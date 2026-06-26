@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高考英语时文阅读学习材料</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+header {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+header h1 { font-size: 32px; color: #2c3e50; margin-bottom: 15px; }
+header p { color: #7f8c8d; line-height: 1.6; }
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #eee;
+}
+.stat-item { text-align: center; }
+.stat-item .number { font-size: 36px; font-weight: bold; color: #3498db; }
+.stat-item .label { font-size: 14px; color: #95a5a6; margin-top: 5px; }
+.articles-grid { display: grid; gap: 25px; }
+.article-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.article-card.new-article {
+  border: 3px solid #e74c3c;
+}
+.article-card .new-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #e74c3c;
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.article-card .date {
+  font-size: 13px;
+  color: #95a5a6;
+  margin-bottom: 10px;
+}
+.article-card h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.article-card .source {
+  font-size: 13px;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+.article-card .tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.article-card .tag {
+  background: #ecf0f1;
+  color: #7f8c8d;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.article-card .tag.tech { background: #e8f4f8; color: #2980b9; }
+.article-card .tag.life { background: #e8f8e8; color: #27ae60; }
+.article-card .tag.culture { background: #f8e8f4; color: #8e44ad; }
+.article-card .summary {
+  font-size: 14px;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.article-card .read-more {
+  display: inline-block;
+  background: #3498db;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.article-card .read-more:hover { background: #2980b9; }
+footer {
+  text-align: center;
+  padding: 30px;
+  color: rgba(255,255,255,0.8);
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  header h1 { font-size: 24px; }
+  .stats { flex-direction: column; gap: 15px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h1>高考英语时文阅读学习材料</h1>
+<p>精选权威英文媒体最新时文，专为高三学生设计<br>涵盖科技、生活、时政、文化等高考常见话题<br>每篇文章配套重点词汇、长难句解析、写作素材积累</p>
+<div class="stats">
+<div class="stat-item">
+<div class="number">1</div>
+<div class="label">今日更新</div>
+</div>
+<div class="stat-item">
+<div class="number">850+</div>
+<div class="label">平均词数</div>
+</div>
+<div class="stat-item">
+<div class="number">15</div>
+<div class="label">核心词汇</div>
+</div>
+</div>
+</header>
+
+<div class="articles-grid">
+
+<div class="article-card new-article">
+<div class="new-badge">今日最新</div>
+<div class="date">2026年6月26日</div>
+<h3>Mars Rover Finds Rocks That Might Show Signs of Ancient Life</h3>
+<div class="source">来源: NASA / The Universe Episodes</div>
+<div class="tags">
+<span class="tag tech">科技类</span>
+<span class="tag">太空探索</span>
+<span class="tag">人工智能</span>
+</div>
+<div class="summary">
+NASA的毅力号火星车在杰泽罗陨石坑发现了具有"豹纹斑点"特征的岩石，含有与微生物生命相关的矿物。结合有机碳化合物和创纪录的镍元素浓度，这些证据表明早期火星可能具备支持微生物生命的条件。
+</div>
+<a href="articles/article_20260626.html" class="read-more">阅读全文</a>
+</div>
+
+</div>
+
+<footer>
+<p>每日精选科技类时文（占比50%），助力高考英语备考</p>
+<p>文章来源：NASA, BBC, Reuters, The Guardian, Nature, Science Daily, TechCrunch, Wired 等权威媒体</p>
+<p>更新时间: 2026年6月26日</p>
+</footer>
+
+</div>
+</body>
+</html>
