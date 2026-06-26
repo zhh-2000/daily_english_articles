@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA's Perseverance Rover: Five Years of Discovery on Mars - 高三英语时文阅读</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-color: #1f2937;
+            --light-bg: #f8fafc;
+            --border-color: #e5e7eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .article-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .article-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .article-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        .article-link a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .summary {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .article-content p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        .vocab-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 8px;
+            font-size: 14px;
+        }
+        
+        .vocab-table td {
+            padding: 10px 8px;
+            border: 1px solid var(--border-color);
+            font-size: 13px;
+        }
+        
+        .vocab-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .vocab-level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .level-core { background: #fef3c7; color: #92400e; }
+        .level-high { background: #dbeafe; color: #1e40af; }
+        .level-common { background: #d1fae5; color: #065f46; }
+        .level-extend { background: #f3e8ff; color: #6b21a8; }
+        
+        .sentence-analysis {
+            background: #fefce8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .sentence-analysis .sentence {
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        .grammar-point {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .analysis-text {
+            color: #4b5563;
+        }
+        
+        .writing-material {
+            background: #f0fdf4;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .writing-material h4 {
+            color: #059669;
+            margin-bottom: 10px;
+        }
+        
+        .writing-material ul {
+            list-style: none;
+        }
+        
+        .writing-material li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .writing-material li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #059669;
+        }
+        
+        .discussion-question {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .question-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .question-translation {
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        
+        .question-hint {
+            background: #eff6ff;
+            padding: 12px;
+            border-radius: 6px;
+            color: #4b5563;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        
+        .tag-tech { background: #8b5cf6; }
+        .tag-space { background: #06b6d4; }
+        .tag-reading { background: #10b981; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← 返回文章列表</a>
+        
+        <div class="article-header">
+            <h1>NASA's Perseverance Rover: Five Years of Discovery on Mars</h1>
+            <div class="article-meta">
+                <span class="tag tag-tech">科技类</span>
+                <span class="tag tag-space">太空探索</span>
+                <span class="tag tag-reading">高考阅读</span>
+            </div>
+            <div class="article-meta">
+                来源: NASA's Curious Universe Podcast | 日期: 2026年6月2日
+            </div>
+            <div class="article-link">
+                原文链接: <a href="https://www.nasa.gov/podcasts/curious-universe/catching-up-with-perseverance/" target="_blank">https://www.nasa.gov/podcasts/curious-universe/catching-up-with-perseverance/</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">文章摘要</h2>
+            <div class="summary">
+                本文介绍了NASA的毅力号火星探测器在火星表面五年来的重大发现。毅力号在杰泽罗陨石坑收集了数十个岩石样本，发现了可能表明过去存在生命的迹象。NASA计划派遣新一代直升机无人机和宇航员继续探索火星，为人类未来的火星任务奠定基础。
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">英文正文</h2>
+            <div class="article-content">
+                <p>February 18, 2021 was a nail-biter of a day at NASA's Jet Propulsion Laboratory in California. More than 140 million miles away, a capsule was hurtling through the atmosphere of another planet. Packed inside was a nuclear-powered, car-sized, six-wheeled rover called Perseverance.</p>
+                
+                <p>Thousands of NASA engineers had spent years designing and building this rover. The spacecraft had to withstand the long journey to the Martian surface, and then the rover inside had to survive the harsh environment there. Katie Stack Morgan, the project scientist for the Perseverance Mars rover, was one of the folks doing the nail-biting.</p>
+                
+                <p>"I very much felt like my career was dependent on the successful landing," Katie recalled. "I had kids now, my family was depending on this rover to land, and so the stakes felt much higher."</p>
+                
+                <p>This phase of a Mars mission is called entry descent and landing, or EDL. But it has another name: the seven minutes of terror. That's because, in the seven minutes it takes to reach the planet's surface from orbit, a lot has to go just right. And with the time delay between Earth and Mars, you can't control what's happening in real time. All you can do is watch and wait and hope the spacecraft does exactly what you programmed it to do.</p>
+                
+                <p>Luckily, the landing was successful. As Katie watched from Earth, orange and white parachutes billowed up above the capsule. On the footage from the capsule's cameras, the red dusty surface came into focus. A big crater called Jezero grew larger and larger. Then, rocket engines on the descent stage fired, stopping it in midair. The rover slowly lowered to the surface on cables.</p>
+                
+                <p>"Touchdown confirmed. Perseverance is safely on the surface of Mars, ready to begin seeking the signs of past life," the broadcast announced.</p>
+                
+                <p>"I just burst into tears," Katie said. "The swell of emotion was just too much. I cried happy tears, relief tears, and then I was like, 'Oh my gosh, our job is just starting.'"</p>
+                
+                <p>Through the Artemis program, NASA is sending humans to the Moon and building a Moon Base. One day, astronauts will walk on Mars. Landing humans on Mars is a hard goal, and NASA science has been laying the groundwork for years. Perseverance is one step on that path.</p>
+                
+                <p>"Robots are great because they can test things out ahead of time. They can decrease the risk," Katie explained. "There is a lot of risk to sending humans to another planet. Our robotic explorers can help reduce the risks for human explorers."</p>
+                
+                <p>Perseverance's main goal is to find evidence of ancient life on Mars. The rover has spent more than five years exploring Mars, first in Jezero Crater, and now along the crater's northern rim. Some 3.5 billion years ago, a river of liquid water flowed through this area. It carved out a canyon and formed a river delta. Today, Mars has no liquid water, although there is some water frozen in ice caps. Mars was once habitable, which means scientists could find evidence of tiny microbial life that has long since died off.</p>
+                
+                <p>Perseverance has made major discoveries in that search for life over the years. The rover also brought along another explorer: Ingenuity, the first aircraft to ever fly on another planet. This small helicopter demonstrated that powered flight is possible in Mars' thin atmosphere, opening new possibilities for future exploration.</p>
+                
+                <p>NASA's Mars strategy has evolved over decades. The first phase was looking for signs of ancient water, starting back in 1997. Rovers like Spirit and Opportunity found signs that water flowed on Mars up to about 2 billion years ago. Then Curiosity, which landed in 2012, looked for evidence that Mars was once habitable. Now, Perseverance takes it to the next level: searching for actual signs of possible ancient life in the rock record.</p>
+                
+                <p>Mars has so many similarities to Earth, especially billions of years ago. "Mars was once habitable. It's not anymore. It's cold and dry, but yet it has this fascinating rock record that tells us that Mars was once very Earth-like," Katie said. For scientists, Mars represents the perfect marriage of the familiar and the mysterious—a world that might hold answers to one of humanity's biggest questions: Did life ever exist beyond Earth?</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">重点词汇表</h2>
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th>词汇</th>
+                        <th>音标</th>
+                        <th>词性</th>
+                        <th>中文释义</th>
+                        <th>高考等级</th>
+                        <th>例句</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>hurtle</td>
+                        <td>/ˈhɜːrtl/</td>
+                        <td>v.</td>
+                        <td>猛冲，飞驰</td>
+                        <td><span class="vocab-level level-extend">★★拓展词汇</span></td>
+                        <td>The spacecraft hurtled through space at incredible speed.</td>
+                    </tr>
+                    <tr>
+                        <td>withstand</td>
+                        <td>/wɪˈθstænd/</td>
+                        <td>v.</td>
+                        <td>经受，承受</td>
+                        <td><span class="vocab-level level-high">★★★★高频词汇</span></td>
+                        <td>The building must withstand strong earthquakes.</td>
+                    </tr>
+                    <tr>
+                        <td>capsule</td>
+                        <td>/ˈkæpsjuːl/</td>
+                        <td>n.</td>
+                        <td>胶囊，太空舱</td>
+                        <td><span class="vocab-level level-common">★★★常见词汇</span></td>
+                        <td>The astronauts returned to Earth in a small capsule.</td>
+                    </tr>
+                    <tr>
+                        <td>descent</td>
+                        <td>/dɪˈsent/</td>
+                        <td>n.</td>
+                        <td>下降，降落</td>
+                        <td><span class="vocab-level level-high">★★★★高频词汇</span></td>
+                        <td>The plane's descent was smooth and steady.</td>
+                    </tr>
+                    <tr>
+                        <td>billow</td>
+                        <td>/ˈbɪləʊ/</td>
+                        <td>v.</td>
+                        <td>翻滚，飘扬</td>
+                        <td><span class="vocab-level level-extend">★★拓展词汇</span></td>
+                        <td>Smoke billowed from the burning building.</td>
+                    </tr>
+                    <tr>
+                        <td>touchdown</td>
+                        <td>/ˈtʌtʃdaʊn/</td>
+                        <td>n.</td>
+                        <td>着陆</td>
+                        <td><span class="vocab-level level-common">★★★常见词汇</span></td>
+                        <td>The team celebrated after a successful touchdown.</td>
+                    </tr>
+                    <tr>
+                        <td>habitable</td>
+                        <td>/ˈhæbɪtəbl/</td>
+                        <td>adj.</td>
+                        <td>可居住的</td>
+                        <td><span class="vocab-level level-high">★★★★高频词汇</span></td>
+                        <td>Scientists search for habitable planets in space.</td>
+                    </tr>
+                    <tr>
+                        <td>microbial</td>
+                        <td>/maɪˈkrəʊbiəl/</td>
+                        <td>adj.</td>
+                        <td>微生物的</td>
+                        <td><span class="vocab-level level-extend">★★拓展词汇</span></td>
+                        <td>Microbial life might exist on other planets.</td>
+                    </tr>
+                    <tr>
+                        <td>fossil</td>
+                        <td>/ˈfɒsl/</td>
+                        <td>n.</td>
+                        <td>化石</td>
+                        <td><span class="vocab-level level-high">★★★★高频词汇</span></td>
+                        <td>Dinosaur fossils were discovered in the valley.</td>
+                    </tr>
+                    <tr>
+                        <td>delta</td>
+                        <td>/ˈdeltə/</td>
+                        <td>n.</td>
+                        <td>三角洲</td>
+                        <td><span class="vocab-level level-common">★★★常见词汇</span></td>
+                        <td>The river delta is rich in wildlife.</td>
+                    </tr>
+                    <tr>
+                        <td>crater</td>
+                        <td>/ˈkreɪtə/</td>
+                        <td>n.</td>
+                        <td>陨石坑，火山口</td>
+                        <td><span class="vocab-level level-extend">★★拓展词汇</span></td>
+                        <td>The moon has many visible craters.</td>
+                    </tr>
+                    <tr>
+                        <td>atmosphere</td>
+                        <td>/ˈætməsfɪə/</td>
+                        <td>n.</td>
+                        <td>大气，气氛</td>
+                        <td><span class="vocab-level level-core">★★★★★核心词汇</span></td>
+                        <td>Earth's atmosphere protects us from harmful rays.</td>
+                    </tr>
+                    <tr>
+                        <td>orchestration</td>
+                        <td>/ˌɔːkɪˈstreɪʃn/</td>
+                        <td>n.</td>
+                        <td>编排，协调</td>
+                        <td><span class="vocab-level level-extend">★★拓展词汇</span></td>
+                        <td>The orchestration of the mission required precision.</td>
+                    </tr>
+                    <tr>
+                        <td>evolution</td>
+                        <td>/ˌevəˈluːʃn/</td>
+                        <td>n.</td>
+                        <td>进化，演变</td>
+                        <td><span class="vocab-level level-core">★★★★★核心词汇</span></td>
+                        <td>The theory of evolution explains species change.</td>
+                    </tr>
+                    <tr>
+                        <td>explorer</td>
+                        <td>/ɪkˈsplɔːrə/</td>
+                        <td>n.</td>
+                        <td>探险家，探测器</td>
+                        <td><span class="vocab-level level-high">★★★★高频词汇</span></td>
+                        <td>The robotic explorer collected valuable data.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">长难句解析</h2>
+            
+            <div class="sentence-analysis">
+                <p class="sentence">1. More than 140 million miles away, a capsule was hurtling through the atmosphere of another planet, packed inside was a nuclear-powered, car-sized, six-wheeled rover called Perseverance.</p>
+                <p class="grammar-point">【语法考点】过去分词作定语和状语</p>
+                <p class="analysis-text">【解析】"packed inside"是过去分词短语作状语，修饰主句的动作；"called Perseverance"是过去分词短语作后置定语，修饰rover。过去分词表示被动和完成的动作。</p>
+            </div>
+            
+            <div class="sentence-analysis">
+                <p class="sentence">2. That's because, in the seven minutes it takes to reach the planet's surface from orbit, a lot has to go just right.</p>
+                <p class="grammar-point">【语法考点】表语从句 + 定语从句</p>
+                <p class="analysis-text">【解析】"That's because..."是表语从句结构，because引导的从句作表语，解释原因。从句中"it takes to reach the planet's surface from orbit"是定语从句，修饰seven minutes，省略了关系代词that。</p>
+            </div>
+            
+            <div class="sentence-analysis">
+                <p class="sentence">3. Mars was once habitable, which means we could find evidence of tiny microbial life that has long since died off.</p>
+                <p class="grammar-point">【语法考点】非限制性定语从句 + 宾语从句</p>
+                <p class="analysis-text">【解析】"which means..."是非限制性定语从句，which指代前面整句话的内容。means后面接宾语从句"we could find evidence..."，该宾语从句中又包含定语从句"that has long since died off"修饰microbial life。</p>
+            </div>
+            
+            <div class="sentence-analysis">
+                <p class="sentence">4. For scientists, Mars represents the perfect marriage of the familiar and the mysterious—a world that might hold answers to one of humanity's biggest questions.</p>
+                <p class="grammar-point">【语法考点】同位语 + 定语从句</p>
+                <p class="analysis-text">【解析】破折号后面的"a world that might hold answers..."是同位语，对Mars进行补充说明。同位语中包含定语从句"that might hold answers..."，that作主语，修饰world。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">高考写作素材积累</h2>
+            
+            <div class="writing-material">
+                <h4>【科技发展话题】</h4>
+                <ul>
+                    <li>hurtle through the atmosphere - 穿过大气层（描述高速运动）</li>
+                    <li>withstand the harsh environment - 经受恶劣环境（描述适应能力）</li>
+                    <li>lay the groundwork for... - 为...奠定基础（描述准备工作）</li>
+                </ul>
+            </div>
+            
+            <div class="writing-material">
+                <h4>【探索精神话题】</h4>
+                <ul>
+                    <li>the stakes felt much higher - 感觉风险更大（描述挑战的重要性）</li>
+                    <li>burst into tears - 热泪盈眶（描述情感表达）</li>
+                    <li>a nail-biter of a day - 令人紧张的一天（描述紧张氛围）</li>
+                </ul>
+            </div>
+            
+            <div class="writing-material">
+                <h4>【青年责任话题】</h4>
+                <ul>
+                    <li>decrease the risk - 降低风险（描述责任担当）</li>
+                    <li>test things out ahead of time - 提前测试（描述准备工作）</li>
+                    <li>take it to the next level - 提升到更高层次（描述进步追求）</li>
+                </ul>
+            </div>
+            
+            <div class="writing-material">
+                <h4>【国际视野话题】</h4>
+                <ul>
+                    <li>the perfect marriage of... - ...的完美结合（描述融合）</li>
+                    <li>hold answers to... - 包含...的答案（描述价值意义）</li>
+                    <li>one of humanity's biggest questions - 人类最大的问题之一（描述全球议题）</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">讨论问题</h2>
+            
+            <div class="discussion-question">
+                <p class="question-title">1. Why is the landing phase called "the seven minutes of terror"?</p>
+                <p class="question-translation">【中文翻译】为什么着陆阶段被称为"恐怖七分钟"？</p>
+                <p class="question-hint">【答题提示】从时间延迟、复杂操作流程、高风险等方面分析。关键词：time delay, complex procedures, high stakes, real-time control impossible.</p>
+            </div>
+            
+            <div class="discussion-question">
+                <p class="question-title">2. What role do robotic explorers like Perseverance play in preparing for human missions to Mars?</p>
+                <p class="question-translation">【中文翻译】像毅力号这样的机器人探测器在为人类火星任务做准备方面扮演什么角色？</p>
+                <p class="question-hint">【答题提示】从降低风险、测试技术、收集数据、探索环境等角度回答。关键词：reduce risks, test technologies, collect data, explore environment.</p>
+            </div>
+            
+            <div class="discussion-question">
+                <p class="question-title">3. Why is Jezero Crater particularly important in the search for ancient life on Mars?</p>
+                <p class="question-translation">【中文翻译】为什么杰泽罗陨石坑在寻找火星古老生命方面特别重要？</p>
+                <p class="question-hint">【答题提示】从古代河流、三角洲形成、宜居环境、化石证据等方面分析。关键词：ancient river, delta formation, habitable environment, fossil evidence.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
