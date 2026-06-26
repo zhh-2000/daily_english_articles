@@ -1,339 +1,200 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高考英语时文学习材料 - 每日更新</title>
-    <meta name="description" content="专为高三学生设计的英文时文学习材料，每日更新，科技主题优先，包含词汇表、长难句解析、写作素材积累">
-    <style>
-        :root {
-            --bg: #f5f7fa;
-            --bg2: #ffffff;
-            --ink: #2c3e50;
-            --muted: #7f8c8d;
-            --rule: #e1e8ed;
-            --accent: #3498db;
-            --accent2: #e74c3c;
-            --success: #27ae60;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: var(--bg);
-            color: var(--ink);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-        
-        header {
-            background: linear-gradient(135deg, var(--accent), #2c3e50);
-            color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            border-radius: 0 0 20px 20px;
-        }
-        
-        header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
-        header p { font-size: 1rem; opacity: 0.9; margin-bottom: 0.75rem; }
-        header .update-info { font-size: 0.85rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.15); border-radius: 8px; display: inline-block; }
-        
-        .view-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .view-btn {
-            padding: 0.5rem 1.5rem;
-            border: 2px solid var(--accent);
-            background: var(--bg2);
-            color: var(--accent);
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-        
-        .view-btn:hover { background: var(--accent); color: white; }
-        .view-btn.active { background: var(--accent); color: white; }
-        
-        .stats-bar {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--bg2);
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
-        .stat-label { font-size: 0.85rem; color: var(--muted); }
-        
-        .section-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--ink);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .section-title .badge {
-            background: var(--accent);
-            color: white;
-            font-size: 0.75rem;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-        }
-        
-        .article-list.cards { display: flex; flex-direction: column; gap: 1rem; }
-        
-        .article-card {
-            background: var(--bg2);
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            transition: transform 0.2s, box-shadow 0.2s;
-            cursor: pointer;
-            border: 1px solid var(--rule);
-        }
-        
-        .article-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: var(--accent); }
-        .article-card.latest { border-left: 4px solid var(--accent); }
-        
-        .article-card .date { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-        .article-card .date .today-badge { background: var(--accent2); color: white; font-size: 0.7rem; padding: 0.15rem 0.4rem; border-radius: 3px; }
-        .article-card h3 { font-size: 1.1rem; color: var(--ink); margin-bottom: 0.75rem; line-height: 1.4; }
-        .article-card .meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; flex-wrap: wrap; }
-        .article-card .summary { font-size: 0.9rem; color: var(--muted); line-height: 1.5; background: var(--bg); padding: 0.6rem; border-radius: 4px; }
-        .article-card .tags { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
-        .article-card .tag { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 4px; background: var(--bg); color: var(--muted); }
-        .article-card .tag.tech { background: #e3f2fd; color: #1976d2; }
-        
-        .article-list.simple { display: flex; flex-direction: column; gap: 0; }
-        
-        .article-simple {
-            display: flex;
-            align-items: center;
-            padding: 0.75rem 1rem;
-            border-bottom: 1px solid var(--rule);
-            cursor: pointer;
-            transition: background 0.2s;
-            background: var(--bg2);
-        }
-        
-        .article-simple:hover { background: #f0f7ff; }
-        .article-simple:first-child { border-radius: 8px 8px 0 0; }
-        .article-simple:last-child { border-radius: 0 0 8px 8px; border-bottom: none; }
-        
-        .article-simple .date-simple {
-            font-size: 0.85rem;
-            color: var(--muted);
-            width: 120px;
-            flex-shrink: 0;
-        }
-        
-        .article-simple .title-simple {
-            font-size: 0.95rem;
-            color: var(--ink);
-            flex-grow: 1;
-        }
-        
-        .article-simple .title-simple:hover { color: var(--accent); }
-        
-        .article-simple .badge-simple {
-            font-size: 0.7rem;
-            background: var(--accent2);
-            color: white;
-            padding: 0.15rem 0.4rem;
-            border-radius: 3px;
-            margin-left: 0.5rem;
-        }
-        
-        .article-simple .source-simple {
-            font-size: 0.8rem;
-            color: var(--muted);
-            margin-left: 1rem;
-            flex-shrink: 0;
-        }
-        
-        .view-cards { display: none; }
-        .view-simple { display: none; }
-        .view-cards.active { display: flex; }
-        .view-simple.active { display: flex; }
-        
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: var(--muted);
-            font-size: 0.85rem;
-            margin-top: 1.5rem;
-            background: var(--bg2);
-            border-radius: 10px;
-        }
-        
-        footer .highlight { color: var(--accent); font-weight: 500; }
-        
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.5rem; }
-            .stats-bar { flex-direction: column; gap: 1rem; }
-            .stat-number { font-size: 1.4rem; }
-            .article-card { padding: 1rem; }
-            .article-card .meta { flex-direction: column; gap: 0.3rem; }
-            .article-simple { flex-wrap: wrap; }
-            .article-simple .date-simple { width: 100%; margin-bottom: 0.25rem; }
-            .article-simple .source-simple { margin-left: 0; margin-top: 0.25rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高考英语时文学习材料 - 每日更新</title>
+<meta name="description" content="专为高三学生设计的英文时文学习材料，每日更新，科技主题优先，包含词汇表、长难句解析、写作素材积累">
+<style>
+:root {
+    --bg: #f5f7fa;
+    --bg2: #ffffff;
+    --ink: #2c3e50;
+    --muted: #7f8c8d;
+    --rule: #e1e8ed;
+    --accent: #3498db;
+    --accent2: #e74c3c;
+    --success: #27ae60;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+.container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+header {
+    background: linear-gradient(135deg, var(--accent), #2c3e50);
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-radius: 0 0 20px 20px;
+}
+header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+header p { font-size: 1rem; opacity: 0.9; margin-bottom: 0.75rem; }
+header .update-info { font-size: 0.85rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.15); border-radius: 8px; display: inline-block; }
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--bg2);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.stat-item { text-align: center; }
+.stat-number { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 0.85rem; color: var(--muted); }
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.section-title .badge {
+    background: var(--accent);
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+.article-list.cards { display: flex; flex-direction: column; gap: 1rem; }
+.article-card {
+    background: var(--bg2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--rule);
+}
+.article-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-color: var(--accent); }
+.article-card.latest { border-left: 4px solid var(--accent); }
+.article-card .date { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+.article-card .date .today-badge { background: var(--accent2); color: white; font-size: 0.7rem; padding: 0.15rem 0.4rem; border-radius: 3px; }
+.article-card h3 { font-size: 1.1rem; color: var(--ink); margin-bottom: 0.75rem; line-height: 1.4; }
+.article-card .meta { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; flex-wrap: wrap; }
+.article-card .summary { font-size: 0.9rem; color: var(--muted); line-height: 1.5; background: var(--bg); padding: 0.6rem; border-radius: 4px; }
+.article-card .tags { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
+.article-card .tag { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 4px; background: var(--bg); color: var(--muted); }
+.article-card .tag.tech { background: #e3f2fd; color: #1976d2; }
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+    background: var(--bg2);
+    border-radius: 10px;
+}
+footer .highlight { color: var(--accent); font-weight: 500; }
+@media (max-width: 600px) {
+    header h1 { font-size: 1.5rem; }
+    .stats-bar { flex-direction: column; gap: 1rem; }
+    .stat-number { font-size: 1.4rem; }
+    .article-card { padding: 1rem; }
+    .article-card .meta { flex-direction: column; gap: 0.3rem; }
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>高考英语时文学习材料</h1>
-        <p>专为高三学生设计 · 每日更新 · 科技主题优先</p>
-        <div class="update-info">每晚 20:00 自动更新 | 点击文章查看完整学习内容</div>
-    </header>
-    
-    <div class="container">
-        <div class="view-toggle">
-            <button class="view-btn active" onclick="switchView('cards')">卡片视图</button>
-            <button class="view-btn" onclick="switchView('simple')">简洁列表</button>
+<header>
+    <h1>高考英语时文学习材料</h1>
+    <p>专为高三学生设计 · 每日更新 · 科技主题优先</p>
+    <div class="update-info">每晚 20:00 自动更新 | 点击文章查看完整学习内容</div>
+</header>
+
+<div class="container">
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div class="stat-label">累计文章</div>
         </div>
-        
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">累计文章</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">科技类</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">75</div>
-                <div class="stat-label">核心词汇</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5</div>
-                <div class="stat-label">更新天数</div>
-            </div>
+        <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div class="stat-label">科技类</div>
         </div>
-        
-        <div class="section-title">
-            文章列表 <span class="badge">历史存档</span>
+        <div class="stat-item">
+            <div class="stat-number">75</div>
+            <div class="stat-label">核心词汇</div>
         </div>
-        
-        <div class="article-list cards view-cards active" id="cards-view">
-            <!-- 今日最新文章 20260626 -->
-            <div class="article-card latest" onclick="openArticle('20260626')">
-                <div class="date">2026年6月26日 <span class="today-badge">今日最新</span></div>
-                <h3>Mars Rover Finds Rocks That Might Show Signs of Ancient Life</h3>
-                <div class="meta"><span>NASA / The Universe Episodes</span><span>约850词</span><span>难度适中</span></div>
-                <div class="summary">NASA的毅力号火星车在杰泽罗陨石坑发现了具有"豹纹斑点"特征的岩石，含有与微生物生命相关的矿物。结合有机碳化合物和创纪录的镍元素浓度，这些证据表明早期火星可能具备支持微生物生命的条件。</div>
-                <div class="tags"><span class="tag tech">太空探索</span><span class="tag tech">科技发展</span><span class="tag">国际视野</span></div>
-            </div>
-            
-            <!-- 20260625 -->
-            <div class="article-card" onclick="openArticle('20260625')">
-                <div class="date">2026年6月25日</div>
-                <h3>NASA's Perseverance Rover: Five Years of Discovery on Mars</h3>
-                <div class="meta"><span>NASA's Curious Universe</span><span>约900词</span><span>难度适中</span></div>
-                <div class="summary">NASA的毅力号火星探测器在火星表面五年来收集了数十个岩石样本，发现了可能表明过去存在生命的迹象。NASA计划派遣新一代直升机无人机和宇航员继续探索火星。</div>
-                <div class="tags"><span class="tag tech">太空探索</span><span class="tag tech">科技发展</span><span class="tag">国际视野</span></div>
-            </div>
-            
-            <!-- 20260624 -->
-            <div class="article-card" onclick="openArticle('20260624')">
-                <div class="date">2026年6月24日</div>
-                <h3>'World-first' Vaccine Designed by Artificial Intelligence</h3>
-                <div class="meta"><span>BBC News</span><span>约900词</span><span>难度适中</span></div>
-                <div class="summary">剑桥大学研究团队首次利用人工智能设计出一种超级抗原疫苗，可对抗多种冠状病毒及潜在的新型病毒。该疫苗已在人体试验中证明安全有效，标志着疫苗研发方式的根本性变革。</div>
-                <div class="tags"><span class="tag tech">医疗科技</span><span class="tag tech">人工智能</span><span class="tag">科技发展</span></div>
-            </div>
-            
-            <!-- 20260623 -->
-            <div class="article-card" onclick="openArticle('20260623')">
-                <div class="date">2026年6月23日</div>
-                <h3>NASA Announces Artemis III Crew for Historic Lunar Mission Test</h3>
-                <div class="meta"><span>NASA/ESA</span><span>约850词</span><span>难度适中</span></div>
-                <div class="summary">NASA正式公布了Artemis III任务的宇航员名单，包括ESA宇航员Luca Parmitano担任飞行员。该任务将在2027年进行地球轨道测试，验证与商业月球着陆器的交会对接能力。</div>
-                <div class="tags"><span class="tag tech">太空探索</span><span class="tag tech">科技发展</span><span class="tag">国际合作</span></div>
-            </div>
-            
-            <!-- 20260622 -->
-            <div class="article-card" onclick="openArticle('20260622')">
-                <div class="date">2026年6月22日</div>
-                <h3>Anthropic Urges Industry Coordination to Allow for a 'Pause' in AI Development</h3>
-                <div class="meta"><span>AP News</span><span>约900词</span><span>难度适中</span></div>
-                <div class="summary">Anthropic公司提议全球顶尖AI企业建立协调机制，在风险增加时暂停先进AI系统的开发。文章探讨了AI技术快速发展带来的潜在风险。</div>
-                <div class="tags"><span class="tag tech">人工智能</span><span class="tag tech">科技发展</span><span class="tag">国际合作</span></div>
-            </div>
-        </div>
-        
-        <div class="article-list simple view-simple" id="simple-view">
-            <div class="article-simple" onclick="openArticle('20260626')">
-                <span class="date-simple">2026-06-26</span>
-                <span class="title-simple">Mars Rover Finds Rocks That Might Show Signs of Ancient Life</span>
-                <span class="badge-simple">今日最新</span>
-                <span class="source-simple">NASA / The Universe Episodes</span>
-            </div>
-            <div class="article-simple" onclick="openArticle('20260625')">
-                <span class="date-simple">2026-06-25</span>
-                <span class="title-simple">NASA's Perseverance Rover: Five Years of Discovery on Mars</span>
-                <span class="source-simple">NASA's Curious Universe</span>
-            </div>
-            <div class="article-simple" onclick="openArticle('20260624')">
-                <span class="date-simple">2026-06-24</span>
-                <span class="title-simple">'World-first' Vaccine Designed by Artificial Intelligence</span>
-                <span class="source-simple">BBC News</span>
-            </div>
-            <div class="article-simple" onclick="openArticle('20260623')">
-                <span class="date-simple">2026-06-23</span>
-                <span class="title-simple">NASA Announces Artemis III Crew for Historic Lunar Mission Test</span>
-                <span class="source-simple">NASA/ESA</span>
-            </div>
-            <div class="article-simple" onclick="openArticle('20260622')">
-                <span class="date-simple">2026-06-22</span>
-                <span class="title-simple">Anthropic Urges Industry Coordination to Allow for a 'Pause' in AI Development</span>
-                <span class="source-simple">AP News</span>
-            </div>
+        <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div class="stat-label">更新天数</div>
         </div>
     </div>
-    
-    <footer>
-        <p><span class="highlight">使用提示</span>：每天晚上8点自动更新，建议收藏本页面方便查阅</p>
-        <p>每篇文章包含：英文正文 · 重点词汇表 · 长难句解析 · 写作素材积累 · 讨论问题</p>
-        <p>本页面由 TRAE 自动生成维护 | 适合高三学生备考使用</p>
-    </footer>
-    
-    <script>
-        function openArticle(date) {
-            window.location.href = 'articles/article_' + date + '.html';
-        }
-        
-        function switchView(type) {
-            document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector('.view-btn:nth-child(' + (type === 'cards' ? '1' : '2') + ')').classList.add('active');
-            
-            document.getElementById('cards-view').classList.toggle('active', type === 'cards');
-            document.getElementById('simple-view').classList.toggle('active', type === 'simple');
-            
-            localStorage.setItem('viewPreference', type);
-        }
-        
-        const savedView = localStorage.getItem('viewPreference') || 'cards';
-        switchView(savedView);
-    </script>
+
+    <div class="section-title">
+        文章列表 <span class="badge">历史存档</span>
+    </div>
+
+    <div class="article-list cards">
+        <!-- 今日最新文章 20260626 - 新能源主题 -->
+        <div class="article-card latest" onclick="openArticle('20260626')">
+            <div class="date">2026年6月26日 <span class="today-badge">今日最新</span></div>
+            <h3>Solid-State EV Batteries Just Hit a Production Line for the First Time</h3>
+            <div class="meta"><span>News Daily S / Eleport</span><span>约900词</span><span>难度适中</span></div>
+            <div class="summary">2026年4月，中国电池制造商Greater Bay Technology首次在生产线成功生产全固态电池，通过针刺、挤压、热冲击等严苛测试且无一起火。固态电池替换了传统锂电池中的易燃液态电解质，实现更快充电、更长续航和更高安全性。</div>
+            <div class="tags"><span class="tag tech">新能源</span><span class="tag tech">电动汽车</span><span class="tag">中国科技</span></div>
+        </div>
+
+        <!-- 20260625 -->
+        <div class="article-card" onclick="openArticle('20260625')">
+            <div class="date">2026年6月25日</div>
+            <h3>NASA's Perseverance Rover: Five Years of Discovery on Mars</h3>
+            <div class="meta"><span>NASA's Curious Universe</span><span>约900词</span><span>难度适中</span></div>
+            <div class="summary">NASA的毅力号火星探测器在火星表面五年来收集了数十个岩石样本，发现了可能表明过去存在生命的迹象。NASA计划派遣新一代直升机无人机和宇航员继续探索火星。</div>
+            <div class="tags"><span class="tag tech">太空探索</span><span class="tag tech">科技发展</span><span class="tag">国际视野</span></div>
+        </div>
+
+        <!-- 20260624 -->
+        <div class="article-card" onclick="openArticle('20260624')">
+            <div class="date">2026年6月24日</div>
+            <h3>'World-first' Vaccine Designed by Artificial Intelligence</h3>
+            <div class="meta"><span>BBC News</span><span>约900词</span><span>难度适中</span></div>
+            <div class="summary">剑桥大学研究团队首次利用人工智能设计出一种超级抗原疫苗，可对抗多种冠状病毒及潜在的新型病毒。该疫苗已在人体试验中证明安全有效，标志着疫苗研发方式的根本性变革。</div>
+            <div class="tags"><span class="tag tech">医疗科技</span><span class="tag tech">人工智能</span><span class="tag">科技发展</span></div>
+        </div>
+
+        <!-- 20260623 -->
+        <div class="article-card" onclick="openArticle('20260623')">
+            <div class="date">2026年6月23日</div>
+            <h3>NASA Announces Artemis III Crew for Historic Lunar Mission Test</h3>
+            <div class="meta"><span>NASA/ESA</span><span>约850词</span><span>难度适中</span></div>
+            <div class="summary">NASA正式公布了Artemis III任务的宇航员名单，包括ESA宇航员Luca Parmitano担任飞行员。该任务将在2027年进行地球轨道测试，验证与商业月球着陆器的交会对接能力。</div>
+            <div class="tags"><span class="tag tech">太空探索</span><span class="tag tech">科技发展</span><span class="tag">国际合作</span></div>
+        </div>
+
+        <!-- 20260622 -->
+        <div class="article-card" onclick="openArticle('20260622')">
+            <div class="date">2026年6月22日</div>
+            <h3>Anthropic Urges Industry Coordination to Allow for a 'Pause' in AI Development</h3>
+            <div class="meta"><span>AP News</span><span>约900词</span><span>难度适中</span></div>
+            <div class="summary">Anthropic公司提议全球顶尖AI企业建立协调机制，在风险增加时暂停先进AI系统的开发。文章探讨了AI技术快速发展带来的潜在风险。</div>
+            <div class="tags"><span class="tag tech">人工智能</span><span class="tag tech">科技发展</span><span class="tag">国际合作</span></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p><span class="highlight">使用提示</span>：每天晚上8点自动更新，建议收藏本页面方便查阅</p>
+    <p>每篇文章包含：英文正文 · 重点词汇表 · 难句解析 · 写作素材积累 · 讨论问题</p>
+    <p>本页面由 TRAE 自动生成维护 | 适合高三学生备考使用</p>
+</footer>
+
+<script>
+function openArticle(date) {
+    window.location.href = 'articles/article_' + date + '.html';
+}
+</script>
 </body>
 </html>
