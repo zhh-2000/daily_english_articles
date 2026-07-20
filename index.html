@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高考英语时文阅读 | 每日一篇</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 头部区域 */
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #95a5a6;
+            font-size: 0.95em;
+        }
+        
+        /* 最新文章标签 */
+        .new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        /* 文章卡片网格 */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .article-card.today {
+            border: 3px solid #f5576c;
+        }
+        
+        .card-header {
+            padding: 25px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
+        }
+        
+        .card-category {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-bottom: 12px;
+        }
+        
+        .card-title {
+            font-size: 1.25em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .card-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .card-title a:hover {
+            color: #667eea;
+        }
+        
+        .card-meta {
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+        
+        .card-body {
+            padding: 20px 25px;
+        }
+        
+        .card-stats {
+            display: flex;
+            justify-content: space-between;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .card-stats span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* 使用说明区域 */
+        .guide {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .guide h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .guide-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .guide-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        
+        .guide-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .guide-item p {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1>📚 高考英语时文阅读</h1>
+            <p class="subtitle">每日精选 · 助力高考 · 拓展视野</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">文章总数</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">核心词汇</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">累计天数</span>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 文章列表 -->
+        <section class="articles-grid">
+            <!-- 2026-07-20 今日文章 -->
+            <article class="article-card today">
+                <div class="card-header">
+                    <span class="card-category">科技类·新能源</span>
+                    <h2 class="card-title">
+                        <a href="articles/article_20260720.html">
+                            Chinese Scientists Set World Record in Solar Cell Efficiency
+                        </a>
+                        <span class="new-badge">今日最新</span>
+                    </h2>
+                    <p class="card-meta">📅 2026年7月20日 | 来源: Xinhua / Nature</p>
+                </div>
+                <div class="card-body">
+                    <div class="card-stats">
+                        <span>📖 约900词</span>
+                        <span>📝 15个词汇</span>
+                        <span>⏱️ 15分钟</span>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <!-- 使用说明 -->
+        <section class="guide">
+            <h2>💡 学习建议</h2>
+            <div class="guide-content">
+                <div class="guide-item">
+                    <h3>晨读15分钟</h3>
+                    <p>每天早晨花15分钟阅读一篇时文，培养英语语感，积累高频词汇。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>词汇积累</h3>
+                    <p>重点记忆每篇文章标注的高考高频词汇，结合例句理解用法。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>长难句分析</h3>
+                    <p>仔细研读长难句解析，提升阅读理解能力，攻克语法难点。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>写作素材</h3>
+                    <p>积累写作素材表格中的地道表达，为高考作文储备语言资源。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>🌟 每日更新 · 精选全球时政科技热点</p>
+            <p>🎯 服务高三学生 · 助力高考英语</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">© 2026 高考英语时文阅读项目</p>
+        </footer>
+    </div>
+</body>
+</html>
