@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China's Electric Vehicle Revolution: A Market Transformed | 每日英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px 40px;
+            border-left: 5px solid #667eea;
+        }
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .summary p {
+            color: #34495e;
+            font-size: 1em;
+        }
+        .content {
+            padding: 40px;
+        }
+        .content h2 {
+            color: #2c3e50;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .vocab-table, .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th, .writing-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+            font-size: 1em;
+        }
+        .vocab-table td, .writing-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:nth-child(even), .writing-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .vocab-table tr:hover, .writing-table tr:hover {
+            background: #e8f4f8;
+        }
+        .vocab-word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-left: 4px solid #38ef7d;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .example-item .cn {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        .complex-sentence {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff3e0 100%);
+            border: 2px solid #ffa726;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(255, 167, 38, 0.2);
+        }
+        .complex-sentence h3 {
+            color: #e65100;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .complex-sentence h3::before {
+            content: "📚";
+            margin-right: 10px;
+        }
+        .complex-sentence .sentence {
+            font-size: 1.05em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .complex-sentence .analysis {
+            background: rgba(255,255,255,0.7);
+            padding: 15px;
+            border-radius: 10px;
+            color: #5d4037;
+            font-size: 0.95em;
+        }
+        .questions {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .questions h2 {
+            color: #00838f;
+            margin-bottom: 20px;
+        }
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .question-item strong {
+            color: #00838f;
+        }
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+        .date-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <span class="date-badge">今日最新</span>
+            <h1>China's Electric Vehicle Revolution: A Market Transformed</h1>
+            <p class="meta">
+                <span class="tag">📅 2026年7月21日</span>
+                <span class="tag">📊 科技类</span>
+                <span class="tag">⏱️ 阅读时长: 8分钟</span>
+                <span class="tag">📖 词数: 985</span>
+            </p>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📝 文章摘要</h2>
+            <p>2026年6月，中国新能源汽车市场渗透率达到历史性的62.92%，标志着中国汽车产业正在经历前所未有的电动化转型。纯电动汽车销量同比增长42%，而传统燃油车销量暴跌39%。比亚迪、小米等中国品牌主导市场，大众、丰田等合资品牌面临严峻挑战。文章分析了中国电动车市场的竞争格局、政策影响及对全球汽车产业的深远意义。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <p>In June 2026, a remarkable transformation occurred in the world's largest automobile market. More than three out of every five new cars sold in China were either battery electric or plug-in hybrid vehicles. The numbers tell a dramatic story: New Energy Vehicle (NEV) penetration hit <span class="highlight">62.92%</span> for the third consecutive record-setting month, while gasoline-only vehicle sales plunged 39% year-over-year.</p>
+
+            <p>The latest data, released by the China Passenger Car Association (CPCA), paints a picture of an industry at a tipping point. Overall automobile sales in China fell 23.2% compared to June 2025. However, within this headline decline lies a tale of two markets: one that is thriving and one that is collapsing.</p>
+
+            <h2>Record-Breaking Numbers</h2>
+            <p>New energy vehicle sales reached 1.008 million units in June 2026. Battery electric vehicles (BEVs) performed particularly well, achieving growth of over 42% year-over-year. This is the real engine of the transition. Plug-in hybrid vehicles (PHEVs) and extended-range EVs (EREVs), while still popular, are beginning to face headwinds.</p>
+
+            <p>Starting in 2027, China will fully eliminate the vehicle purchase tax exemption for PHEVs and EREVs. This policy shift is already influencing manufacturer strategies and consumer choices. Buyers are increasingly opting for pure electric vehicles over transitional technologies.</p>
+
+            <h2>A Tale of Two Markets</h2>
+            <p>To understand what is happening in China, it helps to examine the market by segments. The mass-market segment, where vehicles are priced between 100,000 and 200,000 RMB, is where the fiercest competition is unfolding. BYD continues to dominate this space with its Dynasty and Ocean series.</p>
+
+            <p>Xiaomi, the smartphone giant turned automaker, has emerged as one of the most watched players. Its SU7 sedan has exceeded expectations, and the company is preparing to launch a larger model. Industry analysts believe this vehicle could reshape the premium EV segment in the same way Xiaomi disrupted the smartphone market: by offering high specifications at aggressive prices.</p>
+
+            <h2>The Decline of Gasoline Cars</h2>
+            <p>The most striking statistic from the June report concerns not electric vehicles at all, but rather what they are replacing. Gasoline-only vehicle sales fell 39% year-over-year—representing a collapse rather than merely a decline. This trend has been building since March 2026.</p>
+
+            <p>Joint venture brands that once dominated China—Volkswagen, Toyota, Honda, Nissan—are bearing the brunt of this shift. These manufacturers built their Chinese businesses on gasoline-powered sedans and SUVs. As Chinese consumers abandon internal combustion at an accelerating rate, these companies face an existential challenge in what was once their most profitable market.</p>
+
+            <h2>Global Implications</h2>
+            <p>China accounts for roughly 60% of global EV sales. When China sneezes, the global auto industry catches a cold. Chinese automakers exported over 5 million vehicles in 2025, and that number is on track to grow significantly in 2026. With domestic production capacity far exceeding domestic demand, Chinese brands are aggressively targeting markets in Southeast Asia, Europe, Latin America, and the Middle East.</p>
+
+            <p>The intense competition in China's mass market segment has driven EV prices down dramatically. A BYD Seagull now starts at under 70,000 RMB in China. When Chinese manufacturers scale exports, these price advantages will pressure incumbent automakers in every market worldwide.</p>
+
+            <h2>Looking Ahead</h2>
+            <p>The question is no longer whether China's auto market will go fully electric, but rather how fast. At the current trajectory, NEV penetration could reach 70% by the end of 2026. For global automakers, the message is unambiguous: adapt to China's electric reality or risk becoming irrelevant in the world's largest car market.</p>
+
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>词汇</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>释义</th>
+                </tr>
+                <tr>
+                    <td class="vocab-word">penetration</td>
+                    <td>/ˌpenɪˈtreɪʃn/</td>
+                    <td>n.</td>
+                    <td>渗透率；穿透</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">transform</td>
+                    <td>/trænsˈfɔːm/</td>
+                    <td>v.</td>
+                    <td>改变；转变</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">plug-in hybrid</td>
+                    <td>/plʌɡ ɪn ˈhaɪbrɪd/</td>
+                    <td>n.</td>
+                    <td>插电式混合动力车</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">plunge</td>
+                    <td>/plʌndʒ/</td>
+                    <td>v.</td>
+                    <td>骤降；暴跌</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">tipping point</td>
+                    <td>/ˈtɪpɪŋ pɔɪnt/</td>
+                    <td>n.</td>
+                    <td>临界点；转折点</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">thrive</td>
+                    <td>/θraɪv/</td>
+                    <td>v.</td>
+                    <td>繁荣；蓬勃发展</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">exemption</td>
+                    <td>/ɪɡˈzempʃn/</td>
+                    <td>n.</td>
+                    <td>免税；豁免</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">fierce</td>
+                    <td>/fɪəs/</td>
+                    <td>adj.</td>
+                    <td>激烈的；猛烈的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">dominate</td>
+                    <td>/ˈdɒmɪneɪt/</td>
+                    <td>v.</td>
+                    <td>主导；支配</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">specifications</td>
+                    <td>/ˌpesɪfɪˈkeɪʃ nz/</td>
+                    <td>n.</td>
+                    <td>规格；技术参数</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">existential</td>
+                    <td>/ˌeɡzɪˈstenʃl/</td>
+                    <td>adj.</td>
+                    <td>生存的；存在主义的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">implication</td>
+                    <td>/ˌɪmplɪˈkeɪʃn/</td>
+                    <td>n.</td>
+                    <td>影响；暗示</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">incumbent</td>
+                    <td>/ɪnˈkʌmbənt/</td>
+                    <td>adj.</td>
+                    <td>现任的；在职的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">trajectory</td>
+                    <td>/trəˈdʒektəri/</td>
+                    <td>n.</td>
+                    <td>轨迹；发展路径</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">unambiguous</td>
+                    <td>/ˌʌnæmˈbɪɡjuəs/</td>
+                    <td>adj.</td>
+                    <td>明确的；不含糊的</td>
+                </tr>
+            </table>
+
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>💡 重点词汇例句</h2>
+                <div class="example-item">
+                    <p class="en">1. The penetration rate of smartphones in developed countries has reached over 90%.</p>
+                    <p class="cn">发达国家的智能手机渗透率已超过90%。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">2. The rapid development of technology has transformed the way we communicate and work.</p>
+                    <p class="cn">技术的快速发展改变了我们交流和工作方式。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">3. Stock prices plunged dramatically following the unexpected economic news.</p>
+                    <p class="cn">意外的经济消息发布后，股价急剧下跌。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">4. Many experts believe we have reached a tipping point in the fight against climate change.</p>
+                    <p class="cn">许多专家认为我们在应对气候变化的斗争中已到达临界点。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">5. Despite the economic downturn, online businesses continue to thrive globally.</p>
+                    <p class="cn">尽管经济低迷，在线业务在全球范围内继续蓬勃发展。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">6. Tax exemptions for electric vehicles have significantly boosted consumer demand.</p>
+                    <p class="cn">电动汽车的免税政策显著促进了消费者需求。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">7. Tech companies engage in fierce competition to dominate the emerging AI market.</p>
+                    <p class="cn">科技公司展开激烈竞争，试图主导新兴的人工智能市场。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">8. The implications of this policy change extend far beyond the automotive industry.</p>
+                    <p class="cn">这项政策变化的影响远远超出了汽车行业。</p>
+                </div>
+            </div>
+
+            <!-- 7. 长难句分析 -->
+            <h2>📖 长难句解析</h2>
+            <div class="complex-sentence">
+                <h3>句子一</h3>
+                <p class="sentence">The numbers tell a dramatic story: New Energy Vehicle (NEV) penetration hit 62.92% for the third consecutive record-setting month, while gasoline-only vehicle sales plunged 39% year-over-year.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句为"The numbers tell a dramatic story"，冒号后为解释性内容。其中包含一个while引导的并列对比结构，对比NEV渗透率创新高与燃油车销量暴跌两种现象。<br>
+                    <strong>翻译：</strong>数据讲述了一个戏剧性的故事：新能源汽车渗透率达到62.92%，连续第三个月创下纪录，而纯燃油车销量同比暴跌39%。
+                </div>
+            </div>
+
+            <div class="complex-sentence">
+                <h3>句子二</h3>
+                <p class="sentence">Joint venture brands that once dominated China—Volkswagen, Toyota, Honda, Nissan—are bearing the brunt of this shift, as Chinese consumers abandon internal combustion at an accelerating rate.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主语为"Joint venture brands"，其后跟随that引导的定语从句修饰。破折号内为列举说明。as引导原因状语从句，解释为何这些品牌承受冲击。<br>
+                    <strong>翻译：</strong>曾经主导中国市场的合资品牌——大众、丰田、本田、日产——正承受着这一转变的冲击，因为中国消费者正在加速抛弃内燃机汽车。
+                </div>
+            </div>
+
+            <div class="complex-sentence">
+                <h3>句子三</h3>
+                <p class="sentence">Industry analysts believe this vehicle could reshape the premium EV segment in the same way Xiaomi disrupted the smartphone market: by offering high specifications at aggressive prices.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句为"Industry analysts believe..."，后接省略that的宾语从句。冒号后为方式状语，解释小米如何颠覆市场。"in the same way"为比较状语结构。<br>
+                    <strong>翻译：</strong>行业分析师认为，这款车型可能重塑高端电动车细分市场，就像小米通过提供高规格产品和激进价格颠覆智能手机市场一样。
+                </div>
+            </div>
+
+            <div class="complex-sentence">
+                <h3>句子四</h3>
+                <p class="sentence">With domestic production capacity far exceeding domestic demand, Chinese brands are aggressively targeting markets in Southeast Asia, Europe, Latin America, and the Middle East.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>"With...demand"为with复合结构作原因状语。主句主语为Chinese brands，谓语为are targeting。介词短语"in Southeast Asia..."作地点状语。<br>
+                    <strong>翻译：</strong>由于国内产能远超国内需求，中国品牌正积极开拓东南亚、欧洲、拉丁美洲和中东市场。
+                </div>
+            </div>
+
+            <!-- 8. 写作素材 -->
+            <h2>✍️ 高考写作素材积累</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>表达</th>
+                    <th>应用场景</th>
+                </tr>
+                <tr>
+                    <td><strong>描述趋势</strong></td>
+                    <td>The numbers tell a dramatic story...<br>A tale of two markets</td>
+                    <td>数据作文、趋势分析类文章开头</td>
+                </tr>
+                <tr>
+                    <td><strong>描述变化</strong></td>
+                    <td>at a tipping point<br>bearing the brunt of</td>
+                    <td>描述行业发展、社会变革</td>
+                </tr>
+                <tr>
+                    <td><strong>表达对比</strong></td>
+                    <td>one that is thriving and one that is collapsing<br>not...but rather...</td>
+                    <td>对比论证、双面分析</td>
+                </tr>
+                <tr>
+                    <td><strong>政策影响</strong></td>
+                    <td>This policy shift is already influencing...<br>putting them on equal footing with...</td>
+                    <td>政策分析类话题</td>
+                </tr>
+                <tr>
+                    <td><strong>未来展望</strong></td>
+                    <td>The question is no longer whether...but rather how fast.<br>At the current trajectory...</td>
+                    <td>结尾段展望未来</td>
+                </tr>
+                <tr>
+                    <td><strong>全球影响</strong></td>
+                    <td>When China sneezes, the global industry catches a cold.<br>pressure incumbent companies in every market</td>
+                    <td>全球化话题、经济影响分析</td>
+                </tr>
+            </table>
+
+            <!-- 9. 讨论问题 -->
+            <div class="questions">
+                <h2>🤔 思考与讨论</h2>
+                <div class="question-item">
+                    <p><strong>问题一：</strong>According to the passage, what are the main factors driving China's rapid transition to electric vehicles? Analyze from the perspectives of policy, technology, and market competition.</p>
+                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 0.95em;"><em>提示：可从税收政策、电池技术进步、中国品牌竞争策略等角度分析。</em></p>
+                </div>
+                <div class="question-item">
+                    <p><strong>问题二：</strong>The author mentions that "gasoline-only vehicle sales fell 39% year-over-year." What challenges do you think traditional automakers face, and how should they respond?</p>
+                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 0.95em;"><em>提示：可讨论技术转型、市场策略调整、品牌重新定位等方面。</em></p>
+                </div>
+                <div class="question-item">
+                    <p><strong>问题三：</strong>China's electric vehicle development has important implications for global environmental protection. In your opinion, what can other countries learn from China's experience?</p>
+                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 0.95em;"><em>提示：可从政策支持、产业链建设、消费者引导等角度展开。</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日英语时文阅读 | 为高考英语助力</p>
+            <p>发布日期：2026年7月21日 | 文章编号：20260721</p>
+            <p>© 2026 Daily English Reading Materials for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
