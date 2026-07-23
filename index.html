@@ -3,348 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高考英语时文阅读 | 每日一篇</title>
+    <title>高考英语时文阅读 | 每日更新</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
-            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
-            padding: 20px;
+            color: #fff;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
-        
-        /* 头部区域 */
+        /* 头部 */
         .header {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+            border-radius: 30px;
+            margin-bottom: 40px;
         }
-        
         .header h1 {
-            font-size: 2.5em;
-            color: #2c3e50;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        .header .subtitle {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+        .header p {
+            font-size: 1.3em;
+            color: #a0a0a0;
+            margin-bottom: 30px;
         }
-        
+        /* 统计卡片 */
         .stats {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-top: 25px;
+            gap: 30px;
+            flex-wrap: wrap;
         }
-        
-        .stat-item {
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px 40px;
+            border-radius: 20px;
             text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
-        .stat-number {
-            display: block;
+        .stat-card .number {
             font-size: 2.5em;
             font-weight: bold;
-            color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        .stat-label {
-            color: #95a5a6;
-            font-size: 0.95em;
+        .stat-card .label {
+            color: #a0a0a0;
+            margin-top: 5px;
         }
-        
-        /* 最新文章标签 */
-        .new-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-left: 10px;
-            animation: pulse 2s infinite;
+        /* 文章列表 */
+        .articles {
+            margin-top: 50px;
         }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+        .articles h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 5px solid #667eea;
         }
-        
-        /* 文章卡片网格 */
-        .articles-grid {
+        .article-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
         }
-        
         .article-card {
-            background: white;
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
         .article-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #667eea;
         }
-        
-        .article-card.today {
-            border: 3px solid #f5576c;
+        .article-card .image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
         }
-        
-        .card-header {
+        .article-card .content {
             padding: 25px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
         }
-        
-        .card-category {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin-bottom: 12px;
-        }
-        
-        .card-title {
-            font-size: 1.25em;
-            color: #2c3e50;
+        .article-card .title {
+            font-size: 1.3em;
             margin-bottom: 10px;
             line-height: 1.4;
         }
-        
-        .card-title a {
-            color: inherit;
+        .article-card .title a {
+            color: #fff;
             text-decoration: none;
         }
-        
-        .card-title a:hover {
+        .article-card .title a:hover {
             color: #667eea;
         }
-        
-        .card-meta {
-            color: #95a5a6;
+        .article-card .meta {
+            color: #a0a0a0;
             font-size: 0.9em;
+            margin-bottom: 15px;
         }
-        
-        .card-body {
-            padding: 20px 25px;
+        .article-card .meta span {
+            margin-right: 15px;
         }
-        
-        .card-stats {
-            display: flex;
-            justify-content: space-between;
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        
-        .card-stats span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        /* 使用说明区域 */
-        .guide {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin-top: 30px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .guide h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-        
-        .guide-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .guide-item {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
-            padding: 20px;
-            border-radius: 12px;
-        }
-        
-        .guide-item h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .guide-item p {
-            color: #7f8c8d;
-            font-size: 0.95em;
+        .article-card .desc {
+            color: #ccc;
             line-height: 1.6;
         }
-        
+        .badge-new {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.3);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
         /* 页脚 */
         .footer {
             text-align: center;
-            color: white;
-            padding: 30px;
-            margin-top: 30px;
+            padding: 50px 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
         .footer p {
-            margin: 5px 0;
-            opacity: 0.9;
+            color: #666;
+            margin-bottom: 10px;
         }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .stats {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .articles-grid {
-                grid-template-columns: 1fr;
-            }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- 头部 -->
-        <header class="header">
+        <div class="header">
             <h1>📚 高考英语时文阅读</h1>
-            <p class="subtitle">每日精选 · 助力高考 · 拓展视野</p>
+            <p>精选国际热点话题，助力高考英语备考</p>
+            
+            <!-- 统计信息 -->
             <div class="stats">
-                <div class="stat-item">
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">文章总数</span>
+                <div class="stat-card">
+                    <div class="number">4</div>
+                    <div class="label">文章总数</div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">45</span>
-                    <span class="stat-label">核心词汇</span>
+                <div class="stat-card">
+                    <div class="number">60</div>
+                    <div class="label">核心词汇</div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">累计天数</span>
+                <div class="stat-card">
+                    <div class="number">4</div>
+                    <div class="label">更新天数</div>
                 </div>
             </div>
-        </header>
+        </div>
         
         <!-- 文章列表 -->
-        <section class="articles-grid">
-            <!-- 2026-07-22 今日文章 -->
-            <article class="article-card today">
-                <div class="card-header">
-                    <span class="card-category">文化类·数字化传承</span>
-                    <h2 class="card-title">
-                        <a href="articles/article_20260722.html">
-                            Digital Technology Brings Traditional Culture to Life
-                        </a>
-                        <span class="new-badge">今日最新</span>
-                    </h2>
-                    <p class="card-meta">📅 2026年7月22日 | 来源: CCTV News / Xinhua</p>
-                </div>
-                <div class="card-body">
-                    <div class="card-stats">
-                        <span>📖 约920词</span>
-                        <span>📝 15个词汇</span>
-                        <span>⏱️ 15分钟</span>
+        <div class="articles">
+            <h2>📖 文章列表</h2>
+            <div class="article-grid">
+                <!-- 今日文章 2026-07-23 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">☀️</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260723.html">
+                                中国太阳能电池效率刷新世界纪录
+                            </a>
+                            <span class="badge-new">今日最新</span>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-23</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">中国科学院团队开发的新型钙钛矿-有机叠层太阳能电池，认证效率达28.04%，刷新世界纪录。该技术通过创新策略解决了材料稳定性难题。</p>
+                        <div class="tag">#清洁能源</div>
+                        <div class="tag">#科技创新</div>
                     </div>
                 </div>
-            </article>
-            
-            <!-- 2026-07-21 往期文章 -->
-            <article class="article-card">
-                <div class="card-header">
-                    <span class="card-category">科技类·新能源汽车</span>
-                    <h2 class="card-title">
-                        <a href="articles/article_20260721.html">
-                            China's Electric Vehicle Revolution: A Market Transformed
-                        </a>
-                    </h2>
-                    <p class="card-meta">📅 2026年7月21日 | 来源: EVCUBE / CPCA</p>
-                </div>
-                <div class="card-body">
-                    <div class="card-stats">
-                        <span>📖 约985词</span>
-                        <span>📝 15个词汇</span>
-                        <span>⏱️ 15分钟</span>
+
+                <!-- 2026-07-22 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🏛️</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260722.html">
+                                数字技术让传统文化焕发生机
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-22</span>
+                            <span>📖 文化类</span>
+                        </div>
+                        <p class="desc">数字技术正在为传统文化注入新活力。虚拟现实、增强现实等技术让古老文化遗产以全新方式呈现在公众面前。</p>
+                        <div class="tag">#传统文化</div>
+                        <div class="tag">#数字技术</div>
                     </div>
                 </div>
-            </article>
-            
-            <!-- 2026-07-20 往期文章 -->
-            <article class="article-card">
-                <div class="card-header">
-                    <span class="card-category">科技类·新能源</span>
-                    <h2 class="card-title">
-                        <a href="articles/article_20260720.html">
-                            Chinese Scientists Set World Record in Solar Cell Efficiency
-                        </a>
-                    </h2>
-                    <p class="card-meta">📅 2026年7月20日 | 来源: Xinhua / Nature</p>
-                </div>
-                <div class="card-body">
-                    <div class="card-stats">
-                        <span>📖 约900词</span>
-                        <span>📝 15个词汇</span>
-                        <span>⏱️ 15分钟</span>
+
+                <!-- 2026-07-21 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">🚗</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260721.html">
+                                中国电动汽车革命：市场转型
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-21</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">中国电动汽车市场正在经历前所未有的转型，本土品牌崛起引领全球新能源汽车发展趋势。</p>
+                        <div class="tag">#电动汽车</div>
+                        <div class="tag">#新能源</div>
                     </div>
                 </div>
-            </article>
-        </section>
-        
-        <!-- 使用说明 -->
-        <section class="guide">
-            <h2>💡 学习建议</h2>
-            <div class="guide-content">
-                <div class="guide-item">
-                    <h3>晨读15分钟</h3>
-                    <p>每天早晨花15分钟阅读一篇时文，培养英语语感，积累高频词汇。</p>
-                </div>
-                <div class="guide-item">
-                    <h3>词汇积累</h3>
-                    <p>重点记忆每篇文章标注的高考高频词汇，结合例句理解用法。</p>
-                </div>
-                <div class="guide-item">
-                    <h3>长难句分析</h3>
-                    <p>仔细研读长难句解析，提升阅读理解能力，攻克语法难点。</p>
-                </div>
-                <div class="guide-item">
-                    <h3>写作素材</h3>
-                    <p>积累写作素材表格中的地道表达，为高考作文储备语言资源。</p>
+
+                <!-- 2026-07-20 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🔬</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260720.html">
+                                中国科学家创造太阳能电池效率世界纪录
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-20</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">中国科研团队在太阳能电池领域取得重大突破，光电转换效率创造新的世界纪录。</p>
+                        <div class="tag">#太阳能</div>
+                        <div class="tag">#科研突破</div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
         
         <!-- 页脚 -->
-        <footer class="footer">
-            <p>🌟 每日更新 · 精选全球时政科技热点</p>
-            <p>🎯 服务高三学生 · 助力高考英语</p>
-            <p style="margin-top: 10px; font-size: 0.85em;">© 2026 高考英语时文阅读项目</p>
-        </footer>
+        <div class="footer">
+            <p>📚 每日更新 · 精选话题 · 助力高考</p>
+            <p>来源：Nature, BBC, CNN, Reuters, Guardian, Xinhua 等权威媒体</p>
+            <p>© 2026 高考英语时文阅读项目 | <a href="https://github.com/zhh-2000/daily_english_articles">GitHub</a></p>
+        </div>
     </div>
 </body>
 </html>
