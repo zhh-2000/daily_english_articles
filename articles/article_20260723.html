@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国太阳能电池效率刷新世界纪录 | 高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        /* 2. 文章头部 */
+        .article-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .article-header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .article-header .meta {
+            font-size: 1em;
+            color: #a0a0a0;
+        }
+        .article-header .meta span {
+            margin: 0 15px;
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #667eea;
+        }
+        .abstract h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .abstract p {
+            color: #555;
+            font-size: 1em;
+        }
+        /* 4. 正文 */
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .content h2 {
+            color: #1a1a2e;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .vocabulary h3 {
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f8f9fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        /* 6. 例句 */
+        .examples {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .examples h3 {
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .example-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border-left: 4px solid #28a745;
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #333;
+        }
+        .example-item .cn {
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+        /* 7. 长难句 */
+        .sentences {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .sentences h3 {
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .sentence-box {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .original {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        .sentence-box .analysis {
+            background: rgba(255,255,255,0.7);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .sentence-box .analysis h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        /* 8. 写作素材 */
+        .writing {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .writing h3 {
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .writing-table tr:hover {
+            background: #f0fff4;
+        }
+        /* 9. 讨论问题 */
+        .discussion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        .discussion h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .question {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .question h4 {
+            margin-bottom: 10px;
+        }
+        /* 10. 页脚 */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <h1>Chinese Scientists Set New World Record in Solar Cell Efficiency</h1>
+            <p style="font-size: 1.3em; margin-top: 10px;">中国科学家刷新太阳能电池效率世界纪录</p>
+            <div class="meta">
+                <span>📅 July 23, 2026</span>
+                <span>📖 Nature Journal</span>
+                <span>⏱️ 约8分钟阅读</span>
+                <span class="badge">今日最新</span>
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📌 文章摘要</h3>
+            <p>2026年7月13日，中国科学院化学研究所团队在《自然》杂志发表突破性研究成果：新型钙钛矿-有机叠层太阳能电池认证效率达28.04%，刷新世界纪录。该技术通过创新的"全阶段调控"策略解决了材料稳定性难题，为未来轻薄柔性光伏应用开辟新道路，展现了中国在清洁能源领域的领先地位。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>A Revolutionary Breakthrough</h2>
+            <p>In a groundbreaking development published in the prestigious journal <em>Nature</em> on July 13, 2026, Chinese scientists from the Institute of Chemistry, Chinese Academy of Sciences have achieved a remarkable milestone in renewable energy research. Their newly developed perovskite-organic tandem solar cell has reached a certified steady-state power conversion efficiency of 28.04%, setting a new world record for this class of solar cells.</p>
+            
+            <p>The research team, led by Academician Li Yongfang and Researcher Meng Lei, has pioneered what they call an "all-stage regulation" strategy. This innovative approach addresses one of the most challenging problems in solar cell technology: the instability of light-sensitive materials under continuous illumination. By introducing a unique light-transformable additive molecule named TDB, the team has successfully overcome the phase separation issue that has long hindered the commercial application of such devices.</p>
+            
+            <h2>The Science Behind the Innovation</h2>
+            <p>Traditional single-junction solar cells, commonly seen in household or power station crystalline silicon panels, rely on a single light-absorbing material. However, this limitation prevents them from efficiently utilizing photons with different energy levels simultaneously. The perovskite-organic tandem solar cell developed by the Chinese team employs a sophisticated sandwich-like structure where two photovoltaic materials are stacked together.</p>
+            
+            <div class="highlight">
+                <p>"The upper perovskite layer absorbs visible light, while the lower organic layer captures near-infrared light. This design allows the device to 'squeeze every drop' from the solar spectrum, theoretically achieving far higher power generation efficiency than single-material batteries."</p>
+            </div>
+            
+            <p>However, creating such tandem devices presented significant challenges. The upper layer requires both iodine and bromine elements to absorb sufficient sunlight. Unfortunately, during manufacturing or under continuous light exposure, these ions tend to separate and form clusters—a phenomenon known as phase separation. Once this occurs, the battery voltage continuously drops, and performance steadily deteriorates, becoming a fatal weakness preventing practical application.</p>
+            
+            <h2>From "Fearing Light" to "Harnessing Light"</h2>
+            <p>To resolve this microscopic conflict, the research team introduced the TDB additive molecule into the material. During the initial formation of the battery film, TDB acts as a patient coordinator, slowing down the rapid aggregation of bromine ions and ensuring that iodine and bromine remain uniformly mixed from the beginning.</p>
+            
+            <p>When the battery begins operating under light, TDB is photo-activated and transforms into a new molecular structure called TAB. This new molecule can anchor at the material's grain boundaries, inhibiting halide ion migration and phase separation. As Meng Lei explains, this represents a complete transformation from "fearing light" to "harnessing light."</p>
+            
+            <h2>Impressive Performance Results</h2>
+            <p>The results have been extraordinary. The wide-bandgap perovskite solar cell created through this strategy achieved the highest open-circuit voltage record for its type. When precisely stacked with the underlying organic solar cell, the entire tandem device reached a laboratory maximum power conversion efficiency of 28.80%, with certified steady-state efficiency locked at 28.04%. Furthermore, after 625 hours of continuous illumination, the tandem solar cell still maintained 90% of its initial efficiency, demonstrating excellent stability.</p>
+            
+            <p>Li Yongfang emphasized that this perovskite-organic tandem solar cell combines the advantages of being lightweight and flexible. It holds promise not only for applications in architecture, transportation, and wearable devices but also, due to its outstanding flexibility-to-weight ratio, has potential to be deployed on satellites and space stations, providing lighter and more efficient space-based energy for humanity.</p>
+            
+            <h2>Global Context and Future Implications</h2>
+            <p>This achievement underscores China's leadership in clean energy technology innovation. According to the Global Electricity Development Index Report released at the United Nations on July 10, 2026, China ranks at the forefront in technological innovation among 100 evaluated countries. The report assesses nations across four dimensions: supply security, consumption services, green and low-carbon development, and technological innovation.</p>
+            
+            <p>As the world continues transitioning toward sustainable energy sources, breakthroughs like this represent critical steps toward addressing climate change and reducing dependence on fossil fuels. The manufacturing process for these next-generation solar cells is particularly noteworthy—they can be produced like newspapers, using solution processing and roll-to-roll printing technologies, enabling flexible, large-scale production with lightweight, bendable final products.</p>
+            
+            <p>The research received support from multiple institutions and represents years of dedicated scientific investigation. With the Chinese government's Renewable Energy Development "15th Five-Year Plan" released on July 23, 2026, explicitly calling for accelerated research on perovskite tandem cell industrialization, the pathway from laboratory to commercial application appears increasingly clear.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📚 核心词汇表（15个）</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">perovskite</td>
+                    <td>/pəˈrɒvskaɪt/</td>
+                    <td>n.</td>
+                    <td>钙钛矿（一种晶体结构材料）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">tandem</td>
+                    <td>/ˈtændəm/</td>
+                    <td>adj./n.</td>
+                    <td>串联的；叠层结构</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">efficiency</td>
+                    <td>/ɪˈfɪʃnsi/</td>
+                    <td>n.</td>
+                    <td>效率；效能</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">conversion</td>
+                    <td>/kənˈvɜːʃn/</td>
+                    <td>n.</td>
+                    <td>转换；转化</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">certified</td>
+                    <td>/ˈsɜːtɪfaɪd/</td>
+                    <td>adj.</td>
+                    <td>经认证的；有证明的</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">prestigious</td>
+                    <td>/preˈstɪdʒəs/</td>
+                    <td>adj.</td>
+                    <td>享有声望的；著名的</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">breakthrough</td>
+                    <td>/ˈbreɪkθruː/</td>
+                    <td>n.</td>
+                    <td>突破；重大发现</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">illuminatioin</td>
+                    <td>/ɪˌluːmɪˈneɪʃn/</td>
+                    <td>n.</td>
+                    <td>照明；光照</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">molecule</td>
+                    <td>/ˈmɒlɪkjuːl/</td>
+                    <td>n.</td>
+                    <td>分子；微粒</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">aggregate</td>
+                    <td>/ˈæɡrɪɡeɪt/</td>
+                    <td>v.</td>
+                    <td>聚集；聚合</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">flexible</td>
+                    <td>/ˈfleksəbl/</td>
+                    <td>adj.</td>
+                    <td>柔性的；灵活的</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">spectrum</td>
+                    <td>/ˈspektrəm/</td>
+                    <td>n.</td>
+                    <td>光谱；范围</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">stability</td>
+                    <td>/stəˈbɪləti/</td>
+                    <td>n.</td>
+                    <td>稳定性；稳固</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">renewable</td>
+                    <td>/rɪˈnjuːəbl/</td>
+                    <td>adj.</td>
+                    <td>可再生的；可更新的</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">commercialization</td>
+                    <td>/kəˌmɜːʃəlaɪˈzeɪʃn/</td>
+                    <td>n.</td>
+                    <td>商业化；商品化</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✍️ 重点词汇例句（8个）</h3>
+            
+            <div class="example-item">
+                <p class="en">1. The research team achieved a major <strong>breakthrough</strong> in renewable energy technology.</p>
+                <p class="cn">研究团队在可再生能源技术方面取得了重大突破。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">2. The new solar cell demonstrated remarkable <strong>efficiency</strong> under continuous illumination.</p>
+                <p class="cn">新型太阳能电池在持续光照下展现出卓越的效率。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">3. <strong>Perovskite</strong> materials have revolutionized the field of photovoltaic research.</p>
+                <p class="cn">钙钛矿材料彻底改变了光伏研究领域。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">4. The <strong>tandem</strong> structure allows the device to absorb different wavelengths of light.</p>
+                <p class="cn">叠层结构使装置能够吸收不同波长的光。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">5. Scientists discovered a unique <strong>molecule</strong> that prevents phase separation.</p>
+                <p class="cn">科学家发现了一种能够防止相分离的独特分子。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">6. The <strong>flexible</strong> solar panels can be integrated into wearable devices.</p>
+                <p class="cn">柔性太阳能电池板可集成到可穿戴设备中。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">7. This innovation paves the way for <strong>commercialization</strong> of next-generation solar cells.</p>
+                <p class="cn">这一创新为下一代太阳能电池的商业化铺平了道路。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">8. The study was published in a <strong>prestigious</strong> international journal.</p>
+                <p class="cn">这项研究发表在一本著名的国际期刊上。</p>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="sentences">
+            <h3>🔬 长难句解析（4句）</h3>
+            
+            <div class="sentence-box">
+                <p class="original">1. "Their newly developed perovskite-organic tandem solar cell has reached a certified steady-state power conversion efficiency of 28.04%, setting a new world record for this class of solar cells."</p>
+                <div class="analysis">
+                    <h4>语法分析：</h4>
+                    <p>• 主句：Their newly developed perovskite-organic tandem solar cell has reached...efficiency of 28.04%</p>
+                    <p>• 现在分词短语：setting a new world record...作结果状语，表示前面动作带来的结果</p>
+                    <p>• 翻译：他们新开发的钙钛矿-有机叠层太阳能电池达到了28.04%的认证稳态光电转换效率，刷新了该类太阳能电池的世界纪录。</p>
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">2. "By introducing a unique light-transformable additive molecule named TDB, the team has successfully overcome the phase separation issue that has long hindered the commercial application of such devices."</p>
+                <div class="analysis">
+                    <h4>语法分析：</h4>
+                    <p>• 介词短语：By introducing...作方式状语</p>
+                    <p>• 定语从句：that has long hindered...修饰先行词phase separation issue</p>
+                    <p>• 翻译：通过引入一种名为TDB的独特光转换添加剂分子，团队成功克服了长期阻碍此类器件商业化应用的相分离问题。</p>
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">3. "When the battery begins operating under light, TDB is photo-activated and transforms into a new molecular structure called TAB, which can anchor at the material's grain boundaries, inhibiting halide ion migration and phase separation."</p>
+                <div class="analysis">
+                    <h4>语法分析：</h4>
+                    <p>• 时间状语从句：When the battery begins operating under light</p>
+                    <p>• 非限制性定语从句：which can anchor...修饰TAB</p>
+                    <p>• 现在分词短语：inhibiting...作结果状语</p>
+                    <p>• 翻译：当电池在光照下开始工作时，TDB被光激活并转化为一种名为TAB的新分子结构，它可以锚定在材料晶界上，抑制卤素离子迁移和相分离。</p>
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">4. "It holds promise not only for applications in architecture, transportation, and wearable devices but also, due to its outstanding flexibility-to-weight ratio, has potential to be deployed on satellites and space stations, providing lighter and more efficient space-based energy for humanity."</p>
+                <div class="analysis">
+                    <h4>语法分析：</h4>
+                    <p>• not only...but also...连接两个并列成分</p>
+                    <p>• 介词短语：due to...作原因状语，插入在but also之后</p>
+                    <p>• 现在分词短语：providing...作结果状语</p>
+                    <p>• 翻译：它不仅在建筑、交通和可穿戴设备领域具有应用前景，而且由于其出色的柔性与重量比，还有潜力部署在卫星和空间站上，为人类提供更轻便高效的太空能源。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing">
+            <h3>📝 写作素材积累（6个主题）</h3>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>科技创新</td>
+                    <td>achieve a remarkable milestone / make a groundbreaking development</td>
+                    <td>取得显著里程碑 / 实现突破性进展</td>
+                </tr>
+                <tr>
+                    <td>能源环保</td>
+                    <td>renewable energy / clean energy transition / reduce carbon emissions</td>
+                    <td>可再生能源 / 清洁能源转型 / 减少碳排放</td>
+                </tr>
+                <tr>
+                    <td>科学精神</td>
+                    <td>pave the way for / address significant challenges / demonstrate excellent stability</td>
+                    <td>为……铺平道路 / 应对重大挑战 / 展现卓越稳定性</td>
+                </tr>
+                <tr>
+                    <td>中国成就</td>
+                    <td>set a new world record / rank at the forefront / underscore China's leadership</td>
+                    <td>刷新世界纪录 / 处于前沿 / 凸显中国领导地位</td>
+                </tr>
+                <tr>
+                    <td>未来展望</td>
+                    <td>holds promise for / commercial application / sustainable development</td>
+                    <td>具有……前景 / 商业化应用 / 可持续发展</td>
+                </tr>
+                <tr>
+                    <td>过渡句型</td>
+                    <td>represents a critical step toward / the pathway appears increasingly clear</td>
+                    <td>代表了迈向……的关键一步 / 道路愈发清晰</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💭 思考与讨论</h3>
+            
+            <div class="question">
+                <h4>Question 1: 科技创新</h4>
+                <p>What qualities do you think are essential for scientists to achieve breakthrough innovations? How does the "all-stage regulation" strategy demonstrate the importance of creative problem-solving?</p>
+                <p>你认为科学家要实现突破性创新需要具备哪些品质？"全阶段调控"策略如何体现创造性解决问题的重要性？</p>
+            </div>
+            
+            <div class="question">
+                <h4>Question 2: 可持续发展</h4>
+                <p>How might advancements in solar cell technology contribute to addressing climate change? What role should governments play in promoting renewable energy development?</p>
+                <p>太阳能电池技术的进步如何有助于应对气候变化？政府应在促进可再生能源发展中扮演什么角色？</p>
+            </div>
+            
+            <div class="question">
+                <h4>Question 3: 未来应用</h4>
+                <p>The article mentions potential applications in space exploration. What other fields might benefit from flexible, lightweight solar cell technology? Discuss the social and economic implications.</p>
+                <p>文章提到了太空探索中的潜在应用。还有哪些领域可能受益于柔性轻便的太阳能电池技术？讨论其社会和经济意义。</p>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 高考英语时文阅读 | 每日更新</p>
+            <p>来源：Nature, Science Daily, Xinhua News | 仅供学习参考</p>
+            <p>© 2026 Daily English Articles Project</p>
+        </div>
+    </div>
+</body>
+</html>
