@@ -3,229 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日高考英语时文阅读 | Daily English Reading for Gaokao</title>
+    <title>高考英语时文阅读 | 每日更新</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
-            padding: 20px;
+            color: #fff;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
-        
         /* 头部 */
         .header {
             text-align: center;
-            color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+            border-radius: 30px;
+            margin-bottom: 40px;
         }
-        
         .header h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        .header .subtitle {
+        .header p {
             font-size: 1.3em;
-            opacity: 0.9;
-            margin-bottom: 20px;
+            color: #a0a0a0;
+            margin-bottom: 30px;
         }
-        
-        .header .description {
-            font-size: 1.1em;
-            opacity: 0.85;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        /* 统计信息 */
+        /* 统计卡片 */
         .stats {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin: 40px 0;
             flex-wrap: wrap;
         }
-        
         .stat-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 25px 40px;
-            border-radius: 15px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-number {
+        .stat-card .number {
             font-size: 2.5em;
             font-weight: bold;
-            color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        .stat-label {
-            color: #666;
+        .stat-card .label {
+            color: #a0a0a0;
             margin-top: 5px;
-            font-size: 1.1em;
         }
-        
         /* 文章列表 */
         .articles {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            margin-top: 50px;
         }
-        
         .articles h2 {
-            color: #2c3e50;
+            font-size: 2em;
             margin-bottom: 30px;
-            font-size: 1.8em;
+            padding-left: 20px;
             border-left: 5px solid #667eea;
-            padding-left: 15px;
         }
-        
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
         .article-card {
-            border: 2px solid #eee;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .article-card:hover {
-            border-color: #667eea;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
-            transform: translateX(5px);
-        }
-        
-        .article-card.new {
-            border-color: #f5576c;
-            background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
-        }
-        
-        .article-card .new-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            font-weight: bold;
-        }
-        
-        .article-card h3 {
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-            padding-right: 100px;
-        }
-        
-        .article-card .meta {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-        }
-        
-        .article-card .meta span {
-            margin-right: 20px;
-        }
-        
-        .article-card .tags {
-            margin-bottom: 15px;
-        }
-        
-        .article-card .tag {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 10px;
-            font-size: 0.85em;
-            margin-right: 8px;
-        }
-        
-        .article-card .abstract {
-            color: #555;
-            font-size: 0.95em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .article-card .read-more {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 30px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #667eea;
+        }
+        .article-card .image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+        .article-card .content {
+            padding: 25px;
+        }
+        .article-card .title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-card .title a {
+            color: #fff;
             text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
-        
-        .article-card .read-more:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        .article-card .title a:hover {
+            color: #667eea;
         }
-        
+        .article-card .meta {
+            color: #a0a0a0;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .article-card .meta span {
+            margin-right: 15px;
+        }
+        .article-card .desc {
+            color: #ccc;
+            line-height: 1.6;
+        }
+        .badge-new {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(102, 126, 234, 0.3);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
         /* 页脚 */
         .footer {
             text-align: center;
-            color: white;
-            padding: 40px 20px;
-            margin-top: 40px;
+            padding: 50px 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
         .footer p {
-            margin: 10px 0;
-            opacity: 0.9;
+            color: #666;
+            margin-bottom: 10px;
         }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .stats {
-                gap: 15px;
-            }
-            
-            .stat-card {
-                padding: 20px 30px;
-            }
-            
-            .articles {
-                padding: 20px;
-            }
-            
-            .article-card {
-                padding: 20px;
-            }
-            
-            .article-card h3 {
-                font-size: 1.2em;
-                padding-right: 80px;
-            }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -233,57 +177,152 @@
     <div class="container">
         <!-- 头部 -->
         <div class="header">
-            <h1>📚 每日高考英语时文阅读</h1>
-            <p class="subtitle">Daily English Reading for Gaokao</p>
-            <p class="description">每天一篇精选英文时文，助力高三学生备考高考英语。文章选自权威媒体，难度适中，词汇丰富，附带详细解析。</p>
-        </div>
-        
-        <!-- 统计信息 -->
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number">1</div>
-                <div class="stat-label">文章总数</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">15</div>
-                <div class="stat-label">核心词汇</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">1</div>
-                <div class="stat-label">累计天数</div>
+            <h1>📚 高考英语时文阅读</h1>
+            <p>精选国际热点话题，助力高考英语备考</p>
+            
+            <!-- 统计信息 -->
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="number">6</div>
+                    <div class="label">文章总数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">90</div>
+                    <div class="label">核心词汇</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">6</div>
+                    <div class="label">更新天数</div>
+                </div>
             </div>
         </div>
         
         <!-- 文章列表 -->
         <div class="articles">
             <h2>📖 文章列表</h2>
-            
-            <!-- 今日文章 -->
-            <div class="article-card new">
-                <span class="new-badge">🔥 今日最新</span>
-                <h3>2026: A Breakthrough Year for Battery Technology</h3>
-                <div class="meta">
-                    <span>📅 July 25, 2026</span>
-                    <span>📚 Science & Technology</span>
-                    <span>⏱️ 8 min read</span>
+            <div class="article-grid">
+                <!-- 今日文章 2026-07-25 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🔋</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260725.html">
+                                2026: A Breakthrough Year for Battery Technology
+                            </a>
+                            <span class="badge-new">今日最新</span>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-25</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">2026年被誉为"电池技术爆发元年"。钠离子电池实现量产装车，固态电池中试线投产，超快充技术成为中高端车型标配。</p>
+                        <div class="tag">#电池技术</div>
+                        <div class="tag">#新能源汽车</div>
+                    </div>
                 </div>
-                <div class="tags">
-                    <span class="tag">🔋 Battery</span>
-                    <span class="tag">🚗 Electric Vehicles</span>
-                    <span class="tag">🌱 Clean Energy</span>
+
+                <!-- 2026-07-24 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">⚡</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260724.html">
+                                Solid-State Battery Breakthrough: EV Range Exceeds 1,000 Kilometers
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-24</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">日本新能源科技公司Power Solid成功突破全固态电池量产难题，新电池能量密度提升65%，续航里程达1028公里。</p>
+                        <div class="tag">#固态电池</div>
+                        <div class="tag">#新能源</div>
+                    </div>
                 </div>
-                <div class="abstract">
-                    2026年被誉为"电池技术爆发元年"。钠离子电池实现量产装车，固态电池中试线投产，超快充技术成为中高端车型标配。三条技术路线并行突破，正在重塑新能源汽车产业格局...
+
+                <!-- 2026-07-23 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">☀️</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260723.html">
+                                中国太阳能电池效率刷新世界纪录
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-23</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">中国科学院团队开发的新型钙钛矿-有机叠层太阳能电池，认证效率达28.04%，刷新世界纪录。</p>
+                        <div class="tag">#清洁能源</div>
+                        <div class="tag">#科技创新</div>
+                    </div>
                 </div>
-                <a href="articles/article_20260725.html" class="read-more">阅读全文 →</a>
+
+                <!-- 2026-07-22 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🏛️</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260722.html">
+                                数字技术让传统文化焕发生机
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-22</span>
+                            <span>📖 文化类</span>
+                        </div>
+                        <p class="desc">数字技术正在为传统文化注入新活力。虚拟现实、增强现实等技术让古老文化遗产以全新方式呈现。</p>
+                        <div class="tag">#传统文化</div>
+                        <div class="tag">#数字技术</div>
+                    </div>
+                </div>
+
+                <!-- 2026-07-21 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🚗</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260721.html">
+                                中国电动汽车革命：市场转型
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-21</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">中国电动汽车市场正在经历前所未有的转型，本土品牌崛起引领全球新能源汽车发展趋势。</p>
+                        <div class="tag">#电动汽车</div>
+                        <div class="tag">#新能源</div>
+                    </div>
+                </div>
+
+                <!-- 2026-07-20 文章 -->
+                <div class="article-card">
+                    <div class="image" style="background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);">🔬</div>
+                    <div class="content">
+                        <h3 class="title">
+                            <a href="articles/article_20260720.html">
+                                中国科学家创造太阳能电池效率世界纪录
+                            </a>
+                        </h3>
+                        <div class="meta">
+                            <span>📅 2026-07-20</span>
+                            <span>📖 科技类</span>
+                        </div>
+                        <p class="desc">中国科研团队在太阳能电池领域取得重大突破，光电转换效率创造新的世界纪录。</p>
+                        <div class="tag">#太阳能</div>
+                        <div class="tag">#科研突破</div>
+                    </div>
+                </div>
             </div>
         </div>
         
         <!-- 页脚 -->
         <div class="footer">
-            <p>📖 Daily English Reading for Gaokao | 每日高考英语时文阅读</p>
-            <p>💡 Designed for Grade 12 Students | 专为高三学生设计</p>
-            <p>📅 Updated Daily | 每日更新</p>
+            <p>📚 每日更新 · 精选话题 · 助力高考</p>
+            <p>来源：Nature, BBC, CNN, Reuters, Guardian, Xinhua 等权威媒体</p>
+            <p>© 2026 高考英语时文阅读项目 | <a href="https://github.com/zhh-2000/daily_english_articles">GitHub</a></p>
         </div>
     </div>
 </body>
