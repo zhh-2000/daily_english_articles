@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China's Renewable Energy Milestone: Wind and Solar Power Surpass Coal | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        /* 3. 摘要 */
+        .abstract {
+            background: #f8f9fa;
+            padding: 25px 40px;
+            border-left: 4px solid #11998e;
+            margin: 30px 40px;
+            border-radius: 0 10px 10px 0;
+        }
+        .abstract h2 {
+            color: #11998e;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .abstract p {
+            color: #555;
+            line-height: 1.8;
+        }
+        /* 4. 正文 */
+        .content {
+            padding: 30px 40px;
+        }
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .content h3 {
+            color: #2c3e50;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #11998e;
+        }
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            margin: 30px 0;
+        }
+        .vocabulary h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .vocab-table tr:hover {
+            background: #f0f8f5;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #11998e;
+        }
+        /* 6. 例句 */
+        .examples {
+            padding: 30px 40px;
+            background: #fff;
+        }
+        .examples h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .example-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #11998e;
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #2c3e50;
+        }
+        .example-item .cn {
+            color: #666;
+            margin-top: 5px;
+        }
+        /* 7. 长难句 */
+        .sentences {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px 40px;
+            color: #fff;
+        }
+        .sentences h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sentence-box {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .sentence-box .original {
+            font-size: 1.05em;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .sentence-box .analysis {
+            font-size: 0.9em;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        /* 8. 写作素材 */
+        .writing {
+            padding: 30px 40px;
+        }
+        .writing h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-table th {
+            background: #2c3e50;
+            color: #fff;
+            padding: 12px;
+        }
+        .writing-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .writing-table tr:hover {
+            background: #f8f9fa;
+        }
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #f8f9fa;
+            padding: 30px 40px;
+        }
+        .discussion h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .question {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .question h4 {
+            color: #11998e;
+            margin-bottom: 10px;
+        }
+        .question p {
+            color: #555;
+            line-height: 1.7;
+        }
+        /* 10. 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 25px;
+        }
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 绿色能源</div>
+            <h1>China's Renewable Energy Milestone: Wind and Solar Power Surpass Coal</h1>
+            <div class="meta">July 26, 2026 | Source: China Energy Industry Report</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>📋 文章摘要</h2>
+            <p>中国能源产业迎来历史性时刻！《2026能源产业生态报告》显示，"十四五"期间风电光伏装机首次超越火电，标志着能源结构转型取得重大突破。报告指出，2025年能源重点项目投资超3.5万亿元，新能源产业实现跨越式发展，为全球绿色低碳转型树立典范。本文深入分析中国可再生能源发展的里程碑意义及其全球影响。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h3>A Historic Turning Point</h3>
+            <p>In a landmark achievement for global energy transition, China has officially reached a historic milestone: the combined installed capacity of wind and solar power has surpassed that of coal-fired power plants for the first time. According to the "2026 Energy Industry Ecosystem Report" released on July 25, this transformation occurred during the 14th Five-Year Plan period (2021-2025), marking a fundamental shift in the country's energy landscape.</p>
+
+            <p>The report, published by the China Enterprise Reform and Development Society, reveals that China's wind and solar installed capacity grew from 530 million kilowatts in 2020 to 1.84 billion kilowatts by 2025—a nearly 3.5-fold increase in just five years. This unprecedented growth demonstrates China's commitment to achieving carbon neutrality and promoting sustainable development.</p>
+
+            <h3>Investment Surge and Technological Innovation</h3>
+            <p>The year 2025 witnessed another significant benchmark: national investment in key energy projects exceeded 3.5 trillion yuan for the first time, representing an 11% year-on-year increase. This massive investment has accelerated technological innovation across the renewable energy sector, driving down costs and improving efficiency.</p>
+
+            <p>China now leads globally in nuclear power operation capacity, with installed biomass energy generation ranking first worldwide for seven consecutive years. These achievements underscore the nation's comprehensive approach to energy diversification, combining multiple renewable sources to create a robust and sustainable energy ecosystem.</p>
+
+            <h3>Policy Support and Future Outlook</h3>
+            <p>The National Development and Reform Commission and the National Energy Administration have jointly issued the "15th Five-Year Plan for Renewable Energy Development," outlining ambitious targets for the next phase. Key priorities include accelerating research on perovskite tandem cells and other high-efficiency photovoltaic technologies, exploring space-based solar power generation, and advancing green hydrogen production capabilities.</p>
+
+            <p>The plan emphasizes strengthening research on advanced materials, core components, and critical equipment for renewable energy. Innovations in variable-speed, ultra-high-head pumped storage units and giant impulse-type hydropower units for kilometer-level water heads are among the technological breakthroughs targeted for development.</p>
+
+            <h3>Global Implications</h3>
+            <p>China's renewable energy milestone carries profound implications for global climate action. As the world's largest energy consumer, China's successful transition from fossil fuels to renewable sources provides a powerful model for other nations. The report highlights that China has achieved a dual balance between energy security and green, low-carbon transformation—a challenge many countries continue to face.</p>
+
+            <p>International energy experts note that China's experience demonstrates that rapid energy transition is technically feasible and economically viable. The integration of artificial intelligence with energy systems, including innovations like the "Yudian" intelligent simulation model developed by Southern Power Grid, showcases how digital technologies can enhance renewable energy utilization and grid stability.</p>
+
+            <h3>Local Innovations and Smart Energy Systems</h3>
+            <p>Beyond large-scale infrastructure, China is pioneering innovative energy solutions at the local level. The zero-carbon distributed smart energy center demonstration project in Shaanxi's Yulin Science and Technology Innovation City exemplifies this approach. The facility integrates photovoltaic power generation, water electrolysis for hydrogen production, and fuel cells to achieve zero-carbon electricity, cooling, and heating supply.</p>
+
+            <p>Calculations show that this project reduces energy costs by approximately 45% compared to traditional models while eliminating about 8,640 tons of carbon emissions annually. Such demonstration projects provide valuable experience for scaling up integrated renewable energy solutions across urban and rural areas.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>📚 核心词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>单词</th>
+                    <th>词性</th>
+                    <th>音标</th>
+                    <th>释义</th>
+                </tr>
+                <tr>
+                    <td class="word">milestone</td>
+                    <td>n.</td>
+                    <td>/ˈmaɪlstəʊn/</td>
+                    <td>里程碑，转折点</td>
+                </tr>
+                <tr>
+                    <td class="word">renewable</td>
+                    <td>adj.</td>
+                    <td>/rɪˈnjuːəbl/</td>
+                    <td>可再生的，可更新的</td>
+                </tr>
+                <tr>
+                    <td class="word">capacity</td>
+                    <td>n.</td>
+                    <td>/kəˈpæsəti/</td>
+                    <td>容量，能力</td>
+                </tr>
+                <tr>
+                    <td class="word">surpass</td>
+                    <td>v.</td>
+                    <td>/səˈpɑːs/</td>
+                    <td>超过，超越</td>
+                </tr>
+                <tr>
+                    <td class="word">installed</td>
+                    <td>adj.</td>
+                    <td>/ɪnˈstɔːld/</td>
+                    <td>安装好的，已安装的</td>
+                </tr>
+                <tr>
+                    <td class="word">transformation</td>
+                    <td>n.</td>
+                    <td>/ˌtrænsfəˈmeɪʃn/</td>
+                    <td>转型，转变</td>
+                </tr>
+                <tr>
+                    <td class="word">carbon neutrality</td>
+                    <td>n. phr.</td>
+                    <td>/ˈkɑːbən nuːˈtræləti/</td>
+                    <td>碳中和</td>
+                </tr>
+                <tr>
+                    <td class="word">sustainable</td>
+                    <td>adj.</td>
+                    <td>/səˈsteɪnəbl/</td>
+                    <td>可持续的</td>
+                </tr>
+                <tr>
+                    <td class="word">unprecedented</td>
+                    <td>adj.</td>
+                    <td>/ʌnˈpresɪdentɪd/</td>
+                    <td>史无前例的，空前的</td>
+                </tr>
+                <tr>
+                    <td class="word">diversification</td>
+                    <td>n.</td>
+                    <td>/daɪˌvɜːsɪfɪˈkeɪʃn/</td>
+                    <td>多样化</td>
+                </tr>
+                <tr>
+                    <td class="word">photovoltaic</td>
+                    <td>adj.</td>
+                    <td>/ˌfəʊtəʊvɒlˈteɪɪk/</td>
+                    <td>光伏的，光电的</td>
+                </tr>
+                <tr>
+                    <td class="word">demonstrate</td>
+                    <td>v.</td>
+                    <td>/ˈdemənstreɪt/</td>
+                    <td>证明，展示</td>
+                </tr>
+                <tr>
+                    <td class="word">ecosystem</td>
+                    <td>n.</td>
+                    <td>/ˈiːkəʊsɪstəm/</td>
+                    <td>生态系统</td>
+                </tr>
+                <tr>
+                    <td class="word">integrated</td>
+                    <td>adj.</td>
+                    <td>/ˈɪntɪɡreɪtɪd/</td>
+                    <td>综合的，集成的</td>
+                </tr>
+                <tr>
+                    <td class="word">innovation</td>
+                    <td>n.</td>
+                    <td>/ˌɪnəˈveɪʃn/</td>
+                    <td>创新，革新</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>✍️ 实用例句</h2>
+            <div class="example-item">
+                <div class="en">1. The completion of the project marks a significant milestone in the company's history.</div>
+                <div class="cn">这个项目的完成标志着公司历史上的一个重要里程碑。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">2. Renewable energy sources such as wind and solar power are crucial for achieving carbon neutrality.</div>
+                <div class="cn">风能和太阳能等可再生能源对于实现碳中和至关重要。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">3. The installed capacity of the new power plant will surpass that of any existing facility.</div>
+                <div class="cn">新发电厂的装机容量将超过任何现有设施。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">4. China has made unprecedented progress in developing green technologies over the past decade.</div>
+                <div class="cn">过去十年中，中国在发展绿色技术方面取得了史无前例的进展。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">5. The government is committed to promoting sustainable development through policy innovations.</div>
+                <div class="cn">政府致力于通过政策创新促进可持续发展。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">6. Photovoltaic technology has become increasingly efficient and affordable in recent years.</div>
+                <div class="cn">近年来，光伏技术变得越来越高效且经济实惠。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">7. The integrated energy system combines multiple renewable sources to ensure stable power supply.</div>
+                <div class="cn">这一综合能源系统结合了多种可再生资源以确保稳定的电力供应。</div>
+            </div>
+            <div class="example-item">
+                <div class="en">8. Technological innovation has driven down the cost of renewable energy significantly.</div>
+                <div class="cn">技术创新大幅降低了可再生能源的成本。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="sentences">
+            <h2>🔍 长难句解析</h2>
+            <div class="sentence-box">
+                <div class="original">1. According to the "2026 Energy Industry Ecosystem Report" released on July 25, this transformation occurred during the 14th Five-Year Plan period (2021-2025), marking a fundamental shift in the country's energy landscape.</div>
+                <div class="analysis">【结构分析】句子主干为"this transformation occurred"，前半部分为介词短语作状语，后半部分"marking..."为现在分词作结果状语。句子展示了报告发布的背景和转型发生的时间及其意义。</div>
+            </div>
+            <div class="sentence-box">
+                <div class="original">2. The report, published by the China Enterprise Reform and Development Society, reveals that China's wind and solar installed capacity grew from 530 million kilowatts in 2020 to 1.84 billion kilowatts by 2025—a nearly 3.5-fold increase in just five years.</div>
+                <div class="analysis">【结构分析】主句为"The report reveals that..."，中间插入的过去分词短语"published by..."作定语修饰"report"，that引导宾语从句详细说明增长数据，破折号后为同位语补充说明增长幅度。</div>
+            </div>
+            <div class="sentence-box">
+                <div class="original">3. The National Development and Reform Commission and the National Energy Administration have jointly issued the "15th Five-Year Plan for Renewable Energy Development," outlining ambitious targets for the next phase.</div>
+                <div class="analysis">【结构分析】主句结构为"两部门联合发布规划"，现在分词短语"outlining..."作伴随状语，说明规划的主要内容。动词"issued"与"outlining"形成逻辑上的主谓关系。</div>
+            </div>
+            <div class="sentence-box">
+                <div class="original">4. International energy experts note that China's experience demonstrates that rapid energy transition is technically feasible and economically viable, providing a powerful model for other nations.</div>
+                <div class="analysis">【结构分析】主句为"experts note that..."，第一个that引导宾语从句，其中包含第二个that引导的宾语从句作"demonstrates"的宾语，句末现在分词"providing"作结果状语。</div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing">
+            <h2>📝 写作素材积累</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>分类</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>数据增长</td>
+                    <td>grow from... to... / increase by...%</td>
+                    <td>从...增长到... / 增长了...%</td>
+                </tr>
+                <tr>
+                    <td>重大突破</td>
+                    <td>reach a historic milestone / mark a turning point</td>
+                    <td>达到历史性里程碑 / 标志转折点</td>
+                </tr>
+                <tr>
+                    <td>政策支持</td>
+                    <td>issue ambitious targets / outline development plans</td>
+                    <td>制定雄心勃勃的目标 / 概述发展规划</td>
+                </tr>
+                <tr>
+                    <td>影响意义</td>
+                    <td>carry profound implications / set a powerful model</td>
+                    <td>具有深远影响 / 树立有力典范</td>
+                </tr>
+                <tr>
+                    <td>技术领先</td>
+                    <td>lead globally in... / rank first worldwide</td>
+                    <td>在全球领先... / 全球排名第一</td>
+                </tr>
+                <tr>
+                    <td>成功实践</td>
+                    <td>demonstrate that... is feasible and viable</td>
+                    <td>证明...是可行且可操作的</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>💭 深度讨论</h2>
+            <div class="question">
+                <h4>Question 1</h4>
+                <p>What are the key factors contributing to China's success in renewable energy development? Discuss the roles of policy support, technological innovation, and market mechanisms in this transformation.</p>
+            </div>
+            <div class="question">
+                <h4>Question 2</h4>
+                <p>The article mentions that China has achieved "a dual balance between energy security and green transformation." Why is this balance important? What challenges might countries face when trying to achieve both goals simultaneously?</p>
+            </div>
+            <div class="question">
+                <h4>Question 3</h4>
+                <p>Based on the article, how might China's renewable energy milestone influence global climate action? What lessons can other countries learn from China's experience in energy transition?</p>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>© 2026 每日高考英语时文阅读 | 专注高三学生英语能力提升</p>
+            <p>文章来源：2026 Energy Industry Ecosystem Report | 学习更多，成长更快</p>
+        </div>
+    </div>
+</body>
+</html>
