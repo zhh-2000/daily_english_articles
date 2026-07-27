@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日高考英语时文阅读 | Daily English Reading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 40px;
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .stat-card .label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .article-card .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e94560;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+        .article-card .category {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+        .article-card .content {
+            padding: 25px;
+        }
+        .article-card h2 {
+            color: #1a1a2e;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .article-card .meta {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .article-card .summary {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .article-card .read-more {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .article-card .read-more:hover {
+            color: #764ba2;
+        }
+        .footer {
+            text-align: center;
+            color: #fff;
+            padding: 40px 20px;
+            opacity: 0.9;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .articles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 每日高考英语时文阅读</h1>
+            <p>每天一篇精选英文时文，助力高三学子备考英语</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="number">1</div>
+                    <div class="label">文章总数</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">15</div>
+                    <div class="label">词汇积累</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">1</div>
+                    <div class="label">坚持天数</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="articles">
+            <div class="article-card">
+                <div class="badge">🔥 今日最新</div>
+                <div class="content">
+                    <span class="category">新能源 / New Energy</span>
+                    <h2>World's First Zero-Carbon Airport Opens in Ordos, China</h2>
+                    <div class="meta">📅 July 27, 2026 | ⏱️ 8 mins</div>
+                    <p class="summary">全球首个零碳机场技术成果在内蒙古鄂尔多斯发布。该系统采用创新的"风-光-储-冷-热-电"零碳能源体系，清洁能源占比超过90%，为民航业绿色发展树立标杆。</p>
+                    <a href="articles/article_20260727.html" class="read-more">阅读全文 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 每日高考英语时文阅读 | Daily English Reading Materials</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">坚持每天阅读，英语进步看得见！</p>
+        </div>
+    </div>
+</body>
+</html>
