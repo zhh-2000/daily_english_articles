@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高考英语时文阅读 | 每日一篇，助力高考</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        /* 头部区域 */
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        .header h1 {
+            font-size: 2.5em;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .header .tagline {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+        }
+        /* 统计区域 */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .label {
+            color: #666;
+            margin-top: 5px;
+        }
+        /* 文章列表 */
+        .articles {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .articles h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .article-card {
+            display: block;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .article-card:hover {
+            transform: translateX(10px);
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+        .article-card .title {
+            font-size: 1.2em;
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+        .article-card .meta {
+            color: #888;
+            font-size: 0.9em;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .article-card .category {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.85em;
+        }
+        .article-card .new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+        .article-card .abstract {
+            color: #555;
+            margin-top: 10px;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        /* 页脚 */
+        .footer {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .footer p {
+            color: #666;
+        }
+        .footer .heart {
+            color: #f5576c;
+        }
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>📚 高考英语时文阅读</h1>
+            <p class="subtitle">Daily English Reading for Gaokao Preparation</p>
+            <span class="tagline">每日更新 · 精选时文 · 助力高考</span>
+        </div>
+
+        <!-- 统计 -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">累计文章</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">15</div>
+                <div class="label">核心词汇</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">更新天数</div>
+            </div>
+        </div>
+
+        <!-- 文章列表 -->
+        <div class="articles">
+            <h2>📖 阅读文章</h2>
+
+            <a href="articles/article_20260728.html" class="article-card">
+                <div class="title">Sodium-Ion Batteries Enter Mass Production Era <span class="new-badge">今日最新</span></div>
+                <div class="meta">
+                    <span>📅 2026-07-28</span>
+                    <span class="category">科技 · 能源</span>
+                </div>
+                <div class="abstract">钠离子电池正迈入大规模生产阶段，有望在电动汽车和储能领域挑战锂离子电池。钠资源储量丰富、成本低廉，且在极寒环境下性能优异...</div>
+            </a>
+
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>© 2026 高考英语时文阅读 | 每日一篇，助力高考 <span class="heart">❤</span></p>
+            <p style="margin-top: 10px; font-size: 0.85em;">更新时间：2026-07-28</p>
+        </div>
+    </div>
+</body>
+</html>
