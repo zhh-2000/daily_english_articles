@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Technology Brings Traditional Culture to Life | 高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.85em;
+        }
+        .date-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .summary {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px 40px;
+            border-left: 5px solid #667eea;
+        }
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .summary p {
+            color: #34495e;
+            font-size: 1em;
+        }
+        .content {
+            padding: 40px;
+        }
+        .content h2 {
+            color: #2c3e50;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .vocab-table, .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th, .writing-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+            font-size: 1em;
+        }
+        .vocab-table td, .writing-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:nth-child(even), .writing-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .vocab-table tr:hover, .writing-table tr:hover {
+            background: #e8f4f8;
+        }
+        .vocab-word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-left: 4px solid #f5576c;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .example-item .cn {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        .complex-sentence {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff3e0 100%);
+            border: 2px solid #ffa726;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(255, 167, 38, 0.2);
+        }
+        .complex-sentence h3 {
+            color: #e65100;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .complex-sentence h3::before {
+            content: "📚";
+            margin-right: 10px;
+        }
+        .complex-sentence .sentence {
+            font-size: 1.05em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .complex-sentence .analysis {
+            background: rgba(255,255,255,0.7);
+            padding: 15px;
+            border-radius: 10px;
+            color: #5d4037;
+            font-size: 0.95em;
+        }
+        .questions {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .questions h2 {
+            color: #00838f;
+            margin-bottom: 20px;
+        }
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .question-item strong {
+            color: #00838f;
+        }
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <span class="date-badge">今日最新</span>
+            <h1>Digital Technology Brings Traditional Culture to Life</h1>
+            <p class="meta">
+                <span class="tag">📅 2026年7月22日</span>
+                <span class="tag">📊 文化类·数字化传承</span>
+                <span class="tag">⏱️ 阅读时长: 8分钟</span>
+                <span class="tag">📖 词数: 920</span>
+            </p>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📝 文章摘要</h2>
+            <p>2026年暑期，VR虚拟现实、数字交互、实景AI等前沿技术加速落地中国文旅场景，为传统文化解锁全新消费体验。南京德基艺术博物馆沉浸式古画展厅日均客流超5000人次，江宁织造博物馆红楼梦智能机器人实现情感交互，全国博物馆数量突破7188家。数字技术不仅提升观众体验，更重塑文化产业全链条，推动传统文化在数字时代焕发新生机。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <p>As summer 2026 unfolds, cultural venues across China are witnessing an extraordinary transformation. At Nanjing Deji Art Museum, visitors line up to experience an <span class="highlight">immersive ancient painting exhibition</span> where the 30 distinctive scenes and 533 character figures from the classic "Jinling Tu" scroll come alive through cutting-edge digital technology. The museum now attracts over 5,000 visitors daily, a testament to the powerful combination of traditional art and modern innovation.</p>
+
+            <p>This phenomenon is part of a broader trend sweeping through China's cultural landscape. According to the National Bureau of Statistics, China's cultural industry revenue exceeded 20 trillion yuan in 2025, with digital-driven new cultural formats playing an increasingly leading role. In the first quarter of 2026 alone, 16 industry categories with distinct new-format characteristics generated over 1.6 trillion yuan in revenue, an 11.2% year-on-year increase.</p>
+
+            <h2>When Classic Literature Meets Artificial Intelligence</h2>
+            <p>Along the historic Yangtze Road in Nanjing — a 1,800-meter stretch that holds 1,800 years of history — another technological marvel awaits. At the Jiangning Imperial Weaving Museum, two special "intelligent employees" greet visitors with warmth and wit. These are AI-powered robots modeled after classic characters from "Dream of the Red Chamber," one of China's Four Great Classical Novels.</p>
+
+            <p>What makes these robots remarkable is their ability to <span class="highlight">capture and respond to visitors' emotions</span>. Equipped with artificial intelligence, facial recognition, and intelligent interaction technology, they can detect subtle changes in visitors' expressions and tone of voice, engaging in real-time conversations that feel surprisingly natural and personal.</p>
+
+            <p>"We structured various versions of 'Dream of the Red Chamber' texts so that AI could precisely understand the relationships between characters, events, places, and objects," explained Chen Hong, director of the Digital Operations Department at Nanjing Cultural Tourism Group. "This ensures that what the robots say preserves each character's personality." Behind this achievement lies a massive dataset — 41.83 billion text corpus entries and 68 million sample sentences — forming the foundation of what they call the "Changgan Large Model."</p>
+
+            <h2>Virtual Reality: A Window to the Past</h2>
+            <p>At the Ming Xiaoling Museum, middle school students on study tours are discovering history in an entirely new way. Wearing VR headsets, they watch as the 600-year-old stone beasts along the sacred way suddenly "come alive." The solemn rituals of the Ming Dynasty royal court and historical scenes materialize before their eyes in vivid, three-dimensional detail.</p>
+
+            <p>This shift from passive observation to active participation represents a fundamental change in how museums engage their audiences. Data from cultural tourism platforms reveals that from January to May 2026, bookings for museum-type attractions rose over 40% year-on-year, while orders for interactive experiences with guided tours grew by 62%.</p>
+
+            <h2>A Nationwide Cultural Renaissance</h2>
+            <p>The numbers tell an impressive story. By the end of 2025, China had <span class="highlight">7,188 registered museums nationwide</span> — achieving the goal of one museum per 200,000 people. Post-90s and post-80s visitors now account for over 60% of museum-goers, and "traveling for museums" has become a new lifestyle choice among young people.</p>
+
+            <p>Museums are no longer solemn places for quiet observation. Night openings, study workshops, and creative cultural products have transformed visitors from passive viewers into active cultural participants. The Shanghai Museum's ancient Egyptian civilization exhibition, which integrated VR experiences with role-playing games, generated 760 million yuan in revenue and drove over 35 billion yuan in related consumption across Shanghai — setting an industry record.</p>
+
+            <h2>Technology as a Catalyst for Creativity</h2>
+            <p>In Hangzhou's Yichuang Town, a hub for creative industries, a team is developing a cultural tourism project using naked-eye 3D video technology. The impact of AI on their workflow has been transformative. "With AI technology development, we can save more than 50% of production time," said Chen Yi, founder of Time Coordinates Imaging Technology.</p>
+
+            <p>This town alone has attracted over 3,000 cultural and creative enterprises, forming a complete industrial chain from animation creation and game development to post-production and digital distribution, with annual revenue exceeding 10 billion yuan. Across Sichuan Province, intangible cultural heritage that once depended solely on oral transmission and paper records now thrives through high-definition digital capture, cloud archiving, VR immersion, and AI restoration — what experts call a "digital archive space" for heritage protection.</p>
+
+            <h2>Looking Forward: A Living Legacy</h2>
+            <p>The transformation extends beyond major cities. County-level museums are becoming cultural landmarks through distinctive exhibitions and creative products. In Chongqing and Sichuan, museums generated over 500 million yuan in creative product sales in 2025, while institutions like the Palace Museum and Sanxingdui Museum each surpassed 100 million yuan in annual creative product revenue.</p>
+
+            <p>As digital technology continues to evolve, it offers unprecedented opportunities to make traditional culture not just preserved, but experienced. The goal is no longer simply to display artifacts behind glass, but to let them speak, move, and connect with new generations. In this digital age, China's rich cultural heritage is finding its voice once again.</p>
+
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>词汇</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>释义</th>
+                </tr>
+                <tr>
+                    <td class="vocab-word">immersive</td>
+                    <td>/ɪˈmɜːsɪv/</td>
+                    <td>adj.</td>
+                    <td>沉浸式的；身临其境的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">phenomenon</td>
+                    <td>/fəˈnɒmɪnən/</td>
+                    <td>n.</td>
+                    <td>现象；奇迹</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">distinctive</td>
+                    <td>/dɪˈstɪŋktɪv/</td>
+                    <td>adj.</td>
+                    <td>独特的；有特色的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">characteristic</td>
+                    <td>/ˌkærəktəˈrɪstɪk/</td>
+                    <td>n./adj.</td>
+                    <td>特征；特有的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">artificial intelligence</td>
+                    <td>/ˌɑːtɪˈfɪʃl ɪnˈtelɪdʒəns/</td>
+                    <td>n.</td>
+                    <td>人工智能</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">capture</td>
+                    <td>/ˈkæptʃə/</td>
+                    <td>v.</td>
+                    <td>捕捉；捕获</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">tremendous</td>
+                    <td>/trəˈmendəs/</td>
+                    <td>adj.</td>
+                    <td>巨大的；极好的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">structure</td>
+                    <td>/ˈstrʌktʃə/</td>
+                    <td>v./n.</td>
+                    <td>组织；结构</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">preserve</td>
+                    <td>/prɪˈzɜːv/</td>
+                    <td>v.</td>
+                    <td>保护；保存</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">heritage</td>
+                    <td>/ˈherɪtɪdʒ/</td>
+                    <td>n.</td>
+                    <td>遗产；传统</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">transformative</td>
+                    <td>/trænsˈfɔːmətɪv/</td>
+                    <td>adj.</td>
+                    <td>变革性的；有改造能力的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">institution</td>
+                    <td>/ˌɪnstɪˈtjuːʃn/</td>
+                    <td>n.</td>
+                    <td>机构；制度</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">revenue</td>
+                    <td>/ˈrevənjuː/</td>
+                    <td>n.</td>
+                    <td>收入；税收</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">unprecedented</td>
+                    <td>/ʌnˈpresɪdentɪd/</td>
+                    <td>adj.</td>
+                    <td>史无前例的；空前的</td>
+                </tr>
+                <tr>
+                    <td class="vocab-word">evolve</td>
+                    <td>/ɪˈvɒlv/</td>
+                    <td>v.</td>
+                    <td>发展；进化</td>
+                </tr>
+            </table>
+
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>💡 重点词汇例句</h2>
+                <div class="example-item">
+                    <p class="en">1. Virtual reality technology creates an immersive experience that makes visitors feel as if they have traveled back in time.</p>
+                    <p class="cn">虚拟现实技术创造了一种沉浸式体验，让游客仿佛穿越回了过去。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">2. The rapid growth of digital cultural products has become a significant phenomenon in the modern entertainment industry.</p>
+                    <p class="cn">数字文化产品的快速增长已成为现代娱乐产业的一个重要现象。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">3. Each museum has its own distinctive approach to presenting traditional culture to contemporary audiences.</p>
+                    <p class="cn">每家博物馆都有自己独特的方式向当代观众呈现传统文化。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">4. Artificial intelligence is revolutionizing how we interact with historical artifacts and cultural heritage.</p>
+                    <p class="cn">人工智能正在彻底改变我们与历史文物和文化遗存的互动方式。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">5. The new technology can capture subtle facial expressions and respond with appropriate emotions.</p>
+                    <p class="cn">这项新技术能够捕捉微妙的面部表情，并以适当的情感做出回应。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">6. Digital technology has had a tremendous impact on how traditional culture is preserved and transmitted.</p>
+                    <p class="cn">数字技术对传统文化的保护和传承产生了巨大影响。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">7. We need to structure educational programs to make cultural heritage more accessible to young people.</p>
+                    <p class="cn">我们需要组织教育项目，让年轻人更容易接触文化遗产。</p>
+                </div>
+                <div class="example-item">
+                    <p class="en">8. Museums play a crucial role in preserving our cultural heritage for future generations.</p>
+                    <p class="cn">博物馆在为后代保护我们的文化遗产方面发挥着关键作用。</p>
+                </div>
+            </div>
+
+            <!-- 7. 长难句分析 -->
+            <h2>📖 长难句解析</h2>
+            <div class="complex-sentence">
+                <h3>句子一</h3>
+                <p class="sentence">At Nanjing Deji Art Museum, visitors line up to experience an immersive ancient painting exhibition where the 30 distinctive scenes and 533 character figures from the classic "Jinling Tu" scroll come alive through cutting-edge digital technology.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句为"visitors line up to experience an immersive...exhibition"。where引导定语从句修饰exhibition，从句中主语为"the 30 distinctive scenes and 533 character figures"，谓语为come alive，through...表示方式。<br>
+                    <strong>翻译：</strong>在南京德基艺术博物馆，游客排队体验沉浸式古画展览，通过前沿数字技术，经典《金陵图》画卷中的30个特色场景和533个人物形象栩栩如生地呈现在眼前。
+                </div>
+            </div>
+
+            <div class="complex-sentence">
+                <h3>句子二</h3>
+                <p class="sentence">What makes these robots remarkable is their ability to capture and respond to visitors' emotions, equipped with artificial intelligence, facial recognition, and intelligent interaction technology.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>What引导主语从句"What makes these robots remarkable"作主语，谓语为is，表语为their ability...。equipped with...为过去分词短语作状语，补充说明机器人配备的技术。<br>
+                    <strong>翻译：</strong>这些机器人的独特之处在于它们能够捕捉并回应游客的情感，它们配备了人工智能、面部识别和智能交互技术。
+                </div>
+            </div>
+
+            <div class="complex-sentence">
+                <h3>句子三</h3>
+                <p class="sentence">The Shanghai Museum's ancient Egyptian civilization exhibition, which integrated VR experiences with role-playing games, generated 760 million yuan in revenue and drove over 35 billion yuan in related consumption across Shanghai, setting an industry record.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句主语为"The Shanghai Museum's...exhibition"，which引导非限制性定语从句修饰exhibition。谓语为generated和drove（并列），setting为现在分词作结果状语。<br>
+                    <strong>翻译：</strong>上海博物馆的古埃及文明展览将VR体验与角色扮演游戏相结合，创造了7.6亿元收入，带动上海全域相关消费超350亿元，创下行业纪录。
+                </div>
+            </div>
+
+            <div class="complex-sentence">
+                <h3>句子四</h3>
+                <p class="sentence">As digital technology continues to evolve, it offers unprecedented opportunities to make traditional culture not just preserved, but experienced, connecting new generations with their cultural roots in ways never before possible.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong>As引导时间状语从句。主句主语为it，谓语为offers，宾语为opportunities。to make...为不定式短语作定语修饰opportunities，其中包含"not just...but..."结构。connecting为现在分词作伴随状语。<br>
+                    <strong>翻译：</strong>随着数字技术的不断发展，它为传统文化提供了前所未有的机遇，不仅使其得到保护，更能让人们亲身体验，以前所未有的方式将新一代与他们的文化根源连接起来。
+                </div>
+            </div>
+
+            <!-- 8. 写作素材 -->
+            <h2>✍️ 高考写作素材积累</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>表达</th>
+                    <th>应用场景</th>
+                </tr>
+                <tr>
+                    <td><strong>描述趋势</strong></td>
+                    <td>witness an extraordinary transformation<br>part of a broader trend</td>
+                    <td>开篇描述社会现象、行业发展</td>
+                </tr>
+                <tr>
+                    <td><strong>强调作用</strong></td>
+                    <td>a testament to the power of...<br>play an increasingly leading role in</td>
+                    <td>论证某事物的重要性</td>
+                </tr>
+                <tr>
+                    <td><strong>描述变化</strong></td>
+                    <td>transform from passive viewers into active participants<br>a fundamental change in how...</td>
+                    <td>描述观念或行为方式的转变</td>
+                </tr>
+                <tr>
+                    <td><strong>数据支撑</strong></td>
+                    <td>The numbers tell an impressive story.<br>According to statistics...</td>
+                    <td>引用数据加强论证</td>
+                </tr>
+                <tr>
+                    <td><strong>展望未来</strong></td>
+                    <td>offer unprecedented opportunities to...<br>continue to evolve</td>
+                    <td>结尾段展望发展前景</td>
+                </tr>
+                <tr>
+                    <td><strong>文化传承</strong></td>
+                    <td>preserve our cultural heritage for future generations<br>connect new generations with their cultural roots</td>
+                    <td>文化遗产保护、传统文化传承话题</td>
+                </tr>
+            </table>
+
+            <!-- 9. 讨论问题 -->
+            <div class="questions">
+                <h2>🤔 思考与讨论</h2>
+                <div class="question-item">
+                    <p><strong>问题一：</strong>According to the passage, how do VR and AI technologies change visitors' experience in museums? What benefits do these technologies bring to traditional culture preservation?</p>
+                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 0.95em;"><em>提示：可从沉浸式体验、情感交互、文化传播效率等角度分析。</em></p>
+                </div>
+                <div class="question-item">
+                    <p><strong>问题二：</strong>The author mentions that "visitors are transformed from passive viewers into active participants." In your opinion, why is this transformation important for cultural education?</p>
+                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 0.95em;"><em>提示：可讨论参与式学习的效果、年轻人文化认同感的培养等。</em></p>
+                </div>
+                <div class="question-item">
+                    <p><strong>问题三：</strong>Some people worry that digital technology might distract from the authentic cultural experience. What is your view on balancing technology and tradition in cultural heritage protection?</p>
+                    <p style="color: #7f8c8d; margin-top: 10px; font-size: 0.95em;"><em>提示：可从技术为文化服务、保持文化内核、避免过度商业化等角度展开。</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日英语时文阅读 | 为高考英语助力</p>
+            <p>发布日期：2026年7月22日 | 文章编号：20260722</p>
+            <p>© 2026 Daily English Reading Materials for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
