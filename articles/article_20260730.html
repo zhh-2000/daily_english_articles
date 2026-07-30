@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Teen Mental Health: Sleep, Screen Time and Exercise Matter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        /* 2. 文章头部 */
+        .article-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(240, 147, 251, 0.3);
+        }
+        .article-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        .article-meta span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+        }
+        /* 3. 摘要 */
+        .abstract {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #f093fb;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .abstract h2 {
+            color: #f093fb;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .abstract p {
+            color: #555;
+            line-height: 1.9;
+        }
+        /* 4. 正文 */
+        .content {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .content h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #f5576c;
+            padding-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 18px;
+            text-align: justify;
+            line-height: 2;
+        }
+        .content .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .vocabulary h2 {
+            color: #f093fb;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #fff5f7;
+        }
+        .vocab-table .word {
+            font-weight: 600;
+            color: #f093fb;
+        }
+        .vocab-table .phonetic {
+            color: #888;
+            font-size: 13px;
+        }
+        /* 6. 例句 */
+        .examples {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .examples h2 {
+            color: #f093fb;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .example-item .en {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .example-item .cn {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 7. 长难句 */
+        .complex-sentences {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .complex-sentences h2 {
+            color: #f093fb;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .sentence-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .original {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .sentence-box .analysis {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .sentence-box .analysis strong {
+            color: #ffd700;
+        }
+        /* 8. 写作素材 */
+        .writing-materials {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .writing-materials h2 {
+            color: #f093fb;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .writing-table tr:hover {
+            background: #f0fff5;
+        }
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .discussion h2 {
+            color: #f093fb;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .question-item {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer .tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .footer .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .article-header h1 {
+                font-size: 22px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <h1>Understanding Teen Mental Health: Sleep, Screen Time and Exercise Matter</h1>
+            <div class="article-meta">
+                <span>📅 July 30, 2026</span>
+                <span>📂 Health & Lifestyle</span>
+                <span>📖 Difficulty: Intermediate</span>
+                <span>⏱️ Reading Time: 9 min</span>
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>📝 文章摘要</h2>
+            <p>本文探讨青少年心理健康的重要研究成果。上海交通大学研究团队发现，睡眠充足、控制屏幕时间和规律运动三项达标可使青少年抑郁风险降低55%。文章还介绍了全球青少年心理健康报告，揭示气候变化、数字化压力等因素对青少年心理的影响，并提出科学的应对策略。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>Full Article</h2>
+            
+            <p>Mental health has emerged as one of the most pressing concerns for teenagers worldwide. Recent studies reveal alarming statistics: approximately 25% of adolescents experience symptoms of depression or anxiety, with rates continuing to climb. However, groundbreaking research offers practical solutions that students can implement immediately.</p>
+
+            <p>A comprehensive study conducted by Shanghai Jiao Tong University's School of Public Health, published in the Journal of Affective Disorders in 2026, examined over 15,000 middle and high school students. The research team, led by Professor Zhu Jingfen, discovered that three daily habits—adequate sleep, limited screen time, and regular physical activity—work together to significantly protect adolescent mental health.</p>
+
+            <div class="highlight">
+                "When students meet all three guidelines simultaneously, their risk of depression drops by 55%, and anxiety risk decreases by 47%."
+            </div>
+
+            <p>The findings are striking. Students who achieved adequate sleep and controlled their screen time showed significantly better mental health outcomes than those who only exercised regularly. This suggests that while physical activity is beneficial, combining it with proper sleep habits and reduced screen exposure creates a powerful protective effect.</p>
+
+            <p>The study also revealed gender differences in mental health benefits. Female students who met all three recommendations experienced a 60% reduction in depression risk, compared to 50% for males. Researchers believe this may be related to hormonal factors and different stress responses between genders.</p>
+
+            <p>The connection between lifestyle and mental wellbeing extends beyond individual choices. The 2025 Lancet Commission on Adolescent Health and Wellbeing reports that today's young people face unprecedented challenges, including climate anxiety, digital pressure, and academic stress. Nearly one-third of adolescent girls globally may be out of education, employment, or training by 2030, compounding mental health risks.</p>
+
+            <p>Climate change poses a particular threat to youth mental health. An Australian study published in 2026 found that extreme heat significantly increases hospital admissions for mental health conditions among young people. When temperatures hit record highs, admission risk doubled in warmer months and tripled in cooler periods, highlighting the physiological connection between environmental stress and psychological wellbeing.</p>
+
+            <p>Digital technology presents a double-edged sword. While offering connectivity and information access, excessive screen time disrupts sleep patterns and exposes teenagers to harmful content. The OECD report emphasizes that late-night device use correlates strongly with sleep disorders and increased anxiety levels.</p>
+
+            <p>Academic pressure remains a significant contributor to youth mental health challenges. In China, over half of adolescents identify school stress as their primary psychological burden. The pressure intensifies during high school, creating a cycle where stress leads to poor sleep, which then exacerbates academic difficulties.</p>
+
+            <p>Fortunately, solutions exist. The Shanghai research demonstrates that small, consistent changes yield substantial benefits. Getting 8-10 hours of sleep, limiting recreational screen time to under two hours daily, and engaging in at least one hour of moderate-to-vigorous physical activity creates a foundation for psychological resilience.</p>
+
+            <p>Schools and families play crucial roles in supporting these habits. Educators can adjust homework policies to protect sleep time, while parents can establish technology-free zones and encourage outdoor activities. Most importantly, recognizing that mental health struggles are medical conditions—not personal failings—helps remove stigma and encourages young people to seek help when needed.</p>
+
+            <p>As society grapples with rising mental health challenges among youth, evidence-based interventions offer hope. By understanding the science behind sleep, screen time, and exercise, teenagers can take control of their mental wellbeing and build habits that last a lifetime.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>📚 Key Vocabulary</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>Word/Phrase</th>
+                    <th>Phonetic</th>
+                    <th>Chinese</th>
+                </tr>
+                <tr>
+                    <td class="word">mental health</td>
+                    <td class="phonetic">/ˈmentl helθ/</td>
+                    <td>n. 心理健康</td>
+                </tr>
+                <tr>
+                    <td class="word">adolescent</td>
+                    <td class="phonetic">/ˌædəˈlesnt/</td>
+                    <td>n. 青少年 adj. 青少年的</td>
+                </tr>
+                <tr>
+                    <td class="word">depression</td>
+                    <td class="phonetic">/dɪˈpreʃn/</td>
+                    <td>n. 抑郁；沮丧</td>
+                </tr>
+                <tr>
+                    <td class="word">anxiety</td>
+                    <td class="phonetic">/æŋˈzaɪəti/</td>
+                    <td>n. 焦虑</td>
+                </tr>
+                <tr>
+                    <td class="word">comprehensive</td>
+                    <td class="phonetic">/ˌkɒmprɪˈhensɪv/</td>
+                    <td>adj. 全面的；综合的</td>
+                </tr>
+                <tr>
+                    <td class="word">simultaneously</td>
+                    <td class="phonetic">/ˌsɪmlˈteɪniəsli/</td>
+                    <td>adv. 同时地</td>
+                </tr>
+                <tr>
+                    <td class="word">physiological</td>
+                    <td class="phonetic">/ˌfɪziəˈlɒdʒɪkl/</td>
+                    <td>adj. 生理的；生理学的</td>
+                </tr>
+                <tr>
+                    <td class="word">unprecedented</td>
+                    <td class="phonetic">/ʌnˈpresɪdentɪd/</td>
+                    <td>adj. 前所未有的</td>
+                </tr>
+                <tr>
+                    <td class="word">resilience</td>
+                    <td class="phonetic">/rɪˈzɪliəns/</td>
+                    <td>n. 韧性；恢复力</td>
+                </tr>
+                <tr>
+                    <td class="word">stigma</td>
+                    <td class="phonetic">/ˈstɪɡmə/</td>
+                    <td>n. 污名；耻辱</td>
+                </tr>
+                <tr>
+                    <td class="word">correlate</td>
+                    <td class="phonetic">/ˈkɒrəleɪt/</td>
+                    <td>v. 相关；关联</td>
+                </tr>
+                <tr>
+                    <td class="word">exacerbate</td>
+                    <td class="phonetic">/ɪɡˈzæsəbeɪt/</td>
+                    <td>v. 加剧；恶化</td>
+                </tr>
+                <tr>
+                    <td class="word">intervention</td>
+                    <td class="phonetic">/ˌɪntəˈvenʃn/</td>
+                    <td>n. 干预；介入</td>
+                </tr>
+                <tr>
+                    <td class="word">statistics</td>
+                    <td class="phonetic">/stəˈtɪstɪks/</td>
+                    <td>n. 统计数据</td>
+                </tr>
+                <tr>
+                    <td class="word">wellbeing</td>
+                    <td class="phonetic">/ˈwelbiːɪŋ/</td>
+                    <td>n. 健康；幸福</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>💡 Example Sentences</h2>
+            
+            <div class="example-item">
+                <div class="en">1. <strong>Mental health</strong> is as important as physical health for overall wellbeing.</div>
+                <div class="cn">心理健康与身体健康同等重要，是整体健康不可或缺的部分。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">2. Many <strong>adolescents</strong> struggle to balance academic pressure and personal development.</div>
+                <div class="cn">许多青少年在学业压力与个人发展之间难以找到平衡。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">3. Regular exercise can help reduce symptoms of <strong>depression</strong> and improve mood.</div>
+                <div class="cn">规律运动有助于减轻抑郁症状并改善情绪。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">4. Students who meet all three guidelines <strong>simultaneously</strong> gain the greatest mental health benefits.</div>
+                <div class="cn">同时达成三项指南的学生获得的心理健康益处最大。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">5. The study found a strong connection between screen time and <strong>anxiety</strong> levels.</div>
+                <div class="cn">研究发现屏幕时间与焦虑水平之间存在强关联。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">6. Building <strong>resilience</strong> helps teenagers cope with stress and challenges.</div>
+                <div class="cn">培养韧性帮助青少年应对压力和挑战。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">7. We must remove the <strong>stigma</strong> around mental health issues and encourage open discussions.</div>
+                <div class="cn">我们必须消除对心理健康问题的污名化，鼓励公开讨论。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">8. Sleep deprivation can <strong>exacerbate</strong> existing mental health problems.</div>
+                <div class="cn">睡眠剥夺会加剧现有的心理健康问题。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h2>🔍 Complex Sentence Analysis</h2>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    1. "A comprehensive study conducted by Shanghai Jiao Tong University's School of Public Health, published in the Journal of Affective Disorders in 2026, examined over 15,000 middle and high school students."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：A comprehensive study<br>
+                    • 后置修饰：conducted by... 和 published in... (两个过去分词短语作后置定语)<br>
+                    • 谓语：examined<br>
+                    • 宾语：over 15,000 middle and high school students<br>
+                    <strong>难点：</strong>主语后有两个并列的过去分词短语修饰，造成主谓分隔。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    2. "Students who achieved adequate sleep and controlled their screen time showed significantly better mental health outcomes than those who only exercised regularly."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：Students<br>
+                    • 定语从句：who achieved adequate sleep and controlled their screen time<br>
+                    • 谓语：showed<br>
+                    • 宾语：better mental health outcomes<br>
+                    • 比较结构：than those who only exercised regularly<br>
+                    <strong>难点：</strong>定语从句中的并列动词结构，以及比较句中的定语从句嵌套。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    3. "When temperatures hit record highs, admission risk doubled in warmer months and tripled in cooler periods, highlighting the physiological connection between environmental stress and psychological wellbeing."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 时间状语：When temperatures hit record highs<br>
+                    • 主句：admission risk doubled... and tripled...<br>
+                    • 现在分词短语：highlighting... (作结果状语)<br>
+                    <strong>难点：</strong>并列谓语结构加上现在分词作结果状语，表达因果关系。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    4. "Most importantly, recognizing that mental health struggles are medical conditions—not personal failings—helps remove stigma and encourages young people to seek help when needed."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 动名词短语：recognizing that... (作主语)<br>
+                    • 宾语从句：that mental health struggles are medical conditions<br>
+                    • 破折号内容：not personal failings (补充说明)<br>
+                    • 谓语：helps remove... and encourages...<br>
+                    <strong>难点：</strong>动名词作主语，内嵌宾语从句，以及并列谓语结构。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h2>✍️ Writing Materials</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Useful Expressions</th>
+                </tr>
+                <tr>
+                    <td><strong>表示问题严重性</strong></td>
+                    <td>emerge as a pressing concern / reveal alarming statistics / pose a significant threat / present unprecedented challenges</td>
+                </tr>
+                <tr>
+                    <td><strong>表示研究发现</strong></td>
+                    <td>discover that... / demonstrate that... / reveal striking findings / offer practical solutions</td>
+                </tr>
+                <tr>
+                    <td><strong>表示因果关系</strong></td>
+                    <td>contribute to / correlate with / lead to / result in / be associated with / exacerbate</td>
+                </tr>
+                <tr>
+                    <td><strong>表示采取措施</strong></td>
+                    <td>implement interventions / establish healthy habits / adjust policies / take control of</td>
+                </tr>
+                <tr>
+                    <td><strong>表示重要性</strong></td>
+                    <td>play a crucial role / serve as a foundation / yield substantial benefits / be essential for</td>
+                </tr>
+                <tr>
+                    <td><strong>表示观点态度</strong></td>
+                    <td>recognize that... / emphasize that... / highlight the importance of / underscore the need for</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>❓ Discussion Questions</h2>
+            
+            <div class="question-item">
+                <strong>Question 1:</strong> According to the research mentioned in the article, what are the three daily habits that significantly protect adolescent mental health? Which combination works best, and why do you think this is the case?
+            </div>
+            
+            <div class="question-item">
+                <strong>Question 2:</strong> The article states that "mental health struggles are medical conditions—not personal failings." Why is it important to remove stigma around mental health issues? How can schools and families help create a supportive environment?
+            </div>
+            
+            <div class="question-item">
+                <strong>Question 3:</strong> As a high school student, what specific changes would you make to your daily routine based on the findings in this article? Consider your current sleep habits, screen time, and physical activity levels.
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p><strong>Daily English Reading for Gaokao</strong></p>
+            <p>Helping students prepare for the English reading comprehension section</p>
+            <p style="font-size: 13px; margin-top: 10px;">Source: Shanghai Jiao Tong University Research, Lancet Commission | Compiled for educational purposes</p>
+            <div class="tags">
+                <span class="tag">#Mental Health</span>
+                <span class="tag">#Adolescent</span>
+                <span class="tag">#Wellbeing</span>
+                <span class="tag">#Lifestyle</span>
+                <span class="tag">#Health Science</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
