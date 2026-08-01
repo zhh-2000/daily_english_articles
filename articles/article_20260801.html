@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Team Sets New World Record in Solar Cell Efficiency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 25px;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .article-header h1 {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8f4f8;
+            color: #2980b9;
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.85em;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            border-left: 5px solid #e67e22;
+        }
+
+        .summary h2 {
+            color: #d35400;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .content {
+            font-size: 1.05em;
+            margin-bottom: 40px;
+        }
+
+        .content p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .content h3 {
+            color: #2c3e50;
+            margin: 30px 0 15px 0;
+            font-size: 1.3em;
+        }
+
+        .vocab-section, .sentences-section, .writing-section, .discussion-section {
+            margin-bottom: 40px;
+        }
+
+        .vocab-section h2, .sentences-section h2, .writing-section h2, .discussion-section h2, .complex-sentences h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            font-size: 1.4em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e8f4f8;
+        }
+
+        .example-sentence {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example-sentence .sentence {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .example-sentence .translation {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .complex-sentence-box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #16a085;
+        }
+
+        .complex-sentence-box .original {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .complex-sentence-box .analysis {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+
+        .complex-sentence-box .analysis strong {
+            color: #e74c3c;
+        }
+
+        .discussion-question {
+            background: #fff3cd;
+            padding: 18px 22px;
+            border-left: 5px solid #ffc107;
+            margin-bottom: 15px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .discussion-question strong {
+            color: #f39c12;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            .article-header h1 {
+                font-size: 1.6em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <h1>Chinese Team Sets New World Record in Solar Cell Efficiency</h1>
+            <div class="article-meta">
+                <span class="tag">科技类</span>
+                <span class="tag">新能源</span>
+                <span class="tag">2026-08-01</span>
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>文章摘要</h2>
+            <p>中国科学院化学研究所李永舫院士、孟磊研究员团队在钙钛矿-有机叠层太阳能电池研究领域取得重大突破，认证稳态光电转换效率达到28.04%，刷新该类器件的世界纪录。该研究成果发表于国际学术期刊《自然》，为未来清洁能源应用开辟了新道路。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <p>A research team from the Institute of Chemistry, Chinese Academy of Sciences has achieved a groundbreaking milestone in renewable energy technology. Led by Academician Li Yongfang and Researcher Meng Lei, the team developed a revolutionary perovskite-organic tandem solar cell that has set a new world record with a certified power conversion efficiency of 28.04%.</p>
+
+            <h3>The Innovation Behind the Breakthrough</h3>
+
+            <p>Traditional single-junction solar cells, commonly seen in household or power station silicon panels, rely on a single light-absorbing material. This limitation makes it difficult to efficiently utilize photons with different energy levels simultaneously. The Chinese research team's innovative tandem technology stacks two different photovoltaic materials together, enabling layered absorption of sunlight and more comprehensive utilization of solar energy.</p>
+
+            <p>The theoretical power conversion efficiency of this new technology is significantly higher than conventional solar cells. Furthermore, the perovskite-organic tandem solar cells possess remarkable characteristics: they are thin, lightweight, and flexible. These properties make them ideal for various applications including building-integrated photovoltaics, portable energy devices, wearable electronics, unmanned aerial vehicles, and space power systems.</p>
+
+            <h3>Overcoming Technical Challenges</h3>
+
+            <p>Previous perovskite-organic tandem solar cells suffered from performance degradation and insufficient stability. Addressing these critical issues, the research team introduced a novel additive molecule called TDB. This innovation achieved comprehensive regulation from the preparation stage to the illumination operation stage, effectively resolving the technical shortcomings of such devices.</p>
+
+            <p>After third-party certification, the tandem solar cells demonstrated excellent stability. After 625 hours of continuous illumination, the devices still retained 90% of their initial power conversion efficiency. This remarkable stability marks a significant step toward practical applications.</p>
+
+            <h3>Global Impact and Future Applications</h3>
+
+            <p>The research findings were published in the prestigious international academic journal Nature on July 13, 2026, representing a major advancement in next-generation solar cell technology. The breakthrough demonstrates China's leadership in renewable energy research and contributes significantly to global sustainable development efforts.</p>
+
+            <p>Industry experts predict that this new solar technology will find applications across multiple sectors. From ground-based architecture to transportation systems, from smart wearable devices to satellite power supplies, the technology offers reliable energy solutions for diverse scenarios. The achievement provides new technical support for China's energy structure transformation and sustainable development goals.</p>
+
+            <p>As the world confronts climate change challenges, innovations in solar cell technology become increasingly crucial. Higher efficiency means more electricity generated from the same amount of sunlight, reducing the cost of clean energy and accelerating the transition from fossil fuels. The Chinese team's record-breaking achievement represents a significant step toward a sustainable energy future.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocab-section">
+            <h2>核心词汇表</h2>
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>英文单词/短语</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr><td>1</td><td>perovskite</td><td>n.</td><td>钙钛矿（一种晶体结构材料）</td></tr>
+                <tr><td>2</td><td>tandem</td><td>adj.</td><td>串联的；前后排列的</td></tr>
+                <tr><td>3</td><td>efficiency</td><td>n.</td><td>效率；功效</td></tr>
+                <tr><td>4</td><td>photovoltaic</td><td>adj.</td><td>光伏的；光生伏打的</td></tr>
+                <tr><td>5</td><td>conversion</td><td>n.</td><td>转换；转化</td></tr>
+                <tr><td>6</td><td>renewable</td><td>adj.</td><td>可再生的；可更新的</td></tr>
+                <tr><td>7</td><td>breakthrough</td><td>n.</td><td>突破；重大发现</td></tr>
+                <tr><td>8</td><td>milestone</td><td>n.</td><td>里程碑；重要事件</td></tr>
+                <tr><td>9</td><td>certified</td><td>adj.</td><td>经认证的；有证明的</td></tr>
+                <tr><td>10</td><td>absorbing material</td><td>n.phr.</td><td>吸收材料</td></tr>
+                <tr><td>11</td><td>utilize</td><td>v.</td><td>利用；使用</td></tr>
+                <tr><td>12</td><td>degradation</td><td>n.</td><td>退化；降低</td></tr>
+                <tr><td>13</td><td>stability</td><td>n.</td><td>稳定性；稳固</td></tr>
+                <tr><td>14</td><td>innovation</td><td>n.</td><td>创新；革新</td></tr>
+                <tr><td>15</td><td>sustainable</td><td>adj.</td><td>可持续的；能维持的</td></tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="sentences-section">
+            <h2>重点词汇例句</h2>
+
+            <div class="example-sentence">
+                <div class="sentence">1. The research team achieved a major breakthrough in renewable energy technology.</div>
+                <div class="translation">研究团队在可再生能源技术方面取得了重大突破。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">2. The power conversion efficiency of the new solar cells has reached a record high.</div>
+                <div class="translation">新型太阳能电池的功率转换效率已达到创纪录的高度。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">3. Perovskite materials have shown great potential in photovoltaic applications.</div>
+                <div class="translation">钙钛矿材料在光伏应用中展现出巨大潜力。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">4. The tandem structure allows for more efficient absorption of sunlight.</div>
+                <div class="translation">串联结构可以更有效地吸收阳光。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">5. Scientists are working to improve the stability of organic solar cells.</div>
+                <div class="translation">科学家们正在努力提高有机太阳能电池的稳定性。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">6. The innovation has been certified by international testing organizations.</div>
+                <div class="translation">这项创新已获得国际测试机构的认证。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">7. Sustainable development requires innovations in clean energy technology.</div>
+                <div class="translation">可持续发展需要清洁能源技术的创新。</div>
+            </div>
+
+            <div class="example-sentence">
+                <div class="sentence">8. The new technology marks an important milestone in energy transformation.</div>
+                <div class="translation">这项新技术标志着能源转型的重要里程碑。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h2>长难句解析</h2>
+
+            <div class="complex-sentence-box">
+                <div class="original">1. Led by Academician Li Yongfang and Researcher Meng Lei, the team developed a revolutionary perovskite-organic tandem solar cell that has set a new world record with a certified power conversion efficiency of 28.04%.</div>
+                <div class="analysis">
+                    <strong>句式结构：</strong>过去分词短语作状语 + 主句 + that引导定语从句<br>
+                    <strong>解析：</strong>"Led by..."是过去分词短语作状语，表示"在...的带领下"；主句主语是"the team"，谓语是"developed"；that引导定语从句修饰"solar cell"，说明这种太阳能电池取得的成就。<br>
+                    <strong>翻译：</strong>在李永舫院士和孟磊研究员的带领下，团队开发出了一种革命性的钙钛矿-有机叠层太阳能电池，以28.04%的认证功率转换效率创造了新的世界纪录。
+                </div>
+            </div>
+
+            <div class="complex-sentence-box">
+                <div class="original">2. The Chinese research team's innovative tandem technology stacks two different photovoltaic materials together, enabling layered absorption of sunlight and more comprehensive utilization of solar energy.</div>
+                <div class="analysis">
+                    <strong>句式结构：</strong>主句 + 现在分词短语作结果状语<br>
+                    <strong>解析：</strong>主句说明技术的核心做法；"enabling..."是现在分词短语作结果状语，表示这项技术带来的结果，其中包含两个并列的动名词短语"layered absorption"和"more comprehensive utilization"。<br>
+                    <strong>翻译：</strong>中国研究团队创新的叠层技术将两种不同的光伏材料堆叠在一起，从而实现对阳光的分层吸收和对太阳能更全面的利用。
+                </div>
+            </div>
+
+            <div class="complex-sentence-box">
+                <div class="original">3. Addressing these critical issues, the research team introduced a novel additive molecule called TDB, which achieved comprehensive regulation from the preparation stage to the illumination operation stage, effectively resolving the technical shortcomings of such devices.</div>
+                <div class="analysis">
+                    <strong>句式结构：</strong>现在分词短语作状语 + 主句 + which引导非限制性定语从句 + 现在分词短语作结果状语<br>
+                    <strong>解析：</strong>"Addressing..."是现在分词短语作原因状语；主句中"called TDB"是过去分词短语作后置定语；which引导非限制性定语从句修饰"TDB"，说明其作用；"resolving..."是现在分词短语作结果状语。<br>
+                    <strong>翻译：</strong>为解决这些关键问题，研究团队引入了一种名为TDB的新型添加剂分子，实现了从制备阶段到光照运行阶段的全面调控，有效解决了此类器件的技术缺陷。
+                </div>
+            </div>
+
+            <div class="complex-sentence-box">
+                <div class="original">4. As the world confronts climate change challenges, innovations in solar cell technology become increasingly crucial, with higher efficiency meaning more electricity generated from the same amount of sunlight, reducing the cost of clean energy and accelerating the transition from fossil fuels.</div>
+                <div class="analysis">
+                    <strong>句式结构：</strong>as引导时间状语从句 + 主句 + with复合结构 + 现在分词短语作结果状语<br>
+                    <strong>解析：</strong>as引导时间状语从句；主句说明创新的重要性；with复合结构作伴随状语，其中"meaning..."是现在分词作定语修饰"efficiency"；"reducing...and accelerating..."是现在分词短语作结果状语。<br>
+                    <strong>翻译：</strong>随着世界面临气候变化挑战，太阳能电池技术的创新变得愈发重要，更高的效率意味着从等量阳光中产生更多电力，从而降低清洁能源成本，加速从化石燃料的转型。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-section">
+            <h2>写作素材积累</h2>
+            <table>
+                <tr>
+                    <th>类别</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr><td>描述成就</td><td>achieve a groundbreaking milestone</td><td>取得突破性里程碑</td></tr>
+                <tr><td>描述成就</td><td>set a new world record</td><td>创造新的世界纪录</td></tr>
+                <tr><td>科技创新</td><td>represent a major advancement</td><td>代表重大进步</td></tr>
+                <tr><td>科技创新</td><td>demonstrate leadership in...</td><td>展示在...领域的领导地位</td></tr>
+                <tr><td>因果关系</td><td>marks a significant step toward...</td><td>标志着迈向...的重要一步</td></tr>
+                <tr><td>因果关系</td><td>contribute significantly to...</td><td>为...做出重大贡献</td></tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion-section">
+            <h2>思考与讨论</h2>
+
+            <div class="discussion-question">
+                <strong>问题1：</strong>Why is the development of more efficient solar cells important for addressing climate change? Consider both environmental and economic factors in your answer.
+            </div>
+
+            <div class="discussion-question">
+                <strong>问题2：</strong>The article mentions that the new solar cells are "thin, lightweight, and flexible." How might these characteristics expand the potential applications of solar technology compared to traditional rigid panels?
+            </div>
+
+            <div class="discussion-question">
+                <strong>问题3：</strong>What role do you think international cooperation and competition play in advancing renewable energy technology? Discuss with examples from the article or your own knowledge.
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>高考英语时文阅读材料 | 2026年08月01日 | 科技类</p>
+            <p>素材来源：CCTV News, Nature Journal</p>
+        </div>
+    </div>
+</body>
+</html>
