@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World's First Zero-Carbon Airport Opens in Ordos | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102,126,234,0.4);
+        }
+        .header {
+            padding: 40px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            color: #b8c5d6;
+        }
+        .header .category {
+            display: inline-block;
+            background: #e94560;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 15px;
+        }
+        .summary {
+            margin: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0fe 100%);
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 30px 40px;
+            font-size: 1.05em;
+        }
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .section {
+            margin: 40px 30px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+        }
+        .section h2 {
+            color: #1a1a2e;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .vocab-table tr:hover {
+            background: #f8f9ff;
+        }
+        .vocab-table .word {
+            font-weight: 600;
+            color: #667eea;
+        }
+        .vocab-table .phonetic {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .sentences {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .sentences li {
+            margin: 12px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .sentences li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+        .sentence-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            border: 2px solid #e94560;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .sentence-box h4 {
+            color: #e94560;
+            margin-bottom: 12px;
+        }
+        .sentence-box .original {
+            font-style: italic;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+        }
+        .sentence-box .analysis {
+            color: #666;
+            font-size: 0.95em;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .writing-table th {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 12px;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .questions {
+            background: linear-gradient(135deg, #e8fff0 0%, #d4ffdf 100%);
+            padding: 25px;
+            border-radius: 12px;
+        }
+        .questions li {
+            margin: 15px 0;
+            font-weight: 500;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #1a1a2e;
+            color: #b8c5d6;
+        }
+        .footer p {
+            margin: 8px 0;
+        }
+        .highlight {
+            background: #ffeb3b;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 0;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .section {
+                margin: 20px 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>World's First Zero-Carbon Airport Opens in Ordos, China</h1>
+            <div class="meta">
+                📅 July 27, 2026 | 📂 Science & Technology | ⏱️ Reading Time: 8 mins
+            </div>
+            <div class="category">新能源 / New Energy</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📝 文章摘要</h2>
+            <p>2026年7月25日，全球首个零碳机场技术成果在内蒙古鄂尔多斯伊金霍洛国际机场正式发布。该系统采用创新的"风-光-储-冷-热-电"零碳能源体系，基于二氧化碳冷热一体化技术，使机场清洁能源占比超过90%，实现整体净碳排放量≤0。这一技术突破不仅为民航业绿色发展树立了标杆，也为全球碳中和目标提供了创新解决方案。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <p>In a groundbreaking achievement for sustainable aviation, Ordos Yijinhuoluo International Airport in Inner Mongolia has become the world's first zero-carbon airport, with its technology results officially released on July 25, 2026. This milestone marks a significant step forward in China's pursuit of carbon neutrality goals and demonstrates how renewable energy innovation can transform traditional infrastructure.</p>
+
+            <p>The zero-carbon airport system, developed by researchers from Peking University Ordos Energy Research Institute, utilizes an innovative "wind-solar-storage-cooling-heating-electricity" integrated energy framework. Unlike conventional airports that rely heavily on fossil fuels, this system harnesses the region's abundant natural resources—approximately 2,800 hours of annual sunshine and strong wind reserves—to generate clean electricity while maintaining stable operations throughout the year.</p>
+
+            <p>What distinguishes this technology is its pioneering use of transcritical carbon dioxide thermodynamic cycles for power generation and heating. By replacing traditional fossil fuel systems with this advanced carbon dioxide-based technology, the airport has eliminated the need for natural gas and fluorocarbon-based refrigerants. According to the research team, the system achieves zero fossil fuel consumption, zero fluorocarbon emissions, and zero cooling water usage, representing a comprehensive approach to green energy supply.</p>
+
+            <p>The results have been impressive: over 90% of the airport's energy now comes from clean sources, with annual wind and solar power generation exceeding 21 million kilowatt-hours. Heating and cooling energy consumption has dropped by 60%, while operational costs have fallen by half. Each year, the system saves more than 2 million cubic meters of natural gas, significantly reducing both carbon emissions and operational expenses.</p>
+
+            <p>Beyond aviation, this zero-carbon technology has broader applications. The research team indicated that the system can be adapted for industrial parks, computing centers, and manufacturing facilities, offering a scalable solution for various sectors seeking to reduce their carbon footprint. As countries worldwide intensify their efforts against climate change, such innovations provide practical pathways toward sustainable development.</p>
+
+            <p>Certified by the China Quality Certification Center and China Communications and Transportation Association, the Ordos zero-carbon airport technology has been assessed as reaching international leading levels. Industry experts believe this achievement will serve as a model for airports worldwide and accelerate the global transition toward green aviation infrastructure, contributing meaningfully to international climate commitments.</p>
+
+            <p>As the aviation industry faces growing pressure to address its environmental impact, innovations like the Ordos zero-carbon airport demonstrate that sustainable solutions are not merely theoretical concepts but practical realities. With continued investment in research and development, such technologies promise to reshape how we think about transportation infrastructure in an era defined by climate consciousness.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="section">
+            <h2>📚 重点词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>英文单词/短语</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td class="word">carbon neutrality</td>
+                    <td class="phonetic">/ˈkɑːrbən nuːtræləti/</td>
+                    <td>n.</td>
+                    <td>碳中和</td>
+                </tr>
+                <tr>
+                    <td class="word">renewable energy</td>
+                    <td class="phonetic">/rɪˈnuːəbl ˈenərdʒi/</td>
+                    <td>n.</td>
+                    <td>可再生能源</td>
+                </tr>
+                <tr>
+                    <td class="word">sustainable</td>
+                    <td class="phonetic">/səˈsteɪnəbl/</td>
+                    <td>adj.</td>
+                    <td>可持续的</td>
+                </tr>
+                <tr>
+                    <td class="word">emission</td>
+                    <td class="phonetic">/ɪˈmɪʃn/</td>
+                    <td>n.</td>
+                    <td>排放；排放物</td>
+                </tr>
+                <tr>
+                    <td class="word">infrastructure</td>
+                    <td class="phonetic">/ˈɪnfrəstrʌktʃər/</td>
+                    <td>n.</td>
+                    <td>基础设施</td>
+                </tr>
+                <tr>
+                    <td class="word">integrated</td>
+                    <td class="phonetic">/ˈɪntɪɡreɪtɪd/</td>
+                    <td>adj.</td>
+                    <td>综合的；集成的</td>
+                </tr>
+                <tr>
+                    <td class="word">harness</td>
+                    <td class="phonetic">/ˈhɑːrnɪs/</td>
+                    <td>v.</td>
+                    <td>利用；驾驭</td>
+                </tr>
+                <tr>
+                    <td class="word">conventional</td>
+                    <td class="phonetic">/kənˈvenʃənl/</td>
+                    <td>adj.</td>
+                    <td>传统的；常规的</td>
+                </tr>
+                <tr>
+                    <td class="word">pioneering</td>
+                    <td class="phonetic">/ˌpaɪəˈnɪərɪŋ/</td>
+                    <td>adj.</td>
+                    <td>开创性的；先驱的</td>
+                </tr>
+                <tr>
+                    <td class="word">eliminate</td>
+                    <td class="phonetic">/ɪˈlɪmɪneɪt/</td>
+                    <td>v.</td>
+                    <td>消除；根除</td>
+                </tr>
+                <tr>
+                    <td class="word">consumption</td>
+                    <td class="phonetic">/kənˈsʌmpʃn/</td>
+                    <td>n.</td>
+                    <td>消耗；消费</td>
+                </tr>
+                <tr>
+                    <td class="word">operational</td>
+                    <td class="phonetic">/ˌɒpəˈreɪʃənl/</td>
+                    <td>adj.</td>
+                    <td>运营的；操作的</td>
+                </tr>
+                <tr>
+                    <td class="word">scalable</td>
+                    <td class="phonetic">/ˈskeɪləbl/</td>
+                    <td>adj.</td>
+                    <td>可扩展的；可缩放的</td>
+                </tr>
+                <tr>
+                    <td class="word">certify</td>
+                    <td class="phonetic">/ˈsɜːrtɪfaɪ/</td>
+                    <td>v.</td>
+                    <td>认证；证明</td>
+                </tr>
+                <tr>
+                    <td class="word">innovative</td>
+                    <td class="phonetic">/ˈɪnəveɪtɪv/</td>
+                    <td>adj.</td>
+                    <td>创新的；革新的</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="section">
+            <h2>💡 重点词汇例句</h2>
+            <ol class="sentences">
+                <li><strong>carbon neutrality</strong> - Many countries have committed to achieving <span class="highlight">carbon neutrality</span> by 2050 to combat climate change effectively.</li>
+                <li><strong>renewable energy</strong> - The government plans to increase <span class="highlight">renewable energy</span> production to 50% of total electricity generation within the next decade.</li>
+                <li><strong>sustainable</strong> - Developing <span class="highlight">sustainable</span> transportation systems is essential for reducing urban air pollution and improving public health.</li>
+                <li><strong>emission</strong> - The new policy aims to cut greenhouse gas <span class="highlight">emission</span> by 40% compared to 2005 levels, representing a significant environmental commitment.</li>
+                <li><strong>infrastructure</strong> - Investment in green <span class="highlight">infrastructure</span> can create jobs while addressing environmental challenges simultaneously.</li>
+                <li><strong>harness</strong> - Scientists continue to develop better methods to <span class="highlight">harness</span> solar energy more efficiently and cost-effectively.</li>
+                <li><strong>eliminate</strong> - The city plans to <span class="highlight">eliminate</span> all plastic bags in retail stores by the end of next year to reduce waste.</li>
+                <li><strong>innovative</strong> - The company received an award for its <span class="highlight">innovative</span> approach to recycling industrial waste into useful products.</li>
+            </ol>
+        </div>
+
+        <!-- 7. 长难句分析 -->
+        <div class="section">
+            <h2>🔬 长难句解析</h2>
+
+            <div class="sentence-box">
+                <h4>句子 1</h4>
+                <p class="original">"Unlike conventional airports that rely heavily on fossil fuels, this system harnesses the region's abundant natural resources—approximately 2,800 hours of annual sunshine and strong wind reserves—to generate clean electricity while maintaining stable operations throughout the year."</p>
+                <p class="analysis">
+                    <strong>结构分析：</strong><br>
+                    • 主句：this system harnesses...natural resources...to generate clean electricity<br>
+                    • 状语：Unlike conventional airports（介词短语作状语）<br>
+                    • 定语从句：that rely heavily on fossil fuels（修饰 airports）<br>
+                    • 破折号内容：approximately 2,800 hours...（解释说明 natural resources）<br>
+                    • 结果状语：to generate clean electricity<br>
+                    • 伴随状语：while maintaining stable operations<br><br>
+                    <strong>参考译文：</strong>与传统严重依赖化石燃料的机场不同，该系统利用该地区丰富的自然资源——每年约2800小时的日照和充沛的风力储备——来产生清洁电力，同时保持全年的稳定运营。
+                </p>
+            </div>
+
+            <div class="sentence-box">
+                <h4>句子 2</h4>
+                <p class="original">"By replacing traditional fossil fuel systems with this advanced carbon dioxide-based technology, the airport has eliminated the need for natural gas and fluorocarbon-based refrigerants."</p>
+                <p class="analysis">
+                    <strong>结构分析：</strong><br>
+                    • 方式状语：By replacing...with...（通过用...替代...）<br>
+                    • 主句：the airport has eliminated the need for...<br>
+                    • 宾语：the need for natural gas and fluorocarbon-based refrigerants<br><br>
+                    <strong>参考译文：</strong>通过用这种先进的二氧化碳基技术替代传统化石燃料系统，该机场消除了对天然气和氟利昂制冷剂的需求。
+                </p>
+            </div>
+
+            <div class="sentence-box">
+                <h4>句子 3</h4>
+                <p class="original">"As countries worldwide intensify their efforts against climate change, such innovations provide practical pathways toward sustainable development."</p>
+                <p class="analysis">
+                    <strong>结构分析：</strong><br>
+                    • 时间状语从句：As countries worldwide intensify their efforts...<br>
+                    • 主句：such innovations provide practical pathways...<br>
+                    • 介词短语：toward sustainable development（修饰 pathways）<br><br>
+                    <strong>参考译文：</strong>随着世界各国加大应对气候变化的力度，此类创新为可持续发展提供了切实可行的途径。
+                </p>
+            </div>
+
+            <div class="sentence-box">
+                <h4>句子 4</h4>
+                <p class="original">"Certified by the China Quality Certification Center and China Communications and Transportation Association, the Ordos zero-carbon airport technology has been assessed as reaching international leading levels."</p>
+                <p class="analysis">
+                    <strong>结构分析：</strong><br>
+                    • 过去分词短语作状语：Certified by...（被...认证）<br>
+                    • 主句：the Ordos zero-carbon airport technology has been assessed as...<br>
+                    • 宾补：reaching international leading levels<br><br>
+                    <strong>参考译文：</strong>经中国质量认证中心和中国交通运输协会认证，鄂尔多斯零碳机场技术被评估为达到国际领先水平。
+                </p>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="section">
+            <h2>✍️ 写作素材积累</h2>
+
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td><strong>表达成就</strong></td>
+                    <td>mark a significant step forward in...</td>
+                    <td>标志着在...方面迈出重要一步</td>
+                </tr>
+                <tr>
+                    <td><strong>表达成就</strong></td>
+                    <td>serve as a model for...</td>
+                    <td>为...树立榜样/典范</td>
+                </tr>
+                <tr>
+                    <td><strong>技术描述</strong></td>
+                    <td>integrated energy framework</td>
+                    <td>综合能源框架</td>
+                </tr>
+                <tr>
+                    <td><strong>技术描述</strong></td>
+                    <td>harness natural resources</td>
+                    <td>利用自然资源</td>
+                </tr>
+                <tr>
+                    <td><strong>环保表达</strong></td>
+                    <td>reduce carbon footprint</td>
+                    <td>减少碳足迹</td>
+                </tr>
+                <tr>
+                    <td><strong>环保表达</strong></td>
+                    <td>transition toward green infrastructure</td>
+                    <td>向绿色基础设施转型</td>
+                </tr>
+            </table>
+
+            <h3 style="margin-top: 30px; color: #1a1a2e;">🌟 高分句型</h3>
+            <ol class="sentences">
+                <li><strong>In a groundbreaking achievement for..., ...has become...</strong><br>
+                    例：In a groundbreaking achievement for sustainable aviation, the airport has become the world's first zero-carbon facility.</li>
+                <li><strong>What distinguishes...is...</strong><br>
+                    例：What distinguishes this technology is its pioneering use of carbon dioxide-based systems.</li>
+                <li><strong>The results have been impressive:...</strong><br>
+                    例：The results have been impressive: over 90% of energy now comes from clean sources.</li>
+            </ol>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="section">
+            <h2>🤔 思考与讨论</h2>
+            <ol class="questions">
+                <li>Why is the development of zero-carbon airports significant for addressing climate change? What challenges might other countries face when implementing similar technologies?</li>
+                <li>The article mentions that this technology can be adapted for industrial parks and computing centers. In your opinion, which other industries could benefit most from such zero-carbon energy systems, and why?</li>
+                <li>"Innovations like the Ordos zero-carbon airport demonstrate that sustainable solutions are practical realities." Discuss how individual actions and technological innovations can work together to achieve carbon neutrality goals.</li>
+            </ol>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读</p>
+            <p>助力高三学子备考英语 | Day 1</p>
+            <p>© 2026 Daily English Reading Materials</p>
+        </div>
+    </div>
+</body>
+</html>
