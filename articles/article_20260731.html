@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silicon-Based Quantum Chips: A Major Step Toward Practical Quantum Computing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        /* 2. 文章头部 */
+        .article-header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(79, 172, 254, 0.3);
+        }
+        .article-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        .article-meta span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+        }
+        /* 3. 摘要 */
+        .abstract {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #4facfe;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .abstract h2 {
+            color: #4facfe;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .abstract p {
+            color: #555;
+            line-height: 1.9;
+        }
+        /* 4. 正文 */
+        .content {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .content h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #00f2fe;
+            padding-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 18px;
+            text-align: justify;
+            line-height: 2;
+        }
+        .content .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .vocabulary h2 {
+            color: #4facfe;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f0faff;
+        }
+        .vocab-table .word {
+            font-weight: 600;
+            color: #4facfe;
+        }
+        .vocab-table .phonetic {
+            color: #888;
+            font-size: 13px;
+        }
+        /* 6. 例句 */
+        .examples {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .examples h2 {
+            color: #4facfe;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .example-item .en {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .example-item .cn {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 7. 长难句 */
+        .complex-sentences {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .complex-sentences h2 {
+            color: #4facfe;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .sentence-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .original {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .sentence-box .analysis {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .sentence-box .analysis strong {
+            color: #00f2fe;
+        }
+        /* 8. 写作素材 */
+        .writing-materials {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .writing-materials h2 {
+            color: #4facfe;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .writing-table tr:hover {
+            background: #f0fff5;
+        }
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .discussion h2 {
+            color: #4facfe;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .question-item {
+            background: linear-gradient(120deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer .tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .footer .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .article-header h1 {
+                font-size: 22px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <h1>Silicon-Based Quantum Chips: A Major Step Toward Practical Quantum Computing</h1>
+            <div class="article-meta">
+                <span>📅 July 31, 2026</span>
+                <span>📂 Science & Technology</span>
+                <span>📖 Difficulty: Intermediate-Advanced</span>
+                <span>⏱️ Reading Time: 10 min</span>
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>📝 文章摘要</h2>
+            <p>国际顶级学术期刊《自然》最新发表的两项独立研究表明，硅基量子计算芯片已能执行对实现量子计算至关重要的基本运算，标志着实用化量子计算机研发迈出重要一步。美国HRL实验室和荷兰代尔夫特理工大学的研究团队分别在不同技术路径上取得突破，为解决量子比特规模化集成与稳定控制难题提供了新思路。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>Full Article</h2>
+            
+            <p>Quantum computing has long promised to revolutionize fields ranging from drug discovery to financial modeling. However, building practical quantum computers that can outperform classical systems has proven extraordinarily difficult. Two groundbreaking studies published in Nature on July 29, 2026, now bring that dream significantly closer to reality.</p>
+
+            <p>Both research teams independently demonstrated that silicon-based quantum computing chips can execute fundamental operations essential for practical quantum computation. This achievement is particularly significant because silicon—the same material used in traditional computer chips—offers the potential for mass production and integration with existing semiconductor manufacturing processes.</p>
+
+            <p>The first study, conducted by researchers at HRL Laboratories in the United States, addressed one of the most persistent challenges in quantum computing: heat management. Quantum bits, or qubits, are extremely sensitive to temperature changes. Traditional silicon-based quantum processors require numerous external wires connecting to control circuits, and these connections generate heat that can destroy the fragile quantum information stored in qubits.</p>
+
+            <div class="highlight">
+                "By integrating control electronics directly within the silicon-based quantum processor, we reduced heat transfer to sensitive qubits, enabling repeated error correction during computation."
+            </div>
+
+            <p>The HRL team's innovation was to place the electronic control systems inside the same ultra-cold environment as the quantum processor itself. Their prototype, fabricated by commercial semiconductor manufacturers, successfully operated with up to 18 qubits. Remarkably, they observed quantum error correction protocols functioning across up to seven qubits simultaneously—a crucial capability for building reliable quantum computers.</p>
+
+            <p>The second study, led by researchers at Delft University of Technology in the Netherlands, explored a different approach to another fundamental challenge: communication between distant qubits. Their design employs a mobile qubit that travels between four stationary qubits, functioning like a "bus" in classical computing architecture.</p>
+
+            <p>This "quantum bus" approach addresses a critical limitation in current quantum processors. As quantum chips grow larger, connecting distant qubits becomes increasingly difficult. The Dutch team's solution allows qubits separated by significant distances to interact and perform joint operations, essential for large-scale quantum computation.</p>
+
+            <p>The significance of using silicon as the base material cannot be overstated. Unlike alternative quantum computing platforms that require exotic materials or completely new manufacturing infrastructure, silicon-based quantum processors can potentially be produced using existing semiconductor fabrication facilities. This could dramatically accelerate the path from laboratory prototypes to mass-produced quantum chips.</p>
+
+            <p>However, substantial challenges remain. Current silicon-based quantum processors still contain relatively few qubits compared to other technologies. Google's Willow processor, for instance, operates with 105 qubits using superconducting technology. IBM's latest Nighthawk processor features 120 qubits. Both companies are pursuing aggressive roadmaps to reach thousands of qubits within the next few years.</p>
+
+            <p>The competition extends beyond Western companies. China has made quantum technology a strategic priority, establishing a technical committee on quantum information standardization under the Ministry of Industry and Information Technology on July 31, 2026. This body will develop industry standards across quantum computing, communication, and precision measurement, strengthening China's position in this critical emerging field.</p>
+
+            <p>Chinese researchers have also reported significant achievements. In May 2026, scientists developed "Jiuzhang 4.0," a programmable quantum computing prototype that set a world record in optical quantum information technology. At the World Artificial Intelligence Conference earlier in July, a Chinese team unveiled the ShanghaiCube Pro, a hybrid quantum-classical computing system featuring 2,048 stable physical quantum bits.</p>
+
+            <p>Industry experts note that silicon-based quantum computing complements rather than replaces other approaches. Each technology platform—superconducting, trapped ion, photonic, and silicon-based—has distinct advantages for different applications. Silicon's particular strength lies in its compatibility with classical computing infrastructure, making it attractive for near-term hybrid systems.</p>
+
+            <p>The Nature publications prompted enthusiastic responses from the scientific community. A companion "News and Views" article noted that while whether silicon-based quantum processors can replicate traditional semiconductor chips' dramatic rise remains uncertain, these studies highlight that building practical quantum computers is as much an engineering challenge as a physics problem.</p>
+
+            <p>For students preparing for exams, understanding quantum computing basics offers valuable context for technology-related reading passages. Key concepts include superposition (qubits existing in multiple states simultaneously), entanglement (correlated quantum states across separated particles), and quantum error correction (detecting and correcting errors without destroying quantum information).</p>
+
+            <p>As research progresses across multiple technology platforms worldwide, the quantum computing revolution appears increasingly inevitable. The silicon-based breakthroughs announced this week may well mark the moment when quantum computing began its transition from laboratory curiosity to practical technology.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>📚 Key Vocabulary</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>Word/Phrase</th>
+                    <th>Phonetic</th>
+                    <th>Chinese</th>
+                </tr>
+                <tr>
+                    <td class="word">quantum</td>
+                    <td class="phonetic">/ˈkwɒntəm/</td>
+                    <td>n. 量子 adj. 量子的</td>
+                </tr>
+                <tr>
+                    <td class="word">silicon-based</td>
+                    <td class="phonetic">/ˈsɪlɪkən beɪst/</td>
+                    <td>adj. 硅基的</td>
+                </tr>
+                <tr>
+                    <td class="word">qubit</td>
+                    <td class="phonetic">/ˈkjuːbɪt/</td>
+                    <td>n. 量子比特</td>
+                </tr>
+                <tr>
+                    <td class="word">semiconductor</td>
+                    <td class="phonetic">/ˌsemɪkənˈdʌktə/</td>
+                    <td>n. 半导体</td>
+                </tr>
+                <tr>
+                    <td class="word">fabrication</td>
+                    <td class="phonetic">/ˌfæbrɪˈkeɪʃn/</td>
+                    <td>n. 制造；生产</td>
+                </tr>
+                <tr>
+                    <td class="word">integrate</td>
+                    <td class="phonetic">/ˈɪntɪɡreɪt/</td>
+                    <td>v. 集成；整合</td>
+                </tr>
+                <tr>
+                    <td class="word">prototype</td>
+                    <td class="phonetic">/ˈprəʊtətaɪp/</td>
+                    <td>n. 原型；样机</td>
+                </tr>
+                <tr>
+                    <td class="word">error correction</td>
+                    <td class="phonetic">/ˈerə kəˈrekʃn/</td>
+                    <td>n. 纠错；错误校正</td>
+                </tr>
+                <tr>
+                    <td class="word">infrastructure</td>
+                    <td class="phonetic">/ˈɪnfrəstrʌktʃə/</td>
+                    <td>n. 基础设施</td>
+                </tr>
+                <tr>
+                    <td class="word">superposition</td>
+                    <td class="phonetic">/ˌsuːpəpəˈzɪʃn/</td>
+                    <td>n. 叠加；叠加态</td>
+                </tr>
+                <tr>
+                    <td class="word">entanglement</td>
+                    <td class="phonetic">/ɪnˈtæŋɡlmənt/</td>
+                    <td>n. 纠缠；量子纠缠</td>
+                </tr>
+                <tr>
+                    <td class="word">revolutionize</td>
+                    <td class="phonetic">/ˌrevəˈluːʃənaɪz/</td>
+                    <td>v. 彻底改变；革命化</td>
+                </tr>
+                <tr>
+                    <td class="word">complementary</td>
+                    <td class="phonetic">/ˌkɒmplɪˈmentri/</td>
+                    <td>adj. 互补的；补充的</td>
+                </tr>
+                <tr>
+                    <td class="word">strategic</td>
+                    <td class="phonetic">/strəˈtiːdʒɪk/</td>
+                    <td>adj. 战略的；关键的</td>
+                </tr>
+                <tr>
+                    <td class="word">inevitable</td>
+                    <td class="phonetic">/ɪnˈevɪtəbl/</td>
+                    <td>adj. 不可避免的；必然的</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>💡 Example Sentences</h2>
+            
+            <div class="example-item">
+                <div class="en">1. <strong>Quantum</strong> computing has the potential to solve problems that classical computers cannot handle.</div>
+                <div class="cn">量子计算有潜力解决经典计算机无法处理的问题。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">2. The researchers developed a <strong>silicon-based</strong> processor that can operate at extremely low temperatures.</div>
+                <div class="cn">研究人员开发出一种能在极低温度下运行的硅基处理器。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">3. Each <strong>qubit</strong> in a quantum computer can represent both 0 and 1 simultaneously.</div>
+                <div class="cn">量子计算机中的每个量子比特可以同时表示0和1。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">4. The company invested heavily in <strong>semiconductor</strong> manufacturing facilities to meet growing demand.</div>
+                <div class="cn">公司大量投资半导体制造设施以满足日益增长的需求。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">5. Scientists are working to <strong>integrate</strong> quantum processors with classical computing systems.</div>
+                <div class="cn">科学家们正在努力将量子处理器与经典计算系统集成在一起。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">6. <strong>Error correction</strong> is essential for maintaining the reliability of quantum computations.</div>
+                <div class="cn">纠错对于保持量子计算的可靠性至关重要。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">7. The discovery could <strong>revolutionize</strong> the way we process information in the future.</div>
+                <div class="cn">这一发现可能彻底改变我们未来处理信息的方式。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">8. The transition from laboratory research to practical application appears increasingly <strong>inevitable</strong>.</div>
+                <div class="cn">从实验室研究到实际应用的转变似乎越来越不可避免。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h2>🔍 Complex Sentence Analysis</h2>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    1. "Both research teams independently demonstrated that silicon-based quantum computing chips can execute fundamental operations essential for practical quantum computation."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：Both research teams<br>
+                    • 谓语：demonstrated<br>
+                    • 宾语从句：that silicon-based quantum computing chips can execute fundamental operations<br>
+                    • 后置定语：essential for practical quantum computation (修饰operations)<br>
+                    <strong>难点：</strong>宾语从句中包含形容词短语作后置定语，造成理解障碍。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    2. "The HRL team's innovation was to place the electronic control systems inside the same ultra-cold environment as the quantum processor itself."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：The HRL team's innovation<br>
+                    • 系动词：was<br>
+                    • 表语：to place... (不定式短语作表语)<br>
+                    • 地点状语：inside the same ultra-cold environment as the quantum processor itself<br>
+                    <strong>难点：</strong>不定式作表语，以及"the same...as"比较结构的理解。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    3. "Unlike alternative quantum computing platforms that require exotic materials or completely new manufacturing infrastructure, silicon-based quantum processors can potentially be produced using existing semiconductor fabrication facilities."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 介词短语：Unlike alternative quantum computing platforms... (作状语)<br>
+                    • 定语从句：that require exotic materials or... (修饰platforms)<br>
+                    • 主句主语：silicon-based quantum processors<br>
+                    • 谓语：can potentially be produced<br>
+                    • 方式状语：using existing semiconductor fabrication facilities<br>
+                    <strong>难点：</strong>句首长介词短语内嵌定语从句，造成主句延迟出现。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    4. "A companion 'News and Views' article noted that while whether silicon-based quantum processors can replicate traditional semiconductor chips' dramatic rise remains uncertain, these studies highlight that building practical quantum computers is as much an engineering challenge as a physics problem."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：A companion article noted that...<br>
+                    • 第一层宾语从句：that while..., these studies highlight that...<br>
+                    • while引导的让步状语从句：whether... remains uncertain<br>
+                    • whether引导的主语从句：whether silicon-based quantum processors can replicate...<br>
+                    • highlight后的宾语从句：that building... is as much...as...<br>
+                    <strong>难点：</strong>多层从句嵌套，including while让步状语从句中的whether主语从句。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h2>✍️ Writing Materials</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Useful Expressions</th>
+                </tr>
+                <tr>
+                    <td><strong>表示技术突破</strong></td>
+                    <td>achieve a significant breakthrough / make groundbreaking progress / mark a major milestone / bring... closer to reality</td>
+                </tr>
+                <tr>
+                    <td><strong>表示因果关系</strong></td>
+                    <td>enable... to... / allow... to... / result in / lead to / contribute to / pave the way for</td>
+                </tr>
+                <tr>
+                    <td><strong>表示对比关系</strong></td>
+                    <td>unlike... / compared to... / in contrast to... / rather than... / as much... as...</td>
+                </tr>
+                <tr>
+                    <td><strong>表示重要性</strong></td>
+                    <td>play a crucial role / be essential for / be particularly significant / cannot be overstated</td>
+                </tr>
+                <tr>
+                    <td><strong>表示发展趋势</strong></td>
+                    <td>accelerate the path to... / transition from... to... / appear increasingly inevitable / make... a strategic priority</td>
+                </tr>
+                <tr>
+                    <td><strong>表示研究方法</strong></td>
+                    <td>conduct a study / demonstrate that... / address a challenge / employ an approach / explore a solution</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>❓ Discussion Questions</h2>
+            
+            <div class="question-item">
+                <strong>Question 1:</strong> According to the article, why is using silicon as the base material for quantum processors particularly significant? What advantages does this choice offer compared to other materials?
+            </div>
+            
+            <div class="question-item">
+                <strong>Question 2:</strong> The article mentions that "building practical quantum computers is as much an engineering challenge as a physics problem." What does this statement mean? Can you identify examples from the text that illustrate engineering challenges versus physics challenges?
+            </div>
+            
+            <div class="question-item">
+                <strong>Question 3:</strong> Many countries and companies are investing heavily in quantum computing. Why do you think this technology is considered strategically important? How might quantum computing affect your daily life in the future?
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p><strong>Daily English Reading for Gaokao</strong></p>
+            <p>Helping students prepare for the English reading comprehension section</p>
+            <p style="font-size: 13px; margin-top: 10px;">Source: Nature, CGTN, China News Service | Compiled for educational purposes</p>
+            <div class="tags">
+                <span class="tag">#Quantum Computing</span>
+                <span class="tag">#Technology</span>
+                <span class="tag">#Innovation</span>
+                <span class="tag">#Silicon Chip</span>
+                <span class="tag">#Science</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
