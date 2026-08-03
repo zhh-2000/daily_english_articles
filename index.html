@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日高考英语时文阅读 | Daily English Reading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .stat-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .article-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 25px;
+            color: white;
+            position: relative;
+        }
+        .card-header.tech {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-header.life {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .card-header.culture {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .new-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .card-date {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        .card-title {
+            font-size: 1.25em;
+            line-height: 1.4;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-category {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-radius: 10px;
+            font-size: 0.85em;
+            margin-bottom: 12px;
+        }
+        .card-summary {
+            color: #666;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+        .card-footer {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-meta {
+            font-size: 0.85em;
+            color: #888;
+        }
+        .read-more {
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            opacity: 0.9;
+        }
+        .footer a {
+            color: white;
+        }
+        .intro-section {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .intro-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .intro-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .intro-section li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .intro-section li:last-child {
+            border-bottom: none;
+        }
+        .intro-section .icon {
+            font-size: 1.3em;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats {
+                gap: 15px;
+            }
+            .stat-item {
+                padding: 15px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>📚 每日高考英语时文阅读</h1>
+            <p>Daily English Reading for Gaokao Preparation</p>
+            <p>精选国际时文，助力高考英语阅读理解与写作</p>
+
+            <!-- 统计数据 -->
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">累计文章</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">核心词汇</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">坚持天数</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目介绍 -->
+        <div class="intro-section">
+            <h2>🎯 项目特色</h2>
+            <ul>
+                <li><span class="icon">📰</span> <strong>时效性强</strong>：精选近3天国际权威媒体报道，紧贴时事热点</li>
+                <li><span class="icon">📝</span> <strong>结构完整</strong>：每篇文章包含摘要、词汇、例句、长难句、写作素材、讨论问题</li>
+                <li><span class="icon">📖</span> <strong>难度适中</strong>：词汇量800-1000词，难度适合高三学生备考</li>
+                <li><span class="icon">💡</span> <strong>写作导向</strong>：提供地道表达和写作素材，助力高考英语作文</li>
+                <li><span class="icon">🔄</span> <strong>每日更新</strong>：坚持每日更新，养成良好阅读习惯</li>
+            </ul>
+        </div>
+
+        <!-- 文章列表 -->
+        <div class="articles-grid">
+            <!-- 今日最新文章 -->
+            <a href="articles/article_20260803.html" class="article-card">
+                <div class="card-header">
+                    <span class="new-badge">今日最新</span>
+                    <div class="card-date">📅 August 3, 2026</div>
+                    <h3 class="card-title">Renewable Energy Milestone: Wind and Solar Surpass Gas Globally</h3>
+                </div>
+                <div class="card-body">
+                    <span class="card-category">📂 Green Technology</span>
+                    <p class="card-summary">2026年4月，风电和光伏发电量首次超越天然气，标志着清洁能源转型的重要里程碑。国际能源署预测可再生能源将在2026年超越煤炭...</p>
+                </div>
+                <div class="card-footer">
+                    <span class="card-meta">⏱️ 8 min read | 📊 Intermediate</span>
+                    <span class="read-more">阅读全文 →</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>© 2026 每日高考英语时文阅读 | Designed for High School Students</p>
+            <p>📚 每天进步一点点，英语阅读不再难</p>
+        </div>
+    </div>
+</body>
+</html>
