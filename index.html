@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日高考英语时文阅读 - 助力高考英语学习</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* 头部 */
+        .header {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* 统计信息 */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 25px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item .number {
+            font-size: 42px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-item .label {
+            font-size: 14px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* 文章列表 */
+        .articles-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #fff;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .article-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .article-card.today {
+            border: 3px solid #764ba2;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #fff;
+        }
+
+        .card-header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .card-header .tag.latest {
+            background: #ff6b6b;
+            font-weight: 600;
+        }
+
+        .card-header h3 {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .card-header .date {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .card-body {
+            padding: 15px 20px;
+        }
+
+        .card-body .category {
+            display: inline-block;
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .card-body .description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .card-footer {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-footer .vocab-count {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .card-footer .read-more {
+            color: #764ba2;
+            font-size: 14px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .footer p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>📚 每日高考英语时文阅读</h1>
+            <p>精选国际权威媒体最新文章，助力高三学生提升英语阅读能力</p>
+            <p>涵盖科技、环境、文化、社会等高考高频话题，每日更新</p>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="number">1</div>
+                    <div class="label">文章总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">15</div>
+                    <div class="label">核心词汇</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">1</div>
+                    <div class="label">持续天数</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 文章列表 -->
+        <div class="articles-section">
+            <h2 class="section-title">最新文章</h2>
+            <div class="articles-grid">
+                <!-- 今日文章 -->
+                <a href="articles/article_20260804.html" class="article-card today">
+                    <div class="card-header">
+                        <span class="tag latest">今日最新</span>
+                        <span class="tag">科技前沿</span>
+                        <h3>Quantum Computing Achieves Major Milestone: IBM Demonstrates "Quantum Advantage"</h3>
+                        <div class="date">2026年8月4日</div>
+                    </div>
+                    <div class="card-body">
+                        <span class="category">科技类</span>
+                        <p class="description">IBM联合多家机构在量子计算领域取得重大突破，首次实现"量子优势"并建立可信验证框架。中国也推出了新一代光子量子计算机。</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="vocab-count">15个核心词汇</span>
+                        <span class="read-more">阅读全文 →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>📖 每日高考英语时文阅读 | 每日更新 助力高考</p>
+            <p>文章来源：BBC, CNN, Reuters, China Daily, MIT Technology Review 等国际权威媒体</p>
+            <p>© 2026 高考英语时文阅读项目组 | <a href="https://github.com/zhh-2000">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
