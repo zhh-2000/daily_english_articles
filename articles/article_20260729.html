@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China's Zero-Carbon Factory Initiative: A Milestone in Green Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        /* 文章头部 */
+        .article-header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(17, 153, 142, 0.3);
+        }
+        .article-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        .article-meta span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+        }
+        /* 摘要 */
+        .abstract {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-left: 5px solid #11998e;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .abstract h2 {
+            color: #11998e;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .abstract p {
+            color: #555;
+            line-height: 1.9;
+        }
+        /* 正文 */
+        .content {
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .content h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #38ef7d;
+            padding-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 18px;
+            text-align: justify;
+            line-height: 2;
+        }
+        .content .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        /* 词汇表 */
+        .vocabulary {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .vocabulary h2 {
+            color: #11998e;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f8fffe;
+        }
+        .vocab-table .word {
+            font-weight: 600;
+            color: #11998e;
+        }
+        .vocab-table .phonetic {
+            color: #888;
+            font-size: 13px;
+        }
+        /* 例句 */
+        .examples {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .examples h2 {
+            color: #11998e;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .example-item .en {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .example-item .cn {
+            color: #666;
+            font-size: 14px;
+        }
+        /* 长难句 */
+        .complex-sentences {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .complex-sentences h2 {
+            color: #11998e;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .sentence-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .original {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .sentence-box .analysis {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .sentence-box .analysis strong {
+            color: #ffd700;
+        }
+        /* 写作素材 */
+        .writing-materials {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .writing-materials h2 {
+            color: #11998e;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-table th {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .writing-table tr:hover {
+            background: #fff5f7;
+        }
+        /* 讨论问题 */
+        .discussion {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .discussion h2 {
+            color: #11998e;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+        .question-item {
+            background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        /* 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+        }
+        .footer .tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .footer .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .article-header h1 {
+                font-size: 22px;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <h1>China's Zero-Carbon Factory Initiative: A Milestone in Green Transition</h1>
+            <div class="article-meta">
+                <span>📅 July 29, 2026</span>
+                <span>📂 Environment & Climate</span>
+                <span>📖 Difficulty: Intermediate</span>
+                <span>⏱️ Reading Time: 8 min</span>
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>📝 文章摘要</h2>
+            <p>本文介绍中国启动国家级零碳工厂建设计划的重要举措。工信部发布的政策旨在通过技术创新、结构调整和管理优化，将工厂碳排放降至接近零水平。文章详细阐述了零碳工厂的评选标准、核心要求以及中国在实现"双碳"目标（2030年前碳达峰、2060年前碳中和）道路上的坚定决心与实际行动。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>Full Article</h2>
+            
+            <p>On July 22, 2026, China took a significant step forward in its environmental journey by initiating a nationwide program to build national-level zero-carbon factories. This initiative represents a concrete action in the country's ongoing pursuit of green manufacturing, directly supporting its ambitious carbon peaking and carbon neutrality goals.</p>
+
+            <p>According to a circular issued by the Ministry of Industry and Information Technology (MIIT), the program will comprehensively support the development of zero-carbon factories, including advanced computing facilities. The primary objective is to steadily reduce carbon dioxide emissions within factory boundaries to near-zero levels through three key approaches: technological innovation, structural adjustment, and management optimization.</p>
+
+            <div class="highlight">
+                "This initiative emphasizes continuous carbon reduction efforts and practical results, rather than offering a one-time certification."
+            </div>
+
+            <p>Manufacturing enterprises and computing facilities that meet specific criteria will be selected for this prestigious program. The requirements include having a solid foundation for low-carbon development, clear objectives with a detailed roadmap, and a firm commitment to achieving construction targets within a specified timeframe. This selection process ensures that only the most dedicated and capable facilities participate in this transformative journey.</p>
+
+            <p>To guide the green transition effectively, the ministry has introduced a comprehensive trial evaluation system. This system outlines core requirements and guiding indicators designed to encourage participating entities to systematically upgrade their operations. The upgrades encompass multiple dimensions: technological innovation, process decarbonization, smart carbon management, strategic carbon offsetting, and transparent information disclosure.</p>
+
+            <p>What distinguishes this initiative from conventional environmental programs is its emphasis on sustained effort and measurable outcomes. The MIIT has made it clear that this is not merely a symbolic gesture or a one-time certification process. Instead, the ministry will conduct random inspections and organize acceptance evaluations to verify actual progress. Only facilities that successfully pass these rigorous assessments will be officially recognized as national-level zero-carbon factories.</p>
+
+            <p>This program aligns perfectly with China's broader "dual carbon" goals. The country has committed to peaking carbon dioxide emissions before 2030 and achieving carbon neutrality before 2060. These ambitious targets demonstrate China's determination to address climate change and contribute to global environmental sustainability.</p>
+
+            <p>The zero-carbon factory initiative represents more than just an industrial policy; it symbolizes a fundamental shift in how China approaches manufacturing and economic development. By integrating environmental considerations into the core of industrial operations, China is paving the way for a new era of sustainable economic growth that other nations may soon emulate.</p>
+
+            <p>Environmental experts worldwide have praised this initiative as a model for other developing nations. The combination of clear policy guidance, practical implementation steps, and rigorous verification processes creates a comprehensive framework that can be adapted and adopted globally.</p>
+
+            <p>As climate change continues to pose unprecedented challenges to humanity, initiatives like China's zero-carbon factory program offer hope and practical solutions. They demonstrate that economic development and environmental protection are not mutually exclusive goals but can be pursued simultaneously through innovative policies and determined implementation.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>📚 Key Vocabulary</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>Word/Phrase</th>
+                    <th>Phonetic</th>
+                    <th>Chinese</th>
+                </tr>
+                <tr>
+                    <td class="word">initiative</td>
+                    <td class="phonetic">/ɪˈnɪʃətɪv/</td>
+                    <td>n. 倡议；新方案</td>
+                </tr>
+                <tr>
+                    <td class="word">carbon neutrality</td>
+                    <td class="phonetic">/ˈkɑːrbən ˌnuːtræləti/</td>
+                    <td>n. 碳中和</td>
+                </tr>
+                <tr>
+                    <td class="word">concrete</td>
+                    <td class="phonetic">/ˈkɒŋkriːt/</td>
+                    <td>adj. 具体的；实在的</td>
+                </tr>
+                <tr>
+                    <td class="word">comprehensive</td>
+                    <td class="phonetic">/ˌkɒmprɪˈhensɪv/</td>
+                    <td>adj. 全面的；综合的</td>
+                </tr>
+                <tr>
+                    <td class="word">objective</td>
+                    <td class="phonetic">/əbˈdʒektɪv/</td>
+                    <td>n. 目标；目的</td>
+                </tr>
+                <tr>
+                    <td class="word">decarbonization</td>
+                    <td class="phonetic">/ˌdiːkɑːrbənaɪˈzeɪʃn/</td>
+                    <td>n. 脱碳；去碳化</td>
+                </tr>
+                <tr>
+                    <td class="word">verification</td>
+                    <td class="phonetic">/ˌverɪfɪˈkeɪʃn/</td>
+                    <td>n. 核实；验证</td>
+                </tr>
+                <tr>
+                    <td class="word">rigorous</td>
+                    <td class="phonetic">/ˈrɪɡərəs/</td>
+                    <td>adj. 严格的；严谨的</td>
+                </tr>
+                <tr>
+                    <td class="word">prestigious</td>
+                    <td class="phonetic">/preˈstɪdʒəs/</td>
+                    <td>adj. 有声望的；享有盛誉的</td>
+                </tr>
+                <tr>
+                    <td class="word">sustainability</td>
+                    <td class="phonetic">/səˌsteɪnəˈbɪləti/</td>
+                    <td>n. 可持续性</td>
+                </tr>
+                <tr>
+                    <td class="word">integrate</td>
+                    <td class="phonetic">/ˈɪntɪɡreɪt/</td>
+                    <td>v. 整合；融入</td>
+                </tr>
+                <tr>
+                    <td class="word">emulate</td>
+                    <td class="phonetic">/ˈemjʊleɪt/</td>
+                    <td>v. 效仿；模仿</td>
+                </tr>
+                <tr>
+                    <td class="word">mutually exclusive</td>
+                    <td class="phonetic">/ˈmuːtʃuəli ɪkˈskluːsɪv/</td>
+                    <td>adj. 互斥的；相互排斥的</td>
+                </tr>
+                <tr>
+                    <td class="word">simultaneously</td>
+                    <td class="phonetic">/ˌsɪmlˈteɪniəsli/</td>
+                    <td>adv. 同时地</td>
+                </tr>
+                <tr>
+                    <td class="word">unprecedented</td>
+                    <td class="phonetic">/ʌnˈpresɪdentɪd/</td>
+                    <td>adj. 前所未有的</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>💡 Example Sentences</h2>
+            
+            <div class="example-item">
+                <div class="en">1. The government launched a new <strong>initiative</strong> to promote renewable energy in rural areas.</div>
+                <div class="cn">政府推出了一项新倡议，在农村地区推广可再生能源。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">2. Achieving <strong>carbon neutrality</strong> requires coordinated efforts from all sectors of society.</div>
+                <div class="cn">实现碳中和需要社会各界的协调努力。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">3. The company has developed a <strong>comprehensive</strong> strategy to reduce its environmental impact.</div>
+                <div class="cn">公司制定了一项全面的战略来减少其环境影响。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">4. <strong>Decarbonization</strong> of the energy sector is crucial for addressing climate change.</div>
+                <div class="cn">能源部门的脱碳对于应对气候变化至关重要。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">5. The new policy underwent <strong>rigorous</strong> evaluation before being implemented nationwide.</div>
+                <div class="cn">新政策在全国实施前经过了严格评估。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">6. <strong>Sustainability</strong> has become a core principle in modern urban planning.</div>
+                <div class="cn">可持续性已成为现代城市规划的核心原则。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">7. Economic growth and environmental protection are not <strong>mutually exclusive</strong> goals.</div>
+                <div class="cn">经济增长和环境保护并非相互排斥的目标。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="en">8. The country is facing <strong>unprecedented</strong> challenges in its transition to green energy.</div>
+                <div class="cn">该国在向绿色能源转型过程中面临前所未有的挑战。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h2>🔍 Complex Sentence Analysis</h2>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    1. "Manufacturing enterprises and computing facilities with a solid foundation for low-carbon development, clear objectives and roadmap, and a commitment to achieving construction targets within a specified timeframe will be selected for the list."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：Manufacturing enterprises and computing facilities<br>
+                    • 后置修饰：with a solid foundation... (介词短语作定语)<br>
+                    • 谓语：will be selected (被动语态)<br>
+                    <strong>难点：</strong>主语后有三个并列的介词短语修饰，句子主语与谓语距离较远。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    2. "To guide the green transition, the ministry has introduced a trial evaluation system, outlining core requirements and guiding indicators to encourage participating entities to systematically upgrade their operations via technological innovation, process decarbonization, smart carbon management, carbon offsetting and transparent information disclosure."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 目的状语：To guide the green transition<br>
+                    • 主句：the ministry has introduced a trial evaluation system<br>
+                    • 现在分词短语：outlining... (作伴随状语)<br>
+                    • 不定式短语：to encourage... (作目的状语)<br>
+                    <strong>难点：</strong>多层嵌套的状语结构，包含多个并列的介词短语。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    3. "By integrating environmental considerations into the core of industrial operations, China is paving the way for a new era of sustainable economic growth that other nations may soon emulate."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 方式状语：By integrating... (介词短语)<br>
+                    • 主句：China is paving the way for...<br>
+                    • 定语从句：that other nations may soon emulate (修饰 growth)<br>
+                    <strong>难点：</strong>介词短语中包含动名词短语，定语从句修饰名词短语中的核心词。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    4. "They demonstrate that economic development and environmental protection are not mutually exclusive goals but can be pursued simultaneously through innovative policies and determined implementation."
+                </div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：They demonstrate that...<br>
+                    • 宾语从句：economic development and environmental protection are not...<br>
+                    • 并列结构：not...but... (不是...而是...)<br>
+                    <strong>难点：</strong>宾语从句中的并列结构，以及被动语态的并列使用。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h2>✍️ Writing Materials</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Useful Expressions</th>
+                </tr>
+                <tr>
+                    <td><strong>表示政策实施</strong></td>
+                    <td>launch an initiative / implement a policy / introduce a program / initiate a nationwide campaign</td>
+                </tr>
+                <tr>
+                    <td><strong>表示目标实现</strong></td>
+                    <td>achieve carbon neutrality / reach the target / realize the goal / accomplish the objective</td>
+                </tr>
+                <tr>
+                    <td><strong>表示努力程度</strong></td>
+                    <td>make determined efforts / take concrete actions / demonstrate commitment / show dedication</td>
+                </tr>
+                <tr>
+                    <td><strong>表示环境保护</strong></td>
+                    <td>pursue green manufacturing / promote sustainability / reduce emissions / protect the environment</td>
+                </tr>
+                <tr>
+                    <td><strong>表示创新变革</strong></td>
+                    <td>pave the way for / lead to transformation / drive innovation / bring about change</td>
+                </tr>
+                <tr>
+                    <td><strong>表示国际合作</strong></td>
+                    <td>serve as a model / offer practical solutions / be emulated globally / contribute to worldwide efforts</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>❓ Discussion Questions</h2>
+            
+            <div class="question-item">
+                <strong>Question 1:</strong> What are the key differences between China's zero-carbon factory program and traditional environmental protection policies? Why is continuous verification important for such initiatives?
+            </div>
+            
+            <div class="question-item">
+                <strong>Question 2:</strong> The article mentions that "economic development and environmental protection are not mutually exclusive goals." Do you agree with this statement? Provide examples to support your view.
+            </div>
+            
+            <div class="question-item">
+                <strong>Question 3:</strong> If you were a factory manager, what specific measures would you take to transform your facility into a zero-carbon factory? Consider technological, managerial, and operational aspects.
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p><strong>Daily English Reading for Gaokao</strong></p>
+            <p>Helping students prepare for the English reading comprehension section</p>
+            <p style="font-size: 13px; margin-top: 10px;">Source: Xinhua News Agency | Compiled for educational purposes</p>
+            <div class="tags">
+                <span class="tag">#Environment</span>
+                <span class="tag">#Climate Change</span>
+                <span class="tag">#Carbon Neutrality</span>
+                <span class="tag">#Green Technology</span>
+                <span class="tag">#Sustainability</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

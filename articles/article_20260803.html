@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Milestone: Wind and Solar Surpass Gas Globally | 2026-08-03</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f7fa;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        .article-header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(17, 153, 142, 0.3);
+        }
+        .article-header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+        .article-meta span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #38ef7d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #38ef7d;
+            border-radius: 50%;
+        }
+        .summary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 1.05em;
+            line-height: 1.9;
+        }
+        .article-content {
+            font-size: 1.05em;
+            line-height: 2;
+            text-align: justify;
+        }
+        .article-content p {
+            margin-bottom: 18px;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f8f9ff;
+        }
+        .vocab-table .word {
+            font-weight: 600;
+            color: #667eea;
+        }
+        .vocab-table .pronunciation {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .example-sentences {
+            list-style: none;
+        }
+        .example-sentences li {
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            border-radius: 0 10px 10px 0;
+            font-style: italic;
+        }
+        .example-sentences li strong {
+            color: #667eea;
+            font-style: normal;
+        }
+        .long-sentence {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ffc107;
+        }
+        .long-sentence .sentence {
+            font-size: 1.05em;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        .long-sentence .analysis {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.95em;
+            color: #666;
+        }
+        .long-sentence .analysis strong {
+            color: #e65100;
+        }
+        .writing-materials {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-materials th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .writing-materials td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .writing-materials .expression {
+            font-weight: 600;
+            color: #11998e;
+        }
+        .discussion-questions {
+            list-style: none;
+        }
+        .discussion-questions li {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 15px;
+            font-size: 1.05em;
+        }
+        .discussion-questions li strong {
+            color: #2e7d32;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+        .tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-radius: 10px;
+            font-size: 0.85em;
+            margin-right: 8px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .article-header h1 {
+                font-size: 1.5em;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <h1>Renewable Energy Milestone: Wind and Solar Surpass Gas Globally</h1>
+            <div class="article-meta">
+                <span>📅 August 3, 2026</span>
+                <span>📂 Green Technology</span>
+                <span>⏱️ 8 min read</span>
+                <span>📊 Intermediate</span>
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <strong>【摘要】</strong>2026年4月，全球风电和光伏发电量首次超越天然气，标志着清洁能源转型的重要里程碑。国际能源署（IEA）预测，可再生能源将在2026年超越煤炭，成为全球最大电力来源。与此同时，中国可再生能源发电量占比首次突破40%，每四度电中就有一度来自风电和光伏。本文探讨这一历史性转折背后的驱动因素及其对全球能源格局的深远影响。
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="section">
+            <h2 class="section-title">Full Article</h2>
+            <div class="article-content">
+                <p>For the first time in history, wind and solar energy generated more electricity than gas globally for an entire month in April 2026. According to analysis by independent energy think tank Ember, these two renewable sources produced 22% of the world's electricity, compared to 20% from gas plants. This milestone represents a significant shift in the global energy landscape, demonstrating the rapid growth and increasing competitiveness of clean energy technologies.</p>
+
+                <p>The achievement is particularly noteworthy given the timing. April marked the first full month of a global energy crisis triggered by conflicts in the Middle East. Despite concerns about energy security and volatile fossil fuel prices, renewable energy sources continued their steady expansion. Wind and solar generation increased by an estimated 13% year over year, with notable growth across major markets including China (+14%), the European Union (+13%), the United Kingdom (+35%), and the United States (+8%).</p>
+
+                <p>Five years ago, in April 2021, gas generation was almost identical to today's level at 476 terawatt-hours. However, back then, wind and solar combined generated just 245 terawatt-hours—less than half of what they produced in April 2026. This dramatic increase highlights the accelerating pace of renewable energy deployment worldwide and its growing role in meeting global electricity demand.</p>
+
+                <p>Meanwhile, China has achieved its own remarkable milestone. The National Energy Administration announced that renewable energy accounted for more than 40% of the country's total electricity generation for the first time. In the first half of 2026, China's renewable energy generation reached nearly 2 trillion kilowatt-hours, representing 41.2% of total power generation. Notably, wind and solar power combined generated 1.25 trillion kilowatt-hours, accounting for 24.6% of total social electricity consumption—approximately one-quarter of all electricity used.</p>
+
+                <p>The International Energy Agency (IEA) projects that renewables are on track to become the world's largest source of electricity generation in 2026, overtaking coal after reaching near parity in 2025. Global electricity demand is forecast to increase by 3.6% in 2026 and a further 3.8% in 2027. Electricity generation from renewables is projected to grow by more than 8% in 2026, with its share of global generation expected to rise from 33% in 2025 to 37% by 2027.</p>
+
+                <p>Solar power remains the largest contributor to global electricity supply growth. Its output is forecast to increase by around 600 terawatt-hours in 2026, roughly matching the record expansion recorded in 2025. The economic case for renewables has strengthened considerably, with many importing countries finding that LNG-powered electricity can no longer compete with wind and solar on cost.</p>
+
+                <p>Governments worldwide are accelerating renewable energy targets to reduce dependence on volatile fossil fuel imports. Indonesia has announced plans to develop 100 GW of solar plus storage capacity, while South Korea aims to triple its renewables capacity to 100 GW by 2030. These ambitious targets reflect growing recognition that wind and solar represent cheap, homegrown, and secure sources of electricity for the future.</p>
+
+                <p>Industry analysts note that countries around the world have been turning to wind and solar because they offer multiple advantages: they are cost-effective, domestically produced, and provide energy security. As technology continues to improve and costs decline further, the transition to renewable energy is expected to accelerate, fundamentally reshaping the global energy landscape in the coming decades.</p>
+            </div>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="section">
+            <h2 class="section-title">Vocabulary 词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>Word/Phrase</th>
+                    <th>Pronunciation</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td class="word">milestone</td>
+                    <td class="pronunciation">/ˈmaɪlstəʊn/</td>
+                    <td>n. 里程碑，转折点</td>
+                </tr>
+                <tr>
+                    <td class="word">renewable</td>
+                    <td class="pronunciation">/rɪˈnjuːəbl/</td>
+                    <td>adj. 可再生的 n. 可再生能源</td>
+                </tr>
+                <tr>
+                    <td class="word">generation</td>
+                    <td class="pronunciation">/ˌdʒenəˈreɪʃn/</td>
+                    <td>n. 发电；产生；一代</td>
+                </tr>
+                <tr>
+                    <td class="word">surpass</td>
+                    <td class="pronunciation">/səˈpɑːs/</td>
+                    <td>v. 超越，胜过</td>
+                </tr>
+                <tr>
+                    <td class="word">noteworthy</td>
+                    <td class="pronunciation">/ˈnəʊtwɜːði/</td>
+                    <td>adj. 值得注意的，显著的</td>
+                </tr>
+                <tr>
+                    <td class="word">volatile</td>
+                    <td class="pronunciation">/ˈvɒlətaɪl/</td>
+                    <td>adj. 易变的，不稳定的</td>
+                </tr>
+                <tr>
+                    <td class="word">deployment</td>
+                    <td class="pronunciation">/dɪˈplɔɪmənt/</td>
+                    <td>n. 部署，调度</td>
+                </tr>
+                <tr>
+                    <td class="word">terawatt-hour</td>
+                    <td class="pronunciation">/ˈterəwɒt aʊə/</td>
+                    <td>n. 太瓦时（电量单位）</td>
+                </tr>
+                <tr>
+                    <td class="word">account for</td>
+                    <td class="pronunciation">/əˈkaʊnt fɔː/</td>
+                    <td>phr. 占据（比例）；解释</td>
+                </tr>
+                <tr>
+                    <td class="word">forecast</td>
+                    <td class="pronunciation">/ˈfɔːkɑːst/</td>
+                    <td>v./n. 预测，预报</td>
+                </tr>
+                <tr>
+                    <td class="word">overtake</td>
+                    <td class="pronunciation">/ˌəʊvəˈteɪk/</td>
+                    <td>v. 超过，赶上</td>
+                </tr>
+                <tr>
+                    <td class="word">parity</td>
+                    <td class="pronunciation">/ˈpærəti/</td>
+                    <td>n. 平等，相同</td>
+                </tr>
+                <tr>
+                    <td class="word">competitiveness</td>
+                    <td class="pronunciation">/kəmˈpetɪtɪvnəs/</td>
+                    <td>n. 竞争力</td>
+                </tr>
+                <tr>
+                    <td class="word">accelerate</td>
+                    <td class="pronunciation">/əkˈseləreɪt/</td>
+                    <td>v. 加速，促进</td>
+                </tr>
+                <tr>
+                    <td class="word">domestically</td>
+                    <td class="pronunciation">/dəˈmestɪkli/</td>
+                    <td>adv. 国内地； domestically produced 国产</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="section">
+            <h2 class="section-title">Example Sentences 例句</h2>
+            <ul class="example-sentences">
+                <li>This achievement marks a significant <strong>milestone</strong> in the global transition to clean energy, demonstrating that renewable sources can meet growing electricity demand.</li>
+                <li>Solar power is expected to remain the largest contributor to global electricity supply growth, with its output <strong>forecast</strong> to increase by around 600 terawatt-hours in 2026.</li>
+                <li>Wind and solar energy combined to <strong>surpass</strong> gas generation globally for the first time in April 2026, producing 22% of the world's electricity.</li>
+                <li>The economic case for renewables has strengthened considerably, as many countries realize that <strong>volatile</strong> fossil fuel prices threaten energy security.</li>
+                <li>Renewable energy <strong>accounts for</strong> more than 40% of China's total electricity generation, marking a historic achievement in the country's energy transition.</li>
+                <li>Governments worldwide are <strong>accelerating</strong> renewable energy targets to reduce dependence on imported fossil fuels and ensure energy security.</li>
+                <li>Indonesia has announced ambitious plans to develop 100 GW of solar capacity, recognizing that <strong>domestically produced</strong> energy offers greater security.</li>
+                <li>The <strong>competitiveness</strong> of wind and solar energy has improved dramatically, with costs declining faster than most analysts predicted.</li>
+            </ul>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="section">
+            <h2 class="section-title">Long & Complex Sentences 长难句解析</h2>
+
+            <div class="long-sentence">
+                <div class="sentence">
+                    According to analysis by independent energy think tank Ember, wind and solar produced 22% of the world's electricity in April 2026, compared to 20% from gas plants, marking the first time renewables have surpassed gas for an entire month.
+                </div>
+                <div class="analysis">
+                    <strong>句式分析：</strong>本句为主从复合句。主句为"wind and solar produced 22% of the world's electricity"，"According to..."为介词短语作状语，"compared to..."为过去分词短语作比较状语，"marking..."为现在分词短语作结果状语。<br>
+                    <strong>参考译文：</strong>根据独立能源智库Ember的分析，2026年4月风电和光伏发电量占全球电力的22%，而天然气发电占比为20%，标志着可再生能源首次在整个月份内超越天然气。
+                </div>
+            </div>
+
+            <div class="long-sentence">
+                <div class="sentence">
+                    The achievement is particularly noteworthy given the timing, as April marked the first full month of a global energy crisis triggered by conflicts in the Middle East, yet renewable energy sources continued their steady expansion despite concerns about energy security.
+                </div>
+                <div class="analysis">
+                    <strong>句式分析：</strong>本句为并列复合句。"given the timing"为介词短语作原因状语，"as"引导原因状语从句，"triggered by..."为过去分词短语修饰crisis，"yet"连接并列分句表示转折，"despite..."为介词短语作让步状语。<br>
+                    <strong>参考译文：</strong>考虑到时间背景，这一成就尤为值得关注：4月是由中东冲突引发的全球能源危机的首个完整月份，然而尽管存在能源安全方面的担忧，可再生能源仍继续保持稳步扩张。
+                </div>
+            </div>
+
+            <div class="long-sentence">
+                <div class="sentence">
+                    The International Energy Agency projects that renewables are on track to become the world's largest source of electricity generation in 2026, overtaking coal after reaching near parity in 2025, while global electricity demand is forecast to increase by 3.6% in the same year.
+                </div>
+                <div class="analysis">
+                    <strong>句式分析：</strong>本句为主从复合句。"projects"后接that引导的宾语从句，"on track to become"为形容词短语作表语，"overtaking..."为现在分词短语作结果状语，"after reaching..."为介词短语作时间状语，"while"引导并列分句表示对比。<br>
+                    <strong>参考译文：</strong>国际能源署预测，可再生能源将在2026年成为全球最大的电力来源，在2025年达到与煤炭发电量相近后实现超越，而同年全球电力需求预计将增长3.6%。
+                </div>
+            </div>
+
+            <div class="long-sentence">
+                <div class="sentence">
+                    Countries around the world have been turning to wind and solar because they offer multiple advantages: they are cost-effective, domestically produced, and provide energy security, making them increasingly attractive alternatives to imported fossil fuels.
+                </div>
+                <div class="analysis">
+                    <strong>句式分析：</strong>本句为主从复合句。主句为"Countries...have been turning to wind and solar"，"because"引导原因状语从句，冒号后为并列的形容词短语和动词短语解释advantages，"making..."为现在分词短语作结果状语。<br>
+                    <strong>参考译文：</strong>世界各国正转向风电和光伏，因为它们具有多重优势：成本效益好、国内生产可控、提供能源安全，使其成为进口化石燃料日益具有吸引力的替代选择。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="section">
+            <h2 class="section-title">Writing Materials 写作素材</h2>
+            <table class="writing-materials">
+                <tr>
+                    <th>Expression</th>
+                    <th>Chinese Translation</th>
+                    <th>Usage Context</th>
+                </tr>
+                <tr>
+                    <td class="expression">mark a milestone</td>
+                    <td>标志着一个里程碑</td>
+                    <td>用于描述重大突破或历史性事件</td>
+                </tr>
+                <tr>
+                    <td class="expression">on track to</td>
+                    <td>有望实现；正朝着...方向发展</td>
+                    <td>用于描述积极的趋势或预期目标</td>
+                </tr>
+                <tr>
+                    <td class="expression">account for</td>
+                    <td>占据（比例）</td>
+                    <td>用于描述数据占比、市场份额等</td>
+                </tr>
+                <tr>
+                    <td class="expression">overtake A after B</td>
+                    <td>在B之后超越A</td>
+                    <td>用于描述竞争、比较中的超越</td>
+                </tr>
+                <tr>
+                    <td class="expression">strengthen the case for</td>
+                    <td>增强了...的理由/论据</td>
+                    <td>用于论证观点、支持决策</td>
+                </tr>
+                <tr>
+                    <td class="expression">reduce dependence on</td>
+                    <td>减少对...的依赖</td>
+                    <td>用于描述战略调整、风险规避</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="section">
+            <h2 class="section-title">Discussion Questions 讨论问题</h2>
+            <ul class="discussion-questions">
+                <li><strong>Question 1:</strong> According to the article, wind and solar energy surpassed gas generation for the first time in April 2026. What factors do you think contributed to this historic milestone? In your opinion, will this trend continue in the coming years? Why or why not?</li>
+                <li><strong>Question 2:</strong> The article mentions that China's renewable energy now accounts for over 40% of its total electricity generation. Discuss the potential benefits and challenges of transitioning from fossil fuels to renewable energy sources. How might this transition affect different stakeholders, including energy companies, consumers, and the environment?</li>
+                <li><strong>Question 3:</strong> Many countries are accelerating their renewable energy targets to reduce dependence on imported fossil fuels. If you were an energy policy advisor, what measures would you recommend to promote renewable energy development while ensuring energy security and economic stability?</li>
+            </ul>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 Daily English Reading for Gaokao Preparation</p>
+            <p>© 2026 Daily English Articles | Designed for High School Students</p>
+            <p>
+                <span class="tag">Green Technology</span>
+                <span class="tag">Renewable Energy</span>
+                <span class="tag">Environment</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
