@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Youth Employment: Challenges and Opportunities in 2026 | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #f5576c;
+        }
+        .abstract h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+            font-size: 16px;
+            line-height: 2;
+        }
+        .content h3 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            font-size: 20px;
+            border-left: 4px solid #f5576c;
+            padding-left: 15px;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 25px 30px;
+        }
+        .vocabulary h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .vocabulary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .vocabulary th, .vocabulary td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        .vocabulary th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .vocabulary tr:nth-child(even) {
+            background: #fff;
+        }
+        .vocabulary tr:hover {
+            background: #e8f4f8;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            padding: 25px 30px;
+            background: #fff;
+        }
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .example-item {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #00bcd4;
+        }
+        .example-item .sentence {
+            font-style: italic;
+            color: #1565c0;
+            margin-bottom: 5px;
+        }
+        .example-item .translation {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* 7. 长难句 */
+        .sentences {
+            background: #f5f5f5;
+            padding: 25px 30px;
+        }
+        .sentences h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .sentence-box {
+            background: #fff;
+            border: 2px solid #f5576c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .original {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .sentence-box .analysis {
+            background: #fff3e0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .sentence-box .analysis strong {
+            color: #e65100;
+        }
+        
+        /* 8. 写作素材 */
+        .writing {
+            padding: 25px 30px;
+            background: #fff;
+        }
+        .writing h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .writing table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing th, .writing td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        .writing th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+        .writing tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px 30px;
+            color: white;
+        }
+        .discussion h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .question {
+            background: rgba(255,255,255,0.15);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .question strong {
+            color: #ffecd2;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Global Youth Employment: Challenges and Opportunities in 2026</h1>
+            <div class="meta">
+                📅 2026年8月11日 | 📖 阅读时长：15分钟 | 📊 词数：950
+            </div>
+            <span class="tag">社会热点 · 青年就业</span>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📝 文章摘要</h3>
+            <p>本文聚焦2026年全球青年就业形势，分析英国、法国、加拿大和韩国等国最新数据。研究发现，尽管部分国家青年失业率有所下降，但AI技术冲击、经济不确定性等因素仍给年轻求职者带来巨大挑战。文章还探讨"技能优先"招聘趋势和微证书革命，为青年职业规划提供重要启示。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h3>A Global Challenge</h3>
+            <p>Youth employment has become one of the most pressing issues facing governments worldwide in 2026. Recent data reveals a complex picture: while some countries are seeing improvements, others are grappling with the highest youth unemployment rates in decades.</p>
+            
+            <p>In the United Kingdom, job openings for recent graduates have fallen to their lowest level since 2020, dropping approximately 7% compared to last year. The youth unemployment rate has reached 14.8%, with about one million young people currently classified as NEET—neither in employment, education, nor training. Experts warn that entering a weak labor market can negatively affect young workers' wages and career development for years to come.</p>
+            
+            <h3>A Mixed Picture Across Europe</h3>
+            <p>France presents an even more challenging scenario. According to the National Institute of Statistics and Economic Studies (INSEE), the overall unemployment rate rose to 8.3% in the second quarter of 2026, the highest since 2020. Young people aged 15-24 are bearing the brunt, with their unemployment rate climbing to 21.6%, an increase of 0.4 percentage points from the previous quarter.</p>
+            
+            <p>However, not all news is discouraging. Canada offers a glimmer of hope. Statistics Canada reports that the youth unemployment rate dropped from 14.6% in July 2025 to 12.6% in July 2026. The summer job market for returning students also improved, with unemployment falling from 17.5% to 15.1%. Analysts attribute this positive trend to reduced trade tensions, lower interest rates, and slower population growth.</p>
+            
+            <h3>The AI Impact</h3>
+            <p>Artificial intelligence is reshaping the youth employment landscape in profound ways. In South Korea, the labor ministry recently announced ambitious plans to address youth job losses caused by AI adoption. Reports indicate that 210,000 youth employment positions have disappeared since ChatGPT became widely available three years ago. The number of unemployed university graduates reached 481,000 in the second quarter of 2026, the highest since 2021.</p>
+            
+            <p>A Stanford University study paints a nuanced picture: AI has not yet caused widespread job losses, but entry-level positions are being significantly affected. In fields with high AI exposure, such as software development and customer service, employment among young workers has notably declined, while senior employees remain relatively stable.</p>
+            
+            <h3>The Skills-First Revolution</h3>
+            <p>Despite these challenges, new opportunities are emerging. According to the World Economic Forum's Future of Jobs Report 2025, 44% of workers' core skills are expected to undergo significant disruption by 2027. LinkedIn's Global Talent Trends Report 2026 reveals that 67% of hiring managers now prioritize skills-based screening over traditional degree requirements, a substantial increase from 55% in 2023.</p>
+            
+            <p>Major companies including IBM, Google, and Deloitte have publicly eliminated four-year degree requirements for thousands of positions, focusing instead on competency assessments and micro-credentials. Universities are responding by integrating industry-certified micro-credentials into degree programs and making work-integrated learning mandatory.</p>
+            
+            <h3>Looking Ahead</h3>
+            <p>The fastest-growing positions for new graduates in 2026 include AI engineers, marketing coordinators, recruitment assistants, and machine learning engineers. However, experts emphasize that students must view their final university year as an "extended interview," building portfolios through projects, side businesses, and practical experience to demonstrate capabilities beyond academic qualifications.</p>
+            
+            <p>For young job seekers, the message is clear: while challenges persist, those who adapt to the skills-first economy and embrace continuous learning will find meaningful opportunities in this evolving job market.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📚 核心词汇表</h3>
+            <table>
+                <tr>
+                    <th>英文</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>高考考点</th>
+                </tr>
+                <tr>
+                    <td>unemployment</td>
+                    <td>n.</td>
+                    <td>失业；失业率</td>
+                    <td>高频名词，常考搭配unemployment rate</td>
+                </tr>
+                <tr>
+                    <td>graduate</td>
+                    <td>n./v.</td>
+                    <td>毕业生；毕业</td>
+                    <td>常见词，注意名词用法</td>
+                </tr>
+                <tr>
+                    <td>challenge</td>
+                    <td>n./v.</td>
+                    <td>挑战；向……挑战</td>
+                    <td>写作高频词</td>
+                </tr>
+                <tr>
+                    <td>opportunity</td>
+                    <td>n.</td>
+                    <td>机会；时机</td>
+                    <td>写作必备，复数opportunities</td>
+                </tr>
+                <tr>
+                    <td>approximately</td>
+                    <td>adv.</td>
+                    <td>大约；近似地</td>
+                    <td>阅读理解常用副词</td>
+                </tr>
+                <tr>
+                    <td>classify</td>
+                    <td>v.</td>
+                    <td>分类；归类</td>
+                    <td>被动语态常见</td>
+                </tr>
+                <tr>
+                    <td>negatively</td>
+                    <td>adv.</td>
+                    <td>消极地；负面地</td>
+                    <td>副词构词法</td>
+                </tr>
+                <tr>
+                    <td>statistics</td>
+                    <td>n.</td>
+                    <td>统计数据；统计学</td>
+                    <td>学术文章高频词</td>
+                </tr>
+                <tr>
+                    <td>attribute</td>
+                    <td>v.</td>
+                    <td>归因于；认为是……的结果</td>
+                    <td>常考搭配attribute...to...</td>
+                </tr>
+                <tr>
+                    <td>artificial</td>
+                    <td>adj.</td>
+                    <td>人工的；人造的</td>
+                    <td>artificial intelligence考点</td>
+                </tr>
+                <tr>
+                    <td>profound</td>
+                    <td>adj.</td>
+                    <td>深刻的；意义深远的</td>
+                    <td>高级形容词</td>
+                </tr>
+                <tr>
+                    <td>available</td>
+                    <td>adj.</td>
+                    <td>可用的；可获得的</td>
+                    <td>阅读高频词</td>
+                </tr>
+                <tr>
+                    <td>significant</td>
+                    <td>adj.</td>
+                    <td>重大的；有意义的</td>
+                    <td>写作万能词</td>
+                </tr>
+                <tr>
+                    <td>priority</td>
+                    <td>n.</td>
+                    <td>优先；优先权</td>
+                    <td>give priority to结构</td>
+                </tr>
+                <tr>
+                    <td>demonstrate</td>
+                    <td>v.</td>
+                    <td>证明；展示</td>
+                    <td>替换show的高级表达</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✍️ 重点例句</h3>
+            
+            <div class="example-item">
+                <div class="sentence">1. The youth unemployment rate has reached 14.8%, the highest level in a decade.</div>
+                <div class="translation">青年失业率已达到14.8%，为十年来最高水平。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">2. Experts attribute the decline in job openings to economic uncertainty and AI adoption.</div>
+                <div class="translation">专家将职位空缺减少归因于经济不确定性和AI的应用。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">3. Companies are giving priority to skills-based screening over traditional degree requirements.</div>
+                <div class="translation">公司正优先采用基于技能的筛选，而非传统的学历要求。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">4. Students should view their final year as an opportunity to demonstrate their capabilities.</div>
+                <div class="translation">学生应将最后一年视为展示能力的机会。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">5. The report reveals that approximately 44% of workers' core skills will undergo significant disruption.</div>
+                <div class="translation">报告显示，大约44%工人的核心技能将经历重大变革。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">6. Artificial intelligence is reshaping the employment landscape in profound ways.</div>
+                <div class="translation">人工智能正以深刻的方式重塑就业格局。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">7. Those who adapt to the changing market will find meaningful opportunities.</div>
+                <div class="translation">那些适应市场变化的人将找到有意义的机会。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">8. Statistics indicate that youth unemployment remains a global challenge.</div>
+                <div class="translation">统计数据表明，青年失业仍是一个全球性挑战。</div>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="sentences">
+            <h3>🔍 长难句解析</h3>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    1. Reports indicate that 210,000 youth employment positions have disappeared since ChatGPT became widely available three years ago.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句为"Reports indicate that..."，that引导宾语从句。从句中，主语是"210,000 youth employment positions"，谓语是"have disappeared"（现在完成时），since引导时间状语从句。<br>
+                    <strong>翻译：</strong>报告指出，自ChatGPT三年前广泛普及以来，已有21万个青年就业岗位消失。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    2. LinkedIn's Global Talent Trends Report 2026 reveals that 67% of hiring managers now prioritize skills-based screening over traditional degree requirements, a substantial increase from 55% in 2023.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主语是"LinkedIn's Global Talent Trends Report 2026"，谓语reveals后接that宾语从句。从句中"a substantial increase..."是同位语，对前面数据进行补充说明。<br>
+                    <strong>翻译：</strong>LinkedIn《2026全球人才趋势报告》显示，67%的招聘经理现在优先采用基于技能的筛选而非传统学历要求，这一比例较2023年的55%大幅上升。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <div class="original">
+                    3. However, experts emphasize that students must view their final university year as an "extended interview," building portfolios through projects, side businesses, and practical experience to demonstrate capabilities beyond academic qualifications.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句结构为"experts emphasize that..."，that后是宾语从句。从句中"building portfolios..."是现在分词短语作伴随状语，"to demonstrate..."是不定式作目的状语。<br>
+                    <strong>翻译：</strong>然而，专家强调，学生必须将大学的最后一年视为"延伸的面试"，通过项目、副业和实践经验建立作品集，以展示超越学业资格的能力。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing">
+            <h3>📝 写作素材积累</h3>
+            <table>
+                <tr>
+                    <th>类别</th>
+                    <th>英文表达</th>
+                    <th>应用场景</th>
+                </tr>
+                <tr>
+                    <td>数据引入</td>
+                    <td>According to recent statistics/data...<br>Reports indicate that...</td>
+                    <td>议论文开头、论证段落</td>
+                </tr>
+                <tr>
+                    <td>原因分析</td>
+                    <td>attribute...to...<br>result from / lead to</td>
+                    <td>分析社会现象成因</td>
+                </tr>
+                <tr>
+                    <td>观点表达</td>
+                    <td>Experts emphasize that...<br>The message is clear: ...</td>
+                    <td>提出论点、总结观点</td>
+                </tr>
+                <tr>
+                    <td>对比论证</td>
+                    <td>However, not all news is discouraging.<br>While challenges persist, ...</td>
+                    <td>正反论证、转折段落</td>
+                </tr>
+                <tr>
+                    <td>影响描述</td>
+                    <td>have a profound impact on...<br>reshape...in profound ways</td>
+                    <td>描述技术、政策影响</td>
+                </tr>
+                <tr>
+                    <td>建议表达</td>
+                    <td>For young job seekers, the message is clear: ...<br>Those who...will find...</td>
+                    <td>提出建议、展望未来</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💭 思考与讨论</h3>
+            
+            <div class="question">
+                <strong>问题1：</strong>According to the passage, what are the main factors contributing to youth unemployment in 2026? Which factor do you think is the most significant? Why?
+            </div>
+            
+            <div class="question">
+                <strong>问题2：</strong>The article mentions that many companies now prioritize skills over degrees. Do you agree with this trend? What are the advantages and disadvantages of skills-based hiring?
+            </div>
+            
+            <div class="question">
+                <strong>问题3：</strong>How should young people prepare themselves for the changing job market? What skills do you think will be most valuable in the future? Support your answer with examples from the text.
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 2026年8月11日</p>
+            <p>文章来源：China Daily, Reuters, Stanford University Report | 词数：950</p>
+            <p>© 2026 高考英语学习项目 | <a href="../index.html">返回首页</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milano Cortina 2026: A Global Success Story | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        /* 3. 摘要 */
+        .abstract {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-left: 5px solid #667eea;
+        }
+
+        .abstract h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .abstract p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .content p {
+            margin-bottom: 18px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .vocabulary h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .vocab-table th {
+            background: #667eea;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .vocab-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .vocab-table tr:hover {
+            background: #f0f4ff;
+        }
+
+        /* 6. 例句 */
+        .examples {
+            background: #fff;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+        }
+
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .example-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #764ba2;
+            border-radius: 5px;
+        }
+
+        .example-item .en {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .example-item .cn {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 7. 长难句 */
+        .long-sentences {
+            background: #fff;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .long-sentences h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .sentence-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        .sentence-box .original {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .sentence-box .analysis {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .sentence-box .analysis strong {
+            color: #667eea;
+        }
+
+        /* 8. 写作素材 */
+        .writing-materials {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .writing-materials h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .materials-table th {
+            background: #764ba2;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .materials-table tr:hover {
+            background: #f0f4ff;
+        }
+
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #fff;
+            padding: 30px;
+            margin: 30px 0;
+            border: 2px solid #764ba2;
+            border-radius: 10px;
+        }
+
+        .discussion h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .question-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .question-item h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .question-item p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+        }
+
+        .footer a:hover {
+            border-bottom: 2px solid #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回首页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Milano Cortina 2026: A Global Success Story</h1>
+            <div class="meta">
+                <span>📅 2026-08-06</span> | 
+                <span>📖 难度：适中</span> | 
+                <span>⏱️ 阅读时间：8-10分钟</span>
+            </div>
+            <div class="tag">体育运动 | 奥运会</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>摘要 Summary</h2>
+            <p>2026年米兰-科尔蒂纳冬季奥运会取得了巨大成功，吸引了全球26亿观众关注。本文探讨了奥运会在数字媒体参与、观众满意度、运动员体验以及社会影响力等方面的卓越表现，展示了体育如何在世界分裂时期团结人心、激励积极变革。文章还强调了奥林匹克运动在促进教育、就业和社会包容方面的重要作用。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>Unprecedented Global Engagement</h2>
+            <p>The Milano Cortina 2026 Olympic Winter Games were a resounding global success, reaffirming the enduring strength and universal appeal of the Olympic brand. Independent research shows that the Games were followed by around 2.6 billion people worldwide, setting new benchmarks in fan engagement across multiple platforms.</p>
+
+            <p>While linear television remained the dominant viewing platform, the use of digital channels surged to new heights. 17 per cent of viewers watched the Games exclusively through digital platforms, a significant rise from 11 per cent during Beijing 2022. Furthermore, 60 per cent of viewers watched across both television and digital channels, highlighting an increasingly seamless, multi-platform experience for audiences worldwide.</p>
+
+            <h2>Record-Breaking Digital Presence</h2>
+            <p>Milano Cortina 2026 marked a defining moment in how audiences experience the Olympic Games, with unprecedented levels of digital engagement. The Olympics Web & App reached 133 million cumulative monthly users, nearly double the 68 million recorded in 2022. Social media engagement climbed to 12.7 billion interactions, up dramatically from 3.2 billion during the previous Winter Games.</p>
+
+            <p>Global interest in the Olympic Winter Games soared, with social media conversations reaching historic levels. An estimated 110 billion social media engagements were recorded during the Games period globally, while internet search activity reached an index four times higher than that of the previous Olympic Winter Games.</p>
+
+            <h2>Exceptional Viewer Satisfaction</h2>
+            <p>Viewer satisfaction reached exceptional levels, demonstrating the quality of delivery and atmosphere across host regions. 84 per cent of audiences stated that they enjoyed the Games, a significant increase from 74 per cent previously. Additionally, 53 per cent of viewers expressed a desire to watch more Olympic coverage, up from 46 per cent in previous years.</p>
+
+            <p>On television, audiences watched an average of 6.9 hours of Milano Cortina 2026 coverage, compared to 6.1 hours for Beijing 2022. The Games welcomed over 5.4 million spectators and visitors across competition venues, Fan Zones and the Olympic Torch Relay, with 85 per cent of ticketholders rating their experience as good or excellent.</p>
+
+            <h2>Athletes' Memorable Experience</h2>
+            <p>For athletes, the Games were equally meaningful. Nine in 10 athletes described their participation as one of the most memorable moments of their careers. Among those surveyed, 92 per cent cited competing at the world's biggest multi-sport event as a primary motivation, while 83 per cent highlighted the importance of becoming an Olympian.</p>
+
+            <p>IOC President Kirsty Coventry emphasized the unique power of the Olympic Games, stating that billions of people followed the performances and stories of athletes across broadcast, streaming, digital and social media platforms. The incredible global engagement demonstrated that the Olympic Games can unify people and bring them together in a way that few other events can achieve.</p>
+
+            <h2>Building a Better World Through Sport</h2>
+            <p>At a time of global uncertainty, Milano Cortina 2026 reinforced the unique role of the Olympic Games in bringing people together and inspiring positive change. 79 per cent of respondents considered the Games a success, increasing to 84 per cent in Italy. Furthermore, 74 per cent of Italians believe the Games will leave a lasting positive legacy for the host regions.</p>
+
+            <p>The broader significance of the Olympic Movement was clearly recognised by global audiences. 80 per cent agreed that the Olympic Games are more important than ever in a divided world, while 79 per cent said the IOC successfully brings the world together in peaceful competition. Additionally, 77 per cent believe the IOC contributes to building a better world through sport, demonstrating the enduring relevance and impact of Olympic values in contemporary society.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>重点词汇 Key Vocabulary</h2>
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th>单词/短语</th>
+                        <th>词性</th>
+                        <th>含义</th>
+                        <th>例句</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>resounding</strong></td>
+                        <td>adj.</td>
+                        <td>巨大的，彻底的</td>
+                        <td>The team achieved a resounding victory in the championship.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>unprecedented</strong></td>
+                        <td>adj.</td>
+                        <td>前所未有的，空前的</td>
+                        <td>The company experienced unprecedented growth this year.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>engagement</strong></td>
+                        <td>n.</td>
+                        <td>参与度，互动</td>
+                        <td>Social media engagement increased significantly during the event.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>dominant</strong></td>
+                        <td>adj.</td>
+                        <td>占主导地位的</td>
+                        <td>Television remains the dominant platform for news consumption.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>seamless</strong></td>
+                        <td>adj.</td>
+                        <td>无缝的，流畅的</td>
+                        <td>The app provides a seamless user experience across devices.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>cumulative</strong></td>
+                        <td>adj.</td>
+                        <td>累计的，累积的</td>
+                        <td>The cumulative effect of small changes can be significant.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>exceptional</strong></td>
+                        <td>adj.</td>
+                        <td>优秀的，杰出的</td>
+                        <td>She showed exceptional talent in mathematics.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>spectator</strong></td>
+                        <td>n.</td>
+                        <td>观众，旁观者</td>
+                        <td>Thousands of spectators gathered to watch the parade.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>emphasize</strong></td>
+                        <td>v.</td>
+                        <td>强调，着重</td>
+                        <td>The teacher emphasized the importance of regular practice.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>unify</strong></td>
+                        <td>v.</td>
+                        <td>统一，使团结</td>
+                        <td>Music has the power to unify people from different cultures.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>reinforce</strong></td>
+                        <td>v.</td>
+                        <td>加强，强化</td>
+                        <td>Regular exercise can reinforce your immune system.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>legacy</strong></td>
+                        <td>n.</td>
+                        <td>遗产，遗留</td>
+                        <td>The Olympics left a lasting legacy for the host city.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>significance</strong></td>
+                        <td>n.</td>
+                        <td>重要性，意义</td>
+                        <td>The historical significance of this discovery cannot be overstated.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>contemporary</strong></td>
+                        <td>adj.</td>
+                        <td>当代的，现代的</td>
+                        <td>Contemporary art often reflects current social issues.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>relevance</strong></td>
+                        <td>n.</td>
+                        <td>相关性，关联性</td>
+                        <td>The relevance of traditional education is being questioned.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>实用例句 Practical Examples</h2>
+
+            <div class="example-item">
+                <div class="en">1. The resounding success of the event demonstrated the power of careful planning.</div>
+                <div class="cn">这次活动的巨大成功展示了精心策划的力量。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">2. Digital platforms have witnessed unprecedented growth in user engagement.</div>
+                <div class="cn">数字平台在用户参与度方面见证了前所未有的增长。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">3. The seamless integration of technology enhanced the overall experience.</div>
+                <div class="cn">技术的无缝融合提升了整体体验。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">4. Athletes described their participation as a memorable moment in their careers.</div>
+                <div class="cn">运动员们将参与这次赛事描述为他们职业生涯中难忘的时刻。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">5. The event unified people from diverse backgrounds through shared experiences.</div>
+                <div class="cn">这次活动通过共同的经历将不同背景的人们团结在一起。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">6. Viewers expressed exceptional satisfaction with the quality of the broadcasts.</div>
+                <div class="cn">观众对广播质量表达了极高的满意度。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">7. The cumulative impact of small improvements led to remarkable results.</div>
+                <div class="cn">小改进的累积影响带来了显著的结果。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">8. Contemporary society places great value on digital connectivity.</div>
+                <div class="cn">当代社会高度重视数字连接的价值。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="long-sentences">
+            <h2>长难句解析 Complex Sentences</h2>
+
+            <div class="sentence-box">
+                <div class="original">1. Milano Cortina 2026 marked a defining moment in how audiences experience the Olympic Games, with unprecedented levels of digital engagement across platforms worldwide.</div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句是"Milano Cortina 2026 marked a defining moment"，"in how audiences experience the Olympic Games"是介词短语修饰moment，其中how引导宾语从句；"with unprecedented levels..."是with复合结构作状语，表示伴随情况。<br>
+                    <strong>参考译文：</strong>米兰-科尔蒂纳2026标志着观众体验奥林匹克运动会的一个决定性时刻，在全球各平台上达到了前所未有的数字参与水平。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">2. While linear television remained the dominant viewing platform, the use of digital channels surged to new heights, with 17 per cent of viewers watching the Games exclusively through digital platforms.</div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>While引导让步状语从句，主句是"the use of digital channels surged to new heights"，"with 17 per cent..."是with复合结构补充说明具体情况。<br>
+                    <strong>参考译文：</strong>虽然线性电视仍然是主要的观看平台，但数字渠道的使用飙升至新高度，17%的观众仅通过数字平台观看奥运会。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">3. At a time of global uncertainty, Milano Cortina 2026 reinforced the unique role of the Olympic Games in bringing people together and inspiring positive change.</div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>"At a time of global uncertainty"是时间状语，主句是"Milano Cortina 2026 reinforced the unique role"，"in bringing people together and inspiring positive change"是介词短语修饰role，表示作用的具体内容。<br>
+                    <strong>参考译文：</strong>在全球充满不确定性的时期，米兰-科尔蒂纳2026加强了奥林匹克运动会在团结人民和激励积极变革方面的独特作用。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">4. The broader significance of the Olympic Movement was clearly recognised by global audiences, with 80 per cent agreeing that the Olympic Games are more important than ever in a divided world.</div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句是被动语态"The broader significance...was clearly recognised"，"with 80 per cent agreeing..."是with复合结构，其中that引导agree的宾语从句。<br>
+                    <strong>参考译文：</strong>全球观众清楚地认识到了奥林匹克运动的更广泛意义，80%的人认同奥林匹克运动会在一个分裂的世界中比以往任何时候都更重要。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h2>写作素材 Writing Materials</h2>
+            <table class="materials-table">
+                <thead>
+                    <tr>
+                        <th>主题</th>
+                        <th>金句/表达</th>
+                        <th>适用场景</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>体育团结人心</td>
+                        <td>The Olympic Games can unify people and bring them together in a way that few other events can achieve.</td>
+                        <td>议论文：体育的作用、国际合作</td>
+                    </tr>
+                    <tr>
+                        <td>数字时代变革</td>
+                        <td>Digital engagement surged to unprecedented levels, marking a defining moment in how audiences experience major events.</td>
+                        <td>议论文：科技发展、媒体演变</td>
+                    </tr>
+                    <tr>
+                        <td>积极社会影响</td>
+                        <td>The Games will leave a lasting positive legacy for the host regions, inspiring positive change in society.</td>
+                        <td>议论文：大型赛事影响、城市发展</td>
+                    </tr>
+                    <tr>
+                        <td>全球合作重要性</td>
+                        <td>The Olympic Games are more important than ever in a divided world, successfully bringing the world together in peaceful competition.</td>
+                        <td>议论文：全球化、国际合作</td>
+                    </tr>
+                    <tr>
+                        <td>卓越的追求</td>
+                        <td>Athletes cited competing at the world's biggest multi-sport event as a primary motivation, highlighting the importance of pursuing excellence.</td>
+                        <td>议论文：追求卓越、个人成长</td>
+                    </tr>
+                    <tr>
+                        <td>观众满意度</td>
+                        <td>Viewer satisfaction reached exceptional levels, with audiences expressing desire to watch more coverage.</td>
+                        <td>应用文：活动总结、报告写作</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>讨论问题 Discussion Questions</h2>
+
+            <div class="question-item">
+                <h3>Question 1: The Role of Sports in Modern Society</h3>
+                <p>According to the article, 80% of respondents believe that the Olympic Games are more important than ever in a divided world. Why do you think major sporting events like the Olympics have such unique power to unify people? In your opinion, what other international activities could play a similar role in promoting global cooperation and understanding?</p>
+            </div>
+
+            <div class="question-item">
+                <h3>Question 2: Digital Transformation in Sports Broadcasting</h3>
+                <p>The article mentions that 17% of viewers watched the Games exclusively through digital platforms, a significant increase from previous years. How do you think this shift from traditional television to digital platforms will change the future of sports broadcasting? What are the advantages and potential challenges of this digital transformation?</p>
+            </div>
+
+            <div class="question-item">
+                <h3>Question 3: Legacy and Long-term Impact</h3>
+                <p>74% of Italians believe the Games will leave a lasting positive legacy for the host regions. What kind of legacy do you think hosting major international events should aim to create? Discuss both the economic benefits and potential challenges that host cities might face after such events conclude.</p>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 <strong>每日高考英语时文阅读</strong></p>
+            <p>助力高三学生备考，每天一篇精选时文阅读材料</p>
+            <p>来源：<a href="https://www.olympics.com/ioc/news/milano-cortina-2026-olympic-winter-games-a-global-success-2-6-billion-people-followed-the-games" target="_blank">Olympics.com</a> | 发布日期：2026-08-06</p>
+            <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">© 2026 每日高考英语时文阅读项目 | 版权所有</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日高考英语时文阅读</title>
+    <title>高考英语时文阅读 | 每日精选</title>
     <style>
         * {
             margin: 0;
@@ -12,283 +12,318 @@
         }
         
         body {
-            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', Arial, sans-serif;
-            line-height: 1.8;
-            color: #333;
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-        }
-        
-        header {
-            background: rgba(255,255,255,0.95);
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            color: #666;
-            font-size: 1.1em;
-        }
-        
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5em;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .stat-label {
-            color: #888;
-            font-size: 0.95em;
+            padding: 20px;
         }
         
         .container {
             max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
+            margin: 0 auto;
         }
-        
-        .section-title {
-            color: white;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
+        /* 头部 */
+        .header {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
-        }
-        
-        .article-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-        
-        .card-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-            color: white;
-        }
-        
-        .card-header h3 {
-            font-size: 1.3em;
+        .header h1 {
+            font-size: 2.5em;
+            color: #1e3c72;
             margin-bottom: 10px;
         }
-        
-        .card-meta {
-            font-size: 0.9em;
-            opacity: 0.9;
+        .header .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
         }
-        
-        .new-badge {
+
+        /* 统计卡片 */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 20px 40px;
+            border-radius: 15px;
+            text-align: center;
+            min-width: 150px;
+        }
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .stat-card .label {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* 文章列表 */
+        .articles-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .articles-section h2 {
+            color: #1e3c72;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .article-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+            position: relative;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .article-card.latest {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+            border-left-color: #ffc107;
+        }
+        .article-card.latest::before {
+            content: "今日最新";
             position: absolute;
             top: 15px;
             right: 15px;
-            background: #ff6b6b;
-            color: white;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            color: #fff;
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.85em;
             font-weight: bold;
-            animation: pulse 2s infinite;
         }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .article-card h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+            font-size: 1.3em;
         }
-        
-        .card-body {
-            padding: 20px;
-        }
-        
-        .card-body p {
+        .article-card .meta {
             color: #666;
-            margin-bottom: 15px;
+            font-size: 0.95em;
+            margin-bottom: 10px;
         }
-        
-        .card-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
+        .article-card .meta span {
+            margin-right: 20px;
         }
-        
-        .tag {
-            background: #f0f0f0;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            color: #666;
+        .article-card .summary {
+            color: #444;
+            line-height: 1.6;
         }
-        
-        .read-more {
+        .article-card a {
             display: inline-block;
-            padding: 10px 25px;
+            margin-top: 15px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
+            color: #fff;
+            padding: 10px 25px;
             border-radius: 25px;
-            font-weight: bold;
-            transition: all 0.3s;
+            text-decoration: none;
+            transition: all 0.3s ease;
         }
-        
-        .read-more:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        .article-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
-        
-        .intro {
-            background: rgba(255,255,255,0.95);
+
+        /* 主题分类 */
+        .categories {
+            background: #fff;
+            border-radius: 20px;
             padding: 30px;
-            margin: 30px auto;
-            max-width: 900px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        
-        .intro h2 {
-            color: #667eea;
-            margin-bottom: 15px;
+        .categories h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
             font-size: 1.5em;
         }
-        
-        .intro ul {
-            list-style: none;
-            padding-left: 20px;
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        
-        .intro li {
-            margin: 10px 0;
-            color: #555;
-        }
-        
-        .intro li::before {
-            content: "✓ ";
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: white;
+        .category-tag {
+            background: #f0f4f8;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: #1e3c72;
             font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
-        
-        footer a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
+        .category-tag:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
         }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            
-            .stats {
-                gap: 20px;
-            }
-            
-            .stat-number {
-                font-size: 2em;
-            }
-            
-            .articles-grid {
-                grid-template-columns: 1fr;
-            }
+
+        /* 页脚 */
+        .footer {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .footer p {
+            color: #666;
+            margin: 5px 0;
+        }
+        .footer .highlight {
+            color: #1e3c72;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>📚 每日高考英语时文阅读</h1>
-        <p>精选国际新闻 · 助力高考英语</p>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number">1</div>
-                <div class="stat-label">累计文章</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">15</div>
-                <div class="stat-label">核心词汇</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">1</div>
-                <div class="stat-label">坚持天数</div>
-            </div>
-        </div>
-    </header>
-    
-    <div class="intro">
-        <h2>🎯 项目简介</h2>
-        <p>为高三学生每天自动生成一篇英文时文阅读材料，帮助学生备考高考英语。</p>
-        <ul>
-            <li>精选国际主流媒体新闻，语言地道规范</li>
-            <li>覆盖科技、生活、时政、文化等多领域话题</li>
-            <li>每篇文章包含词汇表、例句、长难句解析、写作素材和讨论问题</li>
-            <li>难度适中，适合高三学生阅读水平</li>
-        </ul>
-    </div>
-    
     <div class="container">
-        <h2 class="section-title">📰 今日最新文章</h2>
-        
-        <div class="articles-grid">
-            <div class="article-card">
-                <span class="new-badge">今日最新</span>
-                <div class="card-header">
-                    <h3>Chinese Team Sets World Record in Solar Cell Efficiency</h3>
-                    <div class="card-meta">📅 2026-08-12 | 🔬 Science & Technology</div>
+        <!-- 头部 -->
+        <div class="header">
+            <h1>高考英语时文阅读</h1>
+            <p class="subtitle">每日精选 | 助力高考 | 提升阅读</p>
+
+            <!-- 统计 -->
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="number">24</div>
+                    <div class="label">文章总数</div>
                 </div>
-                <div class="card-body">
-                    <p>中国科学院团队在钙钛矿太阳能电池研究中取得重大突破，经认证效率达28.04%，创下新的世界纪录...</p>
-                    <div class="card-tags">
-                        <span class="tag">🔬 科技</span>
-                        <span class="tag">🌞 可再生能源</span>
-                        <span class="tag">🇨🇳 中国创新</span>
-                    </div>
-                    <a href="articles/article_20260812.html" class="read-more">阅读全文 →</a>
+                <div class="stat-card">
+                    <div class="number">360</div>
+                    <div class="label">核心词汇</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">24</div>
+                    <div class="label">累计天数</div>
                 </div>
             </div>
         </div>
+
+        <!-- 文章列表 -->
+        <div class="articles-section">
+            <h2>最新文章</h2>
+
+            <!-- 2026-08-12 今日最新 -->
+            <div class="article-card latest">
+                <h3>Chinese Team Sets World Record in Solar Cell Efficiency</h3>
+                <div class="meta">
+                    <span>📅 2026年8月12日</span>
+                    <span>📁 科技类 - 可再生能源</span>
+                    <span>📖 850词</span>
+                </div>
+                <p class="summary">中国科学院化学研究所团队在钙钛矿-有机叠层太阳能电池研究中取得重大突破，通过创新的"全阶段调控"策略，成功解决了长期困扰该领域的光致相分离难题。团队研发的太阳能电池经认证效率达到28.04%，创下新的世界纪录。这一突破为下一代光伏技术的商业化铺平了道路，有望将太阳能应用拓展至建筑一体化光伏、便携式能源设备乃至未来空间动力系统等领域。</p>
+                <a href="articles/article_20260812.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-11 -->
+            <div class="article-card">
+                <h3>Global Youth Employment: Challenges and Opportunities in 2026</h3>
+                <div class="meta">
+                    <span>📅 2026年8月11日</span>
+                    <span>📁 社会热点 - 青年就业</span>
+                    <span>📖 950词</span>
+                </div>
+                <p class="summary">本文聚焦2026年全球青年就业形势，分析英国、法国、加拿大和韩国等国最新数据。研究发现，尽管部分国家青年失业率有所下降，但AI技术冲击、经济不确定性等因素仍给年轻求职者带来巨大挑战。文章还探讨"技能优先"招聘趋势和微证书革命，为青年职业规划提供重要启示。</p>
+                <a href="articles/article_20260811.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-10 -->
+            <div class="article-card">
+                <h3>Global Battery Storage: Powering the Clean Energy Revolution</h3>
+                <div class="meta">
+                    <span>📅 2026年8月10日</span>
+                    <span>📁 科技类 - 新能源技术</span>
+                    <span>📖 920词</span>
+                </div>
+                <p class="summary">本文介绍了2026年8月全球电池储能领域的最新发展。从印度的20 GWh大规模储能计划到美国的10亿美元融资，从德国首个无补贴光储混合项目到日本的电网级电池开发，各国正在加速布局清洁能源基础设施。</p>
+                <a href="articles/article_20260810.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-09 -->
+            <div class="article-card">
+                <h3>Revolutionary Weight-Loss Pill Transforms Obesity Treatment</h3>
+                <div class="meta">
+                    <span>📅 2026年8月9日</span>
+                    <span>📁 科技类 - 医学健康</span>
+                </div>
+                <p class="summary">新型口服减肥药正在改变肥胖治疗的方式，为患者提供更便捷的选择。</p>
+                <a href="articles/article_20260809.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-08 -->
+            <div class="article-card">
+                <h3>Sound Sleep Boosts Teens' School and Social Success</h3>
+                <div class="meta">
+                    <span>📅 2026年8月8日</span>
+                    <span>📁 生活类 - 青少年成长</span>
+                </div>
+                <p class="summary">研究发现良好的睡眠质量有助于青少年在学业和社交方面取得成功。</p>
+                <a href="articles/article_20260808.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-07 -->
+            <div class="article-card">
+                <h3>Intangible Cultural Heritage Finds New Life Through Innovation</h3>
+                <div class="meta">
+                    <span>📅 2026年8月7日</span>
+                    <span>📁 文化类 - 传统创新</span>
+                </div>
+                <p class="summary">非物质文化遗产通过创新手段焕发新生，传统文化与现代技术相结合。</p>
+                <a href="articles/article_20260807.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-06 -->
+            <div class="article-card">
+                <h3>更多历史文章</h3>
+                <div class="meta">
+                    <span>📅 2026年7月20日 - 8月6日</span>
+                </div>
+                <p class="summary">点击下方查看更多历史文章...</p>
+                <a href="articles/article_20260806.html">查看更多 →</a>
+            </div>
+        </div>
+
+        <!-- 主题分类 -->
+        <div class="categories">
+            <h2>主题分类</h2>
+            <div class="category-tags">
+                <span class="category-tag">🔬 科技类 (50%)</span>
+                <span class="category-tag">🌱 生活类</span>
+                <span class="category-tag">🌍 时政类</span>
+                <span class="category-tag">🎭 文化类</span>
+                <span class="category-tag">👥 社会热点</span>
+                <span class="category-tag">☀️ 新能源</span>
+                <span class="category-tag">🔋 电池储能</span>
+                <span class="category-tag">🌱 环境保护</span>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p class="highlight">每日更新 | 优质内容 | 助力高考</p>
+            <p>文章来源：BBC, CNN, Reuters, Guardian, China Daily, CGTN等国际主流媒体</p>
+            <p>© 2026 高考英语时文阅读 | All Rights Reserved</p>
+        </div>
     </div>
-    
-    <footer>
-        <p>© 2026 高考英语时文阅读计划 | 助力高考，成就梦想</p>
-        <p style="margin-top: 10px; font-size: 0.85em;">
-            <a href="https://github.com/zhh-2000/daily_english_articles" target="_blank">GitHub 仓库</a>
-        </p>
-    </footer>
 </body>
 </html>
