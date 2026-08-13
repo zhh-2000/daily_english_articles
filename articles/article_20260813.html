@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record-Breaking Heat: 2026 Marks Hottest Summer on Record | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #ff6b6b;
+        }
+        
+        .abstract h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+            font-size: 16px;
+            line-height: 2;
+        }
+        
+        .content h3 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            font-size: 20px;
+            border-left: 4px solid #ff6b6b;
+            padding-left: 15px;
+        }
+        
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .vocabulary h3 {
+            color: #c0392b;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .vocabulary table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .vocabulary th {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .vocabulary td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .vocabulary tr:hover {
+            background: #fff9c4;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            padding: 30px;
+        }
+        
+        .examples h3 {
+            color: #c0392b;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .example-item .sentence {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .example-item .translation {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* 7. 长难句 */
+        .complex-sentences {
+            padding: 30px;
+            background: #fff9c4;
+        }
+        
+        .complex-sentences h3 {
+            color: #c0392b;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .complex-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .complex-item .sentence {
+            color: #2c3e50;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .complex-item .analysis {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .complex-item .analysis strong {
+            color: #c0392b;
+        }
+        
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 30px;
+        }
+        
+        .writing-materials h3 {
+            color: #c0392b;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .writing-materials table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .writing-materials th {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .writing-materials td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .writing-materials tr:hover {
+            background: #fff9c4;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .discussion h3 {
+            color: #c0392b;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question-item .number {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .question-item .question {
+            display: inline;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .footer .links {
+            margin-top: 15px;
+        }
+        
+        .footer a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Record-Breaking Heat: 2026 Marks Hottest Summer on Record</h1>
+            <div class="meta">
+                <span>📅 2026年8月13日</span>
+                <span>📚 来源：World Meteorological Organization</span>
+            </div>
+            <span class="tag">时政类 · 气候变化</span>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📋 文章摘要</h3>
+            <p>2026年夏季成为全球有气象记录以来最热的夏天，7月份全球平均气温比工业化前水平高出1.47°C，与2024年7月并列为史上最热的月份。西欧经历了前所未有的连续五次热浪，英国气温达到38°C，加拿大野火释放的烟雾影响了超过1.2亿人口。世界气象组织警告称，极端高温、干旱和野火已成为北半球夏季的标志性特征，气候变化正在加速这些极端天气事件的频率和强度。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h3>Record-Breaking Global Temperatures</h3>
+            <p>The summer of 2026 has officially become the hottest on record globally, according to the World Meteorological Organization (WMO). July 2026 tied with July 2024 as the warmest month ever recorded since 1850, with global average surface air temperatures reaching 1.47°C above the pre-industrial baseline (1850-1900 average). This milestone marks a significant escalation in the ongoing climate crisis that scientists have been warning about for decades.</p>
+            
+            <p>What makes this year particularly alarming is the persistence and intensity of extreme weather events across multiple continents. North America, Africa, and Asia all experienced their warmest July on record, while Western Europe faced an unprecedented series of five consecutive heatwaves between May and August. The UK's Met Office recorded temperatures climbing to 38°C (100°F) across central and southeastern England, narrowly missing the August 2003 record of 38.5°C.</p>
+            
+            <h3>Infrastructure Struggles Under Heat Stress</h3>
+            <p>The exceptional heat has severely strained infrastructure and public services across Europe, particularly in countries that were historically designed for cooler climates. In Britain, hospital staff experienced heat-related collapses and illnesses severe enough to require admission, drawing sharp criticism from healthcare unions. The Royal College of Nursing warned that healthcare workers are "being failed" by workplace conditions unable to manage extreme temperatures.</p>
+            
+            <p>Transportation systems have also been significantly impacted. Major rivers across Europe, including the Seine, Rhine, and Danube, reached exceptionally low levels, affecting water supply, irrigation, and energy production in multiple countries. The persistent drought has created water shortages across much of Western Europe, affecting households, farms, and natural ecosystems. Southern Water in England requested a rare drought order that would restrict non-essential water uses, marking the first such restriction since 2006.</p>
+            
+            <h3>Wildfires and Air Quality Crisis</h3>
+            <p>Canada's 2026 wildfire season has proven exceptionally severe, with more than 3 million hectares burned to date. What was particularly remarkable this year was the exceptionally rapid rate at which burned area accumulated over a very short period of time—approximately 94% of the total area burned occurred during just five weeks between the end of June and end of July.</p>
+            
+            <p>The consequences extended far beyond Canada's borders. Over 120 million people in the Midwest and Northeast United States were affected by dangerous air quality, with alerts stretching from Minnesota to New Hampshire. Exposure to elevated concentrations of wildfire smoke has been associated with increased emergency healthcare utilization, particularly for respiratory and cardiovascular conditions, as well as increases in all-cause mortality.</p>
+            
+            <h3>Scientific Attribution to Climate Change</h3>
+            <p>A comprehensive study by scientists from Canada, the US, the Netherlands, and the UK has determined that human-induced climate change has significantly altered the likelihood and intensity of the weather conditions driving these fires. In Ontario, the rapid spread and establishment of fires was made approximately 3.5 times more likely by 1.4°C of global warming. The research team found that events that would have occurred once every 50-100 years in a cooler climate now happen every 2-6 years.</p>
+            
+            <p>"What we have seen over the last few months is the combined effect of long-term warming with a persistent pattern of alternating high- and low-pressure systems stretching across the northern hemisphere," explains John Kennedy, head of climate information at WMO. "These kinds of high-pressure patterns can last days or even, as we have seen this year, for weeks."</p>
+            
+            <h3>Call for Urgent Action</h3>
+            <p>The continuing series of high-impact weather and climate events underscores the urgent need for reliable forecasts, early warning systems, and coordinated international response. The WMO emphasizes that limiting the cascading impacts on society and economies requires sustained investment in climate monitoring, adaptation measures, and decisive action to reduce greenhouse gas emissions.</p>
+            
+            <p>As temperatures continue to rise, experts warn that infrastructure designed for historical climate conditions will increasingly fail to protect populations from extreme heat events. The summer of 2026 serves as a stark reminder that climate change is not a distant threat but a present reality requiring immediate and sustained global action.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📖 重点词汇（15个）</h3>
+            <table>
+                <tr>
+                    <th>英文单词</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>英文释义</th>
+                </tr>
+                <tr>
+                    <td><strong>record-breaking</strong></td>
+                    <td>adj.</td>
+                    <td>破纪录的</td>
+                    <td>surpassing all previous achievements or levels</td>
+                </tr>
+                <tr>
+                    <td><strong>baseline</strong></td>
+                    <td>n.</td>
+                    <td>基准线</td>
+                    <td>a standard or reference point for comparison</td>
+                </tr>
+                <tr>
+                    <td><strong>persistence</strong></td>
+                    <td>n.</td>
+                    <td>持续性</td>
+                    <td>the fact of continuing in a determined way</td>
+                </tr>
+                <tr>
+                    <td><strong>escalation</strong></td>
+                    <td>n.</td>
+                    <td>升级，恶化</td>
+                    <td>an increase in intensity or seriousness</td>
+                </tr>
+                <tr>
+                    <td><strong>strain</strong></td>
+                    <td>v.</td>
+                    <td>使紧张，使承受压力</td>
+                    <td>to put under severe pressure or stress</td>
+                </tr>
+                <tr>
+                    <td><strong>infrastructure</strong></td>
+                    <td>n.</td>
+                    <td>基础设施</td>
+                    <td>basic systems and structures needed for society</td>
+                </tr>
+                <tr>
+                    <td><strong>consecutive</strong></td>
+                    <td>adj.</td>
+                    <td>连续的</td>
+                    <td>following one after another without interruption</td>
+                </tr>
+                <tr>
+                    <td><strong>utilization</strong></td>
+                    <td>n.</td>
+                    <td>利用，使用</td>
+                    <td>the action of making practical use of something</td>
+                </tr>
+                <tr>
+                    <td><strong>attribute</strong></td>
+                    <td>v.</td>
+                    <td>归因于</td>
+                    <td>to regard as caused by something</td>
+                </tr>
+                <tr>
+                    <td><strong>mortality</strong></td>
+                    <td>n.</td>
+                    <td>死亡率</td>
+                    <td>the number of deaths in a given period</td>
+                </tr>
+                <tr>
+                    <td><strong>unprecedented</strong></td>
+                    <td>adj.</td>
+                    <td>史无前例的</td>
+                    <td>never done or known before</td>
+                </tr>
+                <tr>
+                    <td><strong>vulnerable</strong></td>
+                    <td>adj.</td>
+                    <td>脆弱的</td>
+                    <td>exposed to the possibility of being harmed</td>
+                </tr>
+                <tr>
+                    <td><strong>decisive</strong></td>
+                    <td>adj.</td>
+                    <td>果断的，决定性的</td>
+                    <td>settling an issue; producing a definite result</td>
+                </tr>
+                <tr>
+                    <td><strong>cascading</strong></td>
+                    <td>adj.</td>
+                    <td>连锁的，级联的</td>
+                    <td>occurring in a series of stages</td>
+                </tr>
+                <tr>
+                    <td><strong>resilience</strong></td>
+                    <td>n.</td>
+                    <td>韧性，恢复力</td>
+                    <td>the capacity to recover quickly from difficulties</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✍️ 重点词汇例句（8个）</h3>
+            
+            <div class="example-item">
+                <div class="sentence">The summer of 2026 has officially become the hottest on record globally, marking an unprecedented milestone in climate history.</div>
+                <div class="translation">2026年夏季正式成为全球有记录以来最热的夏天，标志着气候史上一个史无前例的里程碑。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Global average surface air temperatures reached 1.47°C above the pre-industrial baseline, raising concerns among scientists worldwide.</div>
+                <div class="translation">全球平均地表气温比工业化前基准线高出1.47°C，引发了全球科学家的担忧。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">The exceptional heat has severely strained infrastructure and public services across Europe, particularly in regions designed for cooler climates.</div>
+                <div class="translation">极端高温严重冲击了欧洲的基础设施和公共服务，特别是在那些为凉爽气候设计的地区。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Western Europe faced an unprecedented series of five consecutive heatwaves between May and August, causing widespread disruption.</div>
+                <div class="translation">西欧在五月至八月期间经历了史无前例的连续五次热浪，造成了大范围的混乱。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Exposure to elevated concentrations of wildfire smoke has been associated with increased emergency healthcare utilization and higher mortality rates.</div>
+                <div class="translation">接触高浓度野火烟雾与急诊就医增加和更高死亡率有关。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Scientists attribute the severity of these extreme weather events to human-induced climate change and rising global temperatures.</div>
+                <div class="translation">科学家将这些极端天气事件的严重程度归因于人为导致的气候变化和全球气温上升。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">The cascading impacts on society and economies require sustained investment in climate monitoring and adaptation measures.</div>
+                <div class="translation">对社会和经济的连锁影响需要持续投资于气候监测和适应措施。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Building climate resilience in vulnerable communities has become an urgent priority for governments worldwide.</div>
+                <div class="translation">在脆弱社区建立气候韧性已成为全球各国政府的紧急优先事项。</div>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h3>🔍 长难句分析（4个）</h3>
+            
+            <div class="complex-item">
+                <div class="sentence">July 2026 tied with July 2024 as the warmest month ever recorded since 1850, with global average surface air temperatures reaching 1.47°C above the pre-industrial baseline (1850-1900 average).</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：July 2026 tied with July 2024 as the warmest month<br>
+                    • 过去分词短语作定语：ever recorded since 1850（修饰 month）<br>
+                    • with复合结构：with global average surface air temperatures reaching...（表伴随状态）<br>
+                    • 介词短语：above the pre-industrial baseline（表示比较）<br>
+                    <strong>翻译：</strong>2026年7月与2024年7月并列为自1850年有记录以来最热的月份，全球平均地表气温比工业化前基准线（1850-1900年平均值）高出1.47°C。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">The exceptional heat has severely strained infrastructure and public services across Europe, particularly in countries that were historically designed for cooler climates.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：The exceptional heat has severely strained infrastructure and public services<br>
+                    • 介词短语：across Europe（表地点范围）<br>
+                    • 定语从句：that were historically designed for cooler climates（修饰 countries）<br>
+                    <strong>翻译：</strong>极端高温严重冲击了欧洲各地的基础设施和公共服务，特别是在那些历史上为凉爽气候设计的国家。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">Exposure to elevated concentrations of wildfire smoke has been associated with increased emergency healthcare utilization, particularly for respiratory and cardiovascular conditions, as well as increases in all-cause mortality.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：Exposure to elevated concentrations of wildfire smoke<br>
+                    • 谓语：has been associated with（现在完成时被动语态）<br>
+                    • 宾语：increased emergency healthcare utilization 和 increases in all-cause mortality<br>
+                    • 插入语：particularly for respiratory and cardiovascular conditions<br>
+                    <strong>翻译：</strong>接触高浓度野火烟雾与急诊就医增加有关，特别是呼吸系统和心血管疾病，同时也与全因死亡率上升有关。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">The continuing series of high-impact weather and climate events underscores the urgent need for reliable forecasts, early warning systems, and coordinated international response to limit the cascading impacts on society and economies.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：The continuing series...underscores the urgent need<br>
+                    • 介词短语：for reliable forecasts, early warning systems, and coordinated international response（修饰 need）<br>
+                    • 不定式短语：to limit the cascading impacts...（表目的）<br>
+                    • 介词短语：on society and economies（修饰 impacts）<br>
+                    <strong>翻译：</strong>持续发生的高影响天气和气候事件系列凸显了迫切需要可靠的预报、预警系统以及协调一致的国际应对，以限制对社会和经济的连锁影响。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>📝 写作素材（6个）</h3>
+            <table>
+                <tr>
+                    <th>类型</th>
+                    <th>英文表达</th>
+                    <th>中文表达</th>
+                    <th>适用话题</th>
+                </tr>
+                <tr>
+                    <td>数据描述</td>
+                    <td>Global temperatures reached 1.47°C above the pre-industrial baseline</td>
+                    <td>全球气温比工业化前基准线高出1.47°C</td>
+                    <td>气候变化、环境问题</td>
+                </tr>
+                <tr>
+                    <td>趋势描述</td>
+                    <td>This milestone marks a significant escalation in the ongoing climate crisis</td>
+                    <td>这一里程碑标志着持续气候危机的显著升级</td>
+                    <td>环境保护、全球问题</td>
+                </tr>
+                <tr>
+                    <td>因果关系</td>
+                    <td>Human-induced climate change has significantly altered the likelihood and intensity of extreme weather</td>
+                    <td>人为导致的气候变化显著改变了极端天气的可能性和强度</td>
+                    <td>气候变化、自然灾害</td>
+                </tr>
+                <tr>
+                    <td>影响描述</td>
+                    <td>The exceptional heat has severely strained infrastructure and public services</td>
+                    <td>极端高温严重冲击了基础设施和公共服务</td>
+                    <td>社会问题、城市规划</td>
+                </tr>
+                <tr>
+                    <td>呼吁行动</td>
+                    <td>Urgent action is required to reduce greenhouse gas emissions and build climate resilience</td>
+                    <td>迫切需要采取行动减少温室气体排放并建立气候韧性</td>
+                    <td>环保倡议、社会责任</td>
+                </tr>
+                <tr>
+                    <td>总结观点</td>
+                    <td>Climate change is not a distant threat but a present reality requiring immediate global action</td>
+                    <td>气候变化不是遥远的威胁，而是需要立即采取全球行动的现实</td>
+                    <td>环境议题、全球合作</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💬 讨论问题（3个）</h3>
+            
+            <div class="question-item">
+                <span class="number">1</span>
+                <span class="question">According to the passage, what evidence suggests that 2026 has been an exceptionally hot year globally? List at least three specific examples mentioned in the text.</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="number">2</span>
+                <span class="question">The article mentions that "infrastructure designed for historical climate conditions will increasingly fail to protect populations." What does this statement imply about the relationship between climate change and urban planning? Provide your own suggestions for how cities could better adapt to extreme heat.</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="number">3</span>
+                <span class="question">The World Meteorological Organization emphasizes the need for "coordinated international response" to climate change. In your opinion, what role should international cooperation play in addressing global environmental challenges? Support your answer with examples from the passage or your own knowledge.</span>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 为高三学生精选全球热点新闻</p>
+            <p>文章来源：World Meteorological Organization | 发布日期：2026年8月13日</p>
+            <div class="links">
+                <a href="../index.html">返回首页</a>
+                <a href="#">词汇复习</a>
+                <a href="#">更多文章</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
