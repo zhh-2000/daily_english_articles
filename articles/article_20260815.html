@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China's "Jiuzhang 4.0" Sets New Quantum Computing World Record | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .abstract h3 {
+            color: #5a67d8;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+            font-size: 16px;
+            line-height: 2;
+        }
+        
+        .content h3 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            font-size: 20px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .vocabulary h3 {
+            color: #5a67d8;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .vocabulary table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .vocabulary th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .vocabulary td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .vocabulary tr:hover {
+            background: #e8eaf6;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            padding: 30px;
+        }
+        
+        .examples h3 {
+            color: #5a67d8;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .example-item .sentence {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .example-item .translation {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* 7. 长难句 */
+        .complex-sentences {
+            padding: 30px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .complex-sentences h3 {
+            color: #5a67d8;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .complex-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .complex-item .sentence {
+            color: #2c3e50;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .complex-item .analysis {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .complex-item .analysis strong {
+            color: #667eea;
+        }
+        
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 30px;
+        }
+        
+        .writing-materials h3 {
+            color: #5a67d8;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .writing-materials table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .writing-materials th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .writing-materials td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .writing-materials tr:hover {
+            background: #e8eaf6;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .discussion h3 {
+            color: #5a67d8;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question-item .number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .question-item .question {
+            display: inline;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .footer .links {
+            margin-top: 15px;
+        }
+        
+        .footer a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>China's "Jiuzhang 4.0" Sets New Quantum Computing World Record</h1>
+            <div class="meta">
+                <span>📅 2026年8月15日</span>
+                <span>📚 来源：Chinese Academy of Sciences / Nature</span>
+            </div>
+            <span class="tag">科技类 · 量子计算</span>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📋 文章摘要</h3>
+            <p>中国科学技术大学潘建伟团队成功研制出可编程量子计算原型机"九章四号"，首次操纵和探测高达3050个光子的量子态，刷新光量子信息技术世界纪录。该原型机求解特定问题比全球最快超级计算机快10的54次方倍，成果发表于《自然》杂志，进一步巩固了中国在量子计算领域的世界领先地位。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h3>A Revolutionary Quantum Milestone</h3>
+            <p>On May 13, 2026, a research team led by Pan Jianwei at the University of Science and Technology of China (USTC) announced a groundbreaking achievement in quantum computing. They successfully developed a programmable quantum computing prototype named "Jiuzhang 4.0," capable of manipulating and detecting the quantum states of up to 3,050 photons—far surpassing the previous record of 255 photons set by "Jiuzhang 3.0."</p>
+            
+            <p>This achievement was published in the prestigious journal Nature, marking another significant milestone for China in the global race for quantum supremacy. The new system features 1,024 quantum-compressed state inputs and an impressive 8,176 modes, demonstrating a cubic expansion in connectivity compared to earlier versions.</p>
+            
+            <h3>Understanding Quantum Advantage</h3>
+            <p>Quantum computers operate fundamentally differently from classical computers. While traditional computers process information in bits (0s and 1s), quantum computers use quantum bits, or "qubits," which can exist in multiple states simultaneously thanks to quantum mechanical phenomena like superposition and entanglement. This allows quantum computers to perform certain calculations exponentially faster than even the most powerful supercomputers.</p>
+            
+            <p>The "Jiuzhang" series uses photons—particles of light—to encode qubits. In executing the Gaussian Boson Sampling task, "Jiuzhang 4.0" can generate a sample in just 25 microseconds. By contrast, using the world's most powerful supercomputer and the best classical algorithms would require more than 10 to the power of 42 years. The quantum advantage ratio reaches an astonishing 10 to the power of 54, demonstrating the immense potential of quantum computing technology.</p>
+            
+            <h3>Overcoming Technical Challenges</h3>
+            <p>Developing such an advanced quantum system was no easy feat. One of the biggest obstacles in photonic quantum computing has been photon loss—as encoding circuits become increasingly large and complex, inevitable photon loss severely limits computational capacity. The research team overcame this challenge by developing highly efficient optical parametric oscillator light sources and a spatiotemporal hybrid encoding interferometer.</p>
+            
+            <p>These innovations allowed them to integrate 1,024 highly efficient compressed-state light fields into an 8,176-mode circuit using spatiotemporal hybrid encoding. This breakthrough represents a major leap forward in low-loss photonic quantum processors, both in scale and complexity.</p>
+            
+            <h3>Implications for the Future</h3>
+            <p>The success of "Jiuzhang 4.0" has far-reaching implications for multiple fields. Quantum computing promises to revolutionize drug discovery, materials science, artificial intelligence, cryptography, weather forecasting, and traffic optimization. The technology could accelerate the development of new medicines, optimize complex logistics systems, and enhance cybersecurity through quantum encryption.</p>
+            
+            <p>Professor Lu Chaoyang, one of the lead researchers, noted that recent findings suggest "the 'peak' of quantum computing is lower than previously estimated, and our 'climbing' speed is faster than expected." This optimistic outlook indicates that practical quantum computing applications may arrive sooner than anticipated.</p>
+            
+            <h3>Global Competition and Cooperation</h3>
+            <p>Quantum computing has become a key battleground in the global technology race. Countries worldwide are investing heavily in quantum research, with global quantum technology investment exceeding $55.7 billion and projected to reach $106 billion by 2040. The United States, European Union, Japan, and China are all competing to achieve breakthroughs in this transformative field.</p>
+            
+            <p>China's achievements with the "Jiuzhang" series and "Zuchongzhi" superconducting quantum computers have positioned the country at the forefront of quantum research. The latest breakthrough opens new possibilities for building "trillion-quantum-mode three-dimensional cluster states" and future "fault-tolerant photonic quantum computing hardware."</p>
+            
+            <p>As quantum computing enters a critical transition period from pure scientific exploration to industrial-scale engineering, international cooperation remains essential. The complexity of developing fault-tolerant quantum computers exceeds the capabilities of any single team, company, or nation, requiring global collaboration similar to what occurred in the microelectronics industry.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📖 重点词汇（15个）</h3>
+            <table>
+                <tr>
+                    <th>英文单词</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>英文释义</th>
+                </tr>
+                <tr>
+                    <td><strong>prototype</strong></td>
+                    <td>n.</td>
+                    <td>原型机，原型</td>
+                    <td>the first model of something from which other forms are developed</td>
+                </tr>
+                <tr>
+                    <td><strong>manipulate</strong></td>
+                    <td>v.</td>
+                    <td>操控，操作</td>
+                    <td>to control or influence something skillfully</td>
+                </tr>
+                <tr>
+                    <td><strong>photon</strong></td>
+                    <td>n.</td>
+                    <td>光子</td>
+                    <td>a particle representing a quantum of light</td>
+                </tr>
+                <tr>
+                    <td><strong>prestigious</strong></td>
+                    <td>adj.</td>
+                    <td>享有声望的</td>
+                    <td>having high status and respect</td>
+                </tr>
+                <tr>
+                    <td><strong>supremacy</strong></td>
+                    <td>n.</td>
+                    <td>优势，至高无上</td>
+                    <td>the state of being superior to all others</td>
+                </tr>
+                <tr>
+                    <td><strong>superposition</strong></td>
+                    <td>n.</td>
+                    <td>叠加</td>
+                    <td>the combination of two or more quantum states</td>
+                </tr>
+                <tr>
+                    <td><strong>entanglement</strong></td>
+                    <td>n.</td>
+                    <td>纠缠</td>
+                    <td>a quantum phenomenon where particles become interconnected</td>
+                </tr>
+                <tr>
+                    <td><strong>exponentially</strong></td>
+                    <td>adv.</td>
+                    <td>指数级地</td>
+                    <td>at an increasing rate that becomes more rapid</td>
+                </tr>
+                <tr>
+                    <td><strong>obstacle</strong></td>
+                    <td>n.</td>
+                    <td>障碍</td>
+                    <td>something that blocks progress</td>
+                </tr>
+                <tr>
+                    <td><strong>inevitable</strong></td>
+                    <td>adj.</td>
+                    <td>不可避免的</td>
+                    <td>certain to happen and unavoidable</td>
+                </tr>
+                <tr>
+                    <td><strong>innovation</strong></td>
+                    <td>n.</td>
+                    <td>创新</td>
+                    <td>a new method, idea, or product</td>
+                </tr>
+                <tr>
+                    <td><strong>implication</strong></td>
+                    <td>n.</td>
+                    <td>影响，含义</td>
+                    <td>the conclusion that can be drawn from something</td>
+                </tr>
+                <tr>
+                    <td><strong>cryptography</strong></td>
+                    <td>n.</td>
+                    <td>密码学</td>
+                    <td>the art of writing or solving codes</td>
+                </tr>
+                <tr>
+                    <td><strong>transformative</strong></td>
+                    <td>adj.</td>
+                    <td>变革性的</td>
+                    <td>causing a major change to something</td>
+                </tr>
+                <tr>
+                    <td><strong>collaboration</strong></td>
+                    <td>n.</td>
+                    <td>合作</td>
+                    <td>working together with others</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✍️ 重点词汇例句（8个）</h3>
+            
+            <div class="example-item">
+                <div class="sentence">The research team successfully developed a programmable quantum computing prototype named "Jiuzhang 4.0."</div>
+                <div class="translation">研究团队成功研制出名为"九章四号"的可编程量子计算原型机。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Scientists can now manipulate and detect the quantum states of up to 3,050 photons.</div>
+                <div class="translation">科学家现在能够操控和探测高达3050个光子的量子态。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">The achievement was published in the prestigious journal Nature.</div>
+                <div class="translation">这一成果发表在享有声望的《自然》杂志上。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Quantum computers can perform certain calculations exponentially faster than classical computers.</div>
+                <div class="translation">量子计算机执行某些计算的速度比经典计算机快指数级倍。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">One of the biggest obstacles in photonic quantum computing has been photon loss.</div>
+                <div class="translation">光量子计算最大的障碍之一是光子损耗。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Quantum computing promises to revolutionize drug discovery and materials science.</div>
+                <div class="translation">量子计算有望彻底改变药物发现和材料科学。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Global quantum technology investment is projected to reach $106 billion by 2040.</div>
+                <div class="translation">全球量子技术投资预计到2040年将达到1060亿美元。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">International collaboration remains essential for developing fault-tolerant quantum computers.</div>
+                <div class="translation">国际合作对于开发容错量子计算机仍然至关重要。</div>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h3>🔍 长难句分析（4个）</h3>
+            
+            <div class="complex-item">
+                <div class="sentence">On May 13, 2026, a research team led by Pan Jianwei at the University of Science and Technology of China announced a groundbreaking achievement in quantum computing.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 时间状语：On May 13, 2026<br>
+                    • 主语：a research team led by Pan Jianwei（过去分词短语作定语）<br>
+                    • 地点状语：at the University of Science and Technology of China<br>
+                    • 谓语：announced<br>
+                    • 宾语：a groundbreaking achievement in quantum computing<br>
+                    <strong>翻译：</strong>2026年5月13日，由中国科学技术大学潘建伟领导的研究团队宣布了量子计算领域的突破性成就。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">They successfully developed a programmable quantum computing prototype named "Jiuzhang 4.0," capable of manipulating and detecting the quantum states of up to 3,050 photons—far surpassing the previous record of 255 photons set by "Jiuzhang 3.0."</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：They successfully developed a programmable quantum computing prototype<br>
+                    • 过去分词短语：named "Jiuzhang 4.0"（作定语修饰 prototype）<br>
+                    • 形容词短语：capable of manipulating and detecting...（补充说明）<br>
+                    • 破折号后：far surpassing...（现在分词短语作状语）<br>
+                    <strong>翻译：</strong>他们成功研制出名为"九章四号"的可编程量子计算原型机，能够操控和探测高达3050个光子的量子态——远超"九章三号"创造的255个光子的纪录。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">While traditional computers process information in bits (0s and 1s), quantum computers use quantum bits, or "qubits," which can exist in multiple states simultaneously thanks to quantum mechanical phenomena like superposition and entanglement.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • While引导的对比从句：While traditional computers process information in bits<br>
+                    • 主句主语：quantum computers<br>
+                    • 谓语：use<br>
+                    • 宾语：quantum bits, or "qubits"<br>
+                    • 定语从句：which can exist in multiple states simultaneously（修饰 qubits）<br>
+                    • 原因状语：thanks to quantum mechanical phenomena...<br>
+                    <strong>翻译：</strong>传统计算机使用比特（0和1）处理信息，而量子计算机使用量子比特或"量子位"，它们由于叠加和纠缠等量子力学现象，可以同时存在于多种状态中。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">The complexity of developing fault-tolerant quantum computers exceeds the capabilities of any single team, company, or nation, requiring global collaboration similar to what occurred in the microelectronics industry.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主语：The complexity of developing fault-tolerant quantum computers<br>
+                    • 谓语：exceeds<br>
+                    • 宾语：the capabilities of any single team, company, or nation<br>
+                    • 现在分词短语：requiring global collaboration...（作结果状语）<br>
+                    • 比较结构：similar to what occurred in the microelectronics industry<br>
+                    <strong>翻译：</strong>开发容错量子计算机的复杂性超出了任何单一团队、公司或国家的能力，需要类似于微电子行业那样的全球合作。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>📝 写作素材（6个）</h3>
+            <table>
+                <tr>
+                    <th>类型</th>
+                    <th>英文表达</th>
+                    <th>中文表达</th>
+                    <th>适用话题</th>
+                </tr>
+                <tr>
+                    <td>科技突破</td>
+                    <td>China successfully developed a programmable quantum computing prototype capable of manipulating 3,050 photons</td>
+                    <td>中国成功研制出能够操控3050个光子的可编程量子计算原型机</td>
+                    <td>科技进步、中国成就</td>
+                </tr>
+                <tr>
+                    <td>国际影响</td>
+                    <td>The achievement was published in Nature, marking a significant milestone in the global race for quantum supremacy</td>
+                    <td>该成果发表在《自然》上，标志着全球量子优势竞争中的重要里程碑</td>
+                    <td>国际竞争、科学成就</td>
+                </tr>
+                <tr>
+                    <td>技术对比</td>
+                    <td>Quantum computers can perform certain calculations exponentially faster than classical supercomputers</td>
+                    <td>量子计算机执行某些计算的速度比经典超级计算机快指数级倍</td>
+                    <td>技术比较、优势分析</td>
+                </tr>
+                <tr>
+                    <td>应用前景</td>
+                    <td>Quantum computing promises to revolutionize drug discovery, materials science, and artificial intelligence</td>
+                    <td>量子计算有望彻底改变药物发现、材料科学和人工智能</td>
+                    <td>科技应用、未来发展</td>
+                </tr>
+                <tr>
+                    <td>投资趋势</td>
+                    <td>Global quantum technology investment is projected to reach $106 billion by 2040</td>
+                    <td>全球量子技术投资预计到2040年将达到1060亿美元</td>
+                    <td>经济投资、产业发展</td>
+                </tr>
+                <tr>
+                    <td>合作意义</td>
+                    <td>International collaboration remains essential for achieving breakthroughs in this transformative field</td>
+                    <td>国际合作对于在这个变革性领域取得突破仍然至关重要</td>
+                    <td>国际关系、科技合作</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💬 讨论问题（3个）</h3>
+            
+            <div class="question-item">
+                <span class="number">1</span>
+                <span class="question">According to the passage, what makes quantum computers fundamentally different from classical computers? Explain how this difference enables quantum computers to perform calculations faster.</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="number">2</span>
+                <span class="question">The article mentions that "Jiuzhang 4.0" can generate a sample in 25 microseconds, while classical supercomputers would require "more than 10 to the power of 42 years." Why do you think the author includes this specific comparison? What effect does it have on readers' understanding of quantum computing's potential?</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="number">3</span>
+                <span class="question">Professor Lu Chaoyang stated that "the 'peak' of quantum computing is lower than previously estimated, and our 'climbing' speed is faster than expected." In your opinion, what challenges might still prevent quantum computing from becoming widely used in daily life? Support your answer with information from the text and your own knowledge.</span>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 为高三学生精选全球热点新闻</p>
+            <p>文章来源：Chinese Academy of Sciences / Nature | 发布日期：2026年8月15日</p>
+            <div class="links">
+                <a href="../index.html">返回首页</a>
+                <a href="#">词汇复习</a>
+                <a href="#">更多文章</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
