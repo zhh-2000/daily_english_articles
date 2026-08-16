@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高考英语时文阅读 | 每日更新</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* 头部 */
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .header .subtitle {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+        }
+        .header .date {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            color: #a8edea;
+        }
+        /* 统计区域 */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            padding: 25px 40px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        .stat-card .number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #a8edea;
+            text-shadow: 0 0 20px rgba(168, 237, 234, 0.5);
+        }
+        .stat-card .label {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 5px;
+        }
+        /* 文章区域 */
+        .articles-section {
+            margin-top: 40px;
+        }
+        .section-title {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #a8edea;
+        }
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .article-card .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: #fff;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        .article-card .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            color: #fff;
+        }
+        .article-card .category {
+            font-size: 12px;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .article-card h3 {
+            font-size: 18px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .article-card .card-body {
+            padding: 20px;
+        }
+        .article-card .summary {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .article-card .meta {
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+            font-size: 13px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .article-card .read-more {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        .article-card .read-more:hover {
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transform: translateX(5px);
+        }
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 50px;
+        }
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .footer .highlight {
+            color: #a8edea;
+        }
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            .stats-bar {
+                gap: 15px;
+            }
+            .stat-card {
+                padding: 20px 30px;
+            }
+            .stat-card .number {
+                font-size: 36px;
+            }
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>📚 高考英语时文阅读</h1>
+            <p class="subtitle">每日精选国际时文，助力高三学子拓展视野、提升英语能力</p>
+            <div class="date">📅 今日更新：2026年8月16日</div>
+        </div>
+        
+        <!-- 统计区域 -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">文章总数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">15</div>
+                <div class="label">核心词汇</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">坚持天数</div>
+            </div>
+        </div>
+        
+        <!-- 文章区域 -->
+        <div class="articles-section">
+            <h2 class="section-title">最新文章</h2>
+            <div class="articles-grid">
+                <!-- 今日文章 -->
+                <div class="article-card">
+                    <span class="badge">🔥 今日最新</span>
+                    <div class="card-header">
+                        <span class="category">绿色科技 · 碳中和</span>
+                        <h3>Japan's Carbon-Negative Manufacturing Innovation</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="summary">日本科学家开发全球首创的碳负制造技术"metacol"，在常温常压下将CO₂转化为碳酸铁，实现"生产越多，排放越少"的环保突破...</p>
+                        <div class="meta">
+                            <span>📝 980词</span>
+                            <span>📚 15词汇</span>
+                            <span>💬 3问题</span>
+                        </div>
+                        <a href="articles/article_20260816.html" class="read-more">阅读全文 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>🎓 为高三学子精心打造的英语学习平台</p>
+            <p>每天一篇时文，积累词汇，提升阅读，冲刺高考</p>
+            <p class="highlight">✨ 坚持就是胜利，加油！</p>
+            <p style="margin-top: 20px; font-size: 12px;">© 2026 Daily English Reading Project</p>
+        </div>
+    </div>
+</body>
+</html>

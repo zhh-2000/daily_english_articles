@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本碳负制造创新：Metacol技术引领绿色革命 | 高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        /* 2. 文章头部 */
+        .article-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+        }
+        .article-header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .article-header h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .article-header .meta {
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+        }
+        /* 3. 摘要 */
+        .summary {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px 30px;
+            margin: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        .summary h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .summary p {
+            color: #555;
+            font-size: 15px;
+        }
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+        .content h2 {
+            color: #1a1a2e;
+            font-size: 22px;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: justify;
+            color: #444;
+        }
+        .content .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        /* 5. 词汇表 */
+        .vocab-section {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .vocab-section h3 {
+            color: #1a1a2e;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .vocab-table tr:nth-child(even) {
+            background: rgba(102, 126, 234, 0.05);
+        }
+        .vocab-table tr:hover {
+            background: rgba(102, 126, 234, 0.1);
+        }
+        .word {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .phonetic {
+            color: #888;
+            font-size: 13px;
+        }
+        .pos {
+            color: #e74c3c;
+            font-size: 12px;
+            background: rgba(231, 76, 60, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        /* 6. 例句 */
+        .examples-section {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .examples-section h3 {
+            color: #00695c;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #00897b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .example-item .en {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            font-size: 14px;
+            color: #666;
+        }
+        /* 7. 长难句 */
+        .sentences-section {
+            background: #fff3e0;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .sentences-section h3 {
+            color: #e65100;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .sentence-box {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #ffb74d;
+            box-shadow: 0 4px 12px rgba(230, 81, 0, 0.15);
+        }
+        .sentence-box .original {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .sentence-box .analysis {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+        .sentence-box .analysis strong {
+            color: #e65100;
+        }
+        /* 8. 写作素材 */
+        .writing-section {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .writing-section h3 {
+            color: #c2185b;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .writing-table th {
+            background: #c2185b;
+            color: #fff;
+            padding: 12px;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .writing-table tr:hover {
+            background: rgba(194, 24, 91, 0.05);
+        }
+        /* 9. 讨论问题 */
+        .discussion-section {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        .discussion-section h3 {
+            color: #2e7d32;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #4caf50;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .question-item .q-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #4caf50;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .question-item .q-text {
+            font-size: 15px;
+            color: #333;
+        }
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .footer .stat-item {
+            text-align: center;
+        }
+        .footer .stat-item .number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .footer .stat-item .label {
+            font-size: 12px;
+            color: rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="article-header">
+            <span class="category">绿色科技 · 碳中和</span>
+            <h1>Japan's Carbon-Negative Manufacturing Innovation: Metacol Technology Leads Green Revolution</h1>
+            <p class="meta">Source: Japan.go.jp | Date: August 16, 2026 | Words: 980</p>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h3>📝 文章摘要</h3>
+            <p>日本科学家开发了全球首创的碳负制造技术"metacol"，该技术能在常温常压下将二氧化碳转化为碳酸铁，无需氢气或电力等能源密集型输入，实现了"生产越多，排放越少"的环保突破。研究团队正致力于将这一技术推向全球，为世界脱碳做出贡献。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>A Revolutionary Breakthrough</h2>
+            <p>Carbon dioxide accounts for the largest share of greenhouse gas emissions worldwide, contributing significantly to global warming and climate change. In Japan, researchers have developed the world's first technology for industrializing iron carbonate, a material produced by capturing CO₂ and reacting it with iron. Known as <span class="highlight">metacol</span>, this patented process transforms greenhouse gas into a valuable manufacturing resource, representing a significant advancement in sustainable technology.</p>
+            
+            <p>The innovative material can be mixed with recycled materials such as paper and plastic, making it applicable to a wide range of products—from small items such as stationery to large-scale applications including roads. By applying metacol, CO₂ can be permanently fixed inside products, helping to remove carbon dioxide from the atmosphere and contributing to global carbon reduction efforts.</p>
+            
+            <h2>Technical Advantages</h2>
+            <p>There are other technologies that convert CO₂ into different substances, but metacol has a key advantage: it can produce iron carbonate at <span class="highlight">normal temperature and pressure</span> without requiring hydrogen, electricity, or other energy-intensive inputs to trigger the chemical reaction. This means it avoids a dilemma common in decarbonization technologies, where attempts to reduce CO₂ conversely end up generating even more of it through energy consumption.</p>
+            
+            <p>This revolutionary characteristic makes metacol particularly attractive for widespread industrial adoption, as companies can implement the technology without significantly increasing their energy costs or carbon footprint. The process represents a true carbon-negative solution, where manufacturing activities actively contribute to atmospheric carbon reduction.</p>
+            
+            <h2>A Collaborative Journey</h2>
+            <p>The development of metacol began with a meeting between two researchers with complementary expertise. One was Baba Masato, a researcher with a background in biology who had been interested in environmental issues since childhood. He set his sights on a career in research with the goal of eliminating what he once saw as the "bad gas" CO₂. While studying biomass fuels at university, he came to understand CO₂ not as something harmful, but as a natural resource that could be reused in human activities.</p>
+            
+            <p>The other was Nakajima Tetsuya, an engineering researcher whom Baba met at a company workshop. Nakajima had been looking for ways to make use of unused iron generated during the company's steel-product manufacturing process. Baba wanted to put CO₂ to use, and Nakajima wanted to put unused iron to use. Their discussions led to researching a new material made from CO₂ and iron.</p>
+            
+            <p>After several years of trial and error, they became the first in the world to develop a technology for producing 100% pure iron carbonate—a substance almost never found in nature—with minimal raw material loss and fine particles that can be easily mixed with other materials. They named it "metacol," combining the idea of metal enclosing carbon (C) and oxygen (O).</p>
+            
+            <h2>From Lab to Global Impact</h2>
+            <p>In 2025, metacol was exhibited at Expo 2025 Osaka, Kansai, Japan, where golf products made with iron carbonate blends were also sold. What Baba took away from the Expo was a clear sense that people genuinely want environmentally friendly products. "When we explain the concept of metacol to visitors, they are delighted," says Baba. "People often say that few citizens are interested in environmental issues, but that is simply not true."</p>
+            
+            <p>The team is working with companies and municipalities on demonstration projects involving CO₂ capture, utilization, and manufacturing with metacol. In one municipality, carbon capture devices were installed in spaces used by children. The captured CO₂ was used to produce iron carbonate, which was then combined with plastic bottle caps collected by the children and their parents to make covers for maternal and child health handbooks.</p>
+            
+            <h2>Vision for the Future</h2>
+            <p>"The long-term goal for metacol is to make it an industry standard," says Nakajima. "To achieve that, it needs to be not only environmentally beneficial, but also durable and visually appealing. We also need to design metacol with the entire ecosystem in mind, including the collection of used products."</p>
+            
+            <p>Baba adds, "We want to create a model for collecting the raw materials for metacol, such as CO₂ and iron, from citizens. When that model works, those people will no longer just be consumers, but suppliers as well. That is a true circular society. We want to create a society and economy in which environmentally conscious actions directly contribute to a better quality of life."</p>
+            
+            <p>Going forward, the team plans to expand its network of partner companies that can help establish the supply chain and roll out metacol globally, contributing to decarbonization around the world. This innovation demonstrates how creative thinking and cross-disciplinary collaboration can transform environmental challenges into opportunities for sustainable economic development.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocab-section">
+            <h3>📚 核心词汇表 (Key Vocabulary)</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>词汇</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>释义</th>
+                </tr>
+                <tr>
+                    <td class="word">carbonate</td>
+                    <td class="phonetic">/ˈkɑːrbənət/</td>
+                    <td><span class="pos">n.</span></td>
+                    <td>碳酸盐；碳酸酯</td>
+                </tr>
+                <tr>
+                    <td class="word">industrialize</td>
+                    <td class="phonetic">/ɪnˈdʌstriəlaɪz/</td>
+                    <td><span class="pos">v.</span></td>
+                    <td>使工业化；实现工业化</td>
+                </tr>
+                <tr>
+                    <td class="word">patent</td>
+                    <td class="phonetic">/ˈpætnt/</td>
+                    <td><span class="pos">v./n.</span></td>
+                    <td>获得专利；专利</td>
+                </tr>
+                <tr>
+                    <td class="word">transform</td>
+                    <td class="phonetic">/trænsˈfɔːrm/</td>
+                    <td><span class="pos">v.</span></td>
+                    <td>转变；改变形态</td>
+                </tr>
+                <tr>
+                    <td class="word">intensive</td>
+                    <td class="phonetic">/ɪnˈtensɪv/</td>
+                    <td><span class="pos">adj.</span></td>
+                    <td>密集的；加强的</td>
+                </tr>
+                <tr>
+                    <td class="word">dilemma</td>
+                    <td class="phonetic">/dɪˈlemə/</td>
+                    <td><span class="pos">n.</span></td>
+                    <td>困境；两难选择</td>
+                </tr>
+                <tr>
+                    <td class="word">decarbonization</td>
+                    <td class="phonetic">/diːˌkɑːrbənaɪˈzeɪʃn/</td>
+                    <td><span class="pos">n.</span></td>
+                    <td>脱碳；去碳化</td>
+                </tr>
+                <tr>
+                    <td class="word">complementary</td>
+                    <td class="phonetic">/ˌkɑːmplɪˈmentri/</td>
+                    <td><span class="pos">adj.</span></td>
+                    <td>互补的；补充的</td>
+                </tr>
+                <tr>
+                    <td class="word">expertise</td>
+                    <td class="phonetic">/ˌekspɜːrˈtiːz/</td>
+                    <td><span class="pos">n.</span></td>
+                    <td>专业知识；专长</td>
+                </tr>
+                <tr>
+                    <td class="word">implement</td>
+                    <td class="phonetic">/ˈɪmplɪment/</td>
+                    <td><span class="pos">v.</span></td>
+                    <td>实施；执行</td>
+                </tr>
+                <tr>
+                    <td class="word">characteristic</td>
+                    <td class="phonetic">/ˌkærəktəˈrɪstɪk/</td>
+                    <td><span class="pos">n./adj.</span></td>
+                    <td>特征；特有的</td>
+                </tr>
+                <tr>
+                    <td class="word">demonstration</td>
+                    <td class="phonetic">/ˌdemənˈstreɪʃn/</td>
+                    <td><span class="pos">n.</span></td>
+                    <td>示范；演示</td>
+                </tr>
+                <tr>
+                    <td class="word">municipality</td>
+                    <td class="phonetic">/mjuːˌnɪsɪˈpæləti/</td>
+                    <td><span class="pos">n.</span></td>
+                    <td>市政当局；自治市</td>
+                </tr>
+                <tr>
+                    <td class="word">circular</td>
+                    <td class="phonetic">/ˈsɜːrkjələr/</td>
+                    <td><span class="pos">adj.</span></td>
+                    <td>循环的；圆形的</td>
+                </tr>
+                <tr>
+                    <td class="word">contribute</td>
+                    <td class="phonetic">/kənˈtrɪbjuːt/</td>
+                    <td><span class="pos">v.</span></td>
+                    <td>贡献；捐献</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples-section">
+            <h3>💡 精选例句 (Example Sentences)</h3>
+            
+            <div class="example-item">
+                <p class="en">1. The new technology can <strong>transform</strong> carbon dioxide into useful manufacturing materials.</p>
+                <p class="cn">这项新技术能将二氧化碳转化为有用的制造材料。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">2. Scientists have developed a <strong>patented</strong> process that produces iron carbonate at normal temperature.</p>
+                <p class="cn">科学家们开发了一种专利工艺，能在常温下生产碳酸铁。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">3. This innovation avoids a common <strong>dilemma</strong> where environmental solutions create new problems.</p>
+                <p class="cn">这项创新避免了一个常见困境，即环保方案反而制造新问题。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">4. The two researchers have <strong>complementary</strong> skills that enable them to solve complex problems.</p>
+                <p class="cn">这两位研究人员拥有互补的技能，使他们能够解决复杂问题。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">5. <strong>Decarbonization</strong> efforts are accelerating across industries worldwide.</p>
+                <p class="cn">全球各行业的脱碳努力正在加速推进。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">6. The company plans to <strong>implement</strong> this technology across its production facilities.</p>
+                <p class="cn">该公司计划在其生产设施中实施这项技术。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">7. Creating a <strong>circular</strong> economy requires collaboration between businesses and citizens.</p>
+                <p class="cn">创建循环经济需要企业和市民之间的协作。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="en">8. Environmental innovations should <strong>contribute</strong> to sustainable economic development.</p>
+                <p class="cn">环保创新应当促进可持续经济发展。</p>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="sentences-section">
+            <h3>🔍 长难句解析 (Complex Sentence Analysis)</h3>
+            
+            <div class="sentence-box">
+                <p class="original">There are other technologies that convert CO₂ into different substances, but metacol has a key advantage: it can produce iron carbonate at normal temperature and pressure without requiring hydrogen, electricity, or other energy-intensive inputs to trigger the chemical reaction.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong><br>
+                    本句是由but连接的并列复合句。第一分句"There are other technologies that convert CO₂ into different substances"中，that引导定语从句修饰technologies；第二分句中，冒号后是对advantage的解释说明，without requiring...是介词短语作状语，表示伴随条件。<br><br>
+                    <strong>核心意思：</strong>虽然有其他技术也能转化CO₂，但metacol的独特优势在于无需能源密集型输入即可在常温常压下反应。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">This means it avoids a dilemma common in decarbonization technologies, where attempts to reduce CO₂ conversely end up generating even more of it through energy consumption.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong><br>
+                    主句为"This means (that)..."，means后是省略that的宾语从句。从句中，dilemma后有两个修饰成分：common in...是形容词短语作后置定语；where引导定语从句进一步说明dilemma的具体内容，其中to reduce CO₂是不定式作attempts的定语。<br><br>
+                    <strong>核心意思：</strong>这意味着它避免了脱碳技术中常见的两难困境——试图减少CO₂反而通过能源消耗产生更多排放。
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">We want to create a society and economy in which environmentally conscious actions directly contribute to a better quality of life.</p>
+                <div class="analysis">
+                    <strong>结构分析：</strong><br>
+                    主句为"We want to create a society and economy"，其中which引导定语从句修饰society and economy。定语从句中，environmentally conscious是形容词短语修饰actions，contribute to是谓语动词短语。<br><br>
+                    <strong>核心意思：</strong>我们想要创建一个社会和经济体系，其中有环保意识的行为能直接提升生活质量。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing-section">
+            <h3>✍️ 写作素材积累 (Writing Materials)</h3>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>环保创新</td>
+                    <td>transform greenhouse gas into valuable resources</td>
+                    <td>将温室气体转化为宝贵资源</td>
+                </tr>
+                <tr>
+                    <td>技术应用</td>
+                    <td>be applicable to a wide range of products</td>
+                    <td>适用于各种产品</td>
+                </tr>
+                <tr>
+                    <td>技术优势</td>
+                    <td>avoid a dilemma common in decarbonization technologies</td>
+                    <td>避免脱碳技术中常见的两难困境</td>
+                </tr>
+                <tr>
+                    <td>合作精神</td>
+                    <td>cross-disciplinary collaboration</td>
+                    <td>跨学科合作</td>
+                </tr>
+                <tr>
+                    <td>循环经济</td>
+                    <td>a true circular society/economy</td>
+                    <td>真正的循环社会/经济</td>
+                </tr>
+                <tr>
+                    <td>未来愿景</td>
+                    <td>make it an industry standard</td>
+                    <td>使其成为行业标准</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion-section">
+            <h3>💬 思考与讨论 (Discussion Questions)</h3>
+            
+            <div class="question-item">
+                <span class="q-number">1</span>
+                <span class="q-text">Why is metacol considered a "carbon-negative" technology? How does it differ from other carbon capture technologies?</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="q-number">2</span>
+                <span class="q-text">What role do you think cross-disciplinary collaboration plays in technological innovation? Can you think of other examples?</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="q-number">3</span>
+                <span class="q-text">How can individuals participate in creating a "circular society" as described in the article? What changes can we make in daily life?</span>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 高考英语时文阅读 · 每日更新</p>
+            <p>助力高三学子备考，拓展国际视野，提升语言能力</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="number">1</div>
+                    <div class="label">今日文章</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">15</div>
+                    <div class="label">核心词汇</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">980</div>
+                    <div class="label">文章词数</div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; font-size: 12px;">© 2026 Daily English Reading Project | 素材来源：Japan.go.jp</p>
+        </div>
+    </div>
+</body>
+</html>
