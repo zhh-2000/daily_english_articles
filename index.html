@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日高考英语时文阅读 | Daily English Reading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 头部 */
+        .header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        /* 统计卡片 */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 25px 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            min-width: 150px;
+        }
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .stat-card .label {
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        /* 文章列表 */
+        .articles-section {
+            margin-top: 40px;
+        }
+        .section-title {
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        
+        .article-card .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(245, 87, 108, 0.4);
+        }
+        
+        .article-card .card-content {
+            padding: 25px;
+        }
+        .article-card h3 {
+            color: #2d3748;
+            font-size: 1.25em;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .article-card .cn-title {
+            color: #667eea;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        .article-card .meta {
+            color: #718096;
+            font-size: 0.9em;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .article-card .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .article-card .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+        .article-card .read-more {
+            display: inline-block;
+            color: #667eea;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .article-card .read-more:hover {
+            color: #764ba2;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .stats {
+                gap: 15px;
+            }
+            .stat-card {
+                padding: 20px 30px;
+            }
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1>📖 每日高考英语时文阅读</h1>
+            <p class="subtitle">Daily English Reading Materials for Gaokao Preparation</p>
+        </header>
+        
+        <!-- 统计卡片 -->
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">文章总数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">15</div>
+                <div class="label">核心词汇</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">累计天数</div>
+            </div>
+        </div>
+        
+        <!-- 文章列表 -->
+        <section class="articles-section">
+            <h2 class="section-title">📚 文章列表</h2>
+            <div class="articles-grid">
+                
+                <article class="article-card">
+                    <span class="badge">🔥 今日最新</span>
+                    <div class="card-content">
+                        <h3>Brain Possesses Greater Self-Repair Capacity Than Previously Assumed</h3>
+                        <p class="cn-title">大脑的自我修复能力远超预期</p>
+                        <div class="meta">
+                            <span>📅 2026-08-17</span>
+                            <span>📰 University of Zurich</span>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">neuroscience</span>
+                            <span class="tag">biology</span>
+                            <span class="tag">research</span>
+                        </div>
+                        <p style="color: #4a5568; font-size: 0.95em; margin-bottom: 15px;">瑞士苏黎世大学研究人员发现大脑具有比预期更强的自我修复能力，为神经系统疾病治疗开辟新方向。</p>
+                        <a href="articles/article_20260817.html" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+        
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>为高三学生每日精选优质英文时文阅读材料</p>
+            <p style="margin-top: 15px;">Topics: Science | Technology | Society | Culture | Environment</p>
+            <p style="margin-top: 15px; opacity: 0.7;">© 2026 Daily English Reading for Gaokao</p>
+        </footer>
+    </div>
+</body>
+</html>

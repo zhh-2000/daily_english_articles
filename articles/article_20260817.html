@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain's Self-Repair Capacity | 每日英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .article-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        .article-header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .article-header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+        .article-header .meta {
+            font-size: 0.95em;
+            opacity: 0.85;
+        }
+        .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+        
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(245, 87, 108, 0.3);
+        }
+        .abstract h2 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .abstract p {
+            font-size: 1em;
+            line-height: 1.9;
+        }
+        
+        /* 4. 正文 */
+        .article-body {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .article-body h2 {
+            color: #667eea;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .article-body p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .vocabulary h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f8f9ff;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .vocab-table .phonetic {
+            color: #888;
+            font-style: italic;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        .examples h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .example-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #667eea;
+            font-size: 0.95em;
+        }
+        
+        /* 7. 长难句 */
+        .sentences {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .sentences h2 {
+            color: #f5576c;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #f5576c;
+            padding-bottom: 10px;
+        }
+        .sentence-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #f0f4ff 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .original {
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .sentence-box .analysis {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .sentence-box .analysis p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+        .sentence-box .analysis .label {
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        /* 8. 写作素材 */
+        .writing {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .writing h2 {
+            color: #48bb78;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #48bb78;
+            padding-bottom: 10px;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .writing-table th {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .writing-table tr:hover {
+            background: #f0fff4;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        .discussion h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .question-item {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .question-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .question-item p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #718096;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .article-header h1 {
+                font-size: 1.6em;
+            }
+            .article-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <header class="article-header">
+            <h1>Brain Possesses Greater Self-Repair Capacity Than Previously Assumed</h1>
+            <p class="subtitle">大脑的自我修复能力远超预期</p>
+            <div class="meta">
+                <span class="tag"> neuroscience</span>
+                <span class="tag"> biology</span>
+                <span class="tag"> research</span>
+                <p style="margin-top: 15px;">Source: University of Zurich | August 10, 2026</p>
+            </div>
+        </header>
+        
+        <!-- 3. 摘要 -->
+        <section class="abstract">
+            <h2>📋 文章摘要</h2>
+            <p>瑞士苏黎世大学研究团队发现，成年大脑具有比预期更强的自我修复能力。研究人员在小鼠大脑中识别出一类特殊的"再生性星形胶质细胞"，它们能够通过细胞核迁移的方式修复受损脑组织。这一发现发表在《自然·神经科学》期刊上，为脑损伤和神经系统疾病的治疗开辟了新方向。</p>
+        </section>
+        
+        <!-- 4. 正文 -->
+        <article class="article-body">
+            <h2>The Discovery</h2>
+            <p>For decades, scientists believed that the adult brain had limited capacity to repair itself after injury. This assumption was based on the observation that neurons, the primary cells responsible for transmitting information in the brain, do not readily divide after maturation. However, a groundbreaking study from the University of Zurich has fundamentally challenged this long-held belief.</p>
+            
+            <p>Researchers at the Institute of Pharmacology and Toxicology discovered a specialized group of cells called <span class="highlight">"regenerative astrocytes"</span> that can step in when brain tissue is damaged. Astrocytes are star-shaped glial cells that provide crucial support to neurons, supplying them with nutrients, regulating blood flow, and maintaining the health of brain tissue. Previously, it was thought that when these supporting cells were lost due to injury or autoimmune diseases, the adult brain could not fully replace them.</p>
+            
+            <h2>A Remarkable Cellular Journey</h2>
+            <p>What makes this discovery particularly fascinating is the unique mechanism by which these regenerative astrocytes repair damaged tissue. Using advanced <span class="highlight">two-photon microscopy</span>, the research team observed the brains of living mice in real time over several weeks. They discovered that these special astrocytes don't simply divide to create new cells at the injury site. Instead, they perform a remarkable feat: they send newly formed cell nuclei gliding across long distances through their star-shaped cellular extensions.</p>
+            
+            <p>The nuclei travel along these extensions, sometimes crossing considerable distances, to repopulate the damaged area of the brain and reconnect the astrocyte network. This process of <span class="highlight">nuclear translocation</span> had never been observed before in the adult brain and represents an entirely new understanding of how neural tissue can regenerate.</p>
+            
+            <h2>Implications for Treatment</h2>
+            <p>The discovery has significant implications for treating neurological conditions. Dr. Bruno Weber, who led the research team, emphasized that identifying the genes and signaling pathways activated during this repair process could serve as starting points for developing new therapeutic approaches. If these mechanisms can be selectively activated, it might help repair damaged brain tissue more effectively and improve recovery after certain brain disorders.</p>
+            
+            <p>This finding is particularly relevant for conditions like <span class="highlight">neuromyelitis optica spectrum disorder</span>, a rare autoimmune disease where the body's own antibodies destroy astrocytes. Understanding how the brain naturally attempts to replace these lost cells opens new possibilities for supporting recovery from such ailments.</p>
+            
+            <h2>A New Chapter in Neuroscience</h2>
+            <p>This research, published in Nature Neuroscience in July 2026, represents a paradigm shift in our understanding of brain plasticity and regeneration. It demonstrates that the adult brain possesses previously unknown capabilities for self-repair, challenging the conventional view that brain injuries inevitably result in permanent damage.</p>
+            
+            <p>The discovery also highlights the importance of continued investment in basic scientific research. By using innovative techniques like two-photon microscopy and gene mapping, researchers were able to observe cellular processes that had remained hidden from scientific view. As technology continues to advance, we can expect further revelations about the brain's remarkable capacity for adaptation and repair.</p>
+            
+            <p>For high school students interested in neuroscience, this discovery offers an exciting glimpse into how scientific understanding evolves and how pursuing unanswered questions can lead to breakthrough findings that may ultimately benefit millions of people suffering from neurological conditions.</p>
+        </article>
+        
+        <!-- 5. 词汇表 -->
+        <section class="vocabulary">
+            <h2>📚 核心词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>词汇</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>释义</th>
+                </tr>
+                <tr>
+                    <td class="word">astrocyte</td>
+                    <td class="phonetic">/ˈæstrəsaɪt/</td>
+                    <td>n.</td>
+                    <td>星形胶质细胞</td>
+                </tr>
+                <tr>
+                    <td class="word">regenerative</td>
+                    <td class="phonetic">/rɪˈdʒenərətɪv/</td>
+                    <td>adj.</td>
+                    <td>再生的；有再生能力的</td>
+                </tr>
+                <tr>
+                    <td class="word">neuron</td>
+                    <td class="phonetic">/ˈnjʊərɒn/</td>
+                    <td>n.</td>
+                    <td>神经元</td>
+                </tr>
+                <tr>
+                    <td class="word">glial</td>
+                    <td class="phonetic">/ˈɡlaɪəl/</td>
+                    <td>adj.</td>
+                    <td>神经胶质的</td>
+                </tr>
+                <tr>
+                    <td class="word">translocation</td>
+                    <td class="phonetic">/ˌtrænzləʊˈkeɪʃn/</td>
+                    <td>n.</td>
+                    <td>易位；迁移</td>
+                </tr>
+                <tr>
+                    <td class="word">microscopy</td>
+                    <td class="phonetic">/maɪˈkrɒskəpɪ/</td>
+                    <td>n.</td>
+                    <td>显微镜检查；显微镜学</td>
+                </tr>
+                <tr>
+                    <td class="word">paradigm</td>
+                    <td class="phonetic">/ˈpærədaɪm/</td>
+                    <td>n.</td>
+                    <td>范式；典范</td>
+                </tr>
+                <tr>
+                    <td class="word">autoimmune</td>
+                    <td class="phonetic">/ˌɔːtəʊɪˈmjuːn/</td>
+                    <td>adj.</td>
+                    <td>自体免疫的</td>
+                </tr>
+                <tr>
+                    <td class="word">plasticity</td>
+                    <td class="phonetic">/plæˈstɪsətɪ/</td>
+                    <td>n.</td>
+                    <td>可塑性</td>
+                </tr>
+                <tr>
+                    <td class="word">therapeutic</td>
+                    <td class="phonetic">/ˌθerəˈpjuːtɪk/</td>
+                    <td>adj.</td>
+                    <td>治疗的；治疗学的</td>
+                </tr>
+                <tr>
+                    <td class="word">repopulate</td>
+                    <td class="phonetic">/riːˈpɒpjʊleɪt/</td>
+                    <td>v.</td>
+                    <td>重新居住于；重新填充</td>
+                </tr>
+                <tr>
+                    <td class="word">signaling</td>
+                    <td class="phonetic">/ˈsɪɡnəlɪŋ/</td>
+                    <td>n.</td>
+                    <td>信号传导</td>
+                </tr>
+                <tr>
+                    <td class="word">neurological</td>
+                    <td class="phonetic">/ˌnjʊərəˈlɒdʒɪkl/</td>
+                    <td>adj.</td>
+                    <td>神经学的；神经系统的</td>
+                </tr>
+                <tr>
+                    <td class="word">assumption</td>
+                    <td class="phonetic">/əˈsʌmpʃn/</td>
+                    <td>n.</td>
+                    <td>假设；假定</td>
+                </tr>
+                <tr>
+                    <td class="word">perimeter</td>
+                    <td class="phonetic">/pəˈrɪmɪtə/</td>
+                    <td>n.</td>
+                    <td>周边；边缘地带</td>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- 6. 例句 -->
+        <section class="examples">
+            <h2>✍️ 重点词汇例句</h2>
+            <div class="example-item">
+                <p class="en">1. The discovery of regenerative astrocytes offers new hope for patients with brain injuries.</p>
+                <p class="cn">再生性星形胶质细胞的发现为脑损伤患者带来了新的希望。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">2. Scientists used advanced microscopy techniques to observe cellular processes in real time.</p>
+                <p class="cn">科学家们使用先进的显微镜技术实时观察细胞过程。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">3. The study represents a paradigm shift in our understanding of brain regeneration.</p>
+                <p class="cn">这项研究代表了我们对大脑再生理解的一次范式转变。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">4. Autoimmune diseases occur when the body's immune system attacks its own cells.</p>
+                <p class="cn">当人体免疫系统攻击自身细胞时，就会发生自身免疫性疾病。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">5. The brain's plasticity allows it to adapt and recover from certain types of damage.</p>
+                <p class="cn">大脑的可塑性使其能够适应某些类型的损伤并从中恢复。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">6. New therapeutic approaches are being developed to treat neurological disorders.</p>
+                <p class="cn">新的治疗方法正在研发中，用于治疗神经系统疾病。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">7. Nuclear translocation enables cells to migrate to areas where they are needed most.</p>
+                <p class="cn">细胞核易位使细胞能够迁移到最需要它们的区域。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">8. Glial cells play a crucial supporting role in maintaining brain health.</p>
+                <p class="cn">神经胶质细胞在维持大脑健康方面发挥着重要的支持作用。</p>
+            </div>
+        </section>
+        
+        <!-- 7. 长难句分析 -->
+        <section class="sentences">
+            <h2>🔍 长难句解析</h2>
+            
+            <div class="sentence-box">
+                <p class="original">① A new study by co-lead authors Marina Herwerth and Matthias Wyss from the Institute of Pharmacology and Toxicology at the University of Zurich has now overturned that assumption: their research team headed by Bruno Weber discovered a specialized group of "regenerative" astrocytes in the brains of living mice that step in on the perimeter of the damaged area of the brain to rebuild the cells.</p>
+                <div class="analysis">
+                    <p><span class="label">句型结构：</span>复合句，包含定语从句和目的状语</p>
+                    <p><span class="label">主干：</span>A new study... has overturned that assumption</p>
+                    <p><span class="label">修饰成分：</span>by co-lead authors...（介词短语作后置定语修饰study）；headed by Bruno Weber（过去分词短语作后置定语修饰team）；that step in...（定语从句修饰astrocytes）</p>
+                    <p><span class="label">译文：</span>苏黎世大学药理学与毒理学研究所的共同第一作者Marina Herwerth和Matthias Wyss发表的一项新研究推翻了这一假设：由Bruno Weber领导的研究团队在活体小鼠的大脑中发现了一类特殊的"再生性"星形胶质细胞，它们会在受损脑区的边缘介入，重建细胞。</p>
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">② The researchers used two-photon microscopy to observe the brains of living mice in real time over a period of several weeks and mapped which genes switch on in which areas of the brain, enabling them to identify the special astrocytes that take care of rebuilding injured tissue.</p>
+                <div class="analysis">
+                    <p><span class="label">句型结构：</span>并列复合句，含宾语从句和定语从句</p>
+                    <p><span class="label">主干：</span>The researchers used... to observe... and mapped which genes...</p>
+                    <p><span class="label">修饰成分：</span>in real time（时间状语）；over a period of several weeks（时间状语）；which genes switch on in which areas（宾语从句）；enabling them to identify...（现在分词短语作结果状语）；that take care of...（定语从句修饰astrocytes）</p>
+                    <p><span class="label">译文：</span>研究人员使用双光子显微镜在几周内实时观察活体小鼠的大脑，并绘制了哪些基因在大脑的哪些区域被激活的图谱，从而使他们能够识别出负责重建受损组织的特殊星形胶质细胞。</p>
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">③ The discovery of how adult brain cell nuclei migrate through the long star-shaped extensions of astrocytes to injured tissue expands our comprehension of how the brain organizes and regenerates itself after certain injuries.</p>
+                <div class="analysis">
+                    <p><span class="label">句型结构：</span>简单句，含多个宾语从句</p>
+                    <p><span class="label">主干：</span>The discovery... expands our comprehension...</p>
+                    <p><span class="label">修饰成分：</span>of how adult brain cell nuclei migrate...（介词短语作后置定语修饰discovery）；through the long star-shaped extensions（介词短语表路径）；of how the brain organizes and regenerates...（介词短语作后置定语修饰comprehension）</p>
+                    <p><span class="label">译文：</span>关于成人大脑细胞核如何通过星形胶质细胞的长星状突起迁移到受损组织的发现，拓展了我们对大脑在特定损伤后如何组织和再生自身的理解。</p>
+                </div>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">④ If those mechanisms can be selectively activated, that could help to more effectively repair damaged brain tissue, restore astrocyte networks and thus improve recovery after certain brain disorders.</p>
+                <div class="analysis">
+                    <p><span class="label">句型结构：</span>条件状语从句 + 主句（并列谓语）</p>
+                    <p><span class="label">主干：</span>If... that could help to repair..., restore... and thus improve...</p>
+                    <p><span class="label">修饰成分：</span>If those mechanisms can be selectively activated（条件状语从句）；more effectively（副词修饰repair）；damaged（过去分词作定语修饰tissue）；thus（连接副词表结果）</p>
+                    <p><span class="label">译文：</span>如果这些机制能够被选择性激活，将有助于更有效地修复受损的脑组织，恢复星形胶质细胞网络，从而改善特定脑部疾病后的恢复情况。</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 8. 写作素材 -->
+        <section class="writing">
+            <h2>📝 写作素材积累</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>表达方式</th>
+                    <th>适用场景</th>
+                </tr>
+                <tr>
+                    <td>科学发现</td>
+                    <td>overturn/challenge an assumption<br>推翻/挑战一种假设</td>
+                    <td>描述科学研究突破</td>
+                </tr>
+                <tr>
+                    <td>研究方法</td>
+                    <td>using advanced techniques to observe... in real time<br>使用先进技术实时观察...</td>
+                    <td>介绍研究方法</td>
+                </tr>
+                <tr>
+                    <td>重要意义</td>
+                    <td>represents a paradigm shift in our understanding of...<br>代表了对...理解的范式转变</td>
+                    <td>强调研究的重要性</td>
+                </tr>
+                <tr>
+                    <td>医学应用</td>
+                    <td>open new avenues for treating...<br>为治疗...开辟新途径</td>
+                    <td>讨论医学前景</td>
+                </tr>
+                <tr>
+                    <td>因果关系</td>
+                    <td>if... can be selectively activated, that could help to...<br>如果...能被选择性激活，将有助于...</td>
+                    <td>论述条件与结果</td>
+                </tr>
+                <tr>
+                    <td>学术评价</td>
+                    <td>highlights the importance of continued investment in...<br>突显了持续投资于...的重要性</td>
+                    <td>论证研究价值</td>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- 9. 讨论问题 -->
+        <section class="discussion">
+            <h2>💭 思考与讨论</h2>
+            
+            <div class="question-item">
+                <h3>Question 1: Scientific Method</h3>
+                <p>How did the researchers' use of two-photon microscopy contribute to their discovery? What advantages does real-time observation offer compared to traditional methods of studying brain tissue?</p>
+                <p style="margin-top: 10px; opacity: 0.8;">研究人员对双光子显微镜的使用如何促成了他们的发现？与传统的脑组织研究方法相比，实时观察有哪些优势？</p>
+            </div>
+            
+            <div class="question-item">
+                <h3>Question 2: Medical Applications</h3>
+                <p>If the mechanism of nuclear translocation could be artificially enhanced, what types of neurological conditions might benefit most from such treatment? Discuss the potential benefits and challenges.</p>
+                <p style="margin-top: 10px; opacity: 0.8;">如果细胞核易位机制可以被人工增强，哪些类型的神经系统疾病可能从中获益最大？讨论潜在的益处和挑战。</p>
+            </div>
+            
+            <div class="question-item">
+                <h3>Question 3: Future Research</h3>
+                <p>The article mentions that this discovery could "point toward new ways of supporting recovery." What further research do you think should be conducted to translate this finding into practical medical treatments?</p>
+                <p style="margin-top: 10px; opacity: 0.8;">文章提到这一发现可能"为支持恢复指明新方向"。你认为应该进行哪些进一步研究，以将这一发现转化为实际的医疗手段？</p>
+            </div>
+        </section>
+        
+        <!-- 10. 页脚 -->
+        <footer class="footer">
+            <p>📖 每日英语时文阅读 · 助力高考英语备考</p>
+            <p style="margin-top: 10px;">文章来源：<a href="https://www.news.uzh.ch/en/articles/media/2026/regenerative-astrocytes.html" target="_blank">University of Zurich</a></p>
+            <p style="margin-top: 10px; opacity: 0.7;">© 2026 Daily English Reading Materials for Gaokao</p>
+        </footer>
+    </div>
+</body>
+</html>
