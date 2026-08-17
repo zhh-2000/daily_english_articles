@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISPR Breakthrough: Scientists Find New Way to Fight Solid Tumors | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #11998e;
+        }
+        
+        .abstract h3 {
+            color: #0a6c5f;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+            font-size: 16px;
+            line-height: 2;
+        }
+        
+        .content h3 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            font-size: 20px;
+            border-left: 4px solid #11998e;
+            padding-left: 15px;
+        }
+        
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .vocabulary h3 {
+            color: #0a6c5f;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .vocabulary table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .vocabulary th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .vocabulary td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .vocabulary tr:hover {
+            background: #d4fc79;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            padding: 30px;
+        }
+        
+        .examples h3 {
+            color: #0a6c5f;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #11998e;
+        }
+        
+        .example-item .sentence {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .example-item .translation {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* 7. 长难句 */
+        .complex-sentences {
+            padding: 30px;
+            background: #d4fc79;
+        }
+        
+        .complex-sentences h3 {
+            color: #0a6c5f;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .complex-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .complex-item .sentence {
+            color: #2c3e50;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .complex-item .analysis {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .complex-item .analysis strong {
+            color: #11998e;
+        }
+        
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 30px;
+        }
+        
+        .writing-materials h3 {
+            color: #0a6c5f;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .writing-materials table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .writing-materials th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        
+        .writing-materials td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .writing-materials tr:hover {
+            background: #d4fc79;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .discussion h3 {
+            color: #0a6c5f;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question-item .number {
+            display: inline-block;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .question-item .question {
+            display: inline;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .footer .links {
+            margin-top: 15px;
+        }
+        
+        .footer a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>CRISPR Breakthrough: Scientists Find New Way to Fight Solid Tumors</h1>
+            <div class="meta">
+                <span>📅 2026年8月14日</span>
+                <span>📚 来源：Gladstone Institutes / Nature</span>
+            </div>
+            <span class="tag">科技类 · 生物医学</span>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📋 文章摘要</h3>
+            <p>美国格拉德斯通研究所和加州大学旧金山分校的研究人员开发出世界首个在活体人类T细胞中进行的全基因组CRISPR筛选平台，并发现两个关键基因编辑可显著增强CAR-T细胞治疗实体肿瘤的效果。在肺癌模型中，经过双重基因编辑的CAR-T细胞使三分之二的小鼠实现肿瘤清除，为治疗肺癌、胰腺癌、乳腺癌等实体肿瘤带来新希望。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h3>A Revolutionary Screening Platform</h3>
+            <p>For patients with blood cancers like leukemia and lymphoma, the immunotherapy known as CAR-T cell therapy can be lifesaving. Doctors remove a patient's immune cells, called T cells, engineer them in the lab to better recognize and attack cancer, and infuse them back into their bloodstream. But for solid tumors—which include lung, pancreatic, ovarian, colon, breast, and other cancer types—these engineered immune cells still meet too much resistance to effectively treat the disease.</p>
+            
+            <p>Now, scientists at Gladstone Institutes and UC San Francisco have discovered a pair of genetic edits that make CAR-T cells more effective at infiltrating and fighting solid tumors. In mice, T cells with these edits dramatically outperformed standard CAR-T cells, clearing tumors in many cases where unedited CAR-T cells had little or no effect. The discovery was published in Nature on August 12, 2026.</p>
+            
+            <h3>Overcoming a Longstanding Technical Bottleneck</h3>
+            <p>For several years, scientists have been using CRISPR gene editing to make thousands of different edits to T cells and screen which make the cells more powerful at fighting cancers. But previous approaches had tested the T cells in lab dishes. Running screens in the complex, hostile environment of a real tumor had long seemed out of reach, mostly because so few T cells survived in the vicinity of a solid tumor.</p>
+            
+            <p>Qi Liu, a postdoctoral researcher, tried a new approach. She engineered tumor cells to display a signal that attracts T cells, causing them to accumulate in the tumors. With previous methods, researchers had only been able to recover tens to hundreds of thousands of T cells from a tumor. With the new technique, Liu and her team could recover many millions of T cells from each tumor, making these new CRISPR screens possible.</p>
+            
+            <h3>A Powerful Pair of Genes Identified</h3>
+            <p>With the new system in place, the group ran two complementary screens using healthy human T cells that had been altered by CRISPR to switch off one of nearly every gene in the human genome. Among nearly 20,000 genes tested in the screens, two genes emerged as especially important.</p>
+            
+            <p>T cells lacking a gene called P2RY8 flooded into tumors in greater numbers than normal. The results suggested that tumors usually produce a molecule that activates P2RY8 in nearby immune cells, putting the brakes on the T cells' ability to move into the tumor. Without that gene, that brake was gone.</p>
+            
+            <p>Once inside tumors, T cells lacking a gene called GNAS produced higher levels of interferon-gamma, a key "cancer fighting" signal, than other T cells. The researchers found that GNAS acts as a central hub for processing signals that aim to suppress both solid tumor cells and other cells within the tumor microenvironment. Removing GNAS made T cells far less responsive to those suppressive signals.</p>
+            
+            <h3>Promising Results Across Multiple Cancer Types</h3>
+            <p>The scientists found that CAR-T cells lacking GNAS shrank tumors across multiple mouse models of solid cancer, including melanoma, lung cancer, pancreatic cancer, gastroesophageal adenocarcinoma, and uterine sarcoma. Removing both GNAS and P2RY8 together produced an even greater benefit. Even at a very low CAR-T cell dose, two-thirds of mice in a lung cancer model were tumor-free at the study's end, compared with none who received control-edited T cells.</p>
+            
+            <p>Importantly, the findings also translated to patient-derived T cells. When the researchers repeated the experiments using T cells from human patients with ovarian cancer and melanoma patients, the gene edits still enabled the T cells to fight tumors effectively.</p>
+            
+            <h3>Future Implications</h3>
+            <p>The new CAR-T cell edits will require additional testing before they can be moved to human clinical trials. However, the initial results suggest a favorable safety profile; the researchers tracked mice for more than six months after their tumors cleared and saw no long-term side effects. The scientists suspect the safety will persist, since the edits to the T cells don't broadly activate them throughout the body.</p>
+            
+            <p>"When you look at these edited cells outside of the tumor, they look the same as normal T cells," says Dr. Julia Carnevale, senior author of the study. "The differences only become apparent within the tumor microenvironment, which is exactly the kind of edit you want." This groundbreaking research opens the door to a whole new generation of discoveries for cell therapy, potentially transforming cancer treatment for millions of patients worldwide.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📖 重点词汇（15个）</h3>
+            <table>
+                <tr>
+                    <th>英文单词</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>英文释义</th>
+                </tr>
+                <tr>
+                    <td><strong>immunotherapy</strong></td>
+                    <td>n.</td>
+                    <td>免疫疗法</td>
+                    <td>treatment that uses the body's immune system to fight disease</td>
+                </tr>
+                <tr>
+                    <td><strong>engineer</strong></td>
+                    <td>v.</td>
+                    <td>设计，改造</td>
+                    <td>to design or modify something scientifically</td>
+                </tr>
+                <tr>
+                    <td><strong>resistance</strong></td>
+                    <td>n.</td>
+                    <td>抵抗力，抵抗</td>
+                    <td>the ability to fight against something</td>
+                </tr>
+                <tr>
+                    <td><strong>infiltrate</strong></td>
+                    <td>v.</td>
+                    <td>渗透，浸润</td>
+                    <td>to enter or spread into something gradually</td>
+                </tr>
+                <tr>
+                    <td><strong>outperform</strong></td>
+                    <td>v.</td>
+                    <td>胜过，表现优于</td>
+                    <td>to perform better than someone or something</td>
+                </tr>
+                <tr>
+                    <td><strong>hostile</strong></td>
+                    <td>adj.</td>
+                    <td>敌对的，不利的</td>
+                    <td>unfriendly and not welcoming</td>
+                </tr>
+                <tr>
+                    <td><strong>accumulate</strong></td>
+                    <td>v.</td>
+                    <td>积累，聚集</td>
+                    <td>to gradually increase in amount</td>
+                </tr>
+                <tr>
+                    <td><strong>complementary</strong></td>
+                    <td>adj.</td>
+                    <td>互补的</td>
+                    <td>combining well to form a whole</td>
+                </tr>
+                <tr>
+                    <td><strong>suppress</strong></td>
+                    <td>v.</td>
+                    <td>抑制，压制</td>
+                    <td>to prevent something from being expressed</td>
+                </tr>
+                <tr>
+                    <td><strong>microenvironment</strong></td>
+                    <td>n.</td>
+                    <td>微环境</td>
+                    <td>the immediate small-scale environment</td>
+                </tr>
+                <tr>
+                    <td><strong>translate</strong></td>
+                    <td>v.</td>
+                    <td>转化，转变</td>
+                    <td>to change into another form</td>
+                </tr>
+                <tr>
+                    <td><strong>profile</strong></td>
+                    <td>n.</td>
+                    <td>概况，特征</td>
+                    <td>a description of characteristics</td>
+                </tr>
+                <tr>
+                    <td><strong>favorable</strong></td>
+                    <td>adj.</td>
+                    <td>有利的，良好的</td>
+                    <td>showing approval or support</td>
+                </tr>
+                <tr>
+                    <td><strong>groundbreaking</strong></td>
+                    <td>adj.</td>
+                    <td>开创性的</td>
+                    <td>using new methods or making new discoveries</td>
+                </tr>
+                <tr>
+                    <td><strong>transform</strong></td>
+                    <td>v.</td>
+                    <td>改变，转变</td>
+                    <td>to change completely in form or nature</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✍️ 重点词汇例句（8个）</h3>
+            
+            <div class="example-item">
+                <div class="sentence">For patients with blood cancers, the immunotherapy known as CAR-T cell therapy can be lifesaving.</div>
+                <div class="translation">对于血液癌症患者来说，被称为CAR-T细胞疗法的免疫疗法可以挽救生命。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Scientists engineer immune cells in the lab to better recognize and attack cancer cells.</div>
+                <div class="translation">科学家在实验室改造免疫细胞，使其更好地识别和攻击癌细胞。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">Running screens in the hostile environment of a real tumor had long seemed out of reach.</div>
+                <div class="translation">在真实肿瘤这种不利环境中进行筛选长期以来似乎遥不可及。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">T cells with these edits dramatically outperformed standard CAR-T cells in clearing tumors.</div>
+                <div class="translation">经过这些编辑的T细胞在清除肿瘤方面显著优于标准CAR-T细胞。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">The researchers found that GNAS acts as a central hub for processing signals that suppress T cell activity.</div>
+                <div class="translation">研究人员发现GNAS作为处理抑制T细胞活性信号的中央枢纽。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">The findings translated effectively to patient-derived T cells in laboratory experiments.</div>
+                <div class="translation">这些发现在实验室实验中有效地转化到了患者来源的T细胞上。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">The initial results suggest a favorable safety profile with no long-term side effects observed.</div>
+                <div class="translation">初步结果显示良好的安全性特征，未观察到长期副作用。</div>
+            </div>
+            
+            <div class="example-item">
+                <div class="sentence">This groundbreaking research could transform cancer treatment for millions of patients worldwide.</div>
+                <div class="translation">这项开创性研究可能会改变全球数百万患者的癌症治疗方式。</div>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h3>🔍 长难句分析（4个）</h3>
+            
+            <div class="complex-item">
+                <div class="sentence">For patients with blood cancers like leukemia and lymphoma, the immunotherapy known as CAR-T cell therapy can be lifesaving.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 介词短语：For patients with blood cancers...（表示受益对象）<br>
+                    • 主语：the immunotherapy<br>
+                    • 过去分词短语作定语：known as CAR-T cell therapy（修饰 immunotherapy）<br>
+                    • 谓语：can be lifesaving（情态动词+系动词+形容词）<br>
+                    <strong>翻译：</strong>对于患有白血病和淋巴瘤等血液癌症的患者来说，被称为CAR-T细胞疗法的免疫疗法可以挽救生命。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">Running screens in the complex, hostile environment of a real tumor had long seemed out of reach, mostly because so few T cells survived in the vicinity of a solid tumor.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 动名词短语作主语：Running screens in...environment<br>
+                    • 谓语：had long seemed out of reach（过去完成时）<br>
+                    • 原因状语从句：because so few T cells survived...<br>
+                    <strong>翻译：</strong>在真实肿瘤复杂且不利的环境中运行筛选长期以来似乎遥不可及，主要是因为很少有T细胞能在实体肿瘤附近存活。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">The researchers found that GNAS acts as a central hub for processing signals that aim to suppress both solid tumor cells and other cells within the tumor microenvironment.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 主句：The researchers found that...<br>
+                    • 宾语从句：GNAS acts as a central hub for processing signals<br>
+                    • 定语从句：that aim to suppress...（修饰 signals）<br>
+                    • 宾语：both solid tumor cells and other cells<br>
+                    <strong>翻译：</strong>研究人员发现，GNAS作为处理信号的中央枢纽，这些信号旨在抑制实体肿瘤细胞和肿瘤微环境中的其他细胞。
+                </div>
+            </div>
+            
+            <div class="complex-item">
+                <div class="sentence">Even at a very low CAR-T cell dose, two-thirds of mice in a lung cancer model were tumor-free at the study's end, compared with none who received control-edited T cells.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    • 介词短语：Even at a very low CAR-T cell dose（表示条件）<br>
+                    • 主句：two-thirds of mice...were tumor-free<br>
+                    • 定语从句：who received control-edited T cells（修饰 none）<br>
+                    • 比较结构：compared with none who...<br>
+                    <strong>翻译：</strong>即使在CAR-T细胞剂量很低的情况下，肺癌模型中三分之二的小鼠在研究结束时实现无肿瘤，而接受对照编辑T细胞的小鼠则无一实现。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>📝 写作素材（6个）</h3>
+            <table>
+                <tr>
+                    <th>类型</th>
+                    <th>英文表达</th>
+                    <th>中文表达</th>
+                    <th>适用话题</th>
+                </tr>
+                <tr>
+                    <td>科技突破</td>
+                    <td>Scientists have discovered a pair of genetic edits that make CAR-T cells more effective</td>
+                    <td>科学家发现了一对基因编辑，使CAR-T细胞更加有效</td>
+                    <td>科技进步、医疗创新</td>
+                </tr>
+                <tr>
+                    <td>研究成果</td>
+                    <td>The discovery was published in Nature, one of the world's leading scientific journals</td>
+                    <td>这一发现发表在世界顶尖科学期刊《自然》上</td>
+                    <td>学术研究、科学成就</td>
+                </tr>
+                <tr>
+                    <td>技术优势</td>
+                    <td>T cells with these edits dramatically outperformed standard CAR-T cells</td>
+                    <td>经过这些编辑的T细胞显著优于标准CAR-T细胞</td>
+                    <td>技术创新、比较表达</td>
+                </tr>
+                <tr>
+                    <td>实验结果</td>
+                    <td>Two-thirds of mice in a lung cancer model were tumor-free at the study's end</td>
+                    <td>肺癌模型中三分之二的小鼠在研究结束时实现无肿瘤</td>
+                    <td>科学实验、数据描述</td>
+                </tr>
+                <tr>
+                    <td>安全性</td>
+                    <td>The initial results suggest a favorable safety profile with no long-term side effects</td>
+                    <td>初步结果显示良好的安全性特征，无长期副作用</td>
+                    <td>医疗安全、风险评估</td>
+                </tr>
+                <tr>
+                    <td>前景展望</td>
+                    <td>This groundbreaking research could transform cancer treatment for millions of patients</td>
+                    <td>这项开创性研究可能改变数百万患者的癌症治疗</td>
+                    <td>未来展望、社会影响</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💬 讨论问题（3个）</h3>
+            
+            <div class="question-item">
+                <span class="number">1</span>
+                <span class="question">According to the passage, what technical bottleneck had limited previous CRISPR screening approaches for CAR-T cells? How did the researchers overcome this challenge?</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="number">2</span>
+                <span class="question">The article mentions that the gene edits to T cells "don't broadly activate them throughout the body" and that "the differences only become apparent within the tumor microenvironment." Why is this characteristic important for cancer therapy safety? Explain using information from the text.</span>
+            </div>
+            
+            <div class="question-item">
+                <span class="number">3</span>
+                <span class="question">The author states that this "groundbreaking research could transform cancer treatment for millions of patients worldwide." In your opinion, what challenges might scientists face when moving these findings from laboratory experiments to human clinical trials? Support your answer with specific examples.</span>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 为高三学生精选全球热点新闻</p>
+            <p>文章来源：Gladstone Institutes / Nature | 发布日期：2026年8月14日</p>
+            <div class="links">
+                <a href="../index.html">返回首页</a>
+                <a href="#">词汇复习</a>
+                <a href="#">更多文章</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

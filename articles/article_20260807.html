@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intangible Cultural Heritage Finds New Life Through Innovation | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .abstract h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            font-size: 22px;
+            margin: 30px 0 15px 0;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .content p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 16px;
+        }
+
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .vocabulary h3 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .vocab-table th {
+            background: #667eea;
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .vocab-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .vocab-table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .vocab-table .word {
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* 6. 例句 */
+        .examples {
+            background: #fff3e0;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .examples h3 {
+            color: #e65100;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .example-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+
+        .example-item .en {
+            font-style: italic;
+            color: #333;
+        }
+
+        .example-item .cn {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* 7. 长难句 */
+        .sentences {
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .sentences h3 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .sentence-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 2px solid #4caf50;
+        }
+
+        .sentence-box .original {
+            font-size: 15px;
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .sentence-box .analysis {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* 8. 写作素材 */
+        .writing-materials {
+            background: #e3f2fd;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .writing-materials h3 {
+            color: #1565c0;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .material-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .material-table th {
+            background: #1976d2;
+            color: #fff;
+            padding: 12px;
+        }
+
+        .material-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #bbdefb;
+        }
+
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #fce4ec;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .discussion h3 {
+            color: #c2185b;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e91e63;
+        }
+
+        .question strong {
+            color: #c2185b;
+        }
+
+        /* 10. 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Intangible Cultural Heritage Finds New Life Through Innovation</h1>
+            <div class="meta">
+                <span>📅 August 7, 2026</span> |
+                <span>📚 Word Count: 950</span> |
+                <span>⏱️ Reading Time: 8 min</span>
+            </div>
+            <div class="tag">Category: Culture & Heritage</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📝 文章摘要</h3>
+            <p>本文介绍2026年新疆非遗展示活动如何通过创新让传统文化焕发新生。来自全国31个省份的650多项非遗项目和540多位传承人齐聚石河子,展示了皮影戏、桑皮纸、传统刺绣等多种非遗技艺的跨地域融合创新。文章展现了传统文化在现代社会中的传承与发展,以及年轻一代如何通过创意设计让非遗走进当代生活。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>A Stage for Cultural Exchange</h2>
+            <p>Under the stage lights in Shihezi, a leather shadow puppet slowly raises an arm, swaying gracefully to the rhythm of melodies unique to the city in northern Xinjiang Uygur autonomous region. Its movements are inspired by a traditional dance of the Uygur ethnic group. The music comes from local performers playing classic Uygur instruments such as the dutar and rawap. Yet, the figure dancing behind the screen belonged to Beijing's centuries-old shadow puppet tradition.</p>
+
+            <p>For the performers, it was an opportunity to explore how intangible cultural heritage can travel across regions, connect with new traditions and continue to evolve. The performance was created for the 2026 Xinjiang Is a Nice Place intangible cultural heritage showcase, which opened on Thursday in Shihezi.</p>
+
+            <p>Organized by the Ministry of Culture and Tourism, the Xinjiang government, and the Xinjiang Production and Construction Corps, the five-day event brought together more than 650 representative intangible cultural heritage practices and over 540 inheritors from 31 provinces, autonomous regions and municipalities, as well as the Xinjiang Production and Construction Corps.</p>
+
+            <h2>Breaking Boundaries Through Collaboration</h2>
+            <p>Rather than simply showcasing traditions from different regions, the event highlighted exchanges and cooperation, encouraging artists and craftspeople to learn from one another and create new forms of expression. For Lu Baogang, an actor with the Beijing shadow puppet troupe, adapting the performance for Xinjiang audiences became the troupe's first challenge.</p>
+
+            <p>"When we received the invitation, we were honestly a little nervous," Lu says. "We kept asking ourselves what kind of program Xinjiang audiences would connect with." Instead of bringing an existing production, the troupe chose to weave local cultural elements into a brand-new performance.</p>
+
+            <p>The result was a short piece inspired by the story of Wan Tongshu, a cultural worker who contributed to the preservation of Twelve Muqam — a traditional Uygur musical suite inscribed on UNESCO's Representative List of the Intangible Cultural Heritage of Humanity in 2008. The Beijing artists created two shadow puppet figures based on Wan and his wife, paying tribute to generations of cultural workers who dedicated themselves to safeguarding Xinjiang's rich musical heritage.</p>
+
+            <h2>Learning From Each Other</h2>
+            <p>For Lu, the most rewarding part of the project came when the Beijing performers began working closely with musicians from Xinjiang. "At first, communication was not easy because we speak differently," Lu says. "But we share something in common — we are all committed to protecting traditional arts."</p>
+
+            <p>After several rehearsals, the two sides gradually found ways to blend the movements of the shadow puppets with the rhythms of Xinjiang's traditional music. Lu says he learned a great deal from the local artists, particularly how to capture the distinctive movements of Xinjiang dance.</p>
+
+            <p>"One example is the posture of a Xinjiang woman dancing," he says. "Previously, our puppet simply placed one hand on its waist. The local artists suggested raising the other hand and adding movements that flowed with the rhythm. It instantly made the character feel more natural."</p>
+
+            <h2>Paper Transformed Into Art</h2>
+            <p>Across the exhibition hall, the Xinjiang mulberry-bark paper, known as sangpi paper, was embarking on a different path toward renewal. Sheets of paper were placed beneath the carved woodblocks used in art studio Rongbaozhai's centuries-old woodblock watermark printing technique, producing a series of collectible artworks.</p>
+
+            <p>According to Li Yang, deputy director of Rongbaozhai's woodblock watermark center, each region produces mulberry paper with its own texture and characteristics. For the Xinjiang collaboration, Rongbaozhai used local mulberry paper to print images including the "Five Stars Rising in the East" brocade, discovered at the Niya archaeological site in Hotan prefecture, Xinjiang.</p>
+
+            <p>Li believes the paper's distinctive texture could eventually become an artistic advantage. "Its weakness could also become its strength," he says. "In the future, if artists create directly for this material, we may discover a new artistic language."</p>
+
+            <h2>A New Chapter for Heritage</h2>
+            <p>Cross-regional cooperation from the partnership between Quanzhou in Fujian province and Changji Hui autonomous prefecture in Xinjiang has delivered special performances blending Fujian folk instruments with Xinjiang traditions. The exhibition highlights unique characteristics of different embroidery traditions, including ethnic Kazak and ethnic Hui embroideries, side by side.</p>
+
+            <p>For Lu Baogang, the gathering was a reminder that intangible cultural heritage is not confined by geography. "Preserving tradition today is not only about safeguarding old techniques, but also about creating opportunities for different forms of heritage to interact, inspire and evolve," he says.</p>
+
+            <p>As China continues to modernize, initiatives like the Xinjiang showcase demonstrate that traditional culture need not be left behind. Through innovation, collaboration and a willingness to embrace change, intangible cultural heritage can find new relevance and reach new audiences in the 21st century.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📚 重点词汇表 (Key Vocabulary)</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>英文单词/短语</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>高考频率</th>
+                </tr>
+                <tr>
+                    <td class="word">intangible</td>
+                    <td>adj.</td>
+                    <td>无形的;触摸不到的</td>
+                    <td>★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">heritage</td>
+                    <td>n.</td>
+                    <td>遗产;传统</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">showcase</td>
+                    <td>n./v.</td>
+                    <td>展示;陈列</td>
+                    <td>★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">collaboration</td>
+                    <td>n.</td>
+                    <td>合作;协作</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">innovation</td>
+                    <td>n.</td>
+                    <td>创新;革新</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">preservation</td>
+                    <td>n.</td>
+                    <td>保护;保存</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">representative</td>
+                    <td>adj./n.</td>
+                    <td>典型的;代表</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">inscribe</td>
+                    <td>v.</td>
+                    <td>列入;刻写</td>
+                    <td>★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">distinctive</td>
+                    <td>adj.</td>
+                    <td>独特的;有特色的</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">safeguard</td>
+                    <td>v./n.</td>
+                    <td>保护;捍卫</td>
+                    <td>★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">technique</td>
+                    <td>n.</td>
+                    <td>技术;技巧</td>
+                    <td>★★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">autonomous</td>
+                    <td>adj.</td>
+                    <td>自治的;自主的</td>
+                    <td>★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">blend</td>
+                    <td>v./n.</td>
+                    <td>混合;融合</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">embrace</td>
+                    <td>v.</td>
+                    <td>拥抱;欣然接受</td>
+                    <td>★★★★</td>
+                </tr>
+                <tr>
+                    <td class="word">relevance</td>
+                    <td>n.</td>
+                    <td>相关性;现实意义</td>
+                    <td>★★★</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>💬 重点词汇例句 (Example Sentences)</h3>
+
+            <div class="example-item">
+                <div class="en">1. The intangible cultural heritage represents the wisdom and creativity of our ancestors.</div>
+                <div class="cn">非物质文化遗产代表了我们祖先的智慧和创造力。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">2. This museum showcases a wide variety of traditional Chinese paintings.</div>
+                <div class="cn">这座博物馆展示了各种各样中国传统绘画作品。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">3. Through close collaboration, the two teams achieved remarkable results.</div>
+                <div class="cn">通过紧密合作,两个团队取得了显著成果。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">4. Innovation plays a crucial role in the development of modern society.</div>
+                <div class="cn">创新在现代社会发展中起着至关重要的作用。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">5. The distinctive style of this artwork attracted many visitors.</div>
+                <div class="cn">这件艺术品独特的风格吸引了许多参观者。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">6. We should take measures to safeguard our cultural heritage from damage.</div>
+                <div class="cn">我们应采取措施保护我们的文化遗产免受损害。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">7. Traditional music blends perfectly with modern elements in this performance.</div>
+                <div class="cn">在这场演出中,传统音乐与现代元素完美融合。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">8. It is important to embrace new ideas while preserving traditional values.</div>
+                <div class="cn">在接受新思想的同时保持传统价值观很重要。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="sentences">
+            <h3>📖 长难句解析 (Complex Sentences)</h3>
+
+            <div class="sentence-box">
+                <div class="original">① The result was a short piece inspired by the story of Wan Tongshu, a cultural worker who contributed to the preservation of Twelve Muqam — a traditional Uygur musical suite inscribed on UNESCO's Representative List of the Intangible Cultural Heritage of Humanity in 2008.</div>
+                <div class="analysis">
+                    <strong>结构分析:</strong> 主句是"The result was a short piece",后面是过去分词短语"inspired by..."作定语修饰piece。其中包含定语从句"who contributed to..."修饰Wan Tongshu,以及同位语"a traditional Uygur musical suite..."解释说明Twelve Muqam。<br>
+                    <strong>翻译:</strong> 成果是一部短片,灵感来自万桐书的故事——他是一位为保护十二木卡姆做出贡献的文化工作者。十二木卡姆是2008年被列入联合国教科文组织人类非物质文化遗产代表作名录的传统维吾尔族音乐套曲。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">② For the Xinjiang collaboration, Rongbaozhai used local mulberry paper to print images including the "Five Stars Rising in the East" brocade, discovered at the Niya archaeological site in Hotan prefecture, Xinjiang, as well as a panda-themed design.</div>
+                <div class="analysis">
+                    <strong>结构分析:</strong> 主句是"Rongbaozhai used local mulberry paper to print images",宾语images后接现在分词短语"including..."作定语。其中"discovered at..."是过去分词短语作定语修饰brocade。<br>
+                    <strong>翻译:</strong> 在与新疆的合作中,荣宝斋使用当地桑皮纸印制图像,包括在新疆和田地区尼雅考古遗址发现的"五星出东方"织锦,以及熊猫主题的设计图案。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">③ Preserving tradition today is not only about safeguarding old techniques, but also about creating opportunities for different forms of heritage to interact, inspire and evolve.</div>
+                <div class="analysis">
+                    <strong>结构分析:</strong> 动名词短语"Preserving tradition today"作主语,谓语是"is"。使用了"not only...but also..."并列结构连接两个介词短语"about safeguarding..."和"about creating..."。不定式"to interact, inspire and evolve"作定语修饰heritage。<br>
+                    <strong>翻译:</strong> 如今保护传统不仅是要保护古老技艺,还要创造机会让不同形式的遗产相互交流、相互启发、共同发展。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">④ As China continues to modernize, initiatives like the Xinjiang showcase demonstrate that traditional culture need not be left behind in the march toward progress.</div>
+                <div class="analysis">
+                    <strong>结构分析:</strong> "As China continues to modernize"是时间状语从句。主句主语是initiatives,谓语demonstrate后接that引导的宾语从句。从句中使用"need not be left behind"表示"不必被抛弃"。<br>
+                    <strong>翻译:</strong> 随着中国继续现代化进程,像新疆展示活动这样的倡议表明,传统文化不必在进步的进程中被抛在身后。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>✍️ 写作素材积累 (Writing Materials)</h3>
+            <table class="material-table">
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>适用话题</th>
+                </tr>
+                <tr>
+                    <td>文化传承</td>
+                    <td>safeguard cultural heritage / pass down traditions</td>
+                    <td>传统文化、文化保护</td>
+                </tr>
+                <tr>
+                    <td>创新融合</td>
+                    <td>blend traditional elements with modern designs</td>
+                    <td>创新、传统文化与现代结合</td>
+                </tr>
+                <tr>
+                    <td>跨文化交流</td>
+                    <td>promote cross-cultural exchanges and mutual learning</td>
+                    <td>文化交流、国际理解</td>
+                </tr>
+                <tr>
+                    <td>年轻一代</td>
+                    <td>inspire young people to appreciate traditional culture</td>
+                    <td>青年责任、文化认同</td>
+                </tr>
+                <tr>
+                    <td>传统与创新</td>
+                    <td>Tradition and innovation are not contradictory but complementary.</td>
+                    <td>传统与现代、创新话题</td>
+                </tr>
+                <tr>
+                    <td>文化价值</td>
+                    <td>Cultural heritage represents the wisdom and creativity of our ancestors.</td>
+                    <td>文化自信、民族精神</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>🤔 思考与讨论 (Discussion Questions)</h3>
+
+            <div class="question">
+                <strong>Question 1:</strong> According to the passage, how did the Beijing shadow puppet troupe adapt their performance for Xinjiang audiences? What does this tell us about cultural exchange?
+                <p style="margin-top: 10px; color: #666; font-size: 14px;"><em>提示: 从文章中找出皮影剧团如何融入新疆元素,思考文化交流的意义。</em></p>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> The author mentions that "its weakness could also become its strength" when discussing mulberry paper. What does this suggest about innovation in traditional crafts?
+                <p style="margin-top: 10px; color: #666; font-size: 14px;"><em>提示: 理解桑皮纸的特性如何从劣势转为优势,思考传统工艺的创新方向。</em></p>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> What role do you think young people should play in preserving and innovating intangible cultural heritage? Use examples from the text to support your view.
+                <p style="margin-top: 10px; color: #666; font-size: 14px;"><em>提示: 结合文章中传承人培训、文创产品开发等内容,谈谈青年在非遗传承中的作用。</em></p>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>© 2026 每日高考英语时文阅读 | 来源: China Daily | 更新日期: 2026-08-07</p>
+            <p style="margin-top: 10px;">
+                <a href="../index.html">返回首页</a> |
+                <a href="https://www.chinadaily.com.cn/a/202608/04/WS6a7136dfa310986e2b468c8c.html" target="_blank">原文链接</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

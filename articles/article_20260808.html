@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Sleep Boosts Teens' School and Social Success | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .abstract h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4facfe;
+            font-size: 20px;
+        }
+
+        .content p {
+            text-align: justify;
+            margin-bottom: 18px;
+            text-indent: 2em;
+            line-height: 1.9;
+        }
+
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 30px;
+            border-top: 3px solid #4facfe;
+        }
+
+        .vocabulary h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .vocabulary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .vocabulary th, .vocabulary td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .vocabulary th {
+            background: #4facfe;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .vocabulary tr:hover {
+            background: #e8f4f8;
+        }
+
+        /* 6. 例句 */
+        .examples {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .example-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4facfe;
+            border-radius: 5px;
+        }
+
+        .example-item .word {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .example-item .sentence {
+            color: #555;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* 7. 长难句 */
+        .complex-sentences {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+        }
+
+        .complex-sentences h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .sentence-box {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .sentence-box .original {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .sentence-box .analysis {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .sentence-box .analysis strong {
+            color: #667eea;
+        }
+
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .writing-materials h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .writing-materials table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .writing-materials th, .writing-materials td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .writing-materials th {
+            background: #764ba2;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .writing-materials tr:hover {
+            background: #f0f4ff;
+        }
+
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #f8f9fa;
+            padding: 30px;
+            border-top: 3px solid #764ba2;
+        }
+
+        .discussion h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .question-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .question-item .number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .question-item .question-text {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 10. 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #4facfe;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Sound Sleep Boosts Teens' School and Social Success</h1>
+            <div class="meta">2026年8月8日 | 来源：UC Davis Health | 难度：★★★☆☆</div>
+            <div class="tag">心理健康</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📌 文章摘要</h3>
+            <p>加州大学戴维斯分校最新研究发现，在影响青少年学业成绩和社交能力的因素中，睡眠质量比屏幕使用时间、运动或饮食更为关键。研究表明，良好的睡眠习惯能够显著缓解焦虑和抑郁症状对学习和社交的负面影响。这一发现为家长和教育者提供了切实可行的干预方向，强调了建立健康睡眠习惯对青少年发展的重要性。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>The Surprising Power of Sleep</h2>
+            <p>A groundbreaking study from UC Davis Health, published in Psychological Medicine in August 2026, has revealed that when it comes to helping adolescents succeed in school and maintain healthy friendships, sleep may matter more than screen time, exercise, or diet. This finding has significant implications for students, parents, and educators alike.</p>
+
+            <p>The research team, led by computational neuroscientist Jason Smucny and senior author Tara Niendam, examined how four lifestyle factors—sleep quality, screen time, physical activity, and diet—influenced the relationship between mental health symptoms and academic and social functioning in children aged 10 to 13. Using data from the Adolescent Brain Cognitive Development (ABCD) Study, they analyzed patterns across thousands of young participants.</p>
+
+            <h2>Sleep: The Standout Factor</h2>
+            <p>"This finding surprised us," admitted Smucny. "We expected sleep to be important, but we didn't expect it to stand out so clearly above other lifestyle factors, particularly screen time." The data showed that sleep was the strongest factor associated with better grades and fewer social problems, with screen time emerging as the second most influential factor.</p>
+
+            <p>The statistical analysis revealed that sleep accounted for 18.5% of the association with depression, 36.3% with anxiety, and 8.3% with psychotic-like disturbances in academic performance. These figures underscore the critical role that quality rest plays in adolescent development and mental well-being.</p>
+
+            <h2>Understanding the Adolescent Brain</h2>
+            <p>Adolescence represents a critical developmental period when mental health concerns often emerge. Globally, about one in seven adolescents experience a mental disorder, with depression and anxiety ranking as the leading causes of illness and disability among young people. During this sensitive phase, the teenage brain undergoes significant changes, making proper sleep even more essential.</p>
+
+            <p>Tara Niendam, professor of psychiatry and executive director of UC Davis Early Psychosis Programs, emphasized the practical importance of these findings. "Parents, educators, and clinicians understandably focus on symptoms like anxiety and depression," she noted. "But what often matters most to young people and their families is how those symptoms affect everyday life—how they perform in school, connect with friends, and navigate daily challenges."</p>
+
+            <h2>Practical Implications for Families</h2>
+            <p>The researchers stress that healthy lifestyle habits are not a substitute for professional mental health care. However, the findings suggest that sleep may be an important and often overlooked target for helping young people experiencing mental health symptoms. "What is encouraging is that sleep is something parents and families can address," Niendam explained. "While it won't solve every mental health challenge, healthy sleep routines are a practical way to support a child's emotional well-being and day-to-day functioning."</p>
+
+            <p>The study also found that screen time was the second strongest lifestyle factor, accounting for 5-6% of the association between mental health symptoms and functional outcomes. Exercise and diet showed smaller but still meaningful effects. This suggests that a comprehensive approach to adolescent well-being should consider multiple lifestyle factors, with sleep receiving particular attention.</p>
+
+            <h2>A Path Forward</h2>
+            <p>For high school students facing academic pressures and social challenges, this research offers a clear message: prioritizing sleep is not just about feeling rested—it directly impacts academic performance and social relationships. Establishing consistent sleep schedules, creating technology-free bedtime routines, and ensuring adequate sleep duration can serve as powerful tools for enhancing both educational outcomes and personal well-being.</p>
+
+            <p>As the study demonstrates, sleep represents a modifiable risk factor that families and schools can target relatively easily. In an era where digital devices compete for attention and academic demands intensify, understanding the protective power of quality sleep becomes increasingly valuable for supporting the next generation's success and happiness.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📚 核心词汇表</h3>
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>英文单词</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>adolescent</td>
+                    <td>/ˌædəˈlesnt/</td>
+                    <td>n./adj.</td>
+                    <td>青少年（的）</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>implication</td>
+                    <td>/ˌɪmplɪˈkeɪʃn/</td>
+                    <td>n.</td>
+                    <td>影响，暗示</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>symptom</td>
+                    <td>/ˈsɪmptəm/</td>
+                    <td>n.</td>
+                    <td>症状</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>associate</td>
+                    <td>/əˈsəʊsiət/</td>
+                    <td>v.</td>
+                    <td>联系，关联</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>account for</td>
+                    <td>/əˈkaʊnt fɔː(r)/</td>
+                    <td>phr.</td>
+                    <td>占...比例；解释</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>adolescence</td>
+                    <td>/ˌædəˈlesns/</td>
+                    <td>n.</td>
+                    <td>青春期</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>emphasize</td>
+                    <td>/ˈemfəsaɪz/</td>
+                    <td>v.</td>
+                    <td>强调</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>substitute</td>
+                    <td>/ˈsʌbstɪtjuːt/</td>
+                    <td>n./v.</td>
+                    <td>替代品；替代</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>comprehensive</td>
+                    <td>/ˌkɒmprɪˈhensɪv/</td>
+                    <td>adj.</td>
+                    <td>全面的，综合的</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>prioritize</td>
+                    <td>/praɪˈɒrətaɪz/</td>
+                    <td>v.</td>
+                    <td>优先考虑</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>significant</td>
+                    <td>/sɪɡˈnɪfɪkənt/</td>
+                    <td>adj.</td>
+                    <td>显著的，重要的</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>intervention</td>
+                    <td>/ˌɪntəˈvenʃn/</td>
+                    <td>n.</td>
+                    <td>干预，介入</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>well-being</td>
+                    <td>/ˈwel biːɪŋ/</td>
+                    <td>n.</td>
+                    <td>幸福感，健康</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>establish</td>
+                    <td>/ɪˈstæblɪʃ/</td>
+                    <td>v.</td>
+                    <td>建立，确立</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>modify</td>
+                    <td>/ˈmɒdɪfaɪ/</td>
+                    <td>v.</td>
+                    <td>修改，调整</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✏️ 词汇例句</h3>
+
+            <div class="example-item">
+                <div class="word">adolescent (n./adj.) 青少年（的）</div>
+                <div class="sentence">During the adolescent years, young people undergo significant physical and emotional changes that shape their future development.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">implication (n.) 影响，暗示</div>
+                <div class="sentence">The new research has important implications for educational policy, suggesting that schools should prioritize student sleep schedules.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">symptom (n.) 症状</div>
+                <div class="sentence">Common symptoms of sleep deprivation include difficulty concentrating, mood swings, and decreased academic performance.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">associate (v.) 联系，关联</div>
+                <div class="sentence">Researchers have associated poor sleep quality with increased risk of anxiety and depression among teenagers.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">account for (phr.) 占...比例</div>
+                <div class="sentence">Sleep quality accounted for over 36% of the association between anxiety and academic performance in the study.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">emphasize (v.) 强调</div>
+                <div class="sentence">The professor emphasized that adequate sleep is essential for memory consolidation and cognitive function.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">comprehensive (adj.) 全面的</div>
+                <div class="sentence">A comprehensive approach to student well-being should address sleep, diet, exercise, and screen time together.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">prioritize (v.) 优先考虑</div>
+                <div class="sentence">Schools need to prioritize mental health education alongside traditional academic subjects to support students' overall development.</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h3>🔬 长难句解析</h3>
+
+            <div class="sentence-box">
+                <div class="original">
+                    A groundbreaking study from UC Davis Health, published in Psychological Medicine in August 2026, has revealed that when it comes to helping adolescents succeed in school and maintain healthy friendships, sleep may matter more than screen time, exercise, or diet.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>主句为"A groundbreaking study...has revealed that..."，that引导宾语从句。宾语从句中包含"when it comes to..."介词短语作状语，"helping...succeed...and maintain..."为动名词短语作介词宾语。<br>
+                    <strong>参考译文：</strong>加州大学戴维斯分校2026年8月发表于《心理学医学》的一项突破性研究揭示，在帮助青少年取得学业成功和维持健康友谊方面，睡眠可能比屏幕使用时间、运动或饮食更为重要。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">
+                    The statistical analysis revealed that sleep accounted for 18.5% of the association with depression, 36.3% with anxiety, and 8.3% with psychotic-like disturbances in academic performance.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>主句"The statistical analysis revealed that..."，that引导宾语从句。宾语从句中"accounted for"为谓语，后接三个并列宾语"18.5%...36.3%...and 8.3%..."，其中后两个省略了"of the association"。<br>
+                    <strong>参考译文：</strong>统计分析显示，睡眠在抑郁与学业表现的关联中占18.5%，在焦虑关联中占36.3%，在类精神病性障碍关联中占8.3%。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">
+                    What is encouraging is that sleep is something parents and families can address, and while it won't solve every mental health challenge, healthy sleep routines are a practical way to support a child's emotional well-being and day-to-day functioning.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>主句"What is encouraging is that..."为主语从句+系动词+表语从句结构。表语从句中包含两个分句：前一分句"sleep is something..."含定语从句"(that) parents and families can address"；后一分句为"while..."引导的让步状语从句+主句结构。<br>
+                    <strong>参考译文：</strong>令人鼓舞的是，睡眠是家长和家庭可以着手解决的问题。虽然它无法解决所有心理健康挑战，但健康的睡眠习惯是支持孩子情感健康和日常功能的一种切实可行的方式。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">
+                    In an era where digital devices compete for attention and academic demands intensify, understanding the protective power of quality sleep becomes increasingly valuable for supporting the next generation's success and happiness.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>"In an era..."为介词短语作状语，其中"where"引导定语从句修饰"era"。主句为"understanding...becomes...valuable"，"understanding..."为动名词短语作主语。<br>
+                    <strong>参考译文：</strong>在数字设备争夺注意力、学业压力加剧的时代，理解优质睡眠的保护作用对于支持下一代的成功与幸福变得愈发重要。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>📝 写作素材积累</h3>
+            <table>
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>重要性强调</td>
+                    <td>sleep may matter more than... / sleep plays a critical role in...</td>
+                    <td>睡眠可能比...更重要 / 睡眠在...中发挥关键作用</td>
+                </tr>
+                <tr>
+                    <td>研究引用</td>
+                    <td>A groundbreaking study has revealed that... / Research indicates that...</td>
+                    <td>一项突破性研究揭示... / 研究表明...</td>
+                </tr>
+                <tr>
+                    <td>数据表达</td>
+                    <td>accounted for X% of... / X emerged as the strongest factor...</td>
+                    <td>占...的X% / X成为最强的影响因素</td>
+                </tr>
+                <tr>
+                    <td>建议措施</td>
+                    <td>establish consistent sleep schedules / create technology-free bedtime routines</td>
+                    <td>建立规律的睡眠时间表 / 创造无电子产品的睡前习惯</td>
+                </tr>
+                <tr>
+                    <td>问题现状</td>
+                    <td>about one in seven adolescents experience a mental disorder</td>
+                    <td>约七分之一的青少年患有精神障碍</td>
+                </tr>
+                <tr>
+                    <td>实用价值</td>
+                    <td>a practical way to support / a modifiable risk factor that families can target</td>
+                    <td>一种支持的切实方式 / 家庭可以针对的可改变风险因素</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💡 思考与讨论</h3>
+
+            <div class="question-item">
+                <div class="number">1</div>
+                <div class="question-text">According to the research, why does sleep matter more than other lifestyle factors for adolescents' academic and social success? What evidence supports this conclusion?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="number">2</div>
+                <div class="question-text">The study mentions that "healthy lifestyle habits are not a substitute for professional mental health care." In your opinion, how can families and schools balance lifestyle interventions with professional support when addressing adolescent mental health?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="number">3</div>
+                <div class="question-text">Given that screen time emerged as the second strongest factor, what practical strategies can students adopt to manage both sleep quality and digital device use during exam preparation periods?</div>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📖 每日高考英语时文阅读 | 助力高考英语学习</p>
+            <p>文章来源：UC Davis Health | 2026年8月8日</p>
+            <p>© 2026 高考英语时文阅读项目组 | <a href="https://github.com/zhh-2000">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
