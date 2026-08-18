@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .stat-item {
+            background: rgba(255,255,255,0.2);
+            padding: 20px 35px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .stat-item .number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .stat-item .label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .articles {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .articles h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .article-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-left: 5px solid #667eea;
+            position: relative;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        .article-card.latest {
+            border-left-color: #ff6b6b;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%);
+        }
+        .latest-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+        .article-card h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        .article-card .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .article-card .category {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .article-card .desc {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .article-card .read-more {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .article-card .read-more:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
+        }
+        .footer {
+            text-align: center;
+            color: #fff;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 50px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 每日高考英语时文阅读</h1>
+            <p class="subtitle">精选国际新闻，助力高考备考 | 每日更新，词汇丰富，难度适中</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="number" id="articleCount">1</div>
+                    <div class="label">文章总数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number" id="vocabCount">15</div>
+                    <div class="label">词汇积累</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number" id="dayCount">1</div>
+                    <div class="label">连续天数</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="articles">
+            <h2>📖 文章列表</h2>
+            
+            <!-- 今日文章 -->
+            <div class="article-card latest">
+                <span class="latest-badge">🔥 今日最新</span>
+                <h3>Iron-Air Batteries: A Breakthrough in Renewable Energy Storage</h3>
+                <div class="meta">
+                    <span class="category">科技类</span>
+                    📅 2026年8月18日 | 📖 约900词 | ⏱️ 15分钟
+                </div>
+                <p class="desc">荷兰初创公司Ore Energy成功研发铁空气电池技术，获4300万美元融资。该电池利用铁的生锈与除锈反应储存能量，可供电100小时，成本仅为锂电池的十分之一。</p>
+                <a href="articles/article_20260818.html" class="read-more">阅读全文 →</a>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <p>🎓 专为高三学生打造的高考英语阅读材料</p>
+            <p>💡 每篇文章包含：摘要、词汇表、例句、长难句解析、写作素材、讨论问题</p>
+            <p>© 2026 Daily English Reading for Gaokao | 持续更新中...</p>
+        </div>
+    </div>
+</body>
+</html>

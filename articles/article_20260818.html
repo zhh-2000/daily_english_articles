@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron-Air Batteries: A Breakthrough in Renewable Energy Storage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffe082 100%);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #666;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8f5e9;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 新能源</div>
+            <h1>Iron-Air Batteries: A Breakthrough in Renewable Energy Storage</h1>
+            <div class="meta">
+                📅 August 18, 2026 &nbsp;|&nbsp; 📖 约900词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>荷兰初创公司Ore Energy成功研发铁空气电池技术，获4300万美元融资。该电池利用铁的生锈与除锈反应储存能量，可供电100小时，成本仅为锂电池的十分之一，不依赖锂、钴等稀有金属。这项突破解决了可再生能源存储瓶颈，为AI数据中心和工业发展提供稳定、清洁的基荷电力。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🔋 The Storage Challenge</h2>
+            <p>As the world transitions toward renewable energy, one critical challenge remains unsolved: how to store wind and solar power efficiently for extended periods. Wind turbines and solar panels generate electricity only when conditions are favorable, but energy demand continues around the clock. This mismatch between generation and consumption has become one of the biggest obstacles in the global energy transition.</p>
+            
+            <p>According to the European Commission's Joint Research Centre, Europe wastes approximately 72 terawatt-hours (TWh) of renewable electricity annually due to grid bottlenecks—enough to power Austria for an entire year. By 2040, these losses are projected to reach 410 TWh annually. The United Kingdom alone has spent nearly £6 billion since 2011 paying renewable generators to switch off when the grid cannot accommodate their output.</p>
+            
+            <h2>⚡ Breakthrough Technology</h2>
+            <p>Ore Energy, an Amsterdam-based startup, has developed a revolutionary solution: iron-air batteries that can store electricity for up to 100 hours at significantly lower costs than conventional lithium-ion systems. The technology operates on a simple yet ingenious principle—rusting and unrusting iron electrodes using only iron, water, and air.</p>
+            
+            <p>During the discharge phase, the battery inhales oxygen from the air, causing the iron to rust. When charging, the process reverses: electrical current converts the rust back into pure iron while releasing oxygen. This reversible rusting cycle can repeat thousands of times without degradation, making it ideal for grid-scale energy storage.</p>
+            
+            <h2>🏭 Manufacturing Advantages</h2>
+            <p>Unlike lithium-ion batteries that require critical minerals like lithium, cobalt, and nickel—often sourced from geopolitically sensitive regions—iron-air batteries use materials that are abundant and inexpensive. Iron is one of the most common elements on Earth, costing a fraction of battery-grade lithium. This material advantage translates to energy storage costs approximately ten times lower per unit of capacity compared to lithium-ion systems for long-duration applications.</p>
+            
+            <p>Furthermore, Ore Energy's manufacturing process relies entirely on European supply chains, eliminating dependence on imported critical raw materials. This independence addresses growing concerns about supply chain security and sustainability in the battery industry.</p>
+            
+            <h2>💡 Meeting Rising Demand</h2>
+            <p>The timing of this innovation couldn't be more crucial. Global electricity demand from data centers is projected to more than double to approximately 945 TWh by 2030, with AI-optimized facilities expected to quadruple. AI training and inference operations create rapid, substantial swings in power demand, making reliable storage essential for maintaining stable electricity supplies.</p>
+            
+            <p>Ore Energy has already secured a landmark agreement with Budget Thuis, a Dutch utility company, to deploy 1 gigawatt-hour (GWh) of iron-air storage capacity. The company has also completed successful pilot projects with French utility EDF, demonstrating real-world performance in utility settings. With Series A funding totaling $43 million from investors including Plural and HV, Ore Energy aims to establish its first manufacturing facility and achieve gigawatt-hour-scale production by 2028.</p>
+            
+            <h2>🌍 Environmental Impact</h2>
+            <p>Beyond economic benefits, iron-air technology offers substantial environmental advantages. The batteries contain no toxic materials and present minimal fire risk compared to lithium-ion alternatives. At the end of their operational life, the iron components can be fully recycled, supporting circular economy principles. By enabling longer storage durations, this technology helps maximize the utilization of existing renewable infrastructure, reducing the need for fossil fuel backup power plants.</p>
+            
+            <p>Industry experts believe iron-air batteries could become the standard infrastructure for long-duration energy storage by 2035, fundamentally transforming how societies power their economies and positioning renewable energy as a reliable, round-the-clock power source.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">transition</td>
+                    <td>n./v.</td>
+                    <td>过渡，转变</td>
+                    <td>energy transition 能源转型</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">renewable</td>
+                    <td>adj.</td>
+                    <td>可再生的</td>
+                    <td>renewable energy 可再生能源</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">efficiently</td>
+                    <td>adv.</td>
+                    <td>高效地</td>
+                    <td>store power efficiently 高效储存电力</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">consumption</td>
+                    <td>n.</td>
+                    <td>消耗，消费</td>
+                    <td>energy demand and consumption 能源需求与消耗</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">obstacle</td>
+                    <td>n.</td>
+                    <td>障碍，阻碍</td>
+                    <td>biggest obstacles 最大的障碍</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">approximately</td>
+                    <td>adv.</td>
+                    <td>大约，近似地</td>
+                    <td>approximately 72 TWh 大约72太瓦时</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">revolutionary</td>
+                    <td>adj.</td>
+                    <td>革命性的</td>
+                    <td>revolutionary solution 革命性解决方案</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">discharge</td>
+                    <td>n./v.</td>
+                    <td>放电，释放</td>
+                    <td>discharge phase 放电阶段</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">reversible</td>
+                    <td>adj.</td>
+                    <td>可逆的</td>
+                    <td>reversible rusting cycle 可逆生锈循环</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">degradation</td>
+                    <td>n.</td>
+                    <td>退化，降解</td>
+                    <td>without degradation 无退化</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">abundant</td>
+                    <td>adj.</td>
+                    <td>丰富的，充裕的</td>
+                    <td>abundant and inexpensive 丰富且廉价</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">independence</td>
+                    <td>n.</td>
+                    <td>独立，自主</td>
+                    <td>supply chain independence 供应链独立</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">project</td>
+                    <td>v.</td>
+                    <td>预测，预计</td>
+                    <td>is projected to 预计将...</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">substantial</td>
+                    <td>adj.</td>
+                    <td>大量的，实质性的</td>
+                    <td>substantial environmental advantages 大量环境优势</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">infrastructure</td>
+                    <td>n.</td>
+                    <td>基础设施</td>
+                    <td>standard infrastructure 标准基础设施</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. The world is transitioning toward renewable energy sources to combat climate change.</div>
+                    <div class="cn">世界正在向可再生能源转型以应对气候变化。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Iron-air batteries can store electricity for up to 100 hours at significantly lower costs.</div>
+                    <div class="cn">铁空气电池可以以显著更低的成本储存电力长达100小时。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. This technology operates on a simple yet ingenious principle of rusting and unrusting iron.</div>
+                    <div class="cn">这项技术基于一个简单却巧妙的原理：铁的生锈与除锈。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. The reversible rusting cycle can repeat thousands of times without degradation.</div>
+                    <div class="cn">这种可逆的生锈循环可以重复数千次而不退化。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. Iron is one of the most abundant elements on Earth, costing a fraction of battery-grade lithium.</div>
+                    <div class="cn">铁是地球上最丰富的元素之一，成本仅为电池级锂的一小部分。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Global electricity demand from data centers is projected to more than double by 2030.</div>
+                    <div class="cn">数据中心的全球电力需求预计到2030年将增长一倍以上。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. The company has completed successful pilot projects demonstrating real-world performance.</div>
+                    <div class="cn">该公司已完成成功的试点项目，展示了真实环境下的性能。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Iron-air technology offers substantial environmental advantages over lithium-ion alternatives.</div>
+                    <div class="cn">铁空气技术相比锂电池替代方案具有实质性的环境优势。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① Unlike lithium-ion batteries that require critical minerals like lithium, cobalt, and nickel—often sourced from geopolitically sensitive regions—iron-air batteries use materials that are abundant and inexpensive.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"iron-air batteries"，谓语是"use"。句首"Unlike lithium-ion batteries"作比较状语，后接that引导的定语从句修饰batteries；破折号内是插入语，补充说明minerals的来源；主句宾语materials后接that引导的定语从句。<br>
+                        <strong>翻译：</strong>与需要锂、钴、镍等关键矿物的锂电池不同——这些矿物往往来自地缘政治敏感地区——铁空气电池使用的是丰富且廉价的材料。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② AI training and inference operations create rapid, substantial swings in power demand, making reliable storage essential for maintaining stable electricity supplies.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"AI training and inference operations"，谓语是"create"，宾语是"swings"。后半部分是现在分词短语作结果状语，其中"essential"是宾语补足语，说明storage的状态。<br>
+                        <strong>翻译：</strong>AI训练和推理操作会造成电力需求的快速、大幅波动，使得可靠的储能对维持稳定的电力供应至关重要。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ By enabling longer storage durations, this technology helps maximize the utilization of existing renewable infrastructure, reducing the need for fossil fuel backup power plants.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>"By enabling..."是介词短语作方式状语；主句主语是"this technology"，谓语是"helps maximize"（help后接不带to的不定式）；"reducing..."是现在分词短语作结果状语，表示技术带来的附加效果。<br>
+                        <strong>翻译：</strong>通过实现更长的储能时间，这项技术有助于最大化现有可再生能源基础设施的利用率，从而减少对化石燃料备用发电厂的需求。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ Industry experts believe iron-air batteries could become the standard infrastructure for long-duration energy storage by 2035, fundamentally transforming how societies power their economies.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句是"Industry experts believe..."，后接省略that的宾语从句；宾语从句中主语是"iron-air batteries"，谓语是"could become"；"fundamentally transforming..."是现在分词短语作结果状语，其中how引导宾语从句作transforming的宾语。<br>
+                        <strong>翻译：</strong>行业专家认为，到2035年铁空气电池可能成为长时储能的标准基础设施，从根本上改变社会为经济供能的方式。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述发展趋势</td>
+                        <td>...is projected to more than double by 2030</td>
+                        <td>用于预测未来增长趋势，可替换increase dramatically</td>
+                    </tr>
+                    <tr>
+                        <td>强调重要性</td>
+                        <td>making...essential for...</td>
+                        <td>表达某事物因某种原因变得不可或缺</td>
+                    </tr>
+                    <tr>
+                        <td>比较优势</td>
+                        <td>Unlike A..., B offers substantial advantages over...</td>
+                        <td>用于对比两种事物的优劣</td>
+                    </tr>
+                    <tr>
+                        <td>提出解决方案</td>
+                        <td>has developed a revolutionary solution to...</td>
+                        <td>介绍新方法或技术突破</td>
+                    </tr>
+                    <tr>
+                        <td>环境影响</td>
+                        <td>offers substantial environmental advantages</td>
+                        <td>讨论环保效益时的地道表达</td>
+                    </tr>
+                    <tr>
+                        <td>未来展望</td>
+                        <td>could become the standard infrastructure by...</td>
+                        <td>预测某技术/事物将成为主流</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> According to the passage, why is long-duration energy storage considered one of the biggest obstacles in the energy transition? What problems does it cause?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The author mentions that iron-air batteries use "abundant and inexpensive" materials. How does this advantage compare to lithium-ion batteries? Why is supply chain independence important for the battery industry?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The passage states that "AI training and inference operations create rapid, substantial swings in power demand." In your opinion, how might iron-air battery technology help address the energy needs of AI development? Can you think of other industries that might benefit from this technology?
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第1期</p>
+            <p>📅 2026年8月18日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
