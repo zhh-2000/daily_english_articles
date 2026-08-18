@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Team Wins European Inventor Award 2026 for Battery Recycling Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102,126,234,0.4);
+        }
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #e74c3c;
+        }
+        .abstract h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+        }
+        .abstract p {
+            color: #2c3e50;
+            font-size: 1.05em;
+        }
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+        .content h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+        .content p {
+            text-align: justify;
+            margin-bottom: 18px;
+            text-indent: 2em;
+        }
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 30px;
+        }
+        .vocabulary h3 {
+            color: #2980b9;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f5f5;
+        }
+        /* 6. 例句 */
+        .examples {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 30px;
+        }
+        .examples h3 {
+            color: #16a085;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .example-item {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #16a085;
+        }
+        .example-item .en {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .example-item .cn {
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        /* 7. 长难句 */
+        .long-sentences {
+            background: #2c3e50;
+            padding: 30px;
+        }
+        .long-sentences h3 {
+            color: #f39c12;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .sentence-box {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #f39c12;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .sentence-box .sentence {
+            color: #ecf0f1;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .sentence-box .analysis {
+            color: #bdc3c7;
+            font-size: 0.95em;
+        }
+        .sentence-box .translation {
+            color: #1abc9c;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        /* 8. 写作素材 */
+        .writing-materials {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+        }
+        .writing-materials h3 {
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .writing-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 12px;
+        }
+        .writing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        /* 9. 讨论问题 */
+        .discussion {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+        }
+        .discussion h3 {
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .question-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .question-item .q-label {
+            color: #3498db;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .question-item .q-text {
+            color: #2c3e50;
+        }
+        /* 10. 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: #bdc3c7;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer .highlight {
+            color: #1abc9c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Chinese Team Wins European Inventor Award 2026 for Revolutionary Battery Recycling Technology</h1>
+            <div class="meta">
+                <span class="category">科技类 · 新能源技术</span><br>
+                Date: August 2, 2026 | Source: Xinhua News Agency
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>【文章摘要】</h3>
+            <p>2026年7月，中国广东邦普循环科技有限公司的余海军和谢英豪团队凭借创新的电池回收技术，在德国柏林荣获欧洲发明家奖两项大奖。他们开发的"逆向产品定位设计"技术能将废旧锂电池高效转化为高性能正极材料，为全球电动汽车产业的可持续发展提供了重要解决方案。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>A Historic Achievement in Green Technology</h2>
+            <p>In a landmark moment for China's renewable energy sector, a Chinese research team has made history by winning two prestigious awards at the 2026 European Inventor Award ceremony held in Berlin, Germany. Yu Haijun and Xie Yinghao, researchers from Guangdong Brunp Recycling Technology Co., Ltd., received both the "Non-European Patent Organization Member Country Award" and the "Popular Award" for their groundbreaking work in battery recycling technology.</p>
+
+            <p>The European Inventor Award, established by the European Patent Office, is one of the most distinguished honors in the global innovation landscape. This year's ceremony highlighted breakthrough contributions addressing some of humanity's most pressing challenges, particularly in energy, environmental technology, and sustainable development. The fact that a Chinese team secured two awards simultaneously marks a significant milestone in international recognition of China's technological innovation capabilities.</p>
+
+            <h2>The Revolutionary "Reverse Product Positioning Design"</h2>
+            <p>At the heart of this achievement lies an innovative technology known as "reverse product positioning design." This sophisticated approach enables the direct transformation of spent lithium-ion batteries into high-performance cathode materials suitable for manufacturing new batteries. The technology achieves remarkable efficiency in recovering critical materials including nickel, cobalt, manganese, and lithium—elements that are essential for electric vehicle battery production.</p>
+
+            <p>Traditional battery recycling methods often involve complex chemical processes that consume significant energy and may result in material loss. However, this new technology represents a paradigm shift by establishing a more direct pathway from waste to valuable resources. According to the European Patent Office, the innovation offers a sustainable solution to the growing challenge of battery waste management while simultaneously addressing the global demand for critical battery materials.</p>
+
+            <h2>Addressing a Global Challenge</h2>
+            <p>With the rapid expansion of electric vehicles and energy storage systems worldwide, the demand for battery materials has surged dramatically. The European Patent Office noted in its announcement that as electric vehicles and energy storage technologies accelerate their deployment globally, the demand for critical battery materials has increased substantially. Consequently, spent battery recycling has emerged as a crucial link in the sustainable development chain.</p>
+
+            <p>Statistics reveal that China has become the world's largest electric vehicle market, with millions of EVs on the road. As these vehicles age, the question of what happens to their batteries becomes increasingly urgent. This award-winning technology provides an answer that benefits not only China but the entire global community working toward carbon neutrality goals.</p>
+
+            <h2>Implications for Sustainable Development</h2>
+            <p>The recognition at the European Inventor Award underscores the growing importance of circular economy principles in modern technology development. By enabling efficient recovery and reuse of battery materials, this technology contributes to reducing dependence on newly mined resources, minimizing environmental impact, and promoting sustainable industrial practices.</p>
+
+            <p>In his acceptance remarks, Yu Haijun emphasized that the award represents tremendous recognition of their smart battery recycling technology. He expressed hope that the technology would be widely applied to advance sustainable energy solutions globally. This sentiment reflects the broader vision of using innovation to address shared global challenges.</p>
+
+            <h2>Looking Ahead</h2>
+            <p>The achievement of the Brunp Recycling team signals a new era in battery technology development. As nations worldwide accelerate their transition to clean energy, technologies that enable sustainable resource management will become increasingly valuable. This award not only recognizes past achievements but also highlights the pathway forward for responsible technological advancement.</p>
+
+            <p>Industry experts suggest that such innovations could fundamentally reshape the electric vehicle industry's supply chain, making it more resilient and environmentally friendly. As more countries implement regulations requiring battery recycling and manufacturers increasingly prioritize sustainability, technologies like the one developed by the Chinese team will play a pivotal role in shaping a greener future.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📚 重点词汇表 (Key Vocabulary)</h3>
+            <table class="vocab-table">
+                <tr>
+                    <th>英文单词</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>音标</th>
+                </tr>
+                <tr>
+                    <td>revolutionary</td>
+                    <td>adj.</td>
+                    <td>革命性的，突破性的</td>
+                    <td>/ˌrevəˈluːʃənəri/</td>
+                </tr>
+                <tr>
+                    <td>prestigious</td>
+                    <td>adj.</td>
+                    <td>有声望的，享有盛誉的</td>
+                    <td>/preˈstɪdʒəs/</td>
+                </tr>
+                <tr>
+                    <td>groundbreaking</td>
+                    <td>adj.</td>
+                    <td>开创性的，突破性的</td>
+                    <td>/ˈɡraʊndbreɪkɪŋ/</td>
+                </tr>
+                <tr>
+                    <td>cathode</td>
+                    <td>n.</td>
+                    <td>阴极，负极</td>
+                    <td>/ˈkæθəʊd/</td>
+                </tr>
+                <tr>
+                    <td>efficiency</td>
+                    <td>n.</td>
+                    <td>效率，效能</td>
+                    <td>/ɪˈfɪʃnsi/</td>
+                </tr>
+                <tr>
+                    <td>sustainable</td>
+                    <td>adj.</td>
+                    <td>可持续的</td>
+                    <td>/səˈsteɪnəbl/</td>
+                </tr>
+                <tr>
+                    <td>deployment</td>
+                    <td>n.</td>
+                    <td>部署，推广应用</td>
+                    <td>/dɪˈplɔɪmənt/</td>
+                </tr>
+                <tr>
+                    <td>circular economy</td>
+                    <td>n.</td>
+                    <td>循环经济</td>
+                    <td>/ˈsɜːkjələr ɪˈkɒnəmi/</td>
+                </tr>
+                <tr>
+                    <td>carbon neutrality</td>
+                    <td>n.</td>
+                    <td>碳中和</td>
+                    <td>/ˈkɑːbən njuːˈtræləti/</td>
+                </tr>
+                <tr>
+                    <td>paradigm shift</td>
+                    <td>n.</td>
+                    <td>范式转变，根本性变革</td>
+                    <td>/ˈpærədaɪm ʃɪft/</td>
+                </tr>
+                <tr>
+                    <td>lithium-ion</td>
+                    <td>adj.</td>
+                    <td>锂离子的</td>
+                    <td>/ˈlɪθiəm ˈaɪən/</td>
+                </tr>
+                <tr>
+                    <td>innovation</td>
+                    <td>n.</td>
+                    <td>创新，革新</td>
+                    <td>/ˌɪnəˈveɪʃn/</td>
+                </tr>
+                <tr>
+                    <td>recognition</td>
+                    <td>n.</td>
+                    <td>认可，承认</td>
+                    <td>/ˌrekəɡˈnɪʃn/</td>
+                </tr>
+                <tr>
+                    <td>resilient</td>
+                    <td>adj.</td>
+                    <td>有弹性的，适应性强的</td>
+                    <td>/rɪˈzɪliənt/</td>
+                </tr>
+                <tr>
+                    <td>milestone</td>
+                    <td>n.</td>
+                    <td>里程碑，转折点</td>
+                    <td>/ˈmaɪlstəʊn/</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✍️ 重点词汇例句 (Example Sentences)</h3>
+            <div class="example-item">
+                <p class="en">1. The revolutionary battery recycling technology has transformed the electric vehicle industry.</p>
+                <p class="cn">这项革命性的电池回收技术彻底改变了电动汽车行业。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">2. Winning the prestigious European Inventor Award brought international attention to their research.</p>
+                <p class="cn">获得享有盛誉的欧洲发明家奖使他们的研究受到国际关注。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">3. The team's groundbreaking approach to recycling has set new standards in the industry.</p>
+                <p class="cn">团队开创性的回收方法为行业树立了新标准。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">4. High efficiency in material recovery is essential for sustainable development.</p>
+                <p class="cn">材料回收的高效率对可持续发展至关重要。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">5. The transition to a circular economy requires innovative recycling technologies.</p>
+                <p class="cn">向循环经济转型需要创新的回收技术。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">6. Many countries are working towards carbon neutrality by 2050.</p>
+                <p class="cn">许多国家正致力于在2050年前实现碳中和。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">7. This innovation represents a paradigm shift in how we approach battery waste management.</p>
+                <p class="cn">这一创新代表了我们处理电池废物管理方式的范式转变。</p>
+            </div>
+            <div class="example-item">
+                <p class="en">8. The recognition of their work highlights the importance of environmental technology.</p>
+                <p class="cn">对他们工作的认可凸显了环境技术的重要性。</p>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="long-sentences">
+            <h3>🔍 长难句分析 (Complex Sentence Analysis)</h3>
+            <div class="sentence-box">
+                <p class="sentence">1. Yu Haijun and Xie Yinghao, researchers from Guangdong Brunp Recycling Technology Co., Ltd., received both the "Non-European Patent Organization Member Country Award" and the "Popular Award" for their groundbreaking work in battery recycling technology.</p>
+                <p class="analysis">【结构分析】主语：Yu Haijun and Xie Yinghao；同位语：researchers from...（介绍主语身份）；谓语：received；宾语：both...and...连接的两个奖项；状语：for their groundbreaking work...（获奖原因）</p>
+                <p class="translation">【参考译文】来自广东邦普循环科技有限公司的研究人员余海军和谢英豪凭借其在电池回收技术方面的开创性工作，同时获得了"非欧洲专利组织成员国奖"和"人气奖"。</p>
+            </div>
+            <div class="sentence-box">
+                <p class="sentence">2. This sophisticated approach enables the direct transformation of spent lithium-ion batteries into high-performance cathode materials suitable for manufacturing new batteries.</p>
+                <p class="analysis">【结构分析】主语：This sophisticated approach；谓语：enables；宾语：the direct transformation...；其中spent lithium-ion batteries是"废旧锂电池"，high-performance cathode materials是"高性能正极材料"，suitable for...是形容词短语后置修饰materials</p>
+                <p class="translation">【参考译文】这种先进的方法能够将废旧锂电池直接转化为适用于制造新电池的高性能正极材料。</p>
+            </div>
+            <div class="sentence-box">
+                <p class="sentence">3. The European Patent Office noted in its announcement that as electric vehicles and energy storage technologies accelerate their deployment globally, the demand for critical battery materials has increased substantially.</p>
+                <p class="analysis">【结构分析】主句：The European Patent Office noted...；宾语从句：that...（that引导整个从句）；在宾语从句中，as引导时间状语从句，主句是the demand...has increased substantially</p>
+                <p class="translation">【参考译文】欧洲专利局在公告中指出，随着电动汽车和储能技术在全球范围内加速推广，对关键电池材料的需求大幅增长。</p>
+            </div>
+            <div class="sentence-box">
+                <p class="sentence">4. By enabling efficient recovery and reuse of battery materials, this technology contributes to reducing dependence on newly mined resources, minimizing environmental impact, and promoting sustainable industrial practices.</p>
+                <p class="analysis">【结构分析】By enabling...是方式状语；主语：this technology；谓语：contributes to；宾语是三个动名词短语并列：reducing...，minimizing...，and promoting...</p>
+                <p class="translation">【参考译文】通过实现电池材料的高效回收和再利用，这项技术有助于减少对新开采资源的依赖、最小化环境影响，并促进可持续工业实践。</p>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>📝 写作素材积累 (Writing Materials)</h3>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>表达</th>
+                    <th>适用场景</th>
+                </tr>
+                <tr>
+                    <td>取得成就</td>
+                    <td>make history by doing sth. / achieve a milestone / secure two awards simultaneously</td>
+                    <td>描述获奖、突破等</td>
+                </tr>
+                <tr>
+                    <td>技术创新</td>
+                    <td>groundbreaking technology / revolutionary approach / paradigm shift</td>
+                    <td>介绍新技术、创新</td>
+                </tr>
+                <tr>
+                    <td>环境保护</td>
+                    <td>sustainable development / circular economy / carbon neutrality</td>
+                    <td>环保、可持续发展话题</td>
+                </tr>
+                <tr>
+                    <td>重要意义</td>
+                    <td>mark a significant milestone / underscore the importance of / play a pivotal role in</td>
+                    <td>强调事物重要性</td>
+                </tr>
+                <tr>
+                    <td>未来展望</td>
+                    <td>signal a new era / shape a greener future / pave the way for</td>
+                    <td>展望未来发展趋势</td>
+                </tr>
+                <tr>
+                    <td>因果关系</td>
+                    <td>As...accelerate their deployment, ...has increased substantially</td>
+                    <td>论述因果关系、趋势变化</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💭 深度思考 (Discussion Questions)</h3>
+            <div class="question-item">
+                <p class="q-label">Question 1:</p>
+                <p class="q-text">Why is battery recycling technology becoming increasingly important in today's world? Discuss its implications for both environmental protection and economic development.</p>
+            </div>
+            <div class="question-item">
+                <p class="q-label">Question 2:</p>
+                <p class="q-text">The article mentions "circular economy" as an important concept. What does this term mean? How can individuals contribute to a circular economy in their daily lives?</p>
+            </div>
+            <div class="question-item">
+                <p class="q-label">Question 3:</p>
+                <p class="q-text">If you were given the opportunity to develop an innovative technology, what environmental problem would you choose to address and why?</p>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p><span class="highlight">高考英语时文阅读</span> · 每日更新</p>
+            <p>文章来源：新华网、欧洲专利局官网</p>
+            <p>词汇数量：15个重点词汇 | 预计阅读时间：12分钟</p>
+            <p>© 2026 Daily English Reading Materials for Gaokao Preparation</p>
+        </div>
+    </div>
+</body>
+</html>

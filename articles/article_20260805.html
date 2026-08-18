@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Powers China's Education Transformation - 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        /* 3. 摘要 */
+        .abstract {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-left: 5px solid #667eea;
+        }
+
+        .abstract h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .abstract p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #333;
+            margin: 25px 0 15px;
+            font-size: 22px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 5. 词汇表 */
+        .vocabulary {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .vocabulary h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .vocab-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .vocab-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .vocab-table tr:hover {
+            background: #f0f4ff;
+        }
+
+        /* 6. 例句 */
+        .examples {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #764ba2;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .example-item .en {
+            color: #333;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .example-item .cn {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* 7. 长难句 */
+        .complex-sentences {
+            padding: 30px;
+        }
+
+        .complex-sentences h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .sentence-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sentence-box .original {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .sentence-box .analysis {
+            color: #555;
+            background: rgba(255,255,255,0.7);
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sentence-box .translation {
+            color: #764ba2;
+            font-size: 14px;
+        }
+
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .writing-materials h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .material-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .material-table th {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: #fff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .material-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .material-table tr:hover {
+            background: #fff0f5;
+        }
+
+        /* 9. 讨论问题 */
+        .discussion {
+            padding: 30px;
+        }
+
+        .discussion h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .question-item {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .question-item .number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: 600;
+        }
+
+        .question-item .question {
+            display: inline;
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .vocab-table, .material-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>AI Powers China's Education Transformation Drive</h1>
+            <div class="meta">China Daily | August 4, 2026</div>
+            <div class="tag">科技与教育</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>📌 文章摘要</h2>
+            <p>本文报道了中国将人工智能融入基础教育的变革举措。通过AI智能"代理"分析学生数据、生成个性化作业，教师得以从繁重的批改工作中解放出来，将更多时间投入到教学设计和个性化指导。文章介绍了北京多所学校的实践案例，展现了AI如何助力实现从"有学上"到"上好学"的转变，同时强调了教师在价值观引导和情感交流中的不可替代作用。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>A Historic Transformation in Education</h2>
+            <p>Inside a math classroom at Beijing No. 13 Secondary School, an artificial intelligence-powered "agent" crunches weeks of student data, analyzing students' recent classroom participation, homework and quiz results. Minutes later, a teacher reviews and refines AI-generated question sequences tailored for students at different learning levels and personalized after-class assignments before class can begin.</p>
+
+            <p>This scene reflects a broader transformation taking place in the world's largest basic education system — which serves more than 220 million students — as China turns to AI to improve the quality of basic education and better meet the needs of individual students, following decades of expanding access to education and narrowing regional disparities.</p>
+
+            <h2>From Access to Quality</h2>
+            <p>Having largely achieved universal enrollment in compulsory education, China is shifting its focus from ensuring access to schooling for all children toward providing every child with higher-quality, more personalized education. The country's 15th Five-Year Plan (2026-30) calls for leveraging AI to transform educational models and integrating the technology into every element, stage and scenario of education.</p>
+
+            <p>In April, the Ministry of Education launched an "AI Plus Education" action plan to accelerate AI education in primary and secondary schools, encourage interdisciplinary teaching and expand AI applications in classrooms. These policies are already taking shape nationwide.</p>
+
+            <h2>Innovative Practices Across China</h2>
+            <p>In Wenzhou, East China's Zhejiang province, AI literacy classes were introduced, through which students created digital avatars that introduce the city's culture in the local dialect using generative AI. By analyzing learning data, the AI "agent" at Beijing No. 13 Secondary School not only identifies common learning gaps among students, but also pinpoints the academic strengths and weaknesses of each one.</p>
+
+            <p>For instance, Zhang Meiya, a teacher at the school, worked with the AI system to shift abstract content closer to students' daily lives, developing case studies on issues such as smart-home privacy disputes and the spread of AI-generated fake news, before teaching a lesson on citizens' rights and responsibilities.</p>
+
+            <h2>Teachers' Roles Evolving</h2>
+            <p>At Beijing No. 35 High School, programming teacher Dong Yue has seen another benefit. "Previously, we had to examine each student's code line by line, which took a tremendous amount of time and effort. Now the AI agent can complete the initial assessment very quickly," Dong said. The time saved is now devoted to lesson planning, individualized guidance and professional development instead of repetitive grading.</p>
+
+            <p>However, teachers warn that AI remains far from perfect. Current systems may struggle to accurately evaluate certain types of writing, such as travel essays, or assess students' reasoning processes in some mathematics problems. Data interoperability between different AI platforms also remains a challenge in some areas.</p>
+
+            <h2>The Irreplaceable Role of Teachers</h2>
+            <p>"That is precisely why the role of teachers has not been diminished but rather strengthened," said Wu Chunhui, vice-principal of Beijing No. 13 Secondary School. "AI is an assisting tool. It cannot replace teachers in providing values-based guidance, inspiring students intellectually, or engaging empathetically with students in complex situations."</p>
+
+            <p>Liu Jizhong, principal of Beijing No. 35 High School, believes teachers will increasingly become designers of learning experiences, gatekeepers of AI use and guardians of technological ethics, rather than simply transmitters of knowledge.</p>
+
+            <p>As Yao Xiaoying, principal of the Foreign Languages Primary School affiliated with the Shenzhen University Education Group, put it, "Technology is merely the fuse. What we truly want to ignite is every child's inner motivation, which is the confidence to say, 'I want to learn, and I can do it.'"</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>📚 核心词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>词汇</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>释义</th>
+                </tr>
+                <tr>
+                    <td>transformation</td>
+                    <td>/ˌtrænsfəˈmeɪʃn/</td>
+                    <td>n.</td>
+                    <td>变革，转变</td>
+                </tr>
+                <tr>
+                    <td>leverage</td>
+                    <td>/ˈlevərɪdʒ/</td>
+                    <td>v.</td>
+                    <td>利用，借助</td>
+                </tr>
+                <tr>
+                    <td>tailor</td>
+                    <td>/ˈteɪlər/</td>
+                    <td>v.</td>
+                    <td>量身定制，专门制作</td>
+                </tr>
+                <tr>
+                    <td>interdisciplinary</td>
+                    <td>/ˌɪntəˈdɪsəplɪnəri/</td>
+                    <td>adj.</td>
+                    <td>跨学科的</td>
+                </tr>
+                <tr>
+                    <td>avatar</td>
+                    <td>/ˈævətɑːr/</td>
+                    <td>n.</td>
+                    <td>虚拟形象，化身</td>
+                </tr>
+                <tr>
+                    <td>pinpoint</td>
+                    <td>/ˈpɪnpɔɪnt/</td>
+                    <td>v.</td>
+                    <td>精准定位，准确指出</td>
+                </tr>
+                <tr>
+                    <td>curriculum</td>
+                    <td>/kəˈrɪkjələm/</td>
+                    <td>n.</td>
+                    <td>课程体系</td>
+                </tr>
+                <tr>
+                    <td>interoperability</td>
+                    <td>/ˌɪntəˌɒpərəˈbɪləti/</td>
+                    <td>n.</td>
+                    <td>互操作性</td>
+                </tr>
+                <tr>
+                    <td>diminish</td>
+                    <td>/dɪˈmɪnɪʃ/</td>
+                    <td>v.</td>
+                    <td>削弱，减少</td>
+                </tr>
+                <tr>
+                    <td>empathetically</td>
+                    <td>/ˌempəˈθetɪkli/</td>
+                    <td>adv.</td>
+                    <td>有同理心地，感同身受地</td>
+                </tr>
+                <tr>
+                    <td>guardian</td>
+                    <td>/ˈɡɑːrdiən/</td>
+                    <td>n.</td>
+                    <td>守护者，保护者</td>
+                </tr>
+                <tr>
+                    <td>ignite</td>
+                    <td>/ɪɡˈnaɪt/</td>
+                    <td>v.</td>
+                    <td>点燃，激发</td>
+                </tr>
+                <tr>
+                    <td>enrollment</td>
+                    <td>/ɪnˈrəʊlmənt/</td>
+                    <td>n.</td>
+                    <td>入学，注册</td>
+                </tr>
+                <tr>
+                    <td>disparity</td>
+                    <td>/dɪˈspærəti/</td>
+                    <td>n.</td>
+                    <td>差距，差异</td>
+                </tr>
+                <tr>
+                    <td>scenario</td>
+                    <td>/səˈnɑːriəʊ/</td>
+                    <td>n.</td>
+                    <td>场景，情景</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>✏️ 重点词汇例句</h2>
+
+            <div class="example-item">
+                <div class="en">The company decided to leverage its existing resources to enter new markets.</div>
+                <div class="cn">公司决定利用现有资源进入新市场。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">The training program was tailored to meet the specific needs of each department.</div>
+                <div class="cn">培训项目被量身定制以满足每个部门的具体需求。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">Interdisciplinary research has become increasingly important in solving complex problems.</div>
+                <div class="cn">跨学科研究在解决复杂问题方面变得越来越重要。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">The new policy aims to narrow the disparity between urban and rural education.</div>
+                <div class="cn">新政策旨在缩小城乡教育差距。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">Teachers should engage empathetically with students who face personal challenges.</div>
+                <div class="cn">教师应与面临个人挑战的学生进行有同理心的交流。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">Technology should serve as a tool to ignite students' passion for learning.</div>
+                <div class="cn">技术应作为点燃学生学习热情的工具。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">The research team managed to pinpoint the exact cause of the problem.</div>
+                <div class="cn">研究团队成功精准定位了问题的确切原因。</div>
+            </div>
+
+            <div class="example-item">
+                <div class="en">Parents are the primary guardians of their children's safety and well-being.</div>
+                <div class="cn">父母是孩子安全和幸福的首要守护者。</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句解析 -->
+        <div class="complex-sentences">
+            <h2>🔍 长难句解析</h2>
+
+            <div class="sentence-box">
+                <div class="original">This scene reflects a broader transformation taking place in the world's largest basic education system — which serves more than 220 million students — as China turns to AI to improve the quality of basic education and better meet the needs of individual students, following decades of expanding access to education and narrowing regional disparities.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    主句：This scene reflects a broader transformation<br>
+                    后置定语：taking place in the world's largest basic education system（现在分词短语修饰transformation）<br>
+                    定语从句：which serves more than 220 million students（修饰system）<br>
+                    原因状语从句：as China turns to AI to improve...<br>
+                    时间背景：following decades of...（介词短语）
+                </div>
+                <div class="translation">这一场景反映了世界最大基础教育体系正在发生的更广泛变革——该体系服务超过2.2亿名学生——中国正借助AI提高基础教育质量，更好地满足每位学生的个性化需求，此前数十年中国已实现了教育机会的普及并缩小了区域差距。</div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">Liu Jizhong, principal of Beijing No. 35 High School, believes teachers will increasingly become designers of learning experiences, gatekeepers of AI use and guardians of technological ethics, rather than simply transmitters of knowledge.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    主语：Liu Jizhong（principal of Beijing No. 35 High School为同位语）<br>
+                    谓语：believes<br>
+                    宾语从句：teachers will increasingly become...<br>
+                    并列名词短语：designers of learning experiences, gatekeepers of AI use, guardians of technological ethics<br>
+                    对比结构：rather than simply transmitters of knowledge
+                </div>
+                <div class="translation">北京35中校长刘继忠认为，教师将日益成为学习体验的设计者、AI使用的把关者和技术伦理的守护者，而非仅仅是知识的传授者。</div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">As Yao Xiaoying, principal of the Foreign Languages Primary School affiliated with the Shenzhen University Education Group, put it, "Technology is merely the fuse. What we truly want to ignite is every child's inner motivation, which is the confidence to say, 'I want to learn, and I can do it.'"</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    方式状语从句：As Yao Xiaoying...put it（"正如...所言"）<br>
+                    主句引用：Technology is merely the fuse<br>
+                    强调句结构：What we truly want to ignite is...（主语从句）<br>
+                    非限制性定语从句：which is the confidence to say...（修饰motivation）<br>
+                    引语内容：'I want to learn, and I can do it.'
+                </div>
+                <div class="translation">正如深圳大学教育集团附属外语小学校长姚晓莹所言："技术仅仅是导火索。我们真正想要点燃的是每个孩子的内在动力，即那种'我想学，我能做到'的自信。"</div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">That is precisely why the role of teachers has not been diminished but rather strengthened, said Wu Chunhui, vice-principal of Beijing No. 13 Secondary School.</div>
+                <div class="analysis">
+                    <strong>句子结构分析：</strong><br>
+                    主语：That<br>
+                    谓语：is precisely<br>
+                    表语从句：why the role of teachers has not been diminished but rather strengthened<br>
+                    并列结构：not...but rather...（不是...而是...）<br>
+                    被动语态：has not been diminished, (has been) strengthened<br>
+                    引述来源：said Wu Chunhui, vice-principal of...（倒装结构）
+                </div>
+                <div class="translation">北京13中副校长吴春晖表示，这正是教师角色非但没有被削弱反而得到加强的原因所在。</div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h2>📝 写作素材积累</h2>
+            <table class="material-table">
+                <tr>
+                    <th>话题</th>
+                    <th>素材表达</th>
+                    <th>适用场景</th>
+                </tr>
+                <tr>
+                    <td>教育变革</td>
+                    <td>transformation in education system; shift from access to quality</td>
+                    <td>教育类议论文</td>
+                </tr>
+                <tr>
+                    <td>技术应用</td>
+                    <td>leverage technology; integrate into every element and scenario</td>
+                    <td>科技类文章</td>
+                </tr>
+                <tr>
+                    <td>个性化学习</td>
+                    <td>tailored for students at different levels; personalized assignments</td>
+                    <td>教育改革话题</td>
+                </tr>
+                <tr>
+                    <td>教师角色</td>
+                    <td>designers of learning experiences; guardians of technological ethics</td>
+                    <td>教师话题文章</td>
+                </tr>
+                <tr>
+                    <td>批判性思维</td>
+                    <td>AI remains far from perfect; data interoperability remains a challenge</td>
+                    <td>科技利弊分析</td>
+                </tr>
+                <tr>
+                    <td>学习动力</td>
+                    <td>ignite every child's inner motivation; "I want to learn, and I can do it"</td>
+                    <td>励志类话题</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>💭 思考与讨论</h2>
+
+            <div class="question-item">
+                <span class="number">1</span>
+                <span class="question">According to the passage, what are the main benefits of integrating AI into education? How does AI change teachers' work?</span>
+            </div>
+
+            <div class="question-item">
+                <span class="number">2</span>
+                <span class="question">The article mentions that "the role of teachers has not been diminished but rather strengthened." Why does the author say this? What aspects of teaching cannot be replaced by AI?</span>
+            </div>
+
+            <div class="question-item">
+                <span class="number">3</span>
+                <span class="question">If AI were introduced into your school, how would you like it to help with your learning? What concerns might you have?</span>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📖 每日高考英语时文阅读 | 助力高考英语学习</p>
+            <p>文章来源：China Daily | 2026年8月4日</p>
+            <p>© 2026 高考英语时文阅读项目组 | <a href="https://github.com/zhh-2000">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>

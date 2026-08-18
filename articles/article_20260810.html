@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Battery Storage: Powering the Clean Energy Revolution | 高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            margin: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.85em;
+        }
+        
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+            padding: 30px 40px;
+            border-left: 5px solid #ffc107;
+        }
+        .abstract h2 {
+            color: #f57f17;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .abstract p {
+            color: #5d4037;
+            line-height: 1.9;
+        }
+        
+        /* 4. 正文 */
+        .content {
+            padding: 40px;
+            font-size: 1.05em;
+        }
+        .content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .content h3 {
+            color: #1e3c72;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e3f2fd;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f5f5f5;
+            padding: 30px 40px;
+        }
+        .vocabulary h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .vocab-table tr:last-child td {
+            border-bottom: none;
+        }
+        .vocab-table tr:hover {
+            background: #f3f4f6;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            padding: 40px;
+            background: #fff;
+        }
+        .examples h2 {
+            color: #1e3c72;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+        }
+        .example-item {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #4caf50;
+        }
+        .example-item .sentence {
+            font-style: italic;
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+        .example-item .translation {
+            color: #5d4037;
+            font-size: 0.95em;
+        }
+        
+        /* 7. 长难句 */
+        .long-sentences {
+            background: #fce4ec;
+            padding: 40px;
+        }
+        .long-sentences h2 {
+            color: #c2185b;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+        }
+        .sentence-box {
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid #f8bbd9;
+        }
+        .sentence-box .original {
+            color: #c2185b;
+            font-weight: bold;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .sentence-box .analysis {
+            color: #5d4037;
+            background: #fce4ec;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 40px;
+            background: #fff;
+        }
+        .writing-materials h2 {
+            color: #1e3c72;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+        }
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .writing-table th {
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .writing-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%);
+            padding: 40px;
+        }
+        .discussion h2 {
+            color: #512da8;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+        }
+        .question {
+            background: #fff;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: flex-start;
+        }
+        .question-num {
+            background: #7c4dff;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        .question p {
+            color: #333;
+            margin: 0;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Global Battery Storage: Powering the Clean Energy Revolution</h1>
+            <p class="meta">August 10, 2026 | Technology & Environment | Word Count: 920</p>
+            <span class="tag">今日最新</span>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h2>文章摘要</h2>
+            <p>本文介绍了2026年8月全球电池储能领域的最新发展。从印度的20 GWh大规模储能计划到美国的10亿美元融资，从德国首个无补贴光储混合项目到日本的电网级电池开发，各国正在加速布局清洁能源基础设施。电池储能技术不仅解决了可再生能源的间歇性问题，也为实现碳中和目标提供了关键技术支撑。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <p>The global transition to clean energy is accelerating, and battery storage technology has emerged as a crucial enabler of this transformation. On August 10, 2026, multiple countries announced significant developments in the battery energy storage systems (BESS) sector, highlighting the growing importance of this technology in achieving climate goals.</p>
+            
+            <h3>India's Ambitious Storage Initiative</h3>
+            <p>Indian electric vehicle manufacturer Ola Electric has entered a memorandum of understanding (MoU) with Axis Energy Ventures to deploy up to 20 GWh of battery energy storage systems by 2032. This partnership marks Ola Electric's expansion into the utility-scale storage market through its new platform, Ola Mahashakti. The initiative is designed to support commercial, industrial, and utility-scale applications, with all systems manufactured domestically in India. Axis Energy, which has secured grid approvals for over 3.75 GW of projects in Andhra Pradesh and Rajasthan, will integrate these batteries into its renewable energy pipeline.</p>
+            
+            <h3>United States: Massive Investment in Home Batteries</h3>
+            <p>In the United States, Base Power has raised $1 billion in Series D funding, reaching a post-money valuation of $13 billion. The company, founded in 2023, has now raised more than $2.5 billion to date. The latest funding round was led by Ribbit, Addition, Valor Equity Partners, and JPMorganChase's Strategic Investment Group. Alongside this financing, Base has launched Base Core, a home battery produced at its factory in Austin, Texas. Available in 39.2 kWh and 78.4 kWh configurations, the battery is designed and built entirely in the US and can be installed in under an hour, providing extended backup power while supporting grid stability.</p>
+            
+            <h3>Germany's Innovative Hybrid Project</h3>
+            <p>German renewable energy developer MaxSolar GmbH and DB Energie have signed a 10-year hybrid power purchase agreement (PPA) for the Friedrichshof solar-plus-storage project in Mecklenburg-Western Pomerania. This project combines a 37 MW ground-mounted solar plant with a 15 MW/30 MWh co-located BESS and is described as Germany's first subsidy-free project to jointly market solar generation and battery storage under a hybrid PPA. The facility is scheduled for commissioning in summer 2027, with the solar plant expected to generate approximately 36,680 MWh annually. DB Energie, a subsidiary of German railway group Deutsche Bahn, will use the contracted renewable electricity as part of its railway power portfolio.</p>
+            
+            <h3>Scotland's Growing Storage Portfolio</h3>
+            <p>Carlyle-backed Revera Energy has begun construction of the 200 MW/400 MWh Windyhill BESS project in Bearsden, Scotland. This project is the first of three battery projects in Revera's Scottish portfolio to enter construction, forming part of a planned nearly 1 GW/2 GWh portfolio representing more than £500 million in investment. GE Vernova serves as the technology partner, while Mitie and OCU support project delivery. Commercial operations are expected to begin in Q1 2028, supporting Scotland's transition to a more flexible, renewables-driven grid.</p>
+            
+            <h3>Japan's Grid-Scale Development</h3>
+            <p>Japan's Intellect has started development of a grid-scale battery storage project in Kumamoto City. The project features a rated output of about 2 MW and storage capacity of 8 MWh, developed on land owned by the BLD Group. Operations are expected to begin in June 2027, with Intellect handling project development, EPC, and O&M, while NAXT provides asset management and an aggregator manages market operations and power balancing. This project will support electricity supply-demand balancing and grid stability in the region.</p>
+            
+            <p>These global developments demonstrate that battery storage is no longer a peripheral technology but a central pillar of the clean energy transition. As countries worldwide invest billions of dollars in storage infrastructure, the technology is becoming increasingly cost-effective and scalable, paving the way for a renewable-powered future.</p>
+        </div>
+        
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h2>核心词汇表</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>例句</th>
+                </tr>
+                <tr>
+                    <td>accelerate</td>
+                    <td>v.</td>
+                    <td>加速；促进</td>
+                    <td>The government plans to accelerate the transition to clean energy.</td>
+                </tr>
+                <tr>
+                    <td>emerge</td>
+                    <td>v.</td>
+                    <td>出现；浮现</td>
+                    <td>New solutions have emerged to address climate change.</td>
+                </tr>
+                <tr>
+                    <td>crucial</td>
+                    <td>adj.</td>
+                    <td>关键的；至关重要的</td>
+                    <td>Technology plays a crucial role in modern education.</td>
+                </tr>
+                <tr>
+                    <td>enabler</td>
+                    <td>n.</td>
+                    <td>促成者；使能因素</td>
+                    <td>Education is an enabler of social mobility.</td>
+                </tr>
+                <tr>
+                    <td>transformtion</td>
+                    <td>n.</td>
+                    <td>转型；变革</td>
+                    <td>The digital transformation has changed how we work.</td>
+                </tr>
+                <tr>
+                    <td>initiative</td>
+                    <td>n.</td>
+                    <td>倡议；新方案</td>
+                    <td>The company launched a new environmental initiative.</td>
+                </tr>
+                <tr>
+                    <td>deploy</td>
+                    <td>v.</td>
+                    <td>部署；调配</td>
+                    <td>The army deployed troops to the disaster area.</td>
+                </tr>
+                <tr>
+                    <td>domestically</td>
+                    <td>adv.</td>
+                    <td>在国内；国产地</td>
+                    <td>The products are manufactured domestically.</td>
+                </tr>
+                <tr>
+                    <td>integrate</td>
+                    <td>v.</td>
+                    <td>整合；结合</td>
+                    <td>We need to integrate traditional and modern methods.</td>
+                </tr>
+                <tr>
+                    <td>configuration</td>
+                    <td>n.</td>
+                    <td>配置；结构</td>
+                    <td>The system offers multiple configuration options.</td>
+                </tr>
+                <tr>
+                    <td>commission</td>
+                    <td>v.</td>
+                    <td>使投入运行；委托</td>
+                    <td>The new power plant was commissioned last month.</td>
+                </tr>
+                <tr>
+                    <td>subsidiary</td>
+                    <td>n.</td>
+                    <td>子公司；附属机构</td>
+                    <td>The company operates through several subsidiaries.</td>
+                </tr>
+                <tr>
+                    <td>flexible</td>
+                    <td>adj.</td>
+                    <td>灵活的；可变通的</td>
+                    <td>We need a more flexible approach to problem-solving.</td>
+                </tr>
+                <tr>
+                    <td>peripheral</td>
+                    <td>adj.</td>
+                    <td>外围的；次要的</td>
+                    <td>These issues were once considered peripheral.</td>
+                </tr>
+                <tr>
+                    <td>pave the way</td>
+                    <td>phrase</td>
+                    <td>铺平道路；为...创造条件</td>
+                    <td>This agreement paves the way for future cooperation.</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h2>精选例句</h2>
+            <div class="example-item">
+                <p class="sentence">1. The global transition to clean energy is accelerating, and battery storage technology has emerged as a crucial enabler of this transformation.</p>
+                <p class="translation">全球向清洁能源的转型正在加速，电池储能技术已成为这一变革的关键使能因素。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">2. Indian electric vehicle manufacturer Ola Electric has entered a memorandum of understanding with Axis Energy Ventures to deploy up to 20 GWh of battery energy storage systems by 2032.</p>
+                <p class="translation">印度电动汽车制造商Ola Electric已与Axis Energy Ventures签署谅解备忘录，计划到2032年部署高达20 GWh的电池储能系统。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">3. The project combines a 37 MW ground-mounted solar plant with a 15 MW/30 MWh co-located BESS and is described as Germany's first subsidy-free project.</p>
+                <p class="translation">该项目结合了37兆瓦地面光伏电站和15兆瓦/30兆瓦时共址电池储能系统，被称为德国首个无补贴项目。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">4. Base Power has raised $1 billion in Series D funding, reaching a post-money valuation of $13 billion.</p>
+                <p class="translation">Base Power在D轮融资中筹集了10亿美元，投后估值达到130亿美元。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">5. This project will support electricity supply-demand balancing and grid stability in the region.</p>
+                <p class="translation">该项目将支持该地区的电力供需平衡和电网稳定。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">6. These global developments demonstrate that battery storage is no longer a peripheral technology but a central pillar of the clean energy transition.</p>
+                <p class="translation">这些全球发展表明，电池储能不再是边缘技术，而是清洁能源转型的核心支柱。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">7. The initiative is designed to support commercial, industrial, and utility-scale applications.</p>
+                <p class="translation">该倡议旨在支持商业、工业和公用事业规模的应用。</p>
+            </div>
+            <div class="example-item">
+                <p class="sentence">8. As countries worldwide invest billions of dollars in storage infrastructure, the technology is becoming increasingly cost-effective and scalable.</p>
+                <p class="translation">随着各国在储能基础设施上投入数十亿美元，这项技术正变得越来越经济高效且可扩展。</p>
+            </div>
+        </div>
+        
+        <!-- 7. 长难句 -->
+        <div class="long-sentences">
+            <h2>长难句解析</h2>
+            <div class="sentence-box">
+                <p class="original">Indian electric vehicle manufacturer Ola Electric has entered a memorandum of understanding (MoU) with Axis Energy Ventures to explore the deployment of up to 20 GWh of battery energy storage systems (BESS) by 2032, which is the first large-scale partnership for Ola Electric's upcoming energy storage platform for commercial, industrial, and utility-scale applications.</p>
+                <div class="analysis">
+                    <strong>句型结构：</strong>主句(S + V + O) + 不定式短语作目的状语 + 非限制性定语从句<br>
+                    <strong>解析：</strong>主句为"Ola Electric has entered a MoU with Axis Energy Ventures"，不定式短语"to explore..."表目的，which引导的非限制性定语从句修饰整个主句内容。<br>
+                    <strong>翻译：</strong>印度电动汽车制造商Ola Electric已与Axis Energy Ventures签署谅解备忘录，探索到2032年部署高达20 GWh电池储能系统，这是Ola Electric即将推出的商用、工业和公用事业规模储能平台的首次大规模合作。
+                </div>
+            </div>
+            <div class="sentence-box">
+                <p class="original">German renewable energy developer MaxSolar GmbH and DB Energie have signed a 10-year hybrid power purchase agreement (PPA) for the Friedrichshof solar-plus-storage project in Mecklenburg-Western Pomerania, which combines a 37 MW ground-mounted solar plant with a 15 MW/30 MWh co-located BESS and is described as Germany's first subsidy-free project to jointly market solar generation and battery storage under a hybrid PPA.</p>
+                <div class="analysis">
+                    <strong>句型结构：</strong>主句(S + V + O) + 介词短语作定语 + which引导的定语从句<br>
+                    <strong>解析：</strong>主句为"MaxSolar GmbH and DB Energie have signed a 10-year hybrid PPA"，介词短语"for the Friedrichshof..."作定语修饰agreement，which引导定语从句修饰project，从句中包含两个并列的谓语"combines"和"is described"。<br>
+                    <strong>翻译：</strong>德国可再生能源开发商MaxSolar GmbH与DB Energie为位于梅克伦堡-前波美拉尼亚的Friedrichshof光储项目签署了为期10年的混合购电协议，该项目结合了37兆瓦地面光伏电站和15兆瓦/30兆瓦时共址储能系统，被称为德国首个在混合购电协议下共同销售光伏发电和电池储能的无补贴项目。
+                </div>
+            </div>
+            <div class="sentence-box">
+                <p class="original">These global developments demonstrate that battery storage is no longer a peripheral technology but a central pillar of the clean energy transition, as countries worldwide invest billions of dollars in storage infrastructure, paving the way for a renewable-powered future.</p>
+                <div class="analysis">
+                    <strong>句型结构：</strong>主句(S + V + 宾语从句) + as引导的原因状语从句 + 现在分词短语作结果状语<br>
+                    <strong>解析：</strong>主句中"demonstrate"后接that引导的宾语从句，从句使用"no longer...but..."结构；as引导原因状语从句，现在分词"paving..."作结果状语，表示前述行动带来的结果。<br>
+                    <strong>翻译：</strong>这些全球发展表明，电池储能不再是边缘技术，而是清洁能源转型的核心支柱，因为各国正投资数十亿美元建设储能基础设施，为可再生能源驱动的未来铺平道路。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h2>写作素材库</h2>
+            <table class="writing-table">
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>适用话题</th>
+                </tr>
+                <tr>
+                    <td>环境保护</td>
+                    <td>accelerate the transition to clean energy</td>
+                    <td>气候变化、可持续发展、新能源</td>
+                </tr>
+                <tr>
+                    <td>科技创新</td>
+                    <td>emerge as a crucial enabler of transformation</td>
+                    <td>技术进步、产业变革、数字化转型</td>
+                </tr>
+                <tr>
+                    <td>国际合作</td>
+                    <td>enter a memorandum of understanding with</td>
+                    <td>国际关系、企业合作、政策协议</td>
+                </tr>
+                <tr>
+                    <td>经济发展</td>
+                    <td>invest billions of dollars in infrastructure</td>
+                    <td>基础设施建设、投资增长、经济政策</td>
+                </tr>
+                <tr>
+                    <td>未来展望</td>
+                    <td>pave the way for a renewable-powered future</td>
+                    <td>前景描述、目标规划、美好愿景</td>
+                </tr>
+                <tr>
+                    <td>重要性强调</td>
+                    <td>is no longer peripheral but a central pillar</td>
+                    <td>观点论证、重要性分析、地位转变</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h2>思考与讨论</h2>
+            <div class="question">
+                <span class="question-num">1</span>
+                <p>According to the article, why is battery storage technology considered crucial for the clean energy transition? What challenges does it help solve?</p>
+            </div>
+            <div class="question">
+                <span class="question-num">2</span>
+                <p>The article mentions that Germany's Friedrichshof project is "subsidy-free." What does this suggest about the development of renewable energy technology? Discuss the relationship between government support and technological maturity.</p>
+            </div>
+            <div class="question">
+                <span class="question-num">3</span>
+                <p>If you were a policy maker in your country, what measures would you propose to accelerate the deployment of battery storage systems? Consider environmental, economic, and social factors.</p>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>高考英语时文阅读 | 每日更新</p>
+            <p>发布日期：2026年8月10日</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>

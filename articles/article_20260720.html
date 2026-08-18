@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Scientists Set World Record in Solar Cell Efficiency | 高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        /* 2. 文章头部 */
+        .article-header {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-header .category {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .article-header h1 {
+            font-size: 2em;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .article-header .meta {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        
+        .article-header .meta span {
+            margin-right: 20px;
+        }
+        
+        /* 3. 摘要 */
+        .summary {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+            border-left: 5px solid #f39c12;
+            padding: 25px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .summary h2 {
+            color: #e67e22;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .summary p {
+            color: #5d4e37;
+            font-size: 1.05em;
+        }
+        
+        /* 4. 正文 */
+        .article-body {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-body h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .article-body p {
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 8px;
+            border-radius: 5px;
+        }
+        
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .vocabulary h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .vocabulary h2::before {
+            content: "📚";
+        }
+        
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1em;
+        }
+        
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .vocab-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .vocab-table .word {
+            font-weight: bold;
+            color: #8e44ad;
+        }
+        
+        /* 6. 例句 */
+        .examples {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .examples h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .examples h2::before {
+            content: "✏️";
+        }
+        
+        .example-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecef 100%);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .example-item .sentence {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .example-item .translation {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+        
+        /* 7. 长难句 */
+        .complex-sentences {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .complex-sentences h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .complex-sentences h2::before {
+            content: "🔍";
+        }
+        
+        .sentence-box {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            border: 2px solid #00acc1;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .sentence-box .original {
+            font-size: 1.05em;
+            color: #006064;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .sentence-box .analysis {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .sentence-box .analysis-title {
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .sentence-box .translation {
+            color: #5d4037;
+            font-style: italic;
+        }
+        
+        /* 8. 写作素材 */
+        .writing-materials {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .writing-materials h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .writing-materials h2::before {
+            content: "📝";
+        }
+        
+        .writing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .writing-table th {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .writing-table td {
+            padding: 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .writing-table .phrase {
+            font-weight: bold;
+            color: #c0392b;
+        }
+        
+        /* 9. 讨论问题 */
+        .discussion {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .discussion h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .discussion h2::before {
+            content: "💭";
+        }
+        
+        .question-item {
+            background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #fbc02d;
+        }
+        
+        .question-item .q-num {
+            display: inline-block;
+            background: #f57f17;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        /* 10. 页脚 */
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        .footer .highlight-text {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .article-header, .article-body, .vocabulary, .examples, 
+            .complex-sentences, .writing-materials, .discussion {
+                padding: 25px;
+            }
+            
+            .article-header h1 {
+                font-size: 1.5em;
+            }
+            
+            .vocab-table, .writing-table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <header class="article-header">
+            <span class="category">科技类·新能源</span>
+            <h1>Chinese Scientists Set World Record in Solar Cell Efficiency</h1>
+            <div class="meta">
+                <span>📅 July 20, 2026</span>
+                <span>📖 来源: Xinhua / Nature</span>
+                <span>⏱️ 约900词</span>
+            </div>
+        </header>
+        
+        <!-- 3. 摘要 -->
+        <section class="summary">
+            <h2>📝 文章摘要</h2>
+            <p>中国科研团队在钙钛矿-有机叠层太阳能电池领域取得重大突破，创造出28.04%的光电转换效率世界纪录。该研究发表在Nature期刊上，通过引入光转化稳定剂解决了困扰已久的相分离难题，为可再生能源发展开辟了新路径。</p>
+        </section>
+        
+        <!-- 4. 正文 -->
+        <article class="article-body">
+            <h2>A Breakthrough in Renewable Energy</h2>
+            <p>Chinese researchers have recently developed a <span class="highlight">novel perovskite-organic tandem solar cell</span> that has set a new world record of 28.04 percent for steady-state photoelectric conversion efficiency, according to a study published in the journal Nature. This remarkable achievement marks a significant milestone in the field of renewable energy technology.</p>
+            
+            <p>The cell, developed by the Institute of Chemistry of the Chinese Academy of Sciences (CAS), features a wide-bandgap perovskite top subcell that has achieved the highest open-circuit voltage ever recorded for its type. When precisely integrated with an organic bottom subcell, the laboratory power conversion efficiency of the tandem device peaked at 28.80 percent, with a certified steady-state efficiency of 28.04 percent.</p>
+            
+            <h2>Exceptional Stability and Versatility</h2>
+            <p>One of the most impressive aspects of this innovation is its remarkable operational stability. The cell demonstrated the ability to retain 90 percent of its initial efficiency after 625 hours of continuous illumination, addressing one of the key challenges that has long hindered the practical application of such technologies.</p>
+            
+            <p>"This perovskite-organic tandem solar cell combines lightweight design, mechanical flexibility and high efficiency," said Li Yongfang, a CAS academician who led the research team. "Beyond applications in buildings, transportation and wearable electronics, its exceptional power-to-weight ratio makes it a promising candidate for future space missions."</p>
+            
+            <h2>The Science Behind the Innovation</h2>
+            <p>Emerging photovoltaic technologies, particularly perovskite and organic solar cells, have advanced rapidly in recent years. Perovskite-organic tandem solar cells maximize solar spectrum utilization through a clever design: the perovskite top layer captures visible light while the organic bottom layer absorbs near-infrared light, delivering a theoretical efficiency far surpassing that of single-junction devices.</p>
+            
+            <p>However, a persistent challenge has plagued the development of such cells. To absorb sufficient sunlight, the thin film requires the simultaneous incorporation of iodine and bromine. Yet during fabrication or under prolonged illumination, iodide and bromide ions tend to segregate—a phenomenon known as phase separation—causing a continuous drop in voltage and performance degradation.</p>
+            
+            <h2>A Creative Solution to a Critical Problem</h2>
+            <p>"This phase separation has been a critical bottleneck, severely undermining the device's operational stability and hindering its commercial viability," said Meng Lei, a researcher at the institute and a key member of the team. The team introduced an innovative solution: an additive molecule called TDB.</p>
+            
+            <p>During the initial formation of the perovskite film, TDB acts as a mediator, slowing the swift aggregation of bromide ions and ensuring a homogeneous distribution of iodine and bromine from the outset. Upon exposure to light, TDB transforms into a new molecular structure called TAB, which anchors at the grain boundaries of the perovskite material.</p>
+            
+            <p>"This newly formed molecule effectively suppresses halide ion migration and phase separation, a transformation from being light-averse to light-adaptive," Meng explained. This creative approach demonstrates how understanding fundamental chemistry can lead to practical solutions for real-world challenges.</p>
+            
+            <h2>Broader Implications for Clean Energy</h2>
+            <p>This breakthrough comes at a critical time when the world is seeking sustainable alternatives to fossil fuels. Solar energy, as one of the cleanest and most abundant renewable resources, plays an increasingly important role in global efforts to combat climate change and achieve carbon neutrality goals.</p>
+            
+            <p>The success of this research team showcases the power of international scientific collaboration and the importance of fundamental research in driving technological innovation. As these advanced solar cells move toward commercial production, they could revolutionize how we generate clean energy, making solar power more efficient, affordable, and accessible to communities around the world.</p>
+        </article>
+        
+        <!-- 5. 词汇表 -->
+        <section class="vocabulary">
+            <h2>核心词汇表</h2>
+            <table class="vocab-table">
+                <thead>
+                    <tr>
+                        <th>单词/短语</th>
+                        <th>词性</th>
+                        <th>释义</th>
+                        <th>高考重要度</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="word">perovskite</td>
+                        <td>n.</td>
+                        <td>钙钛矿（一种晶体结构材料）</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">tandem</td>
+                        <td>adj./n.</td>
+                        <td>串联的；协同工作的</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">efficiency</td>
+                        <td>n.</td>
+                        <td>效率；功效</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">conversion</td>
+                        <td>n.</td>
+                        <td>转化；转换</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">integrate</td>
+                        <td>v.</td>
+                        <td>整合；结合；使一体化</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">stability</td>
+                        <td>n.</td>
+                        <td>稳定性；稳固</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">innovation</td>
+                        <td>n.</td>
+                        <td>创新；革新</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">flexibility</td>
+                        <td>n.</td>
+                        <td>灵活性；柔韧性</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">segregate</td>
+                        <td>v.</td>
+                        <td>分离；隔离</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">phenomenon</td>
+                        <td>n.</td>
+                        <td>现象；奇迹</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">degradation</td>
+                        <td>n.</td>
+                        <td>退化；恶化</td>
+                        <td>⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">bottleneck</td>
+                        <td>n.</td>
+                        <td>瓶颈；障碍</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">suppress</td>
+                        <td>v.</td>
+                        <td>抑制；镇压</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">sustainable</td>
+                        <td>adj.</td>
+                        <td>可持续的；能维持的</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td class="word">revolutionize</td>
+                        <td>v.</td>
+                        <td>彻底变革；使革命化</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- 6. 例句 -->
+        <section class="examples">
+            <h2>重点例句</h2>
+            
+            <div class="example-item">
+                <p class="sentence">1. The research team achieved a <strong>breakthrough</strong> in renewable energy technology.</p>
+                <p class="translation">研究团队在可再生能源技术方面取得了重大突破。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">2. The new device demonstrates remarkable <strong>efficiency</strong> in converting sunlight into electricity.</p>
+                <p class="translation">新设备在将阳光转化为电力方面表现出卓越的效率。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">3. Scientists are working to <strong>integrate</strong> different technologies to improve performance.</p>
+                <p class="translation">科学家们正在努力整合不同技术以提高性能。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">4. The <strong>stability</strong> of the material under various conditions remains a key challenge.</p>
+                <p class="translation">材料在各种条件下的稳定性仍然是一个关键挑战。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">5. This <strong>innovation</strong> could revolutionize how we generate clean energy.</p>
+                <p class="translation">这一创新可能会彻底改变我们生产清洁能源的方式。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">6. The <strong>phenomenon</strong> of phase separation has long puzzled researchers.</p>
+                <p class="translation">相分离现象长期以来困扰着研究人员。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">7. <strong>Sustainable</strong> development requires innovative solutions to environmental challenges.</p>
+                <p class="translation">可持续发展需要针对环境挑战的创新解决方案。</p>
+            </div>
+            
+            <div class="example-item">
+                <p class="sentence">8. The team introduced a creative approach to <strong>suppress</strong> unwanted chemical reactions.</p>
+                <p class="translation">团队引入了一种创新方法来抑制不需要的化学反应。</p>
+            </div>
+        </section>
+        
+        <!-- 7. 长难句 -->
+        <section class="complex-sentences">
+            <h2>长难句解析</h2>
+            
+            <div class="sentence-box">
+                <p class="original">Chinese researchers have recently developed a novel perovskite-organic tandem solar cell that has set a new world record of 28.04 percent for steady-state photoelectric conversion efficiency, according to a study published in the journal Nature.</p>
+                <div class="analysis">
+                    <p class="analysis-title">📊 句子结构分析：</p>
+                    <p>主句：Chinese researchers have developed a novel solar cell（主谓宾结构）</p>
+                    <p>定语从句：that has set a new world record...（修饰solar cell）</p>
+                    <p>状语：according to a study published in...（补充信息来源）</p>
+                </div>
+                <p class="translation">📖 参考译文：根据发表在《Nature》期刊上的一项研究，中国研究人员最近开发了一种新型钙钛矿-有机叠层太阳能电池，创下了28.04%的稳态光电转换效率世界纪录。</p>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">When precisely integrated with an organic bottom subcell, the laboratory power conversion efficiency of the tandem device peaked at 28.80 percent, with a certified steady-state efficiency of 28.04 percent.</p>
+                <div class="analysis">
+                    <p class="analysis-title">📊 句子结构分析：</p>
+                    <p>时间状语：When precisely integrated with...（过去分词短语作状语）</p>
+                    <p>主句：the efficiency peaked at 28.80 percent</p>
+                    <p>伴随状语：with a certified efficiency of...（with复合结构）</p>
+                </div>
+                <p class="translation">📖 参考译文：当与有机底部子电池精确集成时，该叠层器件的实验室功率转换效率峰值达到28.80%，认证稳态效率为28.04%。</p>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">Beyond applications in buildings, transportation and wearable electronics, its exceptional power-to-weight ratio makes it a promising candidate for future space missions, including satellites and space stations, where lighter and more efficient energy sources are critical.</p>
+                <div class="analysis">
+                    <p class="analysis-title">📊 句子结构分析：</p>
+                    <p>介词短语：Beyond applications in...（表范围）</p>
+                    <p>主句：its ratio makes it a promising candidate</p>
+                    <p>定语从句：where lighter sources are critical（修饰space missions）</p>
+                </div>
+                <p class="translation">📖 参考译文：除了应用于建筑、交通和可穿戴电子设备外，其卓越的功率重量比使其成为未来太空任务（包括卫星和空间站）的理想候选者，因为在这些领域，更轻、更高效的能源至关重要。</p>
+            </div>
+            
+            <div class="sentence-box">
+                <p class="original">This newly formed molecule effectively suppresses halide ion migration and phase separation, a transformation from being light-averse to light-adaptive.</p>
+                <div class="analysis">
+                    <p class="analysis-title">📊 句子结构分析：</p>
+                    <p>主句：This molecule suppresses halide ion migration and phase separation</p>
+                    <p>同位语：a transformation from... to...（对前面内容的解释说明）</p>
+                </div>
+                <p class="translation">📖 参考译文：这种新形成的分子有效抑制了卤素离子迁移和相分离，实现了从"避光"到"适应光照"的转变。</p>
+            </div>
+        </section>
+        
+        <!-- 8. 写作素材 -->
+        <section class="writing-materials">
+            <h2>写作素材积累</h2>
+            <table class="writing-table">
+                <thead>
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>中文释义</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>科技创新</td>
+                        <td class="phrase">achieve a breakthrough in...</td>
+                        <td>在...方面取得突破</td>
+                    </tr>
+                    <tr>
+                        <td>描述成就</td>
+                        <td class="phrase">set a new world record for...</td>
+                        <td>创下...的世界纪录</td>
+                    </tr>
+                    <tr>
+                        <td>表达意义</td>
+                        <td class="phrase">marks a significant milestone in...</td>
+                        <td>标志着...的重要里程碑</td>
+                    </tr>
+                    <tr>
+                        <td>解决问题</td>
+                        <td class="phrase">address/tackle the challenge of...</td>
+                        <td>解决/应对...的挑战</td>
+                    </tr>
+                    <tr>
+                        <td>展现前景</td>
+                        <td class="phrase">a promising candidate for...</td>
+                        <td>...的有前途的选择</td>
+                    </tr>
+                    <tr>
+                        <td>强调重要性</td>
+                        <td class="phrase">play an increasingly important role in...</td>
+                        <td>在...中发挥越来越重要的作用</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- 9. 讨论问题 -->
+        <section class="discussion">
+            <h2>思考与讨论</h2>
+            
+            <div class="question-item">
+                <p><span class="q-num">1</span>According to the passage, what are the main advantages of the new perovskite-organic tandem solar cell? How might it contribute to sustainable development?</p>
+            </div>
+            
+            <div class="question-item">
+                <p><span class="q-num">2</span>The research team used an innovative approach to solve the phase separation problem. In your opinion, what qualities are essential for scientists to make such breakthroughs?</p>
+            </div>
+            
+            <div class="question-item">
+                <p><span class="q-num">3</span>Solar energy is considered one of the most promising renewable resources. What do you think are the challenges and opportunities for developing clean energy in China?</p>
+            </div>
+        </section>
+        
+        <!-- 10. 页脚 -->
+        <footer class="footer">
+            <p>📚 高考英语时文阅读材料</p>
+            <p>日期：<span class="highlight-text">2026年7月20日</span> | 类别：科技类·新能源</p>
+            <p>词汇量：15个核心词汇 | 阅读时长：约15分钟</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">致力于帮助高三学生拓展视野、积累词汇、提升阅读能力</p>
+        </footer>
+    </div>
+</body>
+</html>

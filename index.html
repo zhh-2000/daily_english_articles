@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日高考英语时文阅读</title>
+    <title>高考英语时文阅读 | 每日精选</title>
     <style>
         * {
             margin: 0;
@@ -17,60 +17,75 @@
             min-height: 100vh;
             padding: 20px;
         }
+        
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
+
+        /* 头部 */
         .header {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
             text-align: center;
-            color: #fff;
-            padding: 40px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         .header h1 {
             font-size: 2.5em;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: #1e3c72;
+            margin-bottom: 10px;
         }
         .header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.95;
-            margin-bottom: 30px;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
         }
+
+        /* 统计卡片 */
         .stats {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 20px;
+            flex-wrap: wrap;
         }
-        .stat-item {
-            background: rgba(255,255,255,0.2);
-            padding: 20px 35px;
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 20px 40px;
             border-radius: 15px;
             text-align: center;
+            min-width: 150px;
         }
-        .stat-item .number {
+        .stat-card .number {
             font-size: 2.5em;
             font-weight: bold;
         }
-        .stat-item .label {
-            font-size: 0.9em;
+        .stat-card .label {
+            font-size: 0.95em;
             opacity: 0.9;
+            margin-top: 5px;
         }
-        .articles {
+
+        /* 文章列表 */
+        .articles-section {
             background: #fff;
             border-radius: 20px;
-            padding: 30px;
-            margin-top: 30px;
+            padding: 40px;
+            margin-bottom: 30px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        .articles h2 {
-            color: #667eea;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+        .articles-section h2 {
+            color: #1e3c72;
+            margin-bottom: 30px;
+            font-size: 1.8em;
             border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
         }
+
         .article-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
             border-radius: 15px;
             padding: 25px;
             margin-bottom: 20px;
@@ -80,121 +95,294 @@
         }
         .article-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         .article-card.latest {
-            border-left-color: #ff6b6b;
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe3e3 100%);
+            background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+            border-left-color: #ffc107;
         }
-        .latest-badge {
+        .article-card.latest::before {
+            content: "今日最新";
             position: absolute;
-            top: -10px;
-            right: 20px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
             color: #fff;
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.85em;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
         }
         .article-card h3 {
-            color: #333;
-            font-size: 1.3em;
+            color: #1e3c72;
             margin-bottom: 10px;
+            font-size: 1.3em;
         }
         .article-card .meta {
             color: #666;
-            font-size: 0.9em;
-            margin-bottom: 15px;
+            font-size: 0.95em;
+            margin-bottom: 10px;
         }
-        .article-card .category {
-            display: inline-block;
-            background: #667eea;
-            color: #fff;
-            padding: 3px 12px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            margin-right: 10px;
+        .article-card .meta span {
+            margin-right: 20px;
         }
-        .article-card .desc {
-            color: #555;
+        .article-card .summary {
+            color: #444;
             line-height: 1.6;
-            margin-bottom: 15px;
         }
-        .article-card .read-more {
+        .article-card a {
             display: inline-block;
+            margin-top: 15px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #fff;
             padding: 10px 25px;
-            border-radius: 20px;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: bold;
             transition: all 0.3s ease;
         }
-        .article-card .read-more:hover {
+        .article-card a:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
-        .footer {
-            text-align: center;
-            color: #fff;
+
+        /* 主题分类 */
+        .categories {
+            background: #fff;
+            border-radius: 20px;
             padding: 30px;
-            margin-top: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .categories h2 {
+            color: #1e3c72;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .category-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .category-tag {
+            background: #f0f4f8;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: #1e3c72;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .category-tag:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         .footer p {
+            color: #666;
             margin: 5px 0;
-            opacity: 0.9;
         }
-        .empty-state {
-            text-align: center;
-            padding: 50px;
-            color: #888;
+        .footer .highlight {
+            color: #1e3c72;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 头部 -->
         <div class="header">
-            <h1>📚 每日高考英语时文阅读</h1>
-            <p class="subtitle">精选国际新闻，助力高考备考 | 每日更新，词汇丰富，难度适中</p>
+            <h1>高考英语时文阅读</h1>
+            <p class="subtitle">每日精选 | 助力高考 | 提升阅读</p>
+
+            <!-- 统计 -->
             <div class="stats">
-                <div class="stat-item">
-                    <div class="number" id="articleCount">1</div>
+                <div class="stat-card">
+                    <div class="number">29</div>
                     <div class="label">文章总数</div>
                 </div>
-                <div class="stat-item">
-                    <div class="number" id="vocabCount">15</div>
-                    <div class="label">词汇积累</div>
+                <div class="stat-card">
+                    <div class="number">435</div>
+                    <div class="label">核心词汇</div>
                 </div>
-                <div class="stat-item">
-                    <div class="number" id="dayCount">1</div>
-                    <div class="label">连续天数</div>
+                <div class="stat-card">
+                    <div class="number">29</div>
+                    <div class="label">累计天数</div>
                 </div>
             </div>
         </div>
-        
-        <div class="articles">
-            <h2>📖 文章列表</h2>
-            
-            <!-- 今日文章 -->
+
+        <!-- 文章列表 -->
+        <div class="articles-section">
+            <h2>最新文章</h2>
+
+            <!-- 2026-08-18 今日最新 -->
             <div class="article-card latest">
-                <span class="latest-badge">🔥 今日最新</span>
                 <h3>Iron-Air Batteries: A Breakthrough in Renewable Energy Storage</h3>
                 <div class="meta">
-                    <span class="category">科技类</span>
-                    📅 2026年8月18日 | 📖 约900词 | ⏱️ 15分钟
+                    <span>📅 2026年8月18日</span>
+                    <span>📁 科技类 - 新能源</span>
+                    <span>📖 900词</span>
                 </div>
-                <p class="desc">荷兰初创公司Ore Energy成功研发铁空气电池技术，获4300万美元融资。该电池利用铁的生锈与除锈反应储存能量，可供电100小时，成本仅为锂电池的十分之一。</p>
-                <a href="articles/article_20260818.html" class="read-more">阅读全文 →</a>
+                <p class="summary">荷兰初创公司Ore Energy成功研发铁空气电池技术，获4300万美元融资。该电池利用铁的生锈与除锈反应储存能量，可供电100小时，成本仅为锂电池的十分之一，不依赖锂、钴等稀有金属。这项突破解决了可再生能源存储瓶颈，为AI数据中心和工业发展提供稳定、清洁的基荷电力。</p>
+                <a href="articles/article_20260818.html">阅读全文 →</a>
             </div>
-            
+
+            <!-- 2026-08-17 -->
+            <div class="article-card">
+                <h3>Brain Possesses Greater Self-Repair Capacity Than Previously Assumed</h3>
+                <div class="meta">
+                    <span>📅 2026年8月17日</span>
+                    <span>📁 科技类 - 神经科学</span>
+                    <span>📖 900词</span>
+                </div>
+                <p class="summary">瑞士苏黎世大学研究团队发现，成年大脑具有比预期更强的自我修复能力。研究人员在小鼠大脑中识别出一类特殊的"再生性星形胶质细胞"，它们能够通过细胞核迁移的方式修复受损脑组织。这一发现发表在《自然·神经科学》期刊上，为脑损伤和神经系统疾病的治疗开辟了新方向。</p>
+                <a href="articles/article_20260817.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-15 -->
+            <div class="article-card">
+                <h3>China's "Jiuzhang 4.0" Sets New Quantum Computing World Record</h3>
+                <div class="meta">
+                    <span>📅 2026年8月15日</span>
+                    <span>📁 科技类 - 量子计算</span>
+                    <span>📖 980词</span>
+                </div>
+                <p class="summary">中国科学技术大学潘建伟团队成功研制出可编程量子计算原型机"九章四号"，首次操纵和探测高达3050个光子的量子态，刷新光量子信息技术世界纪录。该原型机求解特定问题比全球最快超级计算机快10的54次方倍，成果发表于《自然》杂志，进一步巩固了中国在量子计算领域的世界领先地位。</p>
+                <a href="articles/article_20260815.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-14 -->
+            <div class="article-card">
+                <h3>CRISPR Breakthrough: Scientists Find New Way to Fight Solid Tumors</h3>
+                <div class="meta">
+                    <span>📅 2026年8月14日</span>
+                    <span>📁 科技类 - 生物医学</span>
+                    <span>📖 950词</span>
+                </div>
+                <p class="summary">美国格拉德斯通研究所和加州大学旧金山分校的研究人员开发出世界首个在活体人类T细胞中进行的全基因组CRISPR筛选平台，并发现两个关键基因编辑可显著增强CAR-T细胞治疗实体肿瘤的效果。在肺癌模型中，经过双重基因编辑的CAR-T细胞使三分之二的小鼠实现肿瘤清除，为治疗肺癌、胰腺癌、乳腺癌等实体肿瘤带来新希望。</p>
+                <a href="articles/article_20260814.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-13 -->
+            <div class="article-card">
+                <h3>Record-Breaking Heat: 2026 Marks Hottest Summer on Record</h3>
+                <div class="meta">
+                    <span>📅 2026年8月13日</span>
+                    <span>📁 时政类 - 气候变化</span>
+                    <span>📖 920词</span>
+                </div>
+                <p class="summary">2026年夏季成为全球有气象记录以来最热的夏天，7月份全球平均气温比工业化前水平高出1.47°C。西欧经历了前所未有的连续五次热浪，英国气温达到38°C，加拿大野火烟雾影响超过1.2亿人口。世界气象组织警告称，气候变化正在加速极端天气事件的频率和强度。</p>
+                <a href="articles/article_20260813.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-12 -->
+            <div class="article-card">
+                <h3>Chinese Team Sets World Record in Solar Cell Efficiency</h3>
+                <div class="meta">
+                    <span>📅 2026年8月12日</span>
+                    <span>📁 科技类 - 可再生能源</span>
+                    <span>📖 850词</span>
+                </div>
+                <p class="summary">中国科学院化学研究所团队在钙钛矿-有机叠层太阳能电池研究中取得重大突破，通过创新的"全阶段调控"策略，成功解决了长期困扰该领域的光致相分离难题。团队研发的太阳能电池经认证效率达到28.04%，创下新的世界纪录。这一突破为下一代光伏技术的商业化铺平了道路，有望将太阳能应用拓展至建筑一体化光伏、便携式能源设备乃至未来空间动力系统等领域。</p>
+                <a href="articles/article_20260812.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-11 -->
+            <div class="article-card">
+                <h3>Global Youth Employment: Challenges and Opportunities in 2026</h3>
+                <div class="meta">
+                    <span>📅 2026年8月11日</span>
+                    <span>📁 社会热点 - 青年就业</span>
+                    <span>📖 950词</span>
+                </div>
+                <p class="summary">本文聚焦2026年全球青年就业形势，分析英国、法国、加拿大和韩国等国最新数据。研究发现，尽管部分国家青年失业率有所下降，但AI技术冲击、经济不确定性等因素仍给年轻求职者带来巨大挑战。文章还探讨"技能优先"招聘趋势和微证书革命，为青年职业规划提供重要启示。</p>
+                <a href="articles/article_20260811.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-10 -->
+            <div class="article-card">
+                <h3>Global Battery Storage: Powering the Clean Energy Revolution</h3>
+                <div class="meta">
+                    <span>📅 2026年8月10日</span>
+                    <span>📁 科技类 - 新能源技术</span>
+                    <span>📖 920词</span>
+                </div>
+                <p class="summary">本文介绍了2026年8月全球电池储能领域的最新发展。从印度的20 GWh大规模储能计划到美国的10亿美元融资，从德国首个无补贴光储混合项目到日本的电网级电池开发，各国正在加速布局清洁能源基础设施。</p>
+                <a href="articles/article_20260810.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-09 -->
+            <div class="article-card">
+                <h3>Revolutionary Weight-Loss Pill Transforms Obesity Treatment</h3>
+                <div class="meta">
+                    <span>📅 2026年8月9日</span>
+                    <span>📁 科技类 - 医学健康</span>
+                </div>
+                <p class="summary">新型口服减肥药正在改变肥胖治疗的方式，为患者提供更便捷的选择。</p>
+                <a href="articles/article_20260809.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-08 -->
+            <div class="article-card">
+                <h3>Sound Sleep Boosts Teens' School and Social Success</h3>
+                <div class="meta">
+                    <span>📅 2026年8月8日</span>
+                    <span>📁 生活类 - 青少年成长</span>
+                </div>
+                <p class="summary">研究发现良好的睡眠质量有助于青少年在学业和社交方面取得成功。</p>
+                <a href="articles/article_20260808.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-07 -->
+            <div class="article-card">
+                <h3>Intangible Cultural Heritage Finds New Life Through Innovation</h3>
+                <div class="meta">
+                    <span>📅 2026年8月7日</span>
+                    <span>📁 文化类 - 传统创新</span>
+                </div>
+                <p class="summary">非物质文化遗产通过创新手段焕发新生，传统文化与现代技术相结合。</p>
+                <a href="articles/article_20260807.html">阅读全文 →</a>
+            </div>
+
+            <!-- 2026-08-06 -->
+            <div class="article-card">
+                <h3>更多历史文章</h3>
+                <div class="meta">
+                    <span>📅 2026年7月20日 - 8月6日</span>
+                </div>
+                <p class="summary">点击下方查看更多历史文章...</p>
+                <a href="articles/article_20260806.html">查看更多 →</a>
+            </div>
         </div>
-        
+
+        <!-- 主题分类 -->
+        <div class="categories">
+            <h2>主题分类</h2>
+            <div class="category-tags">
+                <span class="category-tag">🔬 科技类 (50%)</span>
+                <span class="category-tag">🌱 生活类</span>
+                <span class="category-tag">🌍 时政类</span>
+                <span class="category-tag">🎭 文化类</span>
+                <span class="category-tag">👥 社会热点</span>
+                <span class="category-tag">☀️ 新能源</span>
+                <span class="category-tag">🔋 电池储能</span>
+                <span class="category-tag">🌱 环境保护</span>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
         <div class="footer">
-            <p>🎓 专为高三学生打造的高考英语阅读材料</p>
-            <p>💡 每篇文章包含：摘要、词汇表、例句、长难句解析、写作素材、讨论问题</p>
-            <p>© 2026 Daily English Reading for Gaokao | 持续更新中...</p>
+            <p class="highlight">每日更新 | 优质内容 | 助力高考</p>
+            <p>文章来源：BBC, CNN, Reuters, Guardian, China Daily, CGTN等国际主流媒体</p>
+            <p>© 2026 高考英语时文阅读 | All Rights Reserved</p>
         </div>
     </div>
 </body>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionary Weight-Loss Pill Transforms Obesity Treatment | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* 1. 返回按钮 */
+        .back-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* 2. 文章头部 */
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .header .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        /* 3. 摘要 */
+        .abstract {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 25px 30px;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .abstract h3 {
+            color: #c0392b;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .abstract p {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* 4. 正文 */
+        .content {
+            padding: 30px;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #11998e;
+            font-size: 20px;
+        }
+
+        .content p {
+            text-align: justify;
+            margin-bottom: 18px;
+            text-indent: 2em;
+            line-height: 1.9;
+        }
+
+        /* 5. 词汇表 */
+        .vocabulary {
+            background: #f8f9fa;
+            padding: 30px;
+            border-top: 3px solid #11998e;
+        }
+
+        .vocabulary h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .vocabulary table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .vocabulary th, .vocabulary td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .vocabulary th {
+            background: #11998e;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .vocabulary tr:hover {
+            background: #e8f8f5;
+        }
+
+        /* 6. 例句 */
+        .examples {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .examples h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .example-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #11998e;
+            border-radius: 5px;
+        }
+
+        .example-item .word {
+            color: #11998e;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .example-item .sentence {
+            color: #555;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        /* 7. 长难句 */
+        .complex-sentences {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            padding: 30px;
+        }
+
+        .complex-sentences h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .sentence-box {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .sentence-box .original {
+            color: #2c3e50;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .sentence-box .analysis {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .sentence-box .analysis strong {
+            color: #11998e;
+        }
+
+        /* 8. 写作素材 */
+        .writing-materials {
+            padding: 30px;
+            background: #fff;
+        }
+
+        .writing-materials h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .writing-materials table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .writing-materials th, .writing-materials td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .writing-materials th {
+            background: #38ef7d;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .writing-materials tr:hover {
+            background: #f0fff4;
+        }
+
+        /* 9. 讨论问题 */
+        .discussion {
+            background: #f8f9fa;
+            padding: 30px;
+            border-top: 3px solid #38ef7d;
+        }
+
+        .discussion h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .question-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .question-item .number {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .question-item .question-text {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 10. 页脚 */
+        .footer {
+            background: #2c3e50;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #38ef7d;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回首页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <h1>Revolutionary Weight-Loss Pill Transforms Obesity Treatment</h1>
+            <div class="meta">2026年8月9日 | 来源：NIH / ScienceDaily | 难度：★★★☆☆</div>
+            <div class="tag">生物医学</div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="abstract">
+            <h3>📌 文章摘要</h3>
+            <p>2026年，一类新型口服减肥药物正在改变肥胖治疗的格局。美国国立卫生研究院研究发现，小分子GLP-1药物能够深入大脑杏仁核，抑制"享乐性进食"。同时，临床试验显示新型口服药物orforglipron在控制血糖和促进减重方面优于口服司美格鲁肽，且无需注射或冷藏，生产成本更低。这一突破为全球肥胖治疗带来了革命性的希望。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>A New Era in Obesity Treatment</h2>
+            <p>The landscape of obesity treatment is undergoing a revolutionary transformation. In 2026, a new class of oral weight-loss medications has emerged, offering patients a more convenient and accessible alternative to injectable drugs. These medications, known as small-molecule GLP-1 receptor agonists, represent a significant breakthrough in the fight against the global obesity epidemic.</p>
+
+            <p>GLP-1 drugs work by mimicking a gut hormone that signals fullness to the brain, slowing digestion and stimulating insulin release. Since the introduction of semaglutide—better known by brand names Wegovy and Ozempic—these medications have transformed weight management. However, the need for injections has remained a significant barrier for many patients, particularly those with needle phobia.</p>
+
+            <h2>Breaking Through Barriers</h2>
+            <p>A major clinical trial published in The Lancet in 2026 has demonstrated that orforglipron, a once-daily oral pill, delivered better weight loss and blood sugar improvements than oral semaglutide. In the 52-week study involving 1,698 adults with type 2 diabetes across six countries, orforglipron reduced HbA1c by an average of 1.71–1.91%, compared with 1.47% for semaglutide.</p>
+
+            <p>Participants taking orforglipron lost an average of 6.1–8.2 kilograms, surpassing the 5.3-kilogram loss achieved with semaglutide. More importantly, as a small-molecule drug, orforglipron is cheaper to manufacture and requires no refrigeration—a crucial advantage for expanding access in low- and middle-income countries where cold chain infrastructure remains unreliable.</p>
+
+            <h2>Deep in the Brain: A New Discovery</h2>
+            <p>Groundbreaking research funded by the National Institutes of Health has revealed another remarkable finding: oral small-molecule GLP-1 drugs can penetrate deep into the brain to suppress cravings. The study, published in Nature, found that these medications activate the central amygdala—a region associated with desire that scientists previously thought GLP-1 drugs could not directly reach.</p>
+
+            <p>"We've known that GLP-1 drugs suppress feeding behavior driven by energy demand," explained Dr. Ali Guler from the University of Virginia. "Now it seems oral small-molecule GLP-1s also dial back eating for pleasure by engaging a brain reward circuit." This mechanism specifically targets hedonic feeding—eating for pleasure rather than hunger—and may have applications beyond obesity treatment.</p>
+
+            <h2>Implications for Global Health</h2>
+            <p>The implications of these developments are profound. According to Goldman Sachs, the global market for anti-obesity drugs is expected to reach $130 billion by 2030. The World Health Organization estimates that worldwide adult obesity has nearly tripled since 1975, making effective treatments more urgent than ever.</p>
+
+            <p>For patients in developing nations, the elimination of refrigeration requirements could prove transformative. Unlike injectable formulations that must be kept cold throughout the supply chain, oral small-molecule drugs can be distributed through standard channels, potentially bringing effective obesity treatment to millions who previously lacked access.</p>
+
+            <h2>Challenges Remain</h2>
+            <p>Despite the enthusiasm, challenges persist. The clinical trial revealed that approximately 59% of participants on orforglipron reported gastrointestinal side effects such as nausea and diarrhea, compared with 37–45% on semaglutide. About 10% discontinued treatment due to adverse effects, highlighting the importance of tolerability alongside efficacy.</p>
+
+            <p>Researchers are also investigating whether these medications might treat other conditions involving reward processing dysfunction, including substance use disorder. "The natural next question is whether these next-generation GLP-1s can also tone down cravings for things other than food," noted Dr. Lorenzo Leggio of NIH's National Institute on Drug Abuse.</p>
+
+            <h2>A Brighter Future</h2>
+            <p>For the estimated 650 million adults worldwide living with obesity, these developments offer genuine hope. As research continues and more patients gain access to effective treatments, the global fight against obesity enters a new chapter—one where a simple daily pill could make the difference between struggle and success.</p>
+        </div>
+
+        <!-- 5. 词汇表 -->
+        <div class="vocabulary">
+            <h3>📚 核心词汇表</h3>
+            <table>
+                <tr>
+                    <th>序号</th>
+                    <th>英文单词</th>
+                    <th>音标</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>revolutionary</td>
+                    <td>/ˌrevəˈluːʃənəri/</td>
+                    <td>adj.</td>
+                    <td>革命性的</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>obesity</td>
+                    <td>/əʊˈbiːsəti/</td>
+                    <td>n.</td>
+                    <td>肥胖</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>agonist</td>
+                    <td>/ˈæɡənɪst/</td>
+                    <td>n.</td>
+                    <td>激动剂（药物术语）</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>penetrate</td>
+                    <td>/ˈpenətreɪt/</td>
+                    <td>v.</td>
+                    <td>穿透，深入</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>suppress</td>
+                    <td>/səˈpres/</td>
+                    <td>v.</td>
+                    <td>抑制，压制</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>hedonic</td>
+                    <td>/hiːˈdɒnɪk/</td>
+                    <td>adj.</td>
+                    <td>享乐的</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>infrastructure</td>
+                    <td>/ˈɪnfrəstrʌktʃə(r)/</td>
+                    <td>n.</td>
+                    <td>基础设施</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>tolerability</td>
+                    <td>/ˌtɒlərəˈbɪləti/</td>
+                    <td>n.</td>
+                    <td>耐受性</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>efficacy</td>
+                    <td>/ˈefɪkəsi/</td>
+                    <td>n.</td>
+                    <td>功效，有效性</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>substance</td>
+                    <td>/ˈsʌbstəns/</td>
+                    <td>n.</td>
+                    <td>物质</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>demonstrate</td>
+                    <td>/ˈdemənstreɪt/</td>
+                    <td>v.</td>
+                    <td>证明，展示</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>transform</td>
+                    <td>/trænsˈfɔːm/</td>
+                    <td>v.</td>
+                    <td>改变，转变</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>barrier</td>
+                    <td>/ˈbæriə(r)/</td>
+                    <td>n.</td>
+                    <td>障碍，壁垒</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>phobia</td>
+                    <td>/ˈfəʊbiə/</td>
+                    <td>n.</td>
+                    <td>恐惧症</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>eliminate</td>
+                    <td>/ɪˈlɪmɪneɪt/</td>
+                    <td>v.</td>
+                    <td>消除，排除</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 6. 例句 -->
+        <div class="examples">
+            <h3>✏️ 词汇例句</h3>
+
+            <div class="example-item">
+                <div class="word">revolutionary (adj.) 革命性的</div>
+                <div class="sentence">The development of oral weight-loss drugs represents a revolutionary breakthrough in obesity treatment, making effective therapy accessible to millions more patients worldwide.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">obesity (n.) 肥胖</div>
+                <div class="sentence">The World Health Organization has identified obesity as one of the most significant public health challenges of the 21st century, affecting over 650 million adults globally.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">penetrate (v.) 穿透，深入</div>
+                <div class="sentence">Researchers discovered that small-molecule GLP-1 drugs can penetrate deep into the brain, reaching regions previously thought inaccessible to such medications.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">suppress (v.) 抑制，压制</div>
+                <div class="sentence">The new medication works by suppressing cravings for food, particularly the desire to eat for pleasure rather than genuine hunger.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">infrastructure (n.) 基础设施</div>
+                <div class="sentence">Unlike injectable drugs requiring refrigeration, oral medications can be distributed through standard supply chains without depending on cold chain infrastructure.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">efficacy (n.) 功效，有效性</div>
+                <div class="sentence">Clinical trials have demonstrated the efficacy of the new oral medication, with patients achieving significant weight loss and improved blood sugar control.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">demonstrate (v.) 证明，展示</div>
+                <div class="sentence">The study demonstrated that oral weight-loss drugs can be as effective as injectable formulations while offering greater convenience for patients.</div>
+            </div>
+
+            <div class="example-item">
+                <div class="word">transform (v.) 改变，转变</div>
+                <div class="sentence">The introduction of GLP-1 medications has transformed the landscape of obesity treatment, providing new hope for patients who previously struggled with weight management.</div>
+            </div>
+        </div>
+
+        <!-- 7. 长难句 -->
+        <div class="complex-sentences">
+            <h3>🔬 长难句解析</h3>
+
+            <div class="sentence-box">
+                <div class="original">
+                    A National Institutes of Health-funded study has found that an emerging class of GLP-1 weight-loss drugs suppress eating for pleasure, or hedonic feeding, in mice by modulating a reward circuit deep within the brain.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>主句为"A...study has found that..."，that引导宾语从句。宾语从句的主干为"drugs suppress eating...by modulating..."，其中"or hedonic feeding"是"eating for pleasure"的同位语，"deep within the brain"为后置定语修饰"circuit"。<br>
+                    <strong>参考译文：</strong>一项由美国国立卫生研究院资助的研究发现，一类新兴的GLP-1减肥药物能够通过调节大脑深处的奖赏回路来抑制小鼠的享乐性进食行为。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">
+                    More importantly, as a small-molecule drug, orforglipron is cheaper to manufacture and requires no refrigeration—a crucial advantage for expanding access in low- and middle-income countries where cold chain infrastructure remains unreliable.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>"as a small-molecule drug"为介词短语作状语。主句为"orforglipron is cheaper...and requires no refrigeration"，破折号后的名词短语是对前文的补充说明，其中"where"引导定语从句修饰"countries"。<br>
+                    <strong>参考译文：</strong>更重要的是，作为一种小分子药物，orforglipron生产成本更低且无需冷藏——这对于在冷链基础设施仍不可靠的中低收入国家扩大药物可及性是一个关键优势。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">
+                    "We've known that GLP-1 drugs suppress feeding behavior driven by energy demand. Now it seems oral small-molecule GLP-1s also dial back eating for pleasure by engaging a brain reward circuit," explained Dr. Ali Guler from the University of Virginia.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>直接引语包含两个分句。前一分句"We've known that..."中that引导宾语从句，从句中"driven by energy demand"为过去分词短语作后置定语。后一分句"Now it seems..."中"it"为形式主语，真正的主语是"oral small-molecule GLP-1s also dial back..."。<br>
+                    <strong>参考译文：</strong>"我们已知GLP-1药物能够抑制由能量需求驱动的进食行为。现在看来，口服小分子GLP-1药物还能通过激活大脑奖赏回路来减少享乐性进食，"弗吉尼亚大学的Ali Guler博士解释道。
+                </div>
+            </div>
+
+            <div class="sentence-box">
+                <div class="original">
+                    For the estimated 650 million adults worldwide living with obesity, these developments offer genuine hope, as research continues and more patients gain access to effective treatments, the global fight against obesity enters a new chapter.
+                </div>
+                <div class="analysis">
+                    <strong>句子结构：</strong>"For..."为介词短语作状语，"living with obesity"为现在分词短语作后置定语修饰"adults"。"as"引导时间状语从句，从句为并列结构"research continues and more patients gain access..."。主句为"the global fight...enters a new chapter"。<br>
+                    <strong>参考译文：</strong>对于全球约6.5亿肥胖成年人而言，这些进展带来了真正的希望。随着研究持续深入，更多患者获得有效治疗，全球抗击肥胖的斗争正在开启新的篇章。
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 写作素材 -->
+        <div class="writing-materials">
+            <h3>📝 写作素材积累</h3>
+            <table>
+                <tr>
+                    <th>主题</th>
+                    <th>英文表达</th>
+                    <th>中文释义</th>
+                </tr>
+                <tr>
+                    <td>科技突破</td>
+                    <td>represent a revolutionary breakthrough / undergo a transformation</td>
+                    <td>代表革命性突破 / 经历变革</td>
+                </tr>
+                <tr>
+                    <td>研究引用</td>
+                    <td>A clinical trial has demonstrated that... / Research reveals that...</td>
+                    <td>一项临床试验证明... / 研究揭示...</td>
+                </tr>
+                <tr>
+                    <td>数据表达</td>
+                    <td>involved X participants across Y countries / reduced HbA1c by an average of...</td>
+                    <td>涉及Y个国家的X名参与者 / HbA1c平均降低...</td>
+                </tr>
+                <tr>
+                    <td>对比优势</td>
+                    <td>surpassed the loss achieved with... / offer greater convenience for...</td>
+                    <td>超越了...达到的效果 / 为...提供更大便利</td>
+                </tr>
+                <tr>
+                    <td>问题现状</td>
+                    <td>affecting over X million people globally / remains a significant barrier</td>
+                    <td>影响全球超过X百万人 / 仍是重大障碍</td>
+                </tr>
+                <tr>
+                    <td>未来展望</td>
+                    <td>offer genuine hope / enter a new chapter</td>
+                    <td>带来真正的希望 / 开启新篇章</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 9. 讨论问题 -->
+        <div class="discussion">
+            <h3>💡 思考与讨论</h3>
+
+            <div class="question-item">
+                <div class="number">1</div>
+                <div class="question-text">According to the passage, what are the main advantages of oral small-molecule GLP-1 drugs over injectable formulations? Why are these advantages particularly important for patients in developing countries?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="number">2</div>
+                <div class="question-text">The research found that the new medications can penetrate deep into the brain to suppress "hedonic feeding." In your opinion, how might this discovery influence future treatments for conditions beyond obesity?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="number">3</div>
+                <div class="question-text">Despite their effectiveness, the clinical trial revealed that about 10% of participants discontinued treatment due to side effects. What factors should patients and doctors consider when deciding whether to use these medications?</div>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📖 每日高考英语时文阅读 | 助力高考英语学习</p>
+            <p>文章来源：NIH / ScienceDaily | 2026年8月9日</p>
+            <p>© 2026 高考英语时文阅读项目组 | <a href="https://github.com/zhh-2000">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>

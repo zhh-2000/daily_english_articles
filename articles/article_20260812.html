@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Team Sets World Record in Solar Cell Efficiency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans CJK SC', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+        
+        .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-top: 10px;
+        }
+        
+        .summary {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 30px;
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+        
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .content {
+            padding: 0 30px 30px;
+        }
+        
+        .content h2 {
+            color: #667eea;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .content p {
+            text-align: justify;
+            margin-bottom: 18px;
+            font-size: 1.05em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .example-sentences {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .example-sentences h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .example-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .example-item .word {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        .example-item .sentence {
+            margin-top: 8px;
+            color: #555;
+        }
+        
+        .complex-sentence {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .complex-sentence h3 {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .complex-sentence .sentence-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .complex-sentence .analysis {
+            background: rgba(255,255,255,0.15);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95em;
+        }
+        
+        .writing-materials {
+            margin: 30px 0;
+        }
+        
+        .discussion {
+            background: #f8f9fa;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .discussion h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            border-bottom: none;
+        }
+        
+        .discussion-item {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .discussion-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.95em;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← 返回主页</a>
+        
+        <header>
+            <h1>Chinese Team Sets World Record in Solar Cell Efficiency</h1>
+            <div class="meta">
+                <span class="date">📅 August 12, 2026</span> | 
+                <span class="source">📰 Global Times</span>
+            </div>
+            <div class="category">🔬 Science & Technology</div>
+        </header>
+        
+        <div class="summary">
+            <h2>📌 文章摘要</h2>
+            <p>中国科学院化学研究所团队在钙钛矿-有机叠层太阳能电池研究中取得重大突破，通过创新的"全阶段调控"策略，成功解决了长期困扰该领域的光致相分离难题。团队研发的太阳能电池经认证效率达到28.04%，创下新的世界纪录。这一突破为下一代光伏技术的商业化铺平了道路，有望将太阳能应用拓展至建筑一体化光伏、便携式能源设备乃至未来空间动力系统等领域。</p>
+        </div>
+        
+        <div class="content">
+            <h2>📖 正文阅读</h2>
+            
+            <p>Light is the source of energy for solar cells, but it can also become a factor accelerating performance degradation. For wide-bandgap subcells in perovskite-organic tandem solar cells, which have long been troubled by light-induced phase segregation, Chinese researchers have developed a new strategy to overcome this challenge.</p>
+            
+            <p>On July 13 Beijing time, the international journal <em>Nature</em> published the latest research achievement from a team led by academician Li Yongfang and research fellow Meng Lei from the Institute of Chemistry under the Chinese Academy of Sciences. The breakthrough marks a significant step forward in overcoming a bottleneck limiting the commercialization of next-generation photovoltaic technologies.</p>
+            
+            <p>The team proposed a "full-stage regulation" strategy that suppresses harmful phase separation throughout the entire lifecycle of perovskite materials—from fabrication to operation. The perovskite-organic tandem solar cell achieved a certified steady-state photoelectric conversion efficiency of <span class="highlight">28.04 percent</span>, setting a new world record.</p>
+            
+            <p>The key challenge facing wide-bandgap perovskite materials is halide phase segregation. The upper perovskite layer needs both iodine and bromine ions to maximize absorption of ultraviolet and visible light, but these ions tend to separate during crystallization. <span class="highlight">"Once phase segregation occurs, the voltage of the solar cell continuously declines like air leaking from a tire, causing persistent performance degradation,"</span> Meng Lei explained.</p>
+            
+            <p>The research team introduced a photo-convertible additive molecule called TDB, which works as a "microscopic coordinator." During fabrication, it helps iodine and bromine ions mix uniformly. During operation, it transforms into TAB, which strengthens interactions with defect sites and suppresses ion migration.</p>
+            
+            <p><span class="highlight">"The key technological challenge was to make high-bromine-content wide-bandgap perovskite materials transform from 'light-fearing' to 'light-harnessing',"</span> Meng said. The wide-bandgap perovskite single-junction cell achieved an open-circuit voltage of 1.42 volts and a fill factor of 85.13 percent. Combined with an organic solar cell, the tandem device reached a laboratory efficiency of 28.80 percent and a certified steady-state efficiency of 28.04 percent.</p>
+            
+            <p>Besides efficiency, perovskite and organic solar cells may reshape photovoltaic manufacturing. They can be produced through solution processing technologies such as roll-to-roll printing and slot-die coating, creating possibilities for lightweight and flexible energy materials. However, commercialization still faces challenges including large-area film uniformity, flexible device packaging reliability, and production consistency.</p>
+            
+            <p>The technology also shows potential for space applications. Li said its high specific power and flexibility could help reduce the weight and volume of spacecraft power systems. <span class="highlight">"Systematic space environment simulations and in-orbit verification will be needed to evaluate their performance in radiation resistance, vacuum stability and long-term operation,"</span> Li added.</p>
+            
+            <p>With high efficiency, lightweight structure and flexibility, perovskite-organic tandem solar cells are expected to expand solar power applications beyond traditional panels, including building-integrated photovoltaics, portable energy devices, drones and future space power systems. This breakthrough demonstrates China's leading position in renewable energy research and its commitment to sustainable development.</p>
+            
+            <h2>📝 词汇表</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>英文单词</th>
+                        <th>词性</th>
+                        <th>中文释义</th>
+                        <th>例句</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>efficiency</td>
+                        <td>n.</td>
+                        <td>效率</td>
+                        <td>The new engine achieves remarkable fuel efficiency.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>degradation</td>
+                        <td>n.</td>
+                        <td>退化，降低</td>
+                        <td>Environmental degradation threatens wildlife habitats.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>segregation</td>
+                        <td>n.</td>
+                        <td>分离，隔离</td>
+                        <td>Segregation of different materials ensures quality control.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>suppress</td>
+                        <td>v.</td>
+                        <td>抑制，压制</td>
+                        <td>The government took measures to suppress the spread of rumors.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>photovoltaic</td>
+                        <td>adj.</td>
+                        <td>光伏的</td>
+                        <td>Photovoltaic cells convert sunlight directly into electricity.</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>certified</td>
+                        <td>adj.</td>
+                        <td>经认证的</td>
+                        <td>Only certified products can be sold in this market.</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>breakthrough</td>
+                        <td>n.</td>
+                        <td>突破</td>
+                        <td>The team made a major breakthrough in cancer research.</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>commercialization</td>
+                        <td>n.</td>
+                        <td>商业化</td>
+                        <td>The commercialization of new technology requires investment.</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>absorption</td>
+                        <td>n.</td>
+                        <td>吸收</td>
+                        <td>Plants rely on light absorption for photosynthesis.</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>crystallization</td>
+                        <td>n.</td>
+                        <td>结晶</td>
+                        <td>The process involves controlled crystallization of sugar.</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>molecule</td>
+                        <td>n.</td>
+                        <td>分子</td>
+                        <td>Water consists of hydrogen and oxygen molecules.</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>uniformly</td>
+                        <td>adv.</td>
+                        <td>均匀地</td>
+                        <td>The paint was applied uniformly across the surface.</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>flexible</td>
+                        <td>adj.</td>
+                        <td>灵活的，柔韧的</td>
+                        <td>The schedule needs to be flexible to accommodate changes.</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>simulate</td>
+                        <td>v.</td>
+                        <td>模拟</td>
+                        <td>The training program simulates real emergency situations.</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>sustainable</td>
+                        <td>adj.</td>
+                        <td>可持续的</td>
+                        <td>Sustainable development balances economic and environmental needs.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="example-sentences">
+                <h3>💡 重点词汇例句</h3>
+                
+                <div class="example-item">
+                    <div class="word">1. efficiency (n. 效率)</div>
+                    <div class="sentence">The new production line improved efficiency by 30 percent, allowing the factory to meet growing demand without additional costs.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">2. breakthrough (n. 突破)</div>
+                    <div class="sentence">Scientists announced a breakthrough in renewable energy technology that could revolutionize how we power our homes.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">3. commercialization (n. 商业化)</div>
+                    <div class="sentence">The commercialization of electric vehicles has accelerated significantly over the past decade, making them more accessible to consumers.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">4. suppress (v. 抑制)</div>
+                    <div class="sentence">The medication helps suppress the symptoms of the disease, allowing patients to lead more normal lives.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">5. certified (adj. 经认证的)</div>
+                    <div class="sentence">All products must be certified by safety inspectors before they can be sold to consumers.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">6. absorption (n. 吸收)</div>
+                    <div class="sentence">The absorption of nutrients from food is essential for maintaining good health and energy levels.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">7. flexible (adj. 灵活的，柔韧的)</div>
+                    <div class="sentence">Flexible working hours have become increasingly popular as companies adapt to changing workforce needs.</div>
+                </div>
+                
+                <div class="example-item">
+                    <div class="word">8. sustainable (adj. 可持续的)</div>
+                    <div class="sentence">Sustainable agriculture practices help protect the environment while ensuring food security for future generations.</div>
+                </div>
+            </div>
+            
+            <h2>🔍 长难句解析</h2>
+            
+            <div class="complex-sentence">
+                <h3>例句 1</h3>
+                <div class="sentence-text">
+                    The breakthrough marks a significant step forward in overcoming a bottleneck limiting the commercialization of next-generation photovoltaic technologies.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句为"The breakthrough marks a significant step forward"，介词短语"in overcoming a bottleneck"作状语，现在分词短语"limiting the commercialization..."作后置定语修饰"bottleneck"。<br><br>
+                    <strong>参考译文：</strong>这一突破标志着在克服限制下一代光伏技术商业化的瓶颈方面迈出了重要一步。
+                </div>
+            </div>
+            
+            <div class="complex-sentence">
+                <h3>例句 2</h3>
+                <div class="sentence-text">
+                    Once phase segregation occurs, the voltage of the solar cell continuously declines like air leaking from a tire, causing persistent performance degradation.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>"Once phase segregation occurs"为时间状语从句，主句为"the voltage...continuously declines"，"like air leaking from a tire"为方式状语，现在分词短语"causing persistent performance degradation"作结果状语。<br><br>
+                    <strong>参考译文：</strong>一旦发生相分离，太阳能电池的电压就会像轮胎漏气一样持续下降，导致性能持续退化。
+                </div>
+            </div>
+            
+            <div class="complex-sentence">
+                <h3>例句 3</h3>
+                <div class="sentence-text">
+                    With high efficiency, lightweight structure and flexibility, perovskite-organic tandem solar cells are expected to expand solar power applications beyond traditional panels, including building-integrated photovoltaics, portable energy devices, drones and future space power systems.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>介词短语"With high efficiency..."作状语，主句为"perovskite-organic tandem solar cells are expected to expand..."，"beyond traditional panels"作状语，"including..."为介词短语作补充说明，列举具体应用领域。<br><br>
+                    <strong>参考译文：</strong>凭借高效率、轻质结构和柔韧性，钙钛矿-有机叠层太阳能电池有望将太阳能应用拓展到传统面板之外，包括建筑一体化光伏、便携式能源设备、无人机和未来空间动力系统等领域。
+                </div>
+            </div>
+            
+            <div class="complex-sentence">
+                <h3>例句 4</h3>
+                <div class="sentence-text">
+                    The key technological challenge was to make high-bromine-content wide-bandgap perovskite materials transform from 'light-fearing' to 'light-harnessing'.
+                </div>
+                <div class="analysis">
+                    <strong>结构分析：</strong>主句为"The key technological challenge was to make..."，"to make..."为不定式短语作表语，其中"transform from...to..."为宾语补足语结构。<br><br>
+                    <strong>参考译文：</strong>关键的技术挑战在于使高溴含量的宽禁带钙钛矿材料从"惧光"转变为"用光"。
+                </div>
+            </div>
+            
+            <h2>✍️ 写作素材积累</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>类别</th>
+                        <th>英文表达</th>
+                        <th>中文释义</th>
+                        <th>适用话题</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>描述成就</td>
+                        <td>mark a significant step forward</td>
+                        <td>标志着迈出重要一步</td>
+                        <td>科技进步、社会发展</td>
+                    </tr>
+                    <tr>
+                        <td>描述突破</td>
+                        <td>achieve a certified efficiency of...</td>
+                        <td>实现经认证的...效率</td>
+                        <td>科技创新、研究成果</td>
+                    </tr>
+                    <tr>
+                        <td>描述转变</td>
+                        <td>transform from...to...</td>
+                        <td>从...转变为...</td>
+                        <td>社会变革、技术革新</td>
+                    </tr>
+                    <tr>
+                        <td>描述挑战</td>
+                        <td>face challenges including...</td>
+                        <td>面临包括...在内的挑战</td>
+                        <td>问题分析、困难描述</td>
+                    </tr>
+                    <tr>
+                        <td>描述潜力</td>
+                        <td>show potential for...</td>
+                        <td>显示出...的潜力</td>
+                        <td>前景展望、发展趋势</td>
+                    </tr>
+                    <tr>
+                        <td>描述应用</td>
+                        <td>expand applications beyond...</td>
+                        <td>将应用拓展到...之外</td>
+                        <td>创新应用、领域拓展</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="discussion">
+                <h2>💭 讨论问题</h2>
+                
+                <div class="discussion-item">
+                    <h4>问题 1：科技创新与社会发展</h4>
+                    <p>The article mentions that this breakthrough "marks a significant step forward in overcoming a bottleneck limiting the commercialization of next-generation photovoltaic technologies." In your opinion, what role does scientific research play in addressing global challenges such as climate change and energy crisis? Use specific examples to support your argument.</p>
+                </div>
+                
+                <div class="discussion-item">
+                    <h4>问题 2：可持续发展的路径</h4>
+                    <p>Solar energy is considered one of the most promising renewable energy sources. What do you think are the advantages and challenges of solar energy compared to traditional fossil fuels? How can individuals and governments contribute to the development and application of clean energy?</p>
+                </div>
+                
+                <div class="discussion-item">
+                    <h4>问题 3：中国科技的国际地位</h4>
+                    <p>This research achievement demonstrates China's leading position in renewable energy technology. How do you view China's role in global scientific research and innovation? What areas do you think China should focus on in the future to maintain its competitive edge in science and technology?</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>📚 每日高考英语时文阅读 | Day 1 | 2026年8月12日</p>
+            <p>© 2026 高考英语时文阅读计划 | 助力高考，成就梦想</p>
+        </footer>
+    </div>
+</body>
+</html>
