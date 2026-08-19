@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotaxis Hit the Streets: Autonomous Driving Enters a New Era | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #667eea;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffe082 100%);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #666;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8f5e9;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 自动驾驶</div>
+            <h1>Robotaxis Hit the Streets: Autonomous Driving Enters a New Era</h1>
+            <div class="meta">
+                📅 August 19, 2026 &nbsp;|&nbsp; 📖 约950词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月，自动驾驶行业迎来里程碑：Waymo获准在加州18县运营无人出租车，Amazon旗下Zoox在拉斯维加斯启动首个商业付费服务，Uber投入超100亿美元构建robotaxi聚合平台。这些突破标志着无人驾驶从测试阶段正式迈入商业化时代，同时也引发了关于安全监管和技术路线的持续讨论。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🚗 A Milestone Week for Autonomous Driving</h2>
+            <p>In August 2026, the autonomous driving industry experienced what many observers are calling a watershed moment. Within a single week, three major developments reshaped the landscape of self-driving transportation, signaling that robotaxis are no longer experimental projects but emerging commercial services available to ordinary citizens.</p>
+            
+            <p>On August 14, Waymo—the autonomous driving subsidiary of Alphabet—received formal approval from the California Public Utilities Commission (CPUC) to operate fully driverless, paid robotaxi rides across 18 counties. The permit covers the Bay Area, Los Angeles, Sacramento, and San Diego, allowing Waymo's fleet of approximately 3,000 vehicles to operate on highways, city streets, and parking lots. The company's robotaxis have already driven roughly 220 million autonomous miles and completed over 20 million trips, establishing a substantial safety record.</p>
+            
+            <h2>🏪 Amazon's Zoox Launches Commercial Service</h2>
+            <p>Just days earlier, Amazon's Zoox began charging passengers for driverless robotaxi rides in Las Vegas starting August 10. This marked Zoox's first commercial service, coming shortly after the company became the first autonomous ride-hailing operator to receive an exemption from the National Highway Traffic Safety Administration (NHTSA) from federal rules requiring human driving controls. The approval allows Zoox to deploy up to 2,500 vehicles in each of the next two years.</p>
+            
+            <p>Zoox's vehicles are purpose-built robotaxis, designed from the ground up without steering wheels or pedals—a radical departure from conventional cars adapted for autonomous driving. The company said fares would be comparable to the "comfort" tier offered by traditional ride-hailing companies, with pricing based on a base fare plus time and distance. Notably, riders will not pay more if the robotaxi takes a longer route than originally planned.</p>
+            
+            <h2>💰 Uber's $10 Billion Bet</h2>
+            <p>Meanwhile, Uber Technologies announced a commitment of over $10 billion to fund its autonomous vehicle aggregator strategy. The massive capital allocation, backed by $10.1 billion in trailing twelve-month free cash flow, aims to expand commercial deployments to 15 cities by late 2026 and 28 by 2028. Uber has established commercial ties or equity positions with over 30 global autonomous vehicle developers.</p>
+            
+            <p>This strategy reflects a shift in Uber's approach. As its anchor partner Waymo prepares to exit exclusive distribution arrangements to focus on direct-to-consumer operations, Uber is hedging its bets by partnering with multiple AV developers. Major commitments include a $500 million investment in Lucid to procure 35,000 Nuro-equipped robotaxis and a $1.25 billion deal with Rivian for autonomous platforms.</p>
+            
+            <h2>🌍 Global Expansion</h2>
+            <p>The robotaxi revolution extends far beyond the United States. In London, Transport for London (TfL) issued licenses for Wayve's fleet of autonomous Ford Mustang Mach-E vehicles operating on the Uber platform. The deployment features Wayve's AV2.0 platform, an end-to-end embodied AI driving architecture that bypasses HD mapping in favor of neural-network-based real-time perception. Uber has already attracted over 100,000 waitlist registrants for early trial access.</p>
+            
+            <p>In China, companies like Pony.ai and WeRide are accelerating their own commercial deployment roadmaps. WeRide has expanded its European footprint into Denmark through a partnership with GreenMobility, while Pony.ai plans to deploy 500 to 1,000 autonomous heavy-duty trucks over the next two to three years. Chinese autonomous vehicle technology is now operating across 40 cities worldwide.</p>
+            
+            <h2>⚠️ Safety and Regulatory Challenges</h2>
+            <p>Despite the enthusiasm, robotaxi operators continue to face significant regulatory scrutiny over safety. Waymo experienced a June recall after vehicles entered closed freeway construction zones, while Zoox recalled vehicles in July after one of its robotaxis struggled to detect heavy smoke at an emergency scene. NHTSA has imposed additional reporting requirements covering crashes and vehicles stopping inappropriately on roads.</p>
+            
+            <p>Waymo Co-CEO Dmitri Dolgov addressed the technical debate by outlining the limitations of vision-only perception architectures for Level 4 autonomous driving. He argued that camera-based sensing hits an early performance plateau, and achieving the safety thresholds required for driver removal necessitates multi-modal sensor fusion integrating high-resolution cameras, 3D LiDAR, and long-range radar. This positions Waymo's multi-sensor approach in direct contrast to Tesla's vision-only philosophy.</p>
+            
+            <p>As autonomous driving transitions from testing to commercial reality, the competition among technology companies, the evolution of regulatory frameworks, and the resolution of remaining safety challenges will collectively determine how quickly self-driving vehicles reshape urban transportation in the years ahead.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">autonomous</td>
+                    <td>adj.</td>
+                    <td>自治的，自主的</td>
+                    <td>autonomous driving 自动驾驶</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">watershed</td>
+                    <td>n./adj.</td>
+                    <td>分水岭，转折点</td>
+                    <td>watershed moment 转折时刻</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">formal</td>
+                    <td>adj.</td>
+                    <td>正式的</td>
+                    <td>formal approval 正式批准</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">commission</td>
+                    <td>n.</td>
+                    <td>委员会</td>
+                    <td>California Public Utilities Commission 加州公共事业委员会</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">exemption</td>
+                    <td>n.</td>
+                    <td>豁免，免除</td>
+                    <td>receive an exemption 获得豁免</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">conventional</td>
+                    <td>adj.</td>
+                    <td>传统的，常规的</td>
+                    <td>conventional cars 传统汽车</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">comparable</td>
+                    <td>adj.</td>
+                    <td>可比较的，相当的</td>
+                    <td>comparable to 与...相当</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">commitment</td>
+                    <td>n.</td>
+                    <td>承诺，投入</td>
+                    <td>a commitment of $10 billion 100亿美元的投入</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">allocation</td>
+                    <td>n.</td>
+                    <td>分配，配置</td>
+                    <td>capital allocation 资本配置</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">aggregator</td>
+                    <td>n.</td>
+                    <td>聚合平台，整合者</td>
+                    <td>aggregator strategy 聚合战略</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">deploy</td>
+                    <td>v.</td>
+                    <td>部署，投放</td>
+                    <td>deploy up to 2,500 vehicles 投放最多2500辆车</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">scrutiny</td>
+                    <td>n.</td>
+                    <td>审查，仔细检查</td>
+                    <td>regulatory scrutiny 监管审查</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">threshold</td>
+                    <td>n.</td>
+                    <td>门槛，阈值</td>
+                    <td>safety thresholds 安全门槛</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">perception</td>
+                    <td>n.</td>
+                    <td>感知，知觉</td>
+                    <td>perception architectures 感知架构</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">fusion</td>
+                    <td>n.</td>
+                    <td>融合</td>
+                    <td>multi-modal sensor fusion 多模态传感器融合</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. The autonomous driving industry experienced what many observers are calling a watershed moment.</div>
+                    <div class="cn">自动驾驶行业经历了被许多观察者称为分水岭的时刻。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Waymo received formal approval to operate fully driverless, paid robotaxi rides across 18 counties.</div>
+                    <div class="cn">Waymo获得正式批准，在18个县运营完全无人驾驶的付费出租车服务。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Zoox became the first autonomous ride-hailing company to receive an exemption from federal rules.</div>
+                    <div class="cn">Zoox成为第一家获得联邦法规豁免的自动驾驶网约车公司。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. The vehicles are purpose-built robotaxis, designed from the ground up without steering wheels or pedals.</div>
+                    <div class="cn">这些车辆是专门建造的无人出租车，从一开始就设计成没有方向盘和踏板。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. Uber announced a commitment of over $10 billion to fund its autonomous vehicle aggregator strategy.</div>
+                    <div class="cn">Uber宣布投入超过100亿美元资助其自动驾驶聚合战略。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Fares will be comparable to the comfort tier offered by traditional ride-hailing companies.</div>
+                    <div class="cn">车费将与传统网约车公司提供的舒适等级相当。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. Robotaxi operators continue to face significant regulatory scrutiny over safety.</div>
+                    <div class="cn">无人出租车运营商继续面临重大的安全监管审查。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Achieving the safety thresholds required for driver removal necessitates multi-modal sensor fusion.</div>
+                    <div class="cn">达到移除驾驶员所需的安全门槛需要多模态传感器融合。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① On August 14, Waymo—the autonomous driving subsidiary of Alphabet—received formal approval from the California Public Utilities Commission (CPUC) to operate fully driverless, paid robotaxi rides across 18 counties.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"Waymo"，谓语是"received"，宾语是"formal approval"。句首"On August 14"是时间状语；两个破折号之间是同位语，补充说明Waymo的身份；"from the CPUC"是介词短语作状语表示来源；"to operate..."是不定式短语作目的状语，其中"fully driverless, paid"是并列形容词修饰robotaxi rides。<br>
+                        <strong>翻译：</strong>8月14日，Waymo——Alphabet旗下的自动驾驶子公司——获得了加州公共事业委员会（CPUC）的正式批准，可以在18个县运营完全无人驾驶的付费出租车服务。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② This marked Zoox's first commercial service, coming shortly after the company became the first autonomous ride-hailing operator to receive an exemption from the National Highway Traffic Safety Administration (NHTSA) from federal rules requiring human driving controls.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句是"This marked Zoox's first commercial service"。"coming shortly after..."是现在分词短语作伴随状语；在after引导的时间状语从句中，"the company"是主语，"became"是谓语，"the first...operator"是表语；其后"to receive an exemption"是不定式短语作定语修饰operator；"from NHTSA"和"from federal rules"两个介词短语修饰exemption；"requiring human driving controls"是现在分词短语作后置定语修饰federal rules。<br>
+                        <strong>翻译：</strong>这标志着Zoox的首个商业服务，此前不久，该公司刚刚成为第一家获得美国国家公路交通安全管理局（NHTSA）联邦法规豁免的自动驾驶网约车运营商，该法规要求配备人类驾驶控制装置。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Uber has established commercial ties or equity positions with over 30 global autonomous vehicle developers, OEM hardware partners, and freight entities.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"Uber"，谓语是"has established"（现在完成时），宾语是"commercial ties or equity positions"。"with over 30 global..."是介词短语作状语，其中三个并列名词短语autonomous vehicle developers, OEM hardware partners, and freight entities共同修饰30 global后面的内容，表示合作对象的多样性。<br>
+                        <strong>翻译：</strong>Uber已与全球30多家自动驾驶开发商、OEM硬件合作伙伴和货运企业建立了商业合作或股权关系。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ He argued that camera-based sensing hits an early performance plateau, and achieving the safety thresholds required for driver removal necessitates multi-modal sensor fusion integrating high-resolution cameras, 3D LiDAR, and long-range radar.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句是"He argued that..."，that引导宾语从句。宾语从句由and连接两个并列分句：第一个分句主语是"camera-based sensing"，谓语是"hits"，宾语是"plateau"；第二个分句主语是"achieving the safety thresholds"（动名词短语作主语），谓语是"necessitates"，宾语是"multi-modal sensor fusion"。"required for driver removal"是过去分词短语作后置定语修饰thresholds；"integrating..."是现在分词短语作后置定语修饰fusion。<br>
+                        <strong>翻译：</strong>他认为基于摄像头的感知会早早遇到性能瓶颈，而达到移除驾驶员所需的安全门槛，需要整合高分辨率摄像头、3D激光雷达和远程雷达的多模态传感器融合。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述重大转折</td>
+                        <td>experienced what many observers are calling a watershed moment</td>
+                        <td>用于描述行业或事件的重大转折点</td>
+                    </tr>
+                    <tr>
+                        <td>介绍新事物特征</td>
+                        <td>designed from the ground up without...</td>
+                        <td>强调某物从零开始全新设计，没有传统束缚</td>
+                    </tr>
+                    <tr>
+                        <td>表达比较关系</td>
+                        <td>fares will be comparable to the... tier offered by...</td>
+                        <td>用于将新事物与传统事物进行价格或质量对比</td>
+                    </tr>
+                    <tr>
+                        <td>描述战略布局</td>
+                        <td>has established commercial ties or equity positions with...</td>
+                        <td>用于描述企业建立合作关系和战略投资</td>
+                    </tr>
+                    <tr>
+                        <td>应对挑战</td>
+                        <td>continue to face significant regulatory scrutiny over...</td>
+                        <td>描述企业或行业持续面临的监管压力</td>
+                    </tr>
+                    <tr>
+                        <td>技术论证</td>
+                        <td>achieving... necessitates multi-modal sensor fusion</td>
+                        <td>用于论证实现某目标需要的技术手段</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> According to the passage, what makes the week of August 2026 a "watershed moment" for autonomous driving? What are the three major developments mentioned, and how do they differ from each other?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The passage mentions that Zoox's vehicles are "purpose-built robotaxis, designed from the ground up without steering wheels or pedals." Why is this described as "a radical departure from conventional cars"? What advantages and challenges might this design approach bring?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> Waymo Co-CEO Dmitri Dolgov argues that "camera-based sensing hits an early performance plateau." In your opinion, what are the advantages of multi-modal sensor fusion over vision-only approaches? If you were a regulator, what safety requirements would you impose on robotaxi operators before allowing them to expand?
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第32期</p>
+            <p>📅 2026年8月19日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
