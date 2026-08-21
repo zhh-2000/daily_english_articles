@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Pioneers AI-Driven Education as World Seeks New Schooling Models | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #11998e;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #11998e;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #11998e;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #11998e;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #11998e;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #fff9c4 0%, #ffe082 100%);
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #e65100;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #666;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8f5e9;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">生活类 | 教育改革</div>
+            <h1>China Pioneers AI-Driven Education as World Seeks New Schooling Models</h1>
+            <div class="meta">
+                📅 August 21, 2026 &nbsp;|&nbsp; 📖 约920词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月，全球智慧教育大会在北京召开，中国推出"人工智能+教育"行动计划，将智能技术全面融入教学。华为推出AI实践实验室，科大讯飞发布"星火"教学助手，备课效率提升超60%。与此同时，美国高校纷纷将批判性思维纳入通识教育必修课，应对AI对学生思考能力的侵蚀。全球教育正从知识传授转向能力培养，公平获取与文化多样性成为核心议题。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🎓 A Fundamental Question for the Intelligent Era</h2>
+            <p>As classrooms worldwide grapple with the transformative yet disruptive power of artificial intelligence (AI), a fundamental question hangs over the future of education: what is schooling for when machines can outthink humans? This question recently took center stage in Beijing, where global academics, policymakers and frontline educators gathered to map out new models for teaching in the intelligent era. Amid the lively cross-border exchanges, one reality is clear: China's large-scale experiments with AI-driven education have already put it miles ahead of most peers.</p>
+            
+            <p>At the opening ceremony of the Global Smart Education Conference 2026, Ren Youqun, China's vice minister of education, said that China has made the integration of AI and education a national priority. The country is pushing forward a digital education strategy that embeds intelligent technologies across all teaching elements, processes and scenarios. The conference, co-hosted by Beijing Normal University and the UNESCO Institute for Information Technologies in Education, gathered representatives from more than 60 countries to explore the deep integration of AI and education.</p>
+            
+            <h2>🚀 From Pilot Projects to System-Wide Deployment</h2>
+            <p>China has rolled out an "AI Plus Education" action plan that sets out systematic arrangements for talent cultivation, application innovation, infrastructure development and ecosystem building. The plan signals a strategic pivot from pilot projects and isolated trials to system-wide deployment and full implementation. Rather than treating AI as a supplementary tool, the strategy positions intelligent technologies at the very core of the educational process, reshaping how teachers teach and how students learn.</p>
+            
+            <p>Chinese tech companies are moving quickly to translate the strategy into action. Tech giant Huawei has unveiled its AI Practice Lab (AIPL) solution for higher education, designed to cultivate interdisciplinary talent through a "multi-disciplinary plus AI" model that shifts the focus from AI knowledge acquisition to AI-driven hands-on practice. In March 2026, Beijing Institute of Technology and Huawei jointly established an AIPL covering three cross-disciplinary tracks: embodied intelligence plus AI, law plus AI, and chemistry plus AI. The lab uses real-world scenarios and data to sharpen students' practical skills.</p>
+            
+            <h2>🤖 Freeing Teachers for Higher-Value Work</h2>
+            <p>Joining the push, another Chinese tech firm, iFLYTEK, recently introduced "Sparklight," an AI-powered super-agent designed as a one-stop assistant for teachers, covering lesson planning, student assessment, home-school communication and administrative tasks. The platform aims to free educators from repetitive paperwork and give them more time for teaching. The system adapts to individual teaching styles over time and builds up a personalized repository of teaching resources.</p>
+            
+            <p>Trial data show it boosts lesson preparation efficiency by more than 60 percent, reduces routine administrative workload by 60 to 80 percent, and saves each teacher four to seven hours per week for higher-value instructional activities. "Teachers are evolving from users to developers of AI applications," said Nie Xiaolin, co-founder and senior vice president of iFLYTEK. He cited a 3D virtual experiment for measuring bell-tower heights and an interactive 3D model of Earth's spheres as vivid examples of this shift, both created by frontline teachers using the platform.</p>
+            
+            <h2>🧠 The Global Push for Critical Thinking</h2>
+            <p>While China embraces AI as an engine of educational transformation, other countries are moving cautiously, alert to the cognitive risks that widespread AI adoption may bring. Across the United States, colleges are formally adding critical thinking, reasoning, and AI ethics to their general education requirements because research shows heavy AI use may erode students' analytical skills. The World Economic Forum's Future of Jobs Report 2025 placed analytical thinking at the very top of the skills hierarchy, cited by 69 percent of global companies as their single most essential skill.</p>
+            
+            <p>The term that has entered the academic literature is "digital cognitive atrophy." Research documented through 2025 indicates that students who extensively use AI for academic tasks show significant decreases in neural activity associated with working memory, analytical reasoning, and independent synthesis. The issue is not the tool but the posture. A student who uses AI to generate a draft and then critically interrogates it is engaging in genuine intellectual work. A student who copies the output into a submission form is not. The cognitive difference between those two behaviors is vast, and general education reform is now being designed explicitly to cultivate the first and make the second untenable.</p>
+            
+            <h2>🌍 Equity, Culture and Global Cooperation</h2>
+            <p>The conference also addressed the global dimension of educational transformation. Chen Qun, UNESCO's assistant director-general for education, identified a host of challenges confronting global education, including demographic shifts, geopolitical tensions, underinvestment and a widening mismatch between skills training and labor market demands. Rabab Fatima, UN under-secretary-general, said in a video address that leveraging AI and digital technologies to advance inclusive, equitable and sustainable education is an urgent shared task for all nations.</p>
+            
+            <p>The conference unveiled the Global Smart School Initiative, an open, evidence-based platform designed to facilitate exchanges, professional assessment, transformation consulting and certification among schools worldwide. The initiative features best-practice cases from more than a dozen schools in China, the Netherlands, Serbia, Singapore, Canada and Kenya, offering reference models for digital transformation. Mo'ale 'Otunuku, minister for education and training of Tonga, stressed that AI must not become an exclusive resource for the privileged few, and that equitable access must be guaranteed. He also cautioned that educational equity entails cultural preservation, urging nations to develop localized intelligent systems that respect indigenous languages, regional civilizations and traditional knowledge systems, thereby countering the risk of cultural homogenization.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">transformative</td>
+                    <td>adj.</td>
+                    <td>变革性的，彻底改变的</td>
+                    <td>transformative yet disruptive power 变革性而又具破坏性的力量</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">grapple with</td>
+                    <td>phr. v.</td>
+                    <td>努力应对， grappling</td>
+                    <td>classrooms grapple with AI 课堂努力应对AI</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">pioneer</td>
+                    <td>v./n.</td>
+                    <td>开拓，先驱</td>
+                    <td>China pioneers AI-driven education 中国开创AI驱动教育</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">integration</td>
+                    <td>n.</td>
+                    <td>融合，整合</td>
+                    <td>integration of AI and education AI与教育的融合</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">embed</td>
+                    <td>v.</td>
+                    <td>嵌入，融入</td>
+                    <td>embeds intelligent technologies 融入智能技术</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">systematic</td>
+                    <td>adj.</td>
+                    <td>系统的，有系统的</td>
+                    <td>systematic arrangements 系统安排</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">cultivation</td>
+                    <td>n.</td>
+                    <td>培养，培育</td>
+                    <td>talent cultivation 人才培养</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">interdisciplinary</td>
+                    <td>adj.</td>
+                    <td>跨学科的</td>
+                    <td>interdisciplinary talent 跨学科人才</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">adapt to</td>
+                    <td>phr. v.</td>
+                    <td>适应</td>
+                    <td>adapts to individual teaching styles 适应个人教学风格</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">erode</td>
+                    <td>v.</td>
+                    <td>侵蚀，削弱</td>
+                    <td>erode students' analytical skills 削弱学生分析能力</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">atrophy</td>
+                    <td>n.</td>
+                    <td>萎缩，衰退</td>
+                    <td>digital cognitive atrophy 数字认知萎缩</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">interrogate</td>
+                    <td>v.</td>
+                    <td>质询，审视</td>
+                    <td>critically interrogates it 批判性地审视它</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">equitable</td>
+                    <td>adj.</td>
+                    <td>公平的，公正的</td>
+                    <td>equitable access 公平获取</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">homogenization</td>
+                    <td>n.</td>
+                    <td>同质化</td>
+                    <td>cultural homogenization 文化同质化</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">leverage</td>
+                    <td>v.</td>
+                    <td>利用，借助</td>
+                    <td>leveraging AI and digital technologies 借助AI和数字技术</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. As classrooms worldwide grapple with the transformative yet disruptive power of AI, a fundamental question hangs over the future of education.</div>
+                    <div class="cn">当全球课堂努力应对AI变革性却又具破坏性的力量时，一个根本性问题笼罩着教育的未来。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. China has made the integration of AI and education a national priority, pushing forward a digital education strategy.</div>
+                    <div class="cn">中国已将AI与教育的融合列为国家优先事项，推进数字教育战略。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. The plan signals a strategic pivot from pilot projects and isolated trials to system-wide deployment and full implementation.</div>
+                    <div class="cn">该计划标志着从试点项目和零散试验到全面部署和全面实施的战略转向。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. The platform aims to free educators from repetitive paperwork and give them more time for teaching.</div>
+                    <div class="cn">该平台旨在将教育工作者从重复性文书工作中解放出来，给他们更多时间用于教学。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. Trial data show it boosts lesson preparation efficiency by more than 60 percent and saves each teacher four to seven hours per week.</div>
+                    <div class="cn">试验数据显示，它将备课效率提升60%以上，每周为每位教师节省四到七小时。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Research shows that students who extensively use AI for academic tasks show significant decreases in neural activity associated with working memory.</div>
+                    <div class="cn">研究表明，大量使用AI完成学业任务的学生，其与工作记忆相关的神经活动显著下降。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. AI must not become an exclusive resource for the privileged few, and equitable access must be guaranteed.</div>
+                    <div class="cn">AI绝不能成为少数特权阶层的专属资源，必须保证公平获取。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Nations should develop localized intelligent systems that respect indigenous languages and traditional knowledge systems, countering the risk of cultural homogenization.</div>
+                    <div class="cn">各国应开发尊重本土语言和传统知识体系的本地化智能系统，以应对文化同质化的风险。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① As classrooms worldwide grapple with the transformative yet disruptive power of artificial intelligence, a fundamental question hangs over the future of education: what is schooling for when machines can outthink humans?</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>句首"As classrooms worldwide grapple with..."是as引导的时间状语从句，意为"当……时"；主句主语是"a fundamental question"，谓语是"hangs over"（悬于……之上），宾语是"the future of education"；冒号后面是question的同位语从句，由"what is schooling for"（表语）和"when machines can outthink humans"（时间状语从句）构成。<br>
+                        <strong>翻译：</strong>当全球课堂努力应对人工智能变革性却又具破坏性的力量时，一个根本性问题笼罩着教育的未来：当机器能在思维上超越人类时，学校教育还有什么意义？
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② The plan signals a strategic pivot from pilot projects and isolated trials to system-wide deployment and full implementation.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"The plan"，谓语是"signals"（标志、发出信号），宾语是"a strategic pivot"（战略转向）；其后"from pilot projects and isolated trials to system-wide deployment and full implementation"是介词短语作后置定语修饰pivot，其中from...to...为固定搭配，表示"从……转向……"；pilot projects与isolated trials并列，system-wide deployment与full implementation并列。<br>
+                        <strong>翻译：</strong>该计划标志着从试点项目和零散试验到全面部署和全面实施的战略转向。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Research documented through 2025 indicates that students who extensively use AI for academic tasks show significant decreases in neural activity associated with working memory, analytical reasoning, and independent synthesis.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"Research"，"documented through 2025"是过去分词短语作后置定语修饰Research；谓语是"indicates"；其后"that students...show..."是that引导的宾语从句。宾语从句中，主语是"students"，"who extensively use AI for academic tasks"是who引导的定语从句修饰students；谓语是"show"，宾语是"significant decreases"；"in neural activity"是介词短语修饰decreases；"associated with working memory, analytical reasoning, and independent synthesis"是过去分词短语作后置定语修饰neural activity，其中三个名词并列。<br>
+                        <strong>翻译：</strong>截至2025年记录的研究表明，大量使用AI完成学业任务的学生，在与工作记忆、分析推理和独立综合相关的神经活动方面表现出显著下降。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ He also cautioned that educational equity entails cultural preservation, urging nations to develop localized intelligent systems that respect indigenous languages, regional civilizations and traditional knowledge systems, thereby countering the risk of cultural homogenization.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>主句主语是"He"，谓语是"cautioned"（告诫）；其后"that educational equity entails cultural preservation"是that引导的宾语从句；"urging nations to develop..."是现在分词短语作伴随状语，其中urge sb to do sth为固定结构；"localized intelligent systems"是develop的宾语；其后"that respect indigenous languages, regional civilizations and traditional knowledge systems"是that引导的定语从句修饰systems，从句中三个名词并列作respect的宾语；句末"thereby countering the risk of cultural homogenization"是现在分词短语作结果状语，thereby意为"从而"。<br>
+                        <strong>翻译：</strong>他还告诫说，教育公平蕴含着文化保护，他敦促各国开发尊重本土语言、地区文明和传统知识体系的本地化智能系统，从而应对文化同质化的风险。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述时代变革</td>
+                        <td>As classrooms worldwide grapple with the transformative yet disruptive power of AI, a fundamental question hangs over...</td>
+                        <td>用于议论文开头引出科技对教育/社会的深刻影响</td>
+                    </tr>
+                    <tr>
+                        <td>描述战略转向</td>
+                        <td>signals a strategic pivot from pilot projects to system-wide deployment</td>
+                        <td>用于描述某项政策从试验阶段到全面实施的转变</td>
+                    </tr>
+                    <tr>
+                        <td>描述效率提升</td>
+                        <td>boosts lesson preparation efficiency by more than 60 percent, saving each teacher four to seven hours per week</td>
+                        <td>用于论述技术如何提升工作效率和释放人力资源</td>
+                    </tr>
+                    <tr>
+                        <td>描述能力削弱</td>
+                        <td>show significant decreases in neural activity associated with working memory and analytical reasoning</td>
+                        <td>用于论述过度依赖技术的潜在危害和认知风险</td>
+                    </tr>
+                    <tr>
+                        <td>强调公平原则</td>
+                        <td>AI must not become an exclusive resource for the privileged few; equitable access must be guaranteed</td>
+                        <td>用于论述技术公平、教育公平和社会正义</td>
+                    </tr>
+                    <tr>
+                        <td>展望文化保护</td>
+                        <td>develop localized systems that respect indigenous languages, countering the risk of cultural homogenization</td>
+                        <td>用于论述全球化背景下文化多样性的保护</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> According to the passage, what does China's "AI Plus Education" action plan aim to achieve, and how does it differ from previous pilot projects? In your opinion, what are the advantages and potential risks of embedding AI technologies across all teaching processes?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The article mentions the concept of "digital cognitive atrophy." What does this term mean, and why is the distinction between "using AI as a thinking partner" and "using AI as a thinking substitute" so important for students? How should schools balance AI integration with critical thinking development?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The Tongan education minister stressed that "AI must not become an exclusive resource for the privileged few" and that educational equity entails cultural preservation. Why is equitable access to AI tools a global concern? What challenges do developing countries face in adopting AI-driven education, and how can international cooperation help address them?
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第34期</p>
+            <p>📅 2026年8月21日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
