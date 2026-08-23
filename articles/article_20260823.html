@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Enjoyment Rises Among Teens for First Time in Five Years | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">文化类 | 文学阅读</div>
+            <h1>Reading Enjoyment Rises Among Teens for First Time in Five Years</h1>
+            <div class="meta">
+                📅 August 23, 2026 &nbsp;|&nbsp; 📖 约950词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年，英国国家读写信托基金会发布了年度阅读调查报告。在对125,375名5至18岁儿童的调查中发现，青少年阅读愉悦感五年来首次上升，36.1%的受访者表示喜欢在课余时间阅读，较上年增长3.4个百分点。每日阅读习惯也有所改善，达到20.3%。然而，阅读愉悦感在不同群体间差距明显：男女差距持续扩大，低收入家庭儿童进步缓慢。英国教育大臣将2026年定为"国家阅读年"，呼吁确保每个孩子都能找到属于自己的阅读方式。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>📊 A Long-Awaited Turnaround</h2>
+            <p>After four consecutive years of decline, children and young people's enjoyment of reading has finally shown signs of recovery. The National Literacy Trust (NLT), a UK-based charity devoted to improving literacy, surveyed 125,375 children and young people aged 5 to 18 across 479 schools nationwide. The findings, published in 2026, revealed that more than one in three (36.1%) children aged 8 to 18 reported enjoying reading in their free time — up from 32.7% the previous year and the first increase since 2021.</p>
+            
+            <p>This reversal is significant. Reading enjoyment had been falling steadily since 2021, when 51.5% of children said they liked reading. That figure dropped to 47.8% in 2022, 43.4% in 2023, then plunged sharply to 34.6% in 2024 and 32.7% in 2025. While the new number is still far below the peak of 58.6% recorded in 2016, researchers described the upward trend as "green shoots of recovery" after a prolonged and worrying decline.</p>
+            
+            <h2>📈 Daily Reading Habits and Age Trends</h2>
+            <p>Daily reading also edged upward. In 2026, 20.3% of children and young people aged 8 to 18 said they read something every day in their free time, compared with 18.7% in 2025. Among younger children aged 5 to 8, 45.5% reported reading daily — a slight improvement on the previous year.</p>
+            
+            <p>The most encouraging gains came from older teenagers. Among those aged 14 to 16, reading enjoyment rose from 28.6% to 35%, while the 16-to-18 age group saw an even sharper increase from 41.4% to 49.4%. These improvements among teenagers — often considered the hardest group to reach — suggest that targeted efforts to make reading more relevant and engaging may be paying off.</p>
+            
+            <p>However, the news for the youngest readers was less positive. Reading enjoyment among children aged 5 to 8 fell slightly from 62.6% to 61.6%, marking the third consecutive year of decline in this age group. The drop was driven primarily by falling enjoyment among boys, even as girls' enjoyment rose. Researchers warned that any sustained erosion of reading pleasure at primary age could have long-term consequences for literacy development.</p>
+            
+            <h2>⚖️ Widening Gaps: Gender and Inequality</h2>
+            <p>While the overall rise in reading enjoyment is real, the improvement is not evenly shared. Fewer than 3 in 10 boys aged 8 to 18 now say they enjoy reading, compared with more than 4 in 10 girls. The gender gap stands at around 13.5 percentage points and has remained unchanged from the previous year. Among younger children aged 5 to 8, the gap actually widened: boys' enjoyment fell while girls' rose, pushing the difference from 7.6 to 10.8 percentage points.</p>
+            
+            <p>The inequality gap is also growing. Reading enjoyment rose by 4.3 percentage points among children not receiving free school meals, but only 1.1 percentage points among those who do. As a result, the enjoyment gap between the two groups widened from around 2 percentage points to over 5 in a single year. This trend has raised concerns that the benefits of national reading campaigns are not reaching the children who need them most.</p>
+            
+            <h2>📚 Beyond the Classroom: The Wider Benefits</h2>
+            <p>The report explored how reading supports different aspects of children's lives, and the findings extend far beyond academic attainment. Among children who enjoy reading and read at least weekly, 85.2% said reading helps them learn new words or things, 64.4% said it helps them relax, and 63.5% said it helps them understand other people's views. Over half (55.6%) said reading helps them when they feel stressed or anxious, and 38% said it helps them understand themselves better.</p>
+            
+            <p>Notably, the wellbeing benefits — relaxation, emotional support, and self-understanding — were much more closely tied to enjoyment than the learning benefits. Children who read regularly but did not enjoy it still recognised reading's value for learning, but far fewer said it helped them relax or feel better. This suggests that building positive associations with reading, rather than simply increasing exposure, is what unlocks its wider benefits.</p>
+            
+            <h2>🗣️ Voices from the Literary World</h2>
+            <p>Education Secretary Bridget Phillipson, who designated 2026 as the National Year of Reading, said the results "genuinely fill me with hope." She added: "When reading feels relevant and role models get involved, children develop a passion with benefits that go far beyond the classroom — but with progress slower for poorer children, we must make sure every child can find a form of reading that speaks to them."</p>
+            
+            <p>Children's author and illustrator Dapo Adeola offered a reminder about why reading matters beyond test scores: "Stories are gateways that allow your imagination to take flight through time and space. Through them, it is possible to escape your surroundings in a myriad of different ways, to connect with people and cultures you may otherwise never encounter in your day to day, to envision a future for yourself that your current circumstances or environment might not point towards."</p>
+            
+            <p>Bestselling author Anthony Horowitz, whose Alex Rider series has sold over 20 million copies, argued that the answer is not telling children reading is good for them, but making books part of everyday family conversation. "If you hold up a book and say 'this is good for you', that's a turn off," he said. "If books are part of your daily conversation, if the whole family is invested in reading and literacy and books, then it will just by symbiosis find its way into children."</p>
+            
+            <p>The 2026 findings offer a nuanced picture. The uptick in enjoyment and daily reading is encouraging, particularly after years of decline. But the uneven nature of that recovery — with younger children, boys at primary age, and pupils from lower-income backgrounds showing slower progress — points to where sustained effort is most needed. Helping children find reading meaningful, relevant, and enjoyable is not merely a nice-to-have; it is the engine that drives all of the wider benefits reading can offer.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">consecutive</td>
+                    <td>adj.</td>
+                    <td>连续的，不间断的</td>
+                    <td>after four consecutive years of decline 连续四年下降之后</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">reversal</td>
+                    <td>n.</td>
+                    <td>逆转，反转</td>
+                    <td>This reversal is significant 这一逆转意义重大</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">survey</td>
+                    <td>v./n.</td>
+                    <td>调查，测量</td>
+                    <td>surveyed 125,375 children 调查了125375名儿童</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">plunge</td>
+                    <td>v.</td>
+                    <td>骤降，暴跌</td>
+                    <td>then plunged sharply to 34.6% 随后骤降至34.6%</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">target</td>
+                    <td>v./adj.</td>
+                    <td>定向的，有针对性的</td>
+                    <td>targeted efforts to make reading relevant 使阅读更具针对性的努力</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">erosion</td>
+                    <td>n.</td>
+                    <td>侵蚀，削弱</td>
+                    <td>any sustained erosion of reading pleasure 阅读愉悦感的持续削弱</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">consequence</td>
+                    <td>n.</td>
+                    <td>后果，结果</td>
+                    <td>long-term consequences for literacy development 对读写能力发展的长期影响</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">gap</td>
+                    <td>n.</td>
+                    <td>差距，鸿沟</td>
+                    <td>the gender gap stands at around 13.5 percentage points 性别差距约为13.5个百分点</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">widen</td>
+                    <td>v.</td>
+                    <td>扩大，加宽</td>
+                    <td>the gap actually widened 差距实际上扩大了</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">attainment</td>
+                    <td>n.</td>
+                    <td>成就，学业成绩</td>
+                    <td>far beyond academic attainment 远超学业成绩</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">empathy</td>
+                    <td>n.</td>
+                    <td>共情，同理心</td>
+                    <td>understand other people's views 理解他人的观点（共情能力）</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">association</td>
+                    <td>n.</td>
+                    <td>联想，关联</td>
+                    <td>building positive associations with reading 建立与阅读的积极联想</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">exposure</td>
+                    <td>n.</td>
+                    <td>接触，暴露</td>
+                    <td>rather than simply increasing exposure 而非仅仅增加接触</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">designate</td>
+                    <td>v.</td>
+                    <td>指定，命名</td>
+                    <td>designated 2026 as the National Year of Reading 将2026年指定为国家阅读年</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">nuanced</td>
+                    <td>adj.</td>
+                    <td>细致入微的，有细微差别的</td>
+                    <td>offer a nuanced picture 呈现了一幅细致入微的图景</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. After four consecutive years of decline, children and young people's enjoyment of reading has finally shown signs of recovery.</div>
+                    <div class="cn">在连续四年下降之后，儿童和青少年对阅读的愉悦感终于显现出复苏的迹象。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. More than one in three (36.1%) children aged 8 to 18 reported enjoying reading in their free time — up from 32.7% the previous year.</div>
+                    <div class="cn">超过三分之一（36.1%）的8至18岁儿童表示喜欢在课余时间阅读——高于上一年的32.7%。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. The most encouraging gains came from older teenagers, with the 16-to-18 age group seeing a sharp increase from 41.4% to 49.4%.</div>
+                    <div class="cn">最令人鼓舞的进步来自年龄较大的青少年，16至18岁年龄组的比例从41.4%大幅上升至49.4%。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Fewer than 3 in 10 boys aged 8 to 18 now say they enjoy reading, compared with more than 4 in 10 girls.</div>
+                    <div class="cn">如今8至18岁男孩中喜欢阅读的不足十分之三，而女孩则超过十分之四。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. The wellbeing benefits were much more closely tied to enjoyment than the learning benefits.</div>
+                    <div class="cn">与学习方面的益处相比，身心健康方面的益处与阅读愉悦感的联系更为紧密。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Stories are gateways that allow your imagination to take flight through time and space.</div>
+                    <div class="cn">故事是让你的想象力穿越时空自由翱翔的通道。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. If books are part of your daily conversation, then it will just by symbiosis find its way into children.</div>
+                    <div class="cn">如果书籍是日常对话的一部分，那么通过潜移默化，它自然会走进孩子们的世界。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Helping children find reading meaningful, relevant, and enjoyable is not merely a nice-to-have; it is the engine that drives all of the wider benefits reading can offer.</div>
+                    <div class="cn">帮助孩子们发现阅读的意义、相关性和愉悦感不仅仅是一种锦上添花；它是驱动阅读所能带来的一切更广泛益处的引擎。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① After four consecutive years of decline, children and young people's enjoyment of reading has finally shown signs of recovery, the first increase since 2021.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>句首"After four consecutive years of decline"是介词短语作时间状语；主句主语是"children and young people's enjoyment of reading"，谓语是"has finally shown"，宾语是"signs of recovery"；句末"the first increase since 2021"是"signs of recovery"的同位语，起补充说明作用，强调这是自2021年以来的首次增长。此句结构清晰，通过时间状语和同位语两个修饰成分，交代了阅读愉悦感变化的背景和意义。<br>
+                        <strong>翻译：</strong>在连续四年下降之后，儿童和青少年对阅读的愉悦感终于显现出复苏的迹象，这是自2021年以来的首次增长。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② While the overall rise in reading enjoyment is real, the improvement is not evenly shared, with fewer than 3 in 10 boys aged 8 to 18 now saying they enjoy reading, compared with more than 4 in 10 girls.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。"While the overall rise in reading enjoyment is real"是while引导的让步状语从句；主句是"the improvement is not evenly shared"；"with fewer than 3 in 10 boys aged 8 to 18 now saying they enjoy reading"是with复合结构（with + 宾语 + 宾语补足语）作伴随状语，其中"aged 8 to 18"是过去分词短语作后置定语修饰boys，"saying they enjoy reading"是现在分词短语作宾语补足语，"they enjoy reading"是省略了that的宾语从句；"compared with more than 4 in 10 girls"是过去分词短语作比较状语。该句通过with结构和比较状语，生动展示了性别间阅读愉悦感的不平衡分布。<br>
+                        <strong>翻译：</strong>虽然阅读愉悦感的总体上升是真实的，但这种改善并非均衡共享：如今8至18岁男孩中喜欢阅读的不足十分之三，而女孩则超过十分之四。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Children who read regularly but did not enjoy it still recognised reading's value for learning, but far fewer said it helped them relax or feel better.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句是由but连接的并列复合句。前一个分句中，主语"Children"后跟who引导的定语从句"who read regularly but did not enjoy it"修饰Children（定语从句中read和did not enjoy并列）；谓语是"still recognised"，宾语是"reading's value for learning"。后一个分句中，主语"far fewer"（省略了children）承前省略，谓语是"said"，宾语是"it helped them relax or feel better"（省略了that的宾语从句，其中helped后跟宾语them和宾语补足语relax or feel better）。通过两个分句的对比，强调了阅读愉悦感对身心健康益处的关键作用。<br>
+                        <strong>翻译：</strong>经常阅读但并不享受阅读的儿童仍然认可阅读对学习的价值，但很少有人说阅读能帮助他们放松或感觉更好。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ Helping children find reading meaningful, relevant, and enjoyable is not merely a nice-to-have; it is the engine that drives all of the wider benefits reading can offer.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为分号连接的并列复合句。前一个分句中，动名词短语"Helping children find reading meaningful, relevant, and enjoyable"作主语（其中find后跟复合宾语children + 宾语补足语meaningful, relevant, and enjoyable）；谓语是"is"，表语是"not merely a nice-to-have"。后一个分句中，"it"指代前文提到的帮助孩子们发现阅读意义的行为；"that drives all of the wider benefits reading can offer"是that引导的定语从句修饰the engine，其中"reading can offer"是省略了that/which的定语从句修饰benefits。该句运用了暗喻（engine），将抽象概念形象化，是议论文中升华主题的典型句式。<br>
+                        <strong>翻译：</strong>帮助孩子们发现阅读的意义、相关性和愉悦感不仅仅是一种锦上添花；它是驱动阅读所能带来的一切更广泛益处的引擎。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述趋势逆转</td>
+                        <td>After four consecutive years of decline, ... has finally shown signs of recovery.</td>
+                        <td>用于描述任何长期下降后出现转机的趋势，适用于数据类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>对比不同群体差距</td>
+                        <td>While the overall rise is real, the improvement is not evenly shared, with fewer than 3 in 10 ... compared with more than 4 in 10 ...</td>
+                        <td>用于论述社会不平等、性别差距等话题，用数据对比增强说服力</td>
+                    </tr>
+                    <tr>
+                        <td>引用名人观点</td>
+                        <td>Stories are gateways that allow your imagination to take flight through time and space.</td>
+                        <td>用于论述阅读的价值、文学的力量，引用作家观点增加权威性</td>
+                    </tr>
+                    <tr>
+                        <td>提出解决方案</td>
+                        <td>If books are part of your daily conversation, then it will just by symbiosis find its way into children.</td>
+                        <td>用于论述家庭教育的力量、潜移默化的影响，适用于教育类话题</td>
+                    </tr>
+                    <tr>
+                        <td>强调核心观点</td>
+                        <td>... is not merely a nice-to-have; it is the engine that drives all of the wider benefits ... can offer.</td>
+                        <td>用于议论文结尾强调某事物的重要性，运用暗喻使表达更生动有力</td>
+                    </tr>
+                    <tr>
+                        <td>描述数据的深层含义</td>
+                        <td>The wellbeing benefits were much more closely tied to enjoyment than the learning benefits.</td>
+                        <td>用于分析数据背后的深层含义，适用于研究类文章或议论文</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> According to the passage, reading enjoyment among children has risen for the first time in five years, but the improvement is not evenly shared. What are the main gaps identified in the report (gender, socioeconomic, age)? In your opinion, what measures could schools and families take to close these gaps and ensure that every child can "find a form of reading that speaks to them"?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The report shows that children who read regularly but do not enjoy it still recognise reading's value for learning, but far fewer say it helps them relax or feel better. What does this finding suggest about the relationship between reading enjoyment and wellbeing? How can we help students build "positive associations" with reading rather than treating it merely as a tool for academic success?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> Author Anthony Horowitz argues that "if you hold up a book and say 'this is good for you', that's a turn off," and that reading should become part of everyday family conversation. Do you agree with his view? In your own experience, what factors — family habits, school environment, personal interests, or technology — have the greatest influence on young people's reading habits? How might the rise of digital media and social platforms be affecting the way teenagers engage with books?
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第36期</p>
+            <p>📅 2026年8月23日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
