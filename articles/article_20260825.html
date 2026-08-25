@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caltech Breakthrough Brings Fiber-Optic Performance to Silicon Chips | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 芯片半导体</div>
+            <h1>Caltech Breakthrough Brings Fiber-Optic Performance to Silicon Chips</h1>
+            <div class="meta">
+                📅 August 25, 2026 &nbsp;|&nbsp; 📖 约950词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月，加州理工学院研究团队在《自然》杂志发表论文，宣布成功将光纤级超低损耗性能移植到硅芯片上。研究团队使用与光纤相同的锗硅酸盐玻璃，通过螺旋形波导设计和"回流"工艺，在可见光波段将信号损耗较主流氮化硅平台降低20倍，激光相干性提升超100倍。该突破为光子集成电路在AI数据中心、量子计算、光钟和原子传感器等领域的应用铺平道路，标志着芯片技术向更高能效、更高精度迈进。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>💡 From Optical Fiber to Silicon Chips</h2>
+            <p>Optical fiber already forms much of the hidden infrastructure behind modern communications. It allows information to travel over long distances at high speed because the glass inside the fiber is extremely pure and its surface is engineered to be exceptionally smooth. As a result, most of the light entering one end can reach the other without being absorbed, scattered, or otherwise lost. Researchers refer to this as ultralow loss performance.</p>
+            
+            <p>For years, scientists have dreamed of bringing this fiber-like efficiency directly onto the silicon wafers used for computer chips. Now, a team led by Professor Kerry Vahala at the California Institute of Technology (Caltech) has done exactly that. "We have developed a method to print optical circuits, made from the same material as optical fiber, directly onto the same 8- and 12-inch wafers used for computer chips," Vahala explains. "This shift toward fiber-like performance, especially in the visible bands, will enable new technologies that benefit from negligibly low circuit energy loss."</p>
+            
+            <h2>🔧 How the Breakthrough Works</h2>
+            <p>The key lies in the material and the manufacturing technique. The researchers create waveguides — nanoscale on-chip pathways that channel light — using germano-silicate, the same type of glass used in optical fiber. They adapt this material to a lithography-based method suitable for making devices on standard semiconductor wafers, meaning the process is compatible with existing chip factories.</p>
+            
+            <p>Instead of running in a straight line, the waveguides are arranged in spirals. This allows light to travel a much longer optical path while remaining inside a very small area. The idea resembles winding optical fiber around a spool, but nanofabrication makes it possible to fit the path into a footprint only a few millimeters across.</p>
+            
+            <p>A crucial step comes after the waveguides are patterned. Because germano-silicate has a comparatively low melting temperature, the team can place their devices into a furnace to "reflow" the surface. This process smooths the waveguide walls down to the level of individual atoms, largely suppressing the severe scattering loss that has limited conventional visible-light photonic chips. "At visible wavelengths, our recent platform exceeds silicon nitride's record by a factor of 20, and we have more room to improve," says Hao-Jing Chen, a lead author of the study.</p>
+            
+            <h2>📊 A 20-Fold Advantage at Visible Wavelengths</h2>
+            <p>The performance gap between the new platform and existing technology is striking. At near-infrared wavelengths, devices built with the new Caltech platform already match the performance of some of the best previous devices made from silicon nitride, a material widely used in optical technology because it can transmit data with relatively little signal loss.</p>
+            
+            <p>The advantage becomes much larger at visible wavelengths, where the new germano-silicate platform substantially surpasses silicon nitride. Reducing loss has a dramatic effect on the performance of optical devices. Lasers produced with the new platform, for example, show more than a 100-fold improvement over previous designs in how long their light remains coherent — meaning the light waves stay in step with one another for far longer, a property essential for precision measurement and communication.</p>
+            
+            <p>Every factor of 10 decrease in loss produces a factor of 100 improvement in coherence. This exponential relationship explains why the research community treats even modest reductions in waveguide loss as major milestones.</p>
+            
+            <h2>🌐 From Optical Clocks to Quantum Technology</h2>
+            <p>The ability to create ultralow-loss waveguides across visible wavelengths could be useful for many different technologies. "One of the reasons this is so compelling is that it has a Swiss Army-knife quality — it can be applied in a wide range of settings," Vahala says. The expanded wavelength coverage supports many important atomic operations, making chip-scale atomic sensors, optical clocks, and ion-trap quantum systems possible.</p>
+            
+            <p>The germano-silicate waveguides can also be efficiently coupled to both optical fibers and semiconductor lasers, a property that Henry Blauvelt, a visiting associate at Caltech and co-author of the paper, describes as being "of paramount importance in reducing the overall energy cost of server infrastructure." As data centers consume ever-growing amounts of electricity to power artificial intelligence workloads, this efficiency gain could translate into enormous energy savings across the global digital economy.</p>
+            
+            <p>To demonstrate the platform's versatility, the researchers describe several devices made with the new material in their Nature paper, including ring resonators, multiple types of lasers, and nonlinear resonators capable of generating a range of frequencies. The team sees the current results as an early stage rather than an endpoint. "We haven't gone as far as we want to go, but we've made significant progress over the last five years, and that's what we're reporting on here," Vahala notes.</p>
+            
+            <h2>🚀 Why Tiny Chips Need Kilometer-Scale Performance</h2>
+            <p>At first, the effort to measure losses over distances of meters or even kilometers might seem excessive for devices that fit on a small chip. Graduate student Kellan Colburn, a lead author of the study, admits that it might seem "a little ridiculous" that the researchers are aiming for losses that can be described by percentages over kilometers. "After all, our chips are only 2 centimeters across. But, in reality, there are a lot of applications where this would be very powerful," he says.</p>
+            
+            <p>One example is the ring resonator, a basic optical device used in both scientific research and data transmission. Light enters the device and is directed into a ring, where it can continue circulating for an extended period. Although the physical ring may measure only a few millimeters, the total effective distance traveled by the light depends on how little energy is lost each time it goes around. The longer light can circulate, the higher the performance of the resulting devices — whether they are lasers, sensors, or communication components.</p>
+            
+            <p>The work, funded by the Defense Advanced Research Projects Agency, the Air Force Research Laboratory, and international partners, signals that the boundary between fiber optics and chip-scale photonics is steadily dissolving. As manufacturing techniques mature, the same low-loss performance that once spanned oceans may soon be printed onto the silicon inside every computer, bringing light — and its extraordinary efficiency — to the heart of modern technology.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">ultralow</td>
+                    <td>adj.</td>
+                    <td>超低的</td>
+                    <td>ultralow loss performance 超低损耗性能</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">absorb</td>
+                    <td>v.</td>
+                    <td>吸收</td>
+                    <td>without being absorbed, scattered, or otherwise lost 不被吸收、散射或以其他方式损耗</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">scatter</td>
+                    <td>v.</td>
+                    <td>散射，散开</td>
+                    <td>without being absorbed or scattered 不被吸收或散射</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">negligibly</td>
+                    <td>adv.</td>
+                    <td>微不足道地，可忽略地</td>
+                    <td>benefit from negligibly low circuit energy loss 受益于可忽略不计的电路能量损耗</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">waveguide</td>
+                    <td>n.</td>
+                    <td>波导（光波导）</td>
+                    <td>nanoscale on-chip pathways called waveguides 纳米级片上通道称为波导</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">adapt</td>
+                    <td>v.</td>
+                    <td>改造，使适应</td>
+                    <td>They adapt the material to a lithography-based method 他们将该材料改造为适用于光刻方法</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">spiral</td>
+                    <td>n./v.</td>
+                    <td>螺旋，盘旋</td>
+                    <td>the waveguides are arranged in spirals 波导被排列成螺旋形</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">suppress</td>
+                    <td>v.</td>
+                    <td>抑制，压制</td>
+                    <td>largely suppressing the severe scattering loss 大幅抑制严重的散射损耗</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">surpass</td>
+                    <td>v.</td>
+                    <td>超过，超越</td>
+                    <td>substantially surpasses silicon nitride 大幅超越氮化硅</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">coherence</td>
+                    <td>n.</td>
+                    <td>相干性，连贯性</td>
+                    <td>how long their light remains coherent 光保持相干的时间</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">exponential</td>
+                    <td>adj.</td>
+                    <td>指数的，急剧的</td>
+                    <td>This exponential relationship explains... 这一指数关系解释了……</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">versatile</td>
+                    <td>adj.</td>
+                    <td>多功能的，多用途的</td>
+                    <td>the platform's versatility 平台的多功能性</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">couple</td>
+                    <td>v.</td>
+                    <td>耦合，连接</td>
+                    <td>can be efficiently coupled to optical fibers 能与光纤高效耦合</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">paramount</td>
+                    <td>adj.</td>
+                    <td>至关重要的</td>
+                    <td>of paramount importance 至关重要</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">dissolve</td>
+                    <td>v.</td>
+                    <td>消散，溶解</td>
+                    <td>the boundary ... is steadily dissolving 边界……正在稳步消散</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. Optical fiber already forms much of the hidden infrastructure behind modern communications.</div>
+                    <div class="cn">光纤已经构成了现代通信背后大部分隐藏的基础设施。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Most of the light entering one end can reach the other without being absorbed, scattered, or otherwise lost.</div>
+                    <div class="cn">进入一端的大部分光能够到达另一端，而不会被吸收、散射或以其他方式损耗。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. We have developed a method to print optical circuits, made from the same material as optical fiber, directly onto the same 8- and 12-inch wafers used for computer chips.</div>
+                    <div class="cn">我们开发了一种方法，将采用与光纤相同材料制成的光路直接印制到用于计算机芯片的8英寸和12英寸晶圆上。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Instead of running in a straight line, the waveguides are arranged in spirals.</div>
+                    <div class="cn">波导并非沿直线排列，而是被排列成螺旋形。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. At visible wavelengths, our recent platform exceeds silicon nitride's record by a factor of 20, and we have more room to improve.</div>
+                    <div class="cn">在可见光波段，我们最新的平台超过氮化硅的纪录20倍，且我们还有更大的改进空间。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Lasers produced with the new platform show more than a 100-fold improvement over previous designs in how long their light remains coherent.</div>
+                    <div class="cn">采用新平台制造的激光器在光保持相干的时间方面比以往设计提升超过100倍。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. Every factor of 10 decrease in loss produces a factor of 100 improvement in coherence.</div>
+                    <div class="cn">损耗每降低10倍，相干性就提升100倍。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. As manufacturing techniques mature, the same low-loss performance that once spanned oceans may soon be printed onto the silicon inside every computer.</div>
+                    <div class="cn">随着制造技术成熟，曾经跨越海洋的低损耗性能可能很快被印制到每台计算机内部的硅芯片上。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① Most of the light entering one end can reach the other without being absorbed, scattered, or otherwise lost.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句，但修饰成分丰富。主语是"Most of the light"，其后跟现在分词短语"entering one end"作后置定语（修饰light，意为"进入一端的光"）；谓语是"can reach"，宾语是"the other"（指另一端）；"without being absorbed, scattered, or otherwise lost"是介词短语作方式状语，其中being absorbed、scattered和otherwise lost是三个并列的被动语态动名词，由or连接，说明光在传播过程中没有被吸收、散射或损耗。该句通过分词定语和并列被动结构，简洁而精确地描述了光纤低损耗传输的特性。<br>
+                        <strong>翻译：</strong>进入一端的大部分光能够到达另一端，而不会被吸收、散射或以其他方式损耗。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② We have developed a method to print optical circuits, made from the same material as optical fiber, directly onto the same 8- and 12-inch wafers used for computer chips.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句，但含多个修饰成分。主句是"We have developed a method"；不定式短语"to print optical circuits ... directly onto the same 8- and 12-inch wafers used for computer chips"作method的后置定语（或目的状语），其中"made from the same material as optical fiber"是过去分词短语作circuits的后置定语（说明光路的材料与光纤相同），"used for computer chips"是过去分词短语作wafers的后置定语（说明晶圆用途）。"directly onto"中onto为介词，表示方向。该句通过层层嵌套的分词定语，清晰说明了新方法的材料、工艺与载体三个关键要素。<br>
+                        <strong>翻译：</strong>我们开发了一种方法，将采用与光纤相同材料制成的光路直接印制到用于计算机芯片的8英寸和12英寸晶圆上。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Due to the comparatively low melting temperature of the material, we can put our devices into a furnace to "reflow" the surface of our waveguides to get their smoothness down to the level of individual atoms, which largely suppresses the severe scattering loss that has limited conventional visible PICs.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句，结构较复杂。"Due to the comparatively low melting temperature of the material"是介词短语作原因状语；主句是"we can put our devices into a furnace"，其后"to 'reflow' the surface of our waveguides"是不定式短语作目的状语，"to get their smoothness down to the level of individual atoms"是第二个不定式短语作目的状语（表示进一步的目的）；"which largely suppresses the severe scattering loss"是which引导的非限制性定语从句，修饰前面整个reflow过程；"that has limited conventional visible PICs"是that引导的限制性定语从句，修饰scattering loss。该句通过"due to + 目的状语 + 非限制性定语从句 + 限制性定语从句"的多层结构，完整呈现了原因、方法、目的和效果之间的逻辑链条。<br>
+                        <strong>翻译：</strong>由于该材料的熔点相对较低，我们可以将器件放入炉中，对波导表面进行"回流"处理，使其光滑度达到单个原子的水平，这大幅抑制了此前限制传统可见光光子集成电路的严重散射损耗。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ As manufacturing techniques mature, the same low-loss performance that once spanned oceans may soon be printed onto the silicon inside every computer, bringing light — and its extraordinary efficiency — to the heart of modern technology.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。"As manufacturing techniques mature"是as引导的时间状语从句（意为"随着制造技术成熟"）；主句是"the same low-loss performance ... may soon be printed onto the silicon inside every computer"，其中"that once spanned oceans"是that引导的定语从句，修饰performance（意为"曾经跨越海洋的"），主句谓语"may soon be printed"是被动语态；"bringing light — and its extraordinary efficiency — to the heart of modern technology"是现在分词短语作结果状语，其中破折号内的"and its extraordinary efficiency"是插入语，与light并列，作bringing的宾语。该句以as开头营造时间递进感，通过定语从句和分词结果状语，将技术突破的意义从"曾经"延伸到"即将"，富有文学色彩。<br>
+                        <strong>翻译：</strong>随着制造技术成熟，曾经跨越海洋的低损耗性能可能很快被印制到每台计算机内部的硅芯片上，将光——及其非凡的效率——带到现代技术的核心。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述基础设施重要性</td>
+                        <td>... already forms much of the hidden infrastructure behind ...</td>
+                        <td>用于描述某项技术作为支撑现代社会的基础设施，适用于科技说明文开头</td>
+                    </tr>
+                    <tr>
+                        <td>描述低损耗特性</td>
+                        <td>Most of the light ... can reach the other without being absorbed, scattered, or otherwise lost.</td>
+                        <td>用于描述传输效率高、损耗极低的技术特性，适用于科普类说明文</td>
+                    </tr>
+                    <tr>
+                        <td>描述创新方法</td>
+                        <td>We have developed a method to ..., made from the same material as ..., directly onto ...</td>
+                        <td>用于介绍研究团队的新方法，强调材料一致性和工艺创新，适用于科技突破类文章</td>
+                    </tr>
+                    <tr>
+                        <td>量化对比表达</td>
+                        <td>... exceeds ...'s record by a factor of 20, and we have more room to improve.</td>
+                        <td>用于通过倍数对比突出技术优势，适用于数据驱动的科技说明和议论文</td>
+                    </tr>
+                    <tr>
+                        <td>描述指数关系</td>
+                        <td>Every factor of 10 decrease in ... produces a factor of 100 improvement in ...</td>
+                        <td>用于说明变量间的指数级关系，适用于科普论证和数据分析</td>
+                    </tr>
+                    <tr>
+                        <td>总结技术前景</td>
+                        <td>As ... mature, the same ... that once ... may soon be ..., bringing ... to the heart of modern technology.</td>
+                        <td>用于文章结尾总结技术从过去到未来的演进，富有文学色彩，适用于科技展望类结尾</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The Caltech team managed to bring fiber-optic-level low loss onto silicon chips by using the same glass material and arranging waveguides in spirals. Professor Vahala says this "will enable new technologies that benefit from negligibly low circuit energy loss." Why do you think reducing energy loss in chips is so important for technologies like AI data centers and quantum computing? In your view, what other fields might benefit from this breakthrough?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The researchers found that "every factor of 10 decrease in loss produces a factor of 100 improvement in coherence." This exponential relationship means that even a modest reduction in loss can dramatically boost performance. How does this principle apply to other areas of science and engineering you have learned about? Can you think of an example where a small improvement in one factor leads to a much larger gain in another?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article notes that the boundary between fiber optics and chip-scale photonics "is steadily dissolving," and that low-loss performance "that once spanned oceans may soon be printed onto the silicon inside every computer." What does this trend suggest about the future relationship between large-scale infrastructure and miniature devices? Do you believe bringing the performance of huge systems into tiny chips will make technology more equal and accessible, or could it create new forms of technological inequality? Explain your reasoning.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第38期</p>
+            <p>📅 2026年8月25日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
