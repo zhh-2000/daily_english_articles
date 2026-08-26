@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogao Grottoes Embrace AI to Preserve Millennia-Old Heritage | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">文化类 | 文化遗产数字化</div>
+            <h1>Mogao Grottoes Embrace AI to Preserve Millennia-Old Heritage</h1>
+            <div class="meta">
+                📅 August 26, 2026 &nbsp;|&nbsp; 📖 约980词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月，敦煌研究院宣布利用人工智能和数字技术对莫高窟千年壁画进行保护与传播。通过"数字敦煌"VR展览，全球观众可沉浸式探索1:1高清复原的洞窟；AI模型基于数万张高分辨率图像实现"像素级"病害检测，能识别比头发丝还细的早期损伤。"数字藏经洞"平台已向全球发布11090件文物数字资源，吸引33个国家和地区超过25万次访问。故宫博物院、国家博物馆等机构也在全面推进文物数字化，标志着科技与文化遗产保护深度融合的新时代。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>📱 When Ancient Murals Meet Digital Magic</h2>
+            <p>With a single tap on a smartphone screen, celestial maidens holding lotuses, painted 1,400 years ago, spring to life and glide toward viewers from the ancient murals. At the millennia-old Mogao Grottoes in Dunhuang, northwest China's Gansu Province, cutting-edge digital immersion is doing more than offering global audiences an unprecedented journey back in time. It is also helping ensure these fragile Silk Road masterpieces survive for generations to come.</p>
+            
+            <p>Carved into desert cliffs from 366 AD onward, the Mogao Grottoes comprise 735 caves, including 492 sanctuaries featuring Buddhist murals and painted sculptures. Inscribed as a UNESCO World Heritage site in 1987, the site is recognized as the world's largest, longest continuously constructed, and most richly endowed Buddhist art repository. For centuries, these treasures have faced threats from wind erosion, sand storms, humidity, and the inevitable aging of pigment. Traditional conservation relied on physical barriers and periodic human inspection, which could only catch problems after visible damage had already occurred.</p>
+            
+            <h2>🤖 AI at the Service of Heritage</h2>
+            <p>Today, local conservators are employing artificial intelligence and advanced digital tools not only to preserve these delicate relics but also to transform how the world experiences them. Through the "Discover Dunhuang" VR exhibition, visitors can enter a high-fidelity 3D reconstruction of Cave 285, where they can view ancient murals up close, explore the space in 360 degrees, and even soar above the ceiling to appreciate the early classic grotto renowned for its Sino-Western fusion and iconic flying apsaras.</p>
+            
+            <p>Lei Zhengguang, a cultural official at the Dunhuang Academy, said the team achieved a 1:1 high-definition restoration of the caves through digital scanning and 3D reconstruction. Combined with interactive design, the project has greatly enriched the visitor experience. "Digitalization is not simply copying what already exists," Lei explained. "It is about creating a new dimension in which the past can speak directly to the present, without the barriers of distance, language, or time."</p>
+            
+            <h2>🔬 Pixel-Level Disease Detection</h2>
+            <p>Behind the scenes, digitalization is quietly revolutionizing heritage conservation. In Cave 44, where complex wall curvatures pose significant challenges, teams now use automated rail systems to capture images. Ding Xiaosheng, a senior researcher in digital preservation at the Dunhuang Academy, noted that specialized software for error-free stitching of billion-pixel images and multi-source 3D reconstruction has greatly improved processing efficiency and quality.</p>
+            
+            <p>More notably, AI models trained on tens of thousands of high-resolution images are achieving "pixel-level" disease detection. Wang Wanfu, an official at the Academy, said AI can identify early-stage damage thinner than a human hair. Through spectral analysis, the system can even give early warnings for tiny hollows in the plaster base that are completely invisible to the naked eye. "What once required months of patient, manual examination can now be accomplished in hours," Wang added. "More importantly, we can intervene before irreversible damage takes place."</p>
+            
+            <h2>🌐 Sharing Dunhuang with the World</h2>
+            <p>The digital renaissance is now bringing Dunhuang to the world through the "Digital Library Cave" platform, launched globally by the Dunhuang Academy in 2025. To date, the platform has released digital resources of 11,090 manuscripts and artifacts, along with 72,810 images, attracting more than 250,000 visits from 33 countries and regions. A student in São Paulo, a scholar in Berlin, or a retiree in Tokyo can now examine the same ancient document with the same level of detail as a researcher standing in Dunhuang itself.</p>
+            
+            <p>Dunhuang's pioneering efforts reflect a broader national push in China to safeguard cultural heritage through technology. China has updated its heritage law to encourage digital collection and utilization, while top-level guidelines and comprehensive technical standards further steer digital preservation efforts. Across the country, institutions are racing to leverage digitalization to strengthen heritage conservation. The Palace Museum has assigned "digital IDs" to over one million artifacts, offering free public access to 150,000 items via its digital relic library. Meanwhile, the National Museum of China has completed 2D imaging for 720,000 relics and 3D modeling for over 7,700, achieving replication-grade precision.</p>
+            
+            <h2>💭 Forever Young: Heritage in the Digital Age</h2>
+            <p>"Next, we will deepen the integration of Dunhuang studies and digital intelligence, build a digital-intelligence research platform for Dunhuangology, and ensure that cultural relics 'remain forever young,'" said Yu Tianxiu, vice president of the Dunhuang Academy. The phrase "forever young" captures a profound aspiration: that the dialogue between past and future need not end. Technology, once seen as a threat to tradition, has become its most faithful guardian.</p>
+            
+            <p>Yet experts caution that digital tools are not a complete substitute for the physical object. A 3D model can record every crack and pigment layer, but it cannot reproduce the atmosphere of a candle-lit cave or the texture of ancient plaster beneath one's fingertips. The goal, conservators insist, is balance — using technology to protect the original while ensuring that knowledge, beauty, and inspiration travel freely to every corner of the globe. In this balance lies the true promise of the digital renaissance: not replacing heritage, but renewing humanity's relationship with it.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">celestial</td>
+                    <td>adj.</td>
+                    <td>天上的，神圣的</td>
+                    <td>celestial maidens holding lotuses 手持莲花的飞天仙女</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">immersion</td>
+                    <td>n.</td>
+                    <td>沉浸，浸入</td>
+                    <td>cutting-edge digital immersion 前沿的数字沉浸技术</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">unprecedented</td>
+                    <td>adj.</td>
+                    <td>前所未有的，空前的</td>
+                    <td>an unprecedented journey back in time 一场前所未有的时光之旅</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">fragile</td>
+                    <td>adj.</td>
+                    <td>脆弱的，易碎的</td>
+                    <td>these fragile Silk Road masterpieces 这些脆弱的丝绸之路杰作</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">comprise</td>
+                    <td>v.</td>
+                    <td>包含，由……组成</td>
+                    <td>the Mogao Grottoes comprise 735 caves 莫高窟包含735个洞窟</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">sanctuary</td>
+                    <td>n.</td>
+                    <td>圣殿，庇护所</td>
+                    <td>492 sanctuaries featuring Buddhist murals 492个以佛教壁画为特色的洞窟</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">repository</td>
+                    <td>n.</td>
+                    <td>储藏室，宝库</td>
+                    <td>the most richly endowed Buddhist art repository 最丰富的佛教艺术宝库</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">conservator</td>
+                    <td>n.</td>
+                    <td>文物保护者，修复师</td>
+                    <td>local conservators are employing AI 当地文物保护者正在使用AI</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">high-fidelity</td>
+                    <td>adj.</td>
+                    <td>高保真的</td>
+                    <td>a high-fidelity 3D reconstruction 高保真3D重建</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">renowned</td>
+                    <td>adj.</td>
+                    <td>著名的</td>
+                    <td>the early classic grotto renowned for its Sino-Western fusion 以中西融合著称的早期经典洞窟</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">curvature</td>
+                    <td>n.</td>
+                    <td>弯曲，曲率</td>
+                    <td>complex wall curvatures 复杂的墙面曲率</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">suppress</td>
+                    <td>v.</td>
+                    <td>抑制，压制</td>
+                    <td>suppressing the severe scattering loss 抑制严重的散射损耗</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">spectral</td>
+                    <td>adj.</td>
+                    <td>光谱的</td>
+                    <td>through spectral analysis 通过光谱分析</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">leverage</td>
+                    <td>v.</td>
+                    <td>利用，借助</td>
+                    <td>racing to leverage digitalization 竞相借助数字化手段</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">renaissance</td>
+                    <td>n.</td>
+                    <td>复兴，再生</td>
+                    <td>the digital renaissance 数字文艺复兴</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. With a single tap on a smartphone screen, celestial maidens holding lotuses, painted 1,400 years ago, spring to life and glide toward viewers from the ancient murals.</div>
+                    <div class="cn">只需在智能手机屏幕上轻轻一触，1400年前绘制的、手持莲花的飞天仙女便从古老的壁画中跃然而出，向观众滑翔而来。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Cutting-edge digital immersion is doing more than offering global audiences an unprecedented journey back in time.</div>
+                    <div class="cn">前沿的数字沉浸技术不仅为全球观众提供了一场前所未有的时光之旅。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Inscribed as a UNESCO World Heritage site in 1987, the site is recognized as the world's largest, longest continuously constructed, and most richly endowed Buddhist art repository.</div>
+                    <div class="cn">该遗址于1987年被列入联合国教科文组织世界遗产名录，被认为是世界上最大、持续建造时间最长、内涵最丰富的佛教艺术宝库。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Through the "Discover Dunhuang" VR exhibition, visitors can enter a high-fidelity 3D reconstruction of Cave 285, where they can view ancient murals up close, explore the space in 360 degrees, and even soar above the ceiling.</div>
+                    <div class="cn">通过"发现敦煌"VR展览，参观者可以进入第285窟的高保真3D重建空间，近距离观看古代壁画，360度探索空间，甚至飞越窟顶上方。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. AI models trained on tens of thousands of high-resolution images are achieving "pixel-level" disease detection.</div>
+                    <div class="cn">基于数万张高分辨率图像训练的AI模型正在实现"像素级"病害检测。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Through spectral analysis, the system can even give early warnings for tiny hollows in the plaster base that are completely invisible to the naked eye.</div>
+                    <div class="cn">通过光谱分析，该系统甚至能对肉眼完全不可见的灰泥层微小空洞发出预警。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. To date, the platform has released digital resources of 11,090 manuscripts and artifacts, along with 72,810 images, attracting more than 250,000 visits from 33 countries and regions.</div>
+                    <div class="cn">迄今为止，该平台已发布11090件手稿和文物的数字资源，以及72810张图像，吸引了来自33个国家和地区的超过25万次访问。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Technology, once seen as a threat to tradition, has become its most faithful guardian.</div>
+                    <div class="cn">曾经被视为传统威胁的技术，如今已成为传统最忠实的守护者。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① With a single tap on a smartphone screen, celestial maidens holding lotuses, painted 1,400 years ago, spring to life and glide toward viewers from the ancient murals.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句，但修饰成分丰富。句首"With a single tap on a smartphone screen"是介词短语作方式状语（意为"只需在智能手机屏幕上轻触一下"）；主语是"celestial maidens holding lotuses"，其中"holding lotuses"是现在分词短语作后置定语（修饰maidens，意为"手持莲花的飞天仙女"），其后"painted 1,400 years ago"是过去分词短语作后置定语（修饰celestial maidens，说明绘制年代）；谓语由两个并列动词构成："spring to life"和"glide toward viewers from the ancient murals"，由and连接。该句通过分词定语和并列谓语，生动描绘了数字技术让壁画"活起来"的震撼场景。<br>
+                        <strong>翻译：</strong>只需在智能手机屏幕上轻轻一触，1400年前绘制的、手持莲花的飞天仙女便从古老的壁画中跃然而出，向观众滑翔而来。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② Inscribed as a UNESCO World Heritage site in 1987, the site is recognized as the world's largest, longest continuously constructed, and most richly endowed Buddhist art repository.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句。句首"Inscribed as a UNESCO World Heritage site in 1987"是过去分词短语作状语（表被动，主语the site与inscribed是逻辑上的动宾关系，意为"于1987年被列入联合国教科文组织世界遗产名录"）；主句主语是"the site"，谓语是"is recognized as"（被动语态），表语是"the world's largest, longest continuously constructed, and most richly endowed Buddhist art repository"，其中三个最高级形容词largest、longest continuously constructed和most richly endowed由and并列，共同修饰Buddhist art repository。该句通过分词状语和并列最高级，简洁有力地概括了莫高窟的世界地位。<br>
+                        <strong>翻译：</strong>该遗址于1987年被列入联合国教科文组织世界遗产名录，被认为是世界上最大、持续建造时间最长、内涵最丰富的佛教艺术宝库。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Through the "Discover Dunhuang" VR exhibition, visitors can enter a high-fidelity 3D reconstruction of Cave 285, where they can view ancient murals up close, explore the space in 360 degrees, and even soar above the ceiling to appreciate the early classic grotto renowned for its Sino-Western fusion and iconic flying apsaras.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。"Through the 'Discover Dunhuang' VR exhibition"是介词短语作方式状语；主句是"visitors can enter a high-fidelity 3D reconstruction of Cave 285"，其中"high-fidelity"是复合形容词修饰3D reconstruction；其后"where they can view ... explore ... and even soar ..."是where引导的非限制性定语从句，修饰Cave 285，从句中有三个并列动词短语（view、explore、soar），由and连接；"to appreciate the early classic grotto"是不定式短语作目的状语；"renowned for its Sino-Western fusion and iconic flying apsaras"是过去分词短语作后置定语，修饰grotto。该句通过定语从句嵌套并列谓语和分词定语，完整呈现了VR展览的沉浸式体验。<br>
+                        <strong>翻译：</strong>通过"发现敦煌"VR展览，参观者可以进入第285窟的高保真3D重建空间，在这里他们可以近距离观看古代壁画，360度探索空间，甚至飞越窟顶上方，欣赏以中西融合和标志飞天闻名的早期经典洞窟。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ Through spectral analysis, the system can even give early warnings for tiny hollows in the plaster base that are completely invisible to the naked eye.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。"Through spectral analysis"是介词短语作方式状语；主句是"the system can even give early warnings for tiny hollows in the plaster base"，其中"in the plaster base"是介词短语作后置定语，修饰tiny hollows（意为"灰泥层中的微小空洞"）；其后"that are completely invisible to the naked eye"是that引导的限制性定语从句，修饰tiny hollows，其中"invisible to the naked eye"是固定搭配（意为"肉眼不可见的"）。该句结构清晰，通过方式状语和定语从句，说明了AI系统超越人眼检测能力的精确性。<br>
+                        <strong>翻译：</strong>通过光谱分析，该系统甚至能对灰泥层中肉眼完全不可见的微小空洞发出预警。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述技术带来的沉浸体验</td>
+                        <td>With a single tap on ..., ... spring to life and glide toward viewers from ...</td>
+                        <td>用于描述数字技术让古老文物"活起来"的震撼场景，适用于科技与文化类作文开头</td>
+                    </tr>
+                    <tr>
+                        <td>描述前所未有的成就</td>
+                        <td>... is doing more than offering ... an unprecedented journey back in time.</td>
+                        <td>用于强调某项技术不仅提供体验，更有深层意义，适用于说明文和议论文</td>
+                    </tr>
+                    <tr>
+                        <td>描述世界遗产地位</td>
+                        <td>Inscribed as a UNESCO World Heritage site in ..., the site is recognized as the world's largest, longest ..., and most ... ...</td>
+                        <td>用于介绍文化遗产的历史地位和价值，适用于文化说明文</td>
+                    </tr>
+                    <tr>
+                        <td>描述AI检测精度</td>
+                        <td>AI can identify early-stage damage thinner than a human hair.</td>
+                        <td>用于通过对比突出技术精度，适用于科技说明文和数据分析</td>
+                    </tr>
+                    <tr>
+                        <td>描述全球影响力</td>
+                        <td>To date, the platform has released ..., attracting more than ... visits from ... countries and regions.</td>
+                        <td>用于用数据说明平台或项目的国际影响力，适用于报告类和应用文</td>
+                    </tr>
+                    <tr>
+                        <td>总结技术与传统的关系</td>
+                        <td>Technology, once seen as a threat to tradition, has become its most faithful guardian.</td>
+                        <td>用于文章结尾升华主题，富有哲理色彩，适用于议论文结尾</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article describes how AI can detect "early-stage damage thinner than a human hair" and warn about "tiny hollows in the plaster base that are completely invisible to the naked eye." Why is early detection so critical for cultural heritage conservation? In what other fields might this kind of precision technology be valuable? Use examples to support your argument.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The "Digital Library Cave" platform has attracted "more than 250,000 visits from 33 countries and regions." Yu Tianxiu, vice president of the Dunhuang Academy, hopes cultural relics will "remain forever young" through digital intelligence. Do you think digital access can truly replace the experience of visiting a heritage site in person? What might be gained and what might be lost when we experience culture through screens rather than through direct contact?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article concludes that "Technology, once seen as a threat to tradition, has become its most faithful guardian," while experts caution that "digital tools are not a complete substitute for the physical object." How do you understand the balance between preserving the original and sharing knowledge digitally? If you were in charge of a museum, how would you decide which artifacts to digitize first and which to keep exclusively for in-person viewing? Explain your criteria.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第39期</p>
+            <p>📅 2026年8月26日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
