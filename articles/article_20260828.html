@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUS Engineers Colour-Sensing Yeast for Programmable Biomanufacturing | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 生物科技</div>
+            <h1>NUS Engineers Colour-Sensing Yeast for Programmable Biomanufacturing</h1>
+            <div class="meta">
+                📅 August 28, 2026 &nbsp;|&nbsp; 📖 约960词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月11日，新加坡国立大学（NUS）宣布一项合成生物学重大突破：研究团队首次将同一种酵母菌株改造为能同时响应红光和蓝光两种颜色的生物。团队开发出名为y-iLight的单一红光感应蛋白，并通过模块化蛋白质工程解决了蓝光串扰难题，实现了两个基因表达通道的独立控制。利用这一双通道系统，研究人员通过调控红蓝光的比例与时机来控制酵母生产木犀草素（luteolin），并用红光触发酵母絮凝沉降，实现生产与分离的一体化。该成果于2026年5月22日发表在《自然·通讯》杂志，为可编程生物制造、代谢通路优化和活体材料开辟了新方向。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🧪 From Bread to Biotechnology: Yeast Gets a New Job</h2>
+            <p>Baker's yeast, scientifically known as Saccharomyces cerevisiae, is one of biotechnology's most important microorganisms. For thousands of years, humans have relied on it to leaven bread and ferment beer. More recently, advances in synthetic biology — a field that designs and builds new biological parts, devices and systems — have enabled engineered yeast to convert sugar into a wide range of products, including medicines, fuels and industrial chemicals. Yet even well-engineered yeast cells can be difficult to control in a precise and timely way. Traditionally, scientists have relied on adding chemical inducers to switch genes on or off, a process that is both costly and difficult to reverse once started.</p>
+            
+            <p>A team of researchers from the National University of Singapore (NUS), led by Associate Professor Poh Chueh Loo from NUS Synthetic Biology for Clinical and Technological Innovation (SynCTI) and the Department of Biomedical Engineering under the College of Design and Engineering (CDE), addressed this long-standing challenge using a powerful approach called optogenetics. Optogenetics is a strategy that rewires cells so that selected genes turn on or off in response to light. By exposing yeast to different colours and patterns of light, the team showed that biological instructions could be delivered dynamically, without repeatedly adding chemical inducers.</p>
+            
+            <h2>🌈 Life in Technicolour: Seeing Red and Blue</h2>
+            <p>While yeast had been previously engineered to respond to single colours of light, this is the first time that a single strain of yeast has been engineered to respond to more than one colour. The NUS team published their research findings in the scientific journal Nature Communications on 22 May 2026.</p>
+            
+            <p>A key challenge was to make yeast respond reliably to red light. Existing red light-responsive optogenetic systems in yeast require several introduced genes, additional cofactors — also known as "helper" molecules — or careful handling to avoid unintended activation. These limitations make them difficult to combine with other light-controlled systems. The team adapted a light-sensitive tool previously used in bacteria and mammalian cells into a single red light-responsive protein for yeast, which they named y-iLight. When exposed to red light, y-iLight attaches to certain DNA sequences in the yeast and turns on specific genes. Importantly, y-iLight works without the need for additional chemicals beyond those naturally found in yeast, making it simpler, more cost-effective, and more reliable for practical use.</p>
+            
+            <h2>🔧 Solving the Crosstalk Puzzle</h2>
+            <p>Although y-iLight was an important improvement, it initially had a serious limitation: blue light could also activate it. This crosstalk meant that the red light system could not yet operate independently alongside a blue light system. To solve this, the researchers used a modular protein-engineering strategy. They fused y-iLight to protein modules designed to block its activity specifically under blue light, then tested different combinations to identify variants that preserved red light responsiveness while suppressing unwanted blue light activation.</p>
+            
+            <p>When the improved red light system was combined with an established blue light-responsive system called EL222, the researchers achieved independent control of two gene-expression channels in the same yeast strain. This represents a major step toward multiplexed optogenetics in yeast. As Linus Tan Yu Han, a PhD student at NUS CDE and lead author of the paper, explained, "Achieving this level of independent control without the two systems interfering with each other was a major hurdle in yeast. By solving the blue-light crosstalk issue, we opened the door to much more complex genetic programming in yeast using colour."</p>
+            
+            <h2>🏭 Colourful Instructions for Cell Factories</h2>
+            <p>With a dual-channel optogenetic yeast strain in hand, the team demonstrated how multi-coloured light could deliver more complex instructions. They placed two enzymes involved in producing luteolin — a natural plant chemical with potential health-related applications — under separate red and blue light control. By exposing the yeast to different proportions and timing of red and blue light, the researchers could adjust how the yeast made luteolin. This light-based control also helped researchers understand how the process worked. In particular, they discovered that one enzyme, called F3′H, was less effective in the later stages of culture, providing useful insight on how to improve the process in the future.</p>
+            
+            <p>The team also used optogenetics to control how yeast cells behave. By linking the flocculation gene FLO1, which makes yeast cells stick together, to a red light-activated genetic switch, they showed that red light could trigger yeast cells to clump together and sink. In their experiment, yeast first produced luteolin under blue light, then clumped together under red light. This demonstrates how light can control both production and separation, which could inspire cleaner and more programmable biomanufacturing strategies.</p>
+            
+            <h2>🎨 Painting with Living Light</h2>
+            <p>Optogenetics also offers spatial control: genes can be switched on only where light is projected. To demonstrate this, the NUS team engineered yeast to produce different coloured compounds in response to red or blue light, spread the cells as a thin layer on agar, and projected light through masks. The result was a set of patterned, multi-colour "living images" grown by yeast — a striking visual proof that biology can be programmed as precisely as a computer-controlled printer.</p>
+            
+            <p>"Together, the work shows that yeast can be programmed with multiple colours of light to control gene expression, metabolic pathways, cell behaviour and spatial patterning," Assoc Prof Poh explained. "The platform could support future applications in biomanufacturing, pathway optimisation and living materials." The research team is currently working on ways to use rationally designed gene networks to boost the properties of these light-sensitive proteins. With increased strength and sensitivity, they believe it will create new opportunities in the way microbes are used to manufacture valuable chemicals and materials — turning the humble yeast that once only leavened bread into a truly programmable microscopic factory.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">optogenetics</td>
+                    <td>n.</td>
+                    <td>光遗传学</td>
+                    <td>using optogenetics, a strategy that rewires cells 使用光遗传学这一重写细胞的策略</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">rewire</td>
+                    <td>v.</td>
+                    <td>重新连接，重新布线</td>
+                    <td>a strategy that rewires cells 一种重新连接细胞的策略</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">dynamic</td>
+                    <td>adj.</td>
+                    <td>动态的，不断变化的</td>
+                    <td>biological instructions could be delivered dynamically 生物指令可以动态地传递</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">inducer</td>
+                    <td>n.</td>
+                    <td>诱导剂，诱导物</td>
+                    <td>without repeatedly adding chemical inducers 无需反复添加化学诱导剂</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">cofactor</td>
+                    <td>n.</td>
+                    <td>辅助因子，辅因子</td>
+                    <td>additional cofactors, or "helper" molecules 额外的辅助因子，即"帮手"分子</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">crosstalk</td>
+                    <td>n.</td>
+                    <td>串扰，交叉干扰</td>
+                    <td>This crosstalk meant that the red light system could not yet operate independently 这种串扰意味着红光系统尚不能独立运行</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">modular</td>
+                    <td>adj.</td>
+                    <td>模块化的</td>
+                    <td>a modular protein-engineering strategy 一种模块化蛋白质工程策略</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">fuse</td>
+                    <td>v.</td>
+                    <td>融合，结合</td>
+                    <td>They fused y-iLight to protein modules 他们将y-iLight与蛋白质模块融合</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">suppress</td>
+                    <td>v.</td>
+                    <td>抑制，压制</td>
+                    <td>suppressing unwanted blue light activation 抑制不需要的蓝光激活</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">multiplexed</td>
+                    <td>adj.</td>
+                    <td>多路的，多重的</td>
+                    <td>a major step toward multiplexed optogenetics 迈向多重光遗传学的重要一步</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">proportion</td>
+                    <td>n.</td>
+                    <td>比例，占比</td>
+                    <td>different proportions and timing of red and blue light 红蓝光的不同比例和时机</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">flocculation</td>
+                    <td>n.</td>
+                    <td>絮凝，聚凝</td>
+                    <td>the flocculation gene FLO1 絮凝基因FLO1</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">spatial</td>
+                    <td>adj.</td>
+                    <td>空间的，空间上的</td>
+                    <td>Optogenetics also offers spatial control 光遗传学还提供空间控制</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">rationally</td>
+                    <td>adv.</td>
+                    <td>理性地，合理地</td>
+                    <td>rationally designed gene networks 理性设计的基因网络</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">microbe</td>
+                    <td>n.</td>
+                    <td>微生物</td>
+                    <td>the way microbes are used to manufacture valuable chemicals 微生物被用于生产有价值化学品的方式</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. A team of researchers from the National University of Singapore addressed this long-standing challenge using a powerful approach called optogenetics.</div>
+                    <div class="cn">新加坡国立大学的一个研究团队利用一种名为光遗传学的强大方法，解决了这一长期存在的难题。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. By exposing yeast to different colours and patterns of light, the team showed that biological instructions could be delivered dynamically, without repeatedly adding chemical inducers.</div>
+                    <div class="cn">通过让酵母暴露于不同颜色和模式的光，该团队表明生物指令可以被动态传递，无需反复添加化学诱导剂。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. This is the first time that a single strain of yeast has been engineered to respond to more than one colour.</div>
+                    <div class="cn">这是首次将单一酵母菌株改造为能响应不止一种颜色的光。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Importantly, y-iLight works without the need for additional chemicals beyond those naturally found in yeast, making it simpler, more cost-effective, and more reliable for practical use.</div>
+                    <div class="cn">重要的是，y-iLight无需酵母中天然存在以外的额外化学品即可工作，使其更简单、更经济、更可靠。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. They fused y-iLight to protein modules designed to block its activity specifically under blue light, then tested different combinations to identify variants that preserved red light responsiveness while suppressing unwanted blue light activation.</div>
+                    <div class="cn">他们将y-iLight与专门设计用于在蓝光下阻断其活性的蛋白质模块融合，然后测试不同组合以筛选出保留红光响应性同时抑制不必要蓝光激活的变体。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. By exposing the yeast to different proportions and timing of red and blue light, the researchers could adjust how the yeast made luteolin.</div>
+                    <div class="cn">通过让酵母暴露于不同比例和时机的红蓝光，研究人员能够调节酵母生产木犀草素的方式。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. In their experiment, yeast first produced luteolin under blue light, then clumped together under red light.</div>
+                    <div class="cn">在他们的实验中，酵母先在蓝光下生产木犀草素，随后在红光下聚集成团。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. The platform could support future applications in biomanufacturing, pathway optimisation and living materials.</div>
+                    <div class="cn">该平台可以支持未来在生物制造、代谢通路优化和活体材料方面的应用。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① A team of researchers from the National University of Singapore (NUS), led by Associate Professor Poh Chueh Loo from NUS Synthetic Biology for Clinical and Technological Innovation (SynCTI) and the Department of Biomedical Engineering under the College of Design and Engineering (CDE), addressed this long-standing challenge using a powerful approach called optogenetics, a strategy that rewires cells so that selected genes turn on or off in response to light.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是"A team of researchers from the National University of Singapore (NUS)"，其后"led by Associate Professor Poh Chueh Loo from..."是过去分词短语作后置定语（修饰team，表示被动，意为"由……领导的"）；主句谓语是"addressed"，宾语是"this long-standing challenge"，其后"using a powerful approach called optogenetics"是现在分词短语作方式状语（表示主动和方式，意为"使用一种名为光遗传学的强大方法"）；其后的"a strategy that rewires cells so that selected genes turn on or off in response to light"是optogenetics的同位语，其中"that rewires cells"是that引导的限制性定语从句（修饰strategy），"so that selected genes turn on or off in response to light"是so that引导的目的状语从句。该句通过分词定语、分词状语、同位语和定语从句的多层嵌套，将研究团队的身份、方法和原理浓缩在一句话中。<br>
+                        <strong>翻译：</strong>新加坡国立大学（NUS）的一个研究团队，由来自NUS临床与技术创新合成生物学中心（SynCTI）及设计与工程学院（CDE）生物医学工程系的潘学理副教授领导，利用一种名为光遗传学的强大方法解决了这一长期存在的难题——光遗传学是一种重新连接细胞的策略，使选定的基因能够根据光照开启或关闭。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② They fused y-iLight to protein modules designed to block its activity specifically under blue light, then tested different combinations to identify variants that preserved red light responsiveness while suppressing unwanted blue light activation.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为并列复合句，由两个并列谓语构成。主语是"They"，第一个谓语是"fused...to..."（将……融合到……），宾语是"y-iLight"和"protein modules"，其中"designed to block its activity specifically under blue light"是过去分词短语作后置定语（修饰protein modules，表示被动，意为"被设计用于在蓝光下特异性阻断其活性的"）；第二个谓语是"tested"，宾语是"different combinations"，其后"to identify variants"是不定式短语作目的状语（意为"以鉴定变体"），"that preserved red light responsiveness while suppressing unwanted blue light activation"是that引导的限制性定语从句（修饰variants），其中"while suppressing unwanted blue light activation"是while引导的现在分词短语作时间/伴随状语（表示同时进行的动作，意为"同时抑制不需要的蓝光激活"）。该句通过两个并列谓语和定语从句的配合，完整描述了研究团队解决串扰问题的实验策略和目标。<br>
+                        <strong>翻译：</strong>他们将y-iLight与专门设计用于在蓝光下阻断其活性的蛋白质模块融合，然后测试不同组合，以筛选出保留红光响应性同时抑制不必要蓝光激活的变体。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ When the improved red light system was combined with an established blue light-responsive system called EL222, the researchers achieved independent control of two gene-expression channels in the same yeast strain, which represents a major step toward multiplexed optogenetics in yeast.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。句首"When the improved red light system was combined with an established blue light-responsive system called EL222"是When引导的时间状语从句，其中"called EL222"是过去分词短语作后置定语（修饰system）；主句主语是"the researchers"，谓语是"achieved"，宾语是"independent control of two gene-expression channels in the same yeast strain"；其后"which represents a major step toward multiplexed optogenetics in yeast"是which引导的非限制性定语从句（修饰整个主句内容，意为"这代表了……"）。该句通过时间状语从句和非限制性定语从句的搭配，说明了实验操作与突破性成果之间的因果逻辑。<br>
+                        <strong>翻译：</strong>当改进的红光系统与一个名为EL222的成熟蓝光响应系统结合时，研究人员在同一酵母菌株中实现了对两个基因表达通道的独立控制，这代表了向酵母多重光遗传学迈出的重要一步。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ By linking the flocculation gene FLO1, which makes yeast cells stick together, to a red light-activated genetic switch, they showed that red light could trigger yeast cells to clump together and sink.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。句首"By linking the flocculation gene FLO1...to a red light-activated genetic switch"是By引导的介词短语作方式状语（By doing...结构，意为"通过将……连接到……"），其中"which makes yeast cells stick together"是which引导的非限制性定语从句（修饰FLO1，插入解释其功能）；主句主语是"they"，谓语是"showed"，其后"that red light could trigger yeast cells to clump together and sink"是that引导的宾语从句，其中"trigger yeast cells to clump together and sink"使用了trigger...to do...结构（意为"促使……做……"）。该句通过介词状语中嵌套非限制性定语从句和宾语从句的运用，清晰地展示了光控基因开关与细胞行为之间的因果关系。<br>
+                        <strong>翻译：</strong>通过将使酵母细胞聚集的絮凝基因FLO1连接到红光激活的基因开关上，他们表明红光可以促使酵母细胞聚集成团并下沉。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述某领域的历史演变</td>
+                        <td>For thousands of years, humans have relied on ... to ... More recently, advances in ... have enabled ... to ...</td>
+                        <td>用于文章开头介绍某事物从传统用途到现代技术的演变，适用于科技说明文</td>
+                    </tr>
+                    <tr>
+                        <td>描述研究团队解决难题</td>
+                        <td>A team of researchers from ..., led by ... from ..., addressed this long-standing challenge using ...</td>
+                        <td>用于介绍科研成果和研究背景，适用于科研报道或学术介绍</td>
+                    </tr>
+                    <tr>
+                        <td>描述方法的优势</td>
+                        <td>Importantly, ... works without the need for ..., making it simpler, more cost-effective, and more reliable for practical use.</td>
+                        <td>用于强调某项技术或方法的实用优势，适用于科技说明文和议论文</td>
+                    </tr>
+                    <tr>
+                        <td>描述研究突破的意义</td>
+                        <td>This is the first time that ..., which represents a major step toward ...</td>
+                        <td>用于强调研究的首创性和突破意义，适用于科研类作文</td>
+                    </tr>
+                    <tr>
+                        <td>描述实验过程与成果</td>
+                        <td>By ..., the researchers showed that ... could ... — a striking visual proof that ...</td>
+                        <td>用于描述实验方法和令人印象深刻的实验结果，适用于科技报道</td>
+                    </tr>
+                    <tr>
+                        <td>展望未来应用</td>
+                        <td>The platform could support future applications in ..., ... and ... — turning ... into a truly ...</td>
+                        <td>用于文章结尾展望技术前景和升华主题，适用于科技类议论文结尾</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article describes how scientists engineered yeast to respond to different colours of light, turning it into a "programmable microscopic factory." In your opinion, what are the greatest advantages and potential risks of using light to control living cells, compared to traditional chemical methods? Use evidence from the text to support your argument.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The researchers demonstrated that yeast could first produce luteolin under blue light and then clump together under red light. This combination of "production and separation" could inspire "cleaner and more programmable biomanufacturing strategies." If you were a biotechnology entrepreneur, what product would you want to manufacture using this technology, and how would you design the light-based production process? Explain your reasoning.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article concludes that the humble yeast that once only leavened bread is becoming "a truly programmable microscopic factory." Some people worry that synthetic biology could create organisms with unpredictable consequences. Do you think the benefits of engineering living cells outweigh the risks? What regulations or safeguards would you propose to ensure that synthetic biology is used responsibly? Discuss with your classmates.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第41期</p>
+            <p>📅 2026年8月28日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
