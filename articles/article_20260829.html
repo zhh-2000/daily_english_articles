@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move More, Worry Less: Exercise Proven to Boost Teen Mental Health | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">生活类 | 心理健康</div>
+            <h1>Move More, Worry Less: Exercise Proven to Boost Teen Mental Health</h1>
+            <div class="meta">
+                📅 August 29, 2026 &nbsp;|&nbsp; 📖 约960词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月，一项发表在《美国儿童与青少年精神病学学会杂志》上的大型伞式综述证实，运动能显著改善青少年抑郁和焦虑症状。研究综合了21项系统综述、375项随机对照试验和超过38,000名儿童及青少年数据。研究发现，中等强度和阻力训练效果最佳，短期项目反而更有效。运动通过提升BDNF、调节神经递质和改善睡眠等多重机制发挥作用，其改善效果与传统心理治疗和药物相当。专家呼吁将体育锻炼纳入青少年心理健康预防与治疗的核心策略。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🧠 A Hidden Solution in Plain Sight</h2>
+            <p>For years, conversations about youth mental health have focused on therapy, medication, screen time, and social media. Yet one of the most accessible interventions may be hiding in plain sight: exercise. As rates of depression and anxiety climb among teenagers worldwide, researchers have turned their attention to a remedy that is affordable, easy to implement, and free of the stigma that often surrounds psychological treatment.</p>
+            
+            <p>A major 2026 umbrella review published in the <em>Journal of the American Academy of Child &amp; Adolescent Psychiatry</em> analyzed the findings of 21 systematic reviews, incorporating 375 randomized controlled trials and more than 38,000 children and adolescents. The question was simple: Can exercise meaningfully improve symptoms of depression and anxiety in young people? The answer was a resounding yes. After pooling evidence from hundreds of studies, the researchers found that exercise produced clinically meaningful reductions in symptoms of both depression and anxiety among children and adolescents.</p>
+            
+            <h2>📉 A Generation Under Pressure</h2>
+            <p>Depression and anxiety have become some of the most common health concerns facing young people. The authors note that approximately one in four children and adolescents experience elevated symptoms of depression, while about one in five experience elevated anxiety symptoms. These challenges can affect academic performance, relationships, self-esteem, and long-term well-being, often persisting into adulthood if left untreated. Although psychotherapy and medication remain important evidence-based treatments, many young people never receive them, and others experience limited benefits. Cost, accessibility, stigma, and treatment adherence continue to pose significant barriers.</p>
+            
+            <p>This has prompted increasing interest in interventions that are effective, affordable, and easier to implement in everyday life. The new review suggests that physical activity deserves a central place in that conversation. The effects of exercise were remarkably consistent across diverse populations, including healthy youth, those with diagnosed depression, ADHD, obesity, cancer, and other clinical conditions. Notably, the magnitude of benefit observed for exercise was similar to, and in some cases larger than, the effect sizes reported in previous meta-analyses of traditional treatments such as antidepressants and psychotherapy.</p>
+            
+            <h2>💪 Not All Movement Is Created Equal</h2>
+            <p>Not all movement appears to have the same impact. For depression, the strongest effects were observed with mixed-mode exercise, which combines aerobic and resistance activities, and with moderate-intensity exercise. For anxiety, resistance training emerged as the most effective approach. Interestingly, extremely intense workouts were not necessary. In some cases, lower or moderate intensities appeared more beneficial than vigorous exercise. This is an important message for families: improving mental health does not require children to become elite athletes or spend hours in the gym. Walking, recreational sports, circuit training, strength exercises, dance, and other enjoyable activities may all contribute to better psychological well-being.</p>
+            
+            <p>Another surprising finding was that programs lasting less than 12 weeks produced larger improvements in depression symptoms than longer interventions. Researchers speculate that motivation and engagement may be highest during the early phase of participation, when activities feel novel and rewarding. However, in those who stuck with their exercise routine, the benefits in anxiety were maintained. The good news is that benefits did not depend heavily on how often children exercised each week or how long individual sessions lasted. This flexibility may make exercise one of the most practical mental health tools available to schools, clinicians, and families.</p>
+            
+            <h2>🔬 Why Exercise Works: Brain and Behaviour</h2>
+            <p>The answer to why exercise works appears to involve both the brain and behaviour. Exercise can increase levels of brain-derived neurotrophic factor (BDNF), which supports brain plasticity and healthy neural functioning. Physical activity also influences neurotransmitters such as serotonin and dopamine, regulates stress-response systems, and can improve sleep quality. Psychologically, exercise can enhance confidence, create opportunities for social connection, provide distraction from negative thoughts, and foster a sense of accomplishment. In other words, exercise is not simply burning calories — it is a biologically and psychologically active intervention.</p>
+            
+            <p>Professor Gary Goldfield, a senior scientist at the Children's Hospital of Eastern Ontario Research Institute, emphasised that exercise should be viewed as a legitimate therapeutic tool rather than merely a wellness recommendation. "The most important takeaway is not that exercise should replace therapy or medication," he explained, "but rather that movement deserves a much more prominent place in conversations about youth mental health and throughout the lifespan."</p>
+            
+            <h2>🌍 From Research to Real-World Action</h2>
+            <p>The implications of this research extend far beyond the laboratory. For clinicians, educators, and parents, the message is clear: physical activity is no longer just a recommendation for physical health — it is an evidence-based strategy that can help alleviate symptoms of depression and anxiety across a wide range of young people. Schools that cut physical education to make room for more academic subjects may, paradoxically, be undermining the very mental health that students need to succeed.</p>
+            
+            <p>As rates of youth mental health concerns continue to climb, some solutions may require new technologies, policies, or treatments. Others may be surprisingly simple. A structured exercise program, a sports team, a strength-training class, a yoga session, or even regular opportunities to move may be among the most powerful mental health interventions we have been overlooking. The evidence is now too strong to ignore: when young people move more, they worry less.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">accessible</td>
+                    <td>adj.</td>
+                    <td>易获得的，可及的</td>
+                    <td>one of the most accessible interventions 最易获得的干预措施之一</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">intervention</td>
+                    <td>n.</td>
+                    <td>干预，干预措施</td>
+                    <td>interventions that are effective, affordable and easy to implement 有效、经济且易于实施的干预措施</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">umbrella review</td>
+                    <td>n.</td>
+                    <td>伞式综述（综述的综述）</td>
+                    <td>a major 2026 umbrella review 一项2026年的重要伞式综述</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">incorporate</td>
+                    <td>v.</td>
+                    <td>包含，纳入</td>
+                    <td>incorporating 375 randomized controlled trials 纳入375项随机对照试验</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">resounding</td>
+                    <td>adj.</td>
+                    <td>响亮的，巨大的</td>
+                    <td>The answer was a resounding yes. 答案是响亮的"是"。</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">elevated</td>
+                    <td>adj.</td>
+                    <td>升高的，偏高的</td>
+                    <td>experience elevated symptoms of depression 经历升高的抑郁症状</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">adherence</td>
+                    <td>n.</td>
+                    <td>依从性，遵从</td>
+                    <td>treatment adherence continues to pose significant barriers 治疗依从性继续构成重大障碍</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">stigma</td>
+                    <td>n.</td>
+                    <td>污名，偏见</td>
+                    <td>free of the stigma that often surrounds psychological treatment 摆脱经常围绕心理治疗的污名</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">magnitude</td>
+                    <td>n.</td>
+                    <td>规模，量级</td>
+                    <td>the magnitude of benefit observed 观察到的益处的规模</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">vigorous</td>
+                    <td>adj.</td>
+                    <td>剧烈的，强有力的</td>
+                    <td>extremely intense workouts were not necessary; lower intensities appeared more beneficial than vigorous exercise 极高强度训练非必需，低强度比剧烈运动更有益</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">neurotransmitter</td>
+                    <td>n.</td>
+                    <td>神经递质</td>
+                    <td>influences neurotransmitters such as serotonin and dopamine 影响血清素和多巴胺等神经递质</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">plasticity</td>
+                    <td>n.</td>
+                    <td>可塑性</td>
+                    <td>supports brain plasticity and healthy neural functioning 支持大脑可塑性和健康的神经功能</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">alleviate</td>
+                    <td>v.</td>
+                    <td>缓解，减轻</td>
+                    <td>can help alleviate symptoms of depression and anxiety 能帮助缓解抑郁和焦虑症状</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">paradoxically</td>
+                    <td>adv.</td>
+                    <td>矛盾地，似非而是地</td>
+                    <td>may, paradoxically, be undermining the very mental health 矛盾的是，可能正在削弱心理健康</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">overlook</td>
+                    <td>v.</td>
+                    <td>忽视，忽略</td>
+                    <td>the most powerful mental health interventions we have been overlooking 我们一直忽视的最强大的心理健康干预措施</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. For years, conversations about youth mental health have focused on therapy, medication, screen time, and social media.</div>
+                    <div class="cn">多年来，关于青少年心理健康的讨论一直集中在心理治疗、药物治疗、屏幕时间和社交媒体上。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. The question was simple: Can exercise meaningfully improve symptoms of depression and anxiety in young people?</div>
+                    <div class="cn">问题很简单：运动能否实质性地改善青少年的抑郁和焦虑症状？</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Approximately one in four children and adolescents experience elevated symptoms of depression.</div>
+                    <div class="cn">大约四分之一的儿童和青少年经历升高的抑郁症状。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. The magnitude of benefit observed for exercise was similar to, and in some cases larger than, the effect sizes reported in previous meta-analyses of traditional treatments.</div>
+                    <div class="cn">观察到的运动益处的规模与之前传统治疗的荟萃分析中报告的效果量相似，在某些情况下甚至更大。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. Improving mental health does not require children to become elite athletes or spend hours in the gym.</div>
+                    <div class="cn">改善心理健康并不需要孩子们成为精英运动员或在健身房花费数小时。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Programs lasting less than 12 weeks produced larger improvements in depression symptoms than longer interventions.</div>
+                    <div class="cn">持续时间少于12周的项目在改善抑郁症状方面比更长的干预措施产生了更大的改善。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. Exercise is not simply burning calories — it is a biologically and psychologically active intervention.</div>
+                    <div class="cn">运动不仅仅是消耗卡路里——它是一种在生物学和心理学上都活跃的干预措施。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. When young people move more, they worry less.</div>
+                    <div class="cn">当年轻人多运动时，他们的烦恼就会减少。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① A major 2026 umbrella review published in the Journal of the American Academy of Child &amp; Adolescent Psychiatry analyzed the findings of 21 systematic reviews, incorporating 375 randomized controlled trials and more than 38,000 children and adolescents.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句，主语是"A major 2026 umbrella review"，其后"published in the Journal of the American Academy of Child &amp; Adolescent Psychiatry"是过去分词短语作后置定语（修饰review，表示被动，意为"发表在《美国儿童与青少年精神病学学会杂志》上的"）；谓语是"analyzed"，宾语是"the findings of 21 systematic reviews"；其后"incorporating 375 randomized controlled trials and more than 38,000 children and adolescents"是现在分词短语作伴随状语（表示主动和补充说明，意为"纳入了375项随机对照试验和超过38,000名儿童及青少年"）。该句通过分词定语和分词状语的搭配，在一句话中完整呈现了研究的发表平台、分析对象和数据规模。<br>
+                        <strong>翻译：</strong>2026年发表在《美国儿童与青少年精神病学学会杂志》上的一项重要伞式综述分析了21项系统综述的研究结果，纳入了375项随机对照试验和超过38,000名儿童及青少年。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② The magnitude of benefit observed for exercise was similar to, and in some cases larger than, the effect sizes reported in previous meta-analyses of traditional treatments such as antidepressants and psychotherapy.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句。主语是"The magnitude of benefit"，其后"observed for exercise"是过去分词短语作后置定语（修饰benefit，意为"运动观察到的益处的"）；谓语是"was"，表语是由"similar to"和"in some cases larger than"构成的并列结构（意为"与……相似，且在某些情况下大于……"），两个比较短语共享同一个比较对象"the effect sizes"，其后"reported in previous meta-analyses of traditional treatments such as antidepressants and psychotherapy"是过去分词短语作后置定语（修饰effect sizes，意为"之前传统治疗如抗抑郁药物和心理治疗的荟萃分析中报告的"）。该句通过并列比较结构和多重后置定语，精确表达了运动效果与传统治疗效果的对比关系。<br>
+                        <strong>翻译：</strong>运动观察到的益处的规模与之前传统治疗（如抗抑郁药物和心理治疗）的荟萃分析中报告的效果量相似，在某些情况下甚至更大。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Schools that cut physical education to make room for more academic subjects may, paradoxically, be undermining the very mental health that students need to succeed.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是"Schools"，其后"that cut physical education to make room for more academic subjects"是that引导的限制性定语从句（修饰Schools，意为"削减体育课以为更多学科让路的"），其中"to make room for more academic subjects"是不定式短语作目的状语；主句谓语是"may be undermining"（意为"可能正在削弱"），"paradoxically"是副词作插入语（意为"矛盾的是"）；宾语是"the very mental health"，其后"that students need to succeed"是that引导的限制性定语从句（修饰mental health，意为"学生取得成功所需的"）。该句通过两个定语从句和插入语的使用，表达了"削减体育课反而损害学生心理健康"这一看似矛盾却真实的逻辑关系。<br>
+                        <strong>翻译：</strong>削减体育课以为更多学科让路的学校，矛盾的是，可能正在削弱学生取得成功所需的恰恰是心理健康。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ A structured exercise program, a sports team, a strength-training class, a yoga session, or even regular opportunities to move may be among the most powerful mental health interventions we have been overlooking.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句。主语是由五个并列名词短语构成的"A structured exercise program, a sports team, a strength-training class, a yoga session, or even regular opportunities to move"（意为"一个有组织的锻炼计划、一支运动队、一节力量训练课、一次瑜伽课程，甚至是规律的运动机会"）；谓语是"may be"，其后"among the most powerful mental health interventions"是介词短语作表语（意为"在最强大的心理健康干预措施之中"）；句末"we have been overlooking"是省略了关系代词that/which/whom的限制性定语从句（修饰interventions，意为"我们一直忽视的"），使用现在完成进行时表示从过去持续到现在的动作。该句通过并列主语和定语从句的组合，以排比列举的方式增强了修辞效果，强调运动形式多样且被长期忽视。<br>
+                        <strong>翻译：</strong>一个有组织的锻炼计划、一支运动队、一节力量训练课、一次瑜伽课程，甚至是规律的运动机会，都可能属于我们一直忽视的最强大的心理健康干预措施之列。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>引出被忽视的解决方案</td>
+                        <td>For years, conversations about ... have focused on ... Yet one of the most accessible ... may be hiding in plain sight: ...</td>
+                        <td>用于文章开头引出主题，先述现状再点出新视角，适用于议论文和说明文</td>
+                    </tr>
+                    <tr>
+                        <td>描述研究规模与权威性</td>
+                        <td>A major ... review published in ... analyzed the findings of ..., incorporating ... and more than ...</td>
+                        <td>用于介绍科研背景和数据规模，增强论证可信度，适用于科研类作文</td>
+                    </tr>
+                    <tr>
+                        <td>对比传统与新方法的效果</td>
+                        <td>The magnitude of benefit observed for ... was similar to, and in some cases larger than, the effect sizes reported in ...</td>
+                        <td>用于比较两种方法的效果，强调新方法的优势，适用于议论文和说明文</td>
+                    </tr>
+                    <tr>
+                        <td>强调方法简单易行</td>
+                        <td>Improving ... does not require ... to become ... or spend hours in the ...</td>
+                        <td>用于消除读者顾虑、降低行动门槛，适用于生活建议类和健康类作文</td>
+                    </tr>
+                    <tr>
+                        <td>解释作用机制</td>
+                        <td>The answer to why ... works appears to involve both ... and ...</td>
+                        <td>用于引出对机制的科普解释，适用于科技说明文</td>
+                    </tr>
+                    <tr>
+                        <td>总结升华主题</td>
+                        <td>The evidence is now too strong to ignore: when ..., ...</td>
+                        <td>用于文章结尾总结呼吁，适用于议论文结尾段落</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article states that exercise produces clinically meaningful reductions in depression and anxiety, with effects comparable to traditional treatments like medication and psychotherapy. Given that many schools are reducing physical education to make room for academic subjects, do you think schools should be required to guarantee a minimum amount of daily exercise for students? Why or why not? Use evidence from the text to support your argument.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> Researchers found that shorter exercise programs (under 12 weeks) actually produced larger improvements than longer ones, possibly because motivation is highest when activities feel novel. As a high school student preparing for the Gaokao, how would you design a realistic, sustainable exercise routine that stays fresh and motivating? What types of activities would you choose, and how would you balance exercise with study demands?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article explains that exercise works through both biological mechanisms (BDNF, neurotransmitters, sleep) and psychological mechanisms (confidence, social connection, accomplishment). In your opinion, which set of mechanisms do you think is more important for improving teen mental health, and why? Can you think of a situation where one type of mechanism might matter more than the other? Discuss with your classmates.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第42期</p>
+            <p>📅 2026年8月29日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
