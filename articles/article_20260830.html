@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generation on Hold: Global Youth Unemployment Rises as Jobs Grow Scarcer | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">社会热点 | 青年就业</div>
+            <h1>Generation on Hold: Global Youth Unemployment Rises as Jobs Grow Scarcer</h1>
+            <div class="meta">
+                📅 August 30, 2026 &nbsp;|&nbsp; 📖 约960词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月11日，国际劳工组织（ILO）发布《2026全球青年就业趋势》报告。数据显示，全球15至24岁青年失业率升至12.4%，约6700万青年失业；未就业、未受教育或培训（NEET）的青年比例升至20%，超过2.57亿人。报告指出，经济增长停滞、就业创造乏力、地缘政治紧张和技术变革共同推高了青年失业率，其中高收入国家失业率增幅最大。AI正在"掏空"中等技能岗位，6.1%的青年工作面临被替代风险。报告呼吁各国以人为本治理AI，投资技能与终身学习，确保青年获得体面工作。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>📉 A World-Wide Worsening</h2>
+            <p>After reaching its lowest level in more than two decades in 2023, the global youth unemployment rate has begun climbing again. According to the <em>Global Employment Trends for Youth 2026: Back to the future</em>, a report released by the International Labour Organization (ILO) on 11 August 2026, the youth unemployment rate rose to 12.4 per cent in 2025, equivalent to 67 million unemployed people aged 15 to 24 worldwide.</p>
+            
+            <p>Even more alarmingly, the share of young people not in employment, education or training — commonly known by the acronym NEET — increased to 20 per cent, affecting more than 257 million people. "With many more young people implicated and with youth disengagement harder to redress, the increasing trend in the youth NEET rate is especially worrisome," the ILO warned. Between 2023 and 2025, youth unemployment rates rose in eight of the world's 11 subregions, as slowing economic growth, weak job creation, geopolitical tensions and rapid technological change push countries toward what the report calls "a new youth jobs crisis."</p>
+            
+            <h2>🌍 Unequal Pain Across Regions</h2>
+            <p>The burden of joblessness is far from evenly shared. Some of the sharpest increases have been recorded in higher-income economies. In Northern America, youth unemployment jumped from 8.3 per cent in 2023 to 9.8 per cent in 2025. In Northern, Southern and Western Europe, the rate remained stubbornly high at 15 per cent, with 20 of the 29 countries in the subregion reporting weaker job opportunities for young people.</p>
+            
+            <p>At the other extreme, the Arab States and Northern Africa continue to record the world's highest youth unemployment rates — 26.2 per cent and 22.6 per cent respectively in 2025. In both subregions, at least one in three young people were NEET. In sub-Saharan Africa, a low unemployment rate of 8.4 per cent actually conceals widespread insecurity: nearly nine in ten young workers in low- and lower-middle-income countries are employed informally, lacking stable incomes and social protection. As the ILO notes, many young people simply cannot afford to remain unemployed and are forced into precarious work.</p>
+            
+            <h2>🤖 The AI Threat to Middle-Skilled Jobs</h2>
+            <p>Technology is reshaping youth employment in ways that are both promising and troubling. The report finds that 6.1 per cent of jobs held by young people aged 15 to 29 fall into categories most exposed to AI-related changes. Many of these overlap with the middle-skilled occupations — clerical and administrative roles, service and sales work, and machine operation — that have been shrinking since 2023.</p>
+            
+            <p>The ILO cautions that if only 10 per cent of these vulnerable jobs were to disappear fully, some 5.6 million employed youth, largely in high-income countries, would face unemployment or be forced to change occupations. "There is increasing noise around AI," said Sukti Dasgupta, ILO Director of the Employment, Skills and Sustainable Enterprises Department. "While the direct impact on jobs is still unclear, we must not be complacent and underestimate the risks." She called for greater investment in skills, lifelong learning and social protection so that young people can adapt and seize new opportunities. "Technological progress, including AI, must work for young people, not against them."</p>
+            
+            <h2>⚖️ A Widening Gender Gap</h2>
+            <p>Behind the headline figures lies a deeply entrenched gender gap. In 2025, more than two out of every three young people in NEET status were women. The global NEET rate for young women stood at 27.4 per cent, more than double the rate for young men at 13.1 per cent. The increase in the NEET rate since 2023 was also steeper for young women, widening the gap even further.</p>
+            
+            <p>The report stresses that this disparity is not caused by unequal access to education, since young men and women are now on par in school enrolment. Rather, persistent barriers such as unpaid care responsibilities, discrimination, and limited access to quality employment continue to constrain young women's economic participation, particularly in the Arab States, Northern Africa, and Southern Asia.</p>
+            
+            <h2>🇨🇳 China's Seasonal Surge</h2>
+            <p>The global trend is mirrored in China, where the youth unemployment rate climbed to 17.9 per cent in July 2026 as fresh college graduates entered the job market, according to the National Bureau of Statistics. The rate for urban workers aged 16 to 24, excluding students, rose 3 percentage points from June. The overall surveyed urban unemployment rate stood at 5.2 per cent, reflecting seasonal pressure as graduates flood into the labour force.</p>
+            
+            <p>To absorb the influx, several ministries jointly issued a notice to optimise community positions for college graduates, opening newly created community roles to graduates in fields such as social work, psychology, law, and community management. The move aims to strengthen grassroots governance while providing entry-level opportunities for young jobseekers.</p>
+            
+            <h2>🛤️ Back to a Future of Decent Work</h2>
+            <p>The report's subtitle, "Back to the future," captures its central message: the challenge is not only to create more jobs, but to ensure that these jobs provide security, dignity, and opportunities for a successful transition into adulthood. ILO Director-General Gilbert F. Houngbo put it plainly: "A generation that cannot find decent work cannot build its future with confidence."</p>
+            
+            <p>The ILO calls for action on several fronts: adopting a human-centred approach to AI governance; investing in quality education, apprenticeships, and lifelong learning; strengthening employment services; and expanding social protection. Rebuilding confidence among today's youth, the report concludes, will require renewed investment in decent work and policies that help young people navigate an increasingly uncertain future — ensuring that technological progress works for, rather than against, the next generation.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">stagnant</td>
+                    <td>adj.</td>
+                    <td>停滞的，不景气的</td>
+                    <td>stagnant economic growth 停滞的经济增长</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">imperative</td>
+                    <td>n./adj.</td>
+                    <td>必要的事；紧迫的</td>
+                    <td>one of the smartest investments a country can make 一个国家能做出的最明智投资之一</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">acronym</td>
+                    <td>n.</td>
+                    <td>首字母缩略词</td>
+                    <td>commonly known by the acronym NEET 通常以缩略词NEET而为人所知</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">disengagement</td>
+                    <td>n.</td>
+                    <td>脱离，脱离参与</td>
+                    <td>youth disengagement harder to redress 青年脱离状态更难纠正</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">redress</td>
+                    <td>v.</td>
+                    <td>纠正，弥补</td>
+                    <td>youth disengagement harder to redress 青年脱离状态更难纠正</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">stubbornly</td>
+                    <td>adv.</td>
+                    <td>顽固地，难以改变地</td>
+                    <td>the rate remained stubbornly high at 15 per cent 失业率顽固地保持在15%</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">conceal</td>
+                    <td>v.</td>
+                    <td>掩盖，隐瞒</td>
+                    <td>a low unemployment rate actually conceals widespread insecurity 低失业率实际上掩盖了普遍的不安全感</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">precarious</td>
+                    <td>adj.</td>
+                    <td>不稳定的，危险的</td>
+                    <td>forced into precarious work 被迫从事不稳定的工作</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">informally</td>
+                    <td>adv.</td>
+                    <td>非正式地（指非正规就业）</td>
+                    <td>nine in ten young workers are employed informally 十分之九的青年工人非正式就业</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">complacent</td>
+                    <td>adj.</td>
+                    <td>自满的，掉以轻心的</td>
+                    <td>we must not be complacent and underestimate the risks 我们不能掉以轻心、低估风险</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">entrenched</td>
+                    <td>adj.</td>
+                    <td>根深蒂固的</td>
+                    <td>a deeply entrenched gender gap 根深蒂固的性别差距</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">disparity</td>
+                    <td>n.</td>
+                    <td>差距，不一致</td>
+                    <td>this disparity is not caused by unequal access to education 这一差距并非由受教育机会不均造成</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">on par with</td>
+                    <td>phrase</td>
+                    <td>与……持平，与……同等</td>
+                    <td>young men and women are now on par in school enrolment 男女在校入学率现已持平</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">influx</td>
+                    <td>n.</td>
+                    <td>涌入，流入</td>
+                    <td>to absorb the influx of graduates 为吸纳涌入的毕业生</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">navigate</td>
+                    <td>v.</td>
+                    <td>驾驭，应对（复杂局面）</td>
+                    <td>help young people navigate an increasingly uncertain future 帮助青年应对日益不确定的未来</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. The global youth unemployment rate rose to 12.4 per cent in 2025, equivalent to 67 million unemployed people aged 15 to 24 worldwide.</div>
+                    <div class="cn">2025年全球青年失业率升至12.4%，相当于全球范围内6700万名15至24岁的失业人口。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. The share of young people not in employment, education or training increased to 20 per cent, affecting more than 257 million people.</div>
+                    <div class="cn">未就业、未受教育或培训的青年比例升至20%，影响超过2.57亿人。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. A low unemployment rate actually conceals widespread insecurity: many young people simply cannot afford to remain unemployed.</div>
+                    <div class="cn">低失业率实际上掩盖了普遍的不安全感：许多青年根本无法承担失业的代价。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Technological progress, including AI, must work for young people, not against them.</div>
+                    <div class="cn">包括人工智能在内的技术进步必须为青年服务，而非与他们作对。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. The global NEET rate for young women stood at 27.4 per cent, more than double the rate for young men at 13.1 per cent.</div>
+                    <div class="cn">全球青年女性NEET率为27.4%，是青年男性13.1%的两倍多。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. We must not be complacent and underestimate the risks.</div>
+                    <div class="cn">我们不能掉以轻心，低估风险。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. A generation that cannot find decent work cannot build its future with confidence.</div>
+                    <div class="cn">无法找到体面工作的一代人，无法自信地建设自己的未来。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Rebuilding confidence among today's youth will require renewed investment in decent work.</div>
+                    <div class="cn">重建当今青年的信心需要重新投资于体面工作。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① After reaching its lowest level in more than two decades in 2023, the global youth unemployment rate has begun climbing again.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句。句首"After reaching its lowest level in more than two decades in 2023"是介词短语作时间状语，其中"reaching its lowest level"是动名词短语作介词after的宾语，"in more than two decades"和"in 2023"两个介词短语分别修饰level表示范围和时间。主句主语是"the global youth unemployment rate"，谓语是"has begun climbing"（现在完成进行时，表示从过去某时开始并持续的动作），"again"是副词作状语。该句以介词短语前置形成时间对比，突出"先降后升"的趋势转折。<br>
+                        <strong>翻译：</strong>在2023年降至二十多年来的最低水平后，全球青年失业率又开始攀升。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② The share of young people not in employment, education or training — commonly known by the acronym NEET — increased to 20 per cent, affecting more than 257 million people.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句。主语是"The share of young people"，其后"not in employment, education or training"是形容词短语作后置定语（修饰young people，意为"未就业、未受教育或培训的"）；两个破折号之间的"commonly known by the acronym NEET"是过去分词短语作插入语（补充说明该群体的名称，意为"通常以缩略词NEET而为人所知"）；谓语是"increased"，其后"to 20 per cent"是介词短语作状语表示结果；句末"affecting more than 257 million people"是现在分词短语作伴随状语（表示主动，意为"影响超过2.57亿人"）。该句通过插入语和分词状语，在一句话中既给出数据又解释了术语并说明了影响规模。<br>
+                        <strong>翻译：</strong>未就业、未受教育或培训的青年比例——通常以缩略词NEET而为人所知——升至20%，影响超过2.57亿人。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ The report stresses that this disparity is not caused by unequal access to education, since young men and women are now on par in school enrolment.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句是"The report stresses that..."，其中that引导宾语从句作stresses的宾语。在宾语从句中，主语是"this disparity"，谓语是"is not caused"（被动语态），其后"by unequal access to education"是介词短语表示施动者；其后"since young men and women are now on par in school enrolment"是since引导的原因状语从句，其中"on par"是形容词短语作表语（意为"持平"），"in school enrolment"是介词短语作状语表示领域。该句通过宾语从句嵌套原因状语从句，先陈述结论再解释原因，逻辑层次清晰。<br>
+                        <strong>翻译：</strong>报告强调，这一差距并非由受教育机会不均造成，因为男女在校入学率现已持平。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ Rebuilding confidence among today's youth will require renewed investment in decent work and policies that help young people navigate an increasingly uncertain future — ensuring that technological progress works for, rather than against, the next generation.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是动名词短语"Rebuilding confidence among today's youth"（意为"重建当今青年中的信心"），谓语是"will require"，其后有两个并列宾语："renewed investment in decent work"和"policies"；"that help young people navigate an increasingly uncertain future"是that引导的限制性定语从句（修饰policies，意为"帮助青年应对日益不确定的未来的"）；破折号后"ensuring that technological progress works for, rather than against, the next generation"是现在分词短语作伴随状语，其中that引导宾语从句作ensuring的宾语，"works for, rather than against"是并列介词结构（意为"为……服务，而非与……作对"）。该句通过动名词主语、并列宾语、定语从句和分词状语的多重组合，完整表达了"目标—手段—保障"的政策逻辑。<br>
+                        <strong>翻译：</strong>重建当今青年的信心将需要重新投资于体面工作和帮助青年应对日益不确定未来的政策——确保技术进步为下一代服务，而非与下一代作对。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述趋势由好转坏</td>
+                        <td>After reaching its lowest level in ..., ... has begun climbing again.</td>
+                        <td>用于引出恶化的数据趋势，适用于数据分析类和说明文开头</td>
+                    </tr>
+                    <tr>
+                        <td>强调问题的普遍性</td>
+                        <td>Between 2023 and 2025, ... rose in eight of the world's 11 subregions, as ... push countries toward ...</td>
+                        <td>用于展示问题的广泛性并分析原因，适用于议论文和说明文</td>
+                    </tr>
+                    <tr>
+                        <td>揭示数据背后的真相</td>
+                        <td>A low ... actually conceals widespread ...: many ... simply cannot afford to ...</td>
+                        <td>用于指出表面数据与真实状况的矛盾，适用于批判性议论文</td>
+                    </tr>
+                    <tr>
+                        <td>提出对技术发展的立场</td>
+                        <td>Technological progress, including ..., must work for ..., not against them.</td>
+                        <td>用于表达对技术发展的价值立场，适用于议论文论点句</td>
+                    </tr>
+                    <tr>
+                        <td>对比凸显性别差距</td>
+                        <td>The ... rate for young women stood at ..., more than double the rate for young men at ...</td>
+                        <td>用于对比两组数据凸显差距，适用于数据分析类作文</td>
+                    </tr>
+                    <tr>
+                        <td>总结呼吁升华主题</td>
+                        <td>A generation that cannot find ... cannot build its future with confidence.</td>
+                        <td>用于文章结尾升华主题、发出呼吁，适用于议论文结尾</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The ILO report warns that 6.1 per cent of jobs held by young people are highly exposed to AI, and that if even 10 per cent of these disappear, 5.6 million youth could lose work. As a high school student preparing for the Gaokao and your future career, how can you prepare yourself for a job market where AI may replace many middle-skilled roles? Which skills do you think will remain valuable, and why? Use evidence from the text to support your answer.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The article reveals a stark gender gap: the NEET rate for young women (27.4%) is more than double that for young men (13.1%), driven by unpaid care responsibilities, discrimination, and limited access to quality employment. What measures do you think governments, schools, and families could take to close this gap? Discuss whether you believe technology like AI will ultimately widen or narrow this gender divide, and explain your reasoning.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> ILO Director-General Gilbert F. Houngbo said, "A generation that cannot find decent work cannot build its future with confidence." The report calls for "decent work" that provides security, dignity, and opportunity. In your view, what exactly makes a job "decent"? Compare the situation of a young worker in informal employment in sub-Saharan Africa with a university graduate struggling to find work in a high-income country — whose challenge do you think is harder to solve, and why?
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第43期</p>
+            <p>📅 2026年8月30日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
