@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness on a Budget: Six Free Habits That Can Transform Your Health | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">生活类 | 健康生活</div>
+            <h1>Wellness on a Budget: Six Free Habits That Can Transform Your Health</h1>
+            <div class="meta">
+                📅 September 2, 2026 &nbsp;|&nbsp; 📖 约960词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月，BBC发布报道指出，健康生活不必昂贵。从社区瑜伽聚会到园艺种植，从观鸟到自重训练，越来越多年轻人转向低成本或免费的身心健康活动。同期，悉尼大学一项针对5.9万名成年人的研究发现，每天多睡5分钟、多活动2分钟或改善饮食等微小改变，就能延长寿命并增加多达4年无重大慢性病的时间。专家强调，可持续的健康改善并非依赖昂贵设备或严格计划，而是源于晨光照射、餐后散步、鼻腔呼吸等简单日常习惯的长期坚持。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🌱 The Myth of Expensive Wellness</h2>
+            <p>Wellness has become a buzzword in recent years — and one that often comes with a hefty price tag. Luxury spa days, floating sound baths in five-star hotels, retreats costing thousands of pounds: these are all wonderful, if you can afford them. But a growing movement of health experts, entrepreneurs and everyday citizens is pushing back against the notion that better health requires deeper pockets. As one BBC commentator noted, wellness is "more about the decisions that you make in life, how you protect your time" than about the money you spend.</p>
+
+            <p>The timing could not be better. Studies show that by the end of January each year, as many as 88 per cent of people have already abandoned their New Year's health goals. Quick-fix plans often fail, experts say, because they are hard to sustain and expensive to maintain. But health improvements don't have to involve marathon training or costly wellness trends. Longevity specialists say small, simple daily habits — many of them free — can have a meaningful and lasting impact on physical and mental health.</p>
+            
+            <h2>☀️ Start the Day with Natural Light</h2>
+            <p>In the rush to get ready for school or work, many people skip one of the most important health cues of the day: sunlight. Getting natural light on your face for just a few minutes after waking can help regulate sleep, mood and stress, according to longevity expert Jessica Kane. Research shows that morning light exposure helps reset the body's circadian rhythm, allowing people to fall asleep faster and experience fewer nighttime disturbances. Sunlight also supports vitamin D production, which is critical for bone health and calcium absorption.</p>
+
+            <p>"You don't need sunshine, just daylight," Kane explained. "Getting outside within 30 minutes of waking, without sunglasses and not through a window, can make a noticeable difference by evening." For students preparing for major examinations, this simple habit may be especially valuable, as poor sleep is linked to impaired memory consolidation and reduced concentration — both of which directly affect academic performance.</p>
+
+            <h2>🚶 Take a Short Walk After Meals</h2>
+            <p>A brisk walk may be the last thing people want after eating, but even five to ten minutes of movement can significantly improve metabolic health. Studies show that short post-meal walks help regulate blood sugar, support digestion and reduce inflammation. A 2022 University of Limerick study found that walking 60 to 90 minutes after eating, when blood sugar typically peaks, reduced the risk of type 2 diabetes. Even "mini walks" lasting two to five minutes can offer measurable benefits, researchers found.</p>
+
+            <p>The implications extend beyond physical health. According to a 2019 study in the <em>British Medical Journal</em>, 25 minutes per day of moderate exercise, like brisk walking, boosted subjects' chances of living longer. The most sedentary group were 60 per cent more likely to die prematurely than the most active group. Breaking up your day with bouts of walking, rather than simply standing at a desk, is the approach that scientists say produces the most pronounced metabolic improvements.</p>
+
+            <h2>👃 Breathe Through Your Nose, Not Your Mouth</h2>
+            <p>Mouth breathing affects nearly half the population and is linked to snoring and disrupted sleep. Emerging research suggests it may also increase the risk of obesity, arthritis, dementia and some cancers. Nasal breathing, by contrast, improves oxygen efficiency and helps calm the nervous system. The technique of alternate nostril breathing — breathing in through one nostril while the other is gently closed, then switching sides — has gained high-profile advocates, including Hillary Clinton, who has said she practices it daily to manage stress.</p>
+
+            <h2>🌿 Get Outdoors and Get Moving</h2>
+            <p>Exercise doesn't have to revolve around the gym. Whether it's bodyweight workouts, outdoor yoga or running, there are plenty of ways to stay active without spending much money. Bodyweight training, also known as calisthenics, uses your own body weight for exercises such as push-ups, squats and pull-ups to help build strength. Running has also grown in popularity, with about 7.1 million adults now taking part in the UK alone — an increase of more than 500,000 over the past year.</p>
+
+            <p>For beginners, the NHS Couch to 5K programme offers a free nine-week plan designed to gradually build fitness. Gardening, too, is often described as boosting physical and mental wellbeing. Research by the Royal Horticultural Society found that people who garden every day report higher wellbeing and lower stress levels. Community gardens welcome volunteers free of charge and provide tools and equipment, making it easy to get outdoors, meet new people and learn new skills.</p>
+
+            <h2>📵 Put Phones Away at Mealtimes</h2>
+            <p>Eating while scrolling may seem harmless, but research links screen use during meals to overeating and fatigue. One study found that people consumed 15 per cent more calories and more fatty foods when using phones while eating. Another study showed that people who used their phones during lunch felt more tired later in the day than those who read or went for a walk. "How you eat matters just as much as what you eat," Kane said. "Slowing down and eating without screens activates the 'rest and digest' nervous system, improving digestion, nutrient absorption and appetite regulation."</p>
+
+            <h2>🌙 Rebuild a Bedtime Routine</h2>
+            <p>Sleep remains one of the most powerful and neglected health tools. Poor sleep is linked to heart disease, high blood pressure, depression and dementia. Around 70 per cent of British adults fail to get the recommended seven to nine hours of sleep, with the average adult clocking just over six hours a night. Dimming lights, avoiding screens and repeating calming habits help signal to the body that it's time to rest. "Quality sleep boosts immunity, mood and overall health," Kane said. "And it doesn't cost a thing."</p>
+
+            <h2>📊 The Science of Small Changes</h2>
+            <p>New research published in <em>eClinicalMedicine</em>, led by the University of Sydney, puts hard numbers behind these simple habits. The study, which analysed health data from more than 59,000 adults, found that individuals with the poorest health habits could gain up to an additional year of life through minimal changes. These include sleeping just five extra minutes per night, moving less than two additional minutes per day and modestly improving diet quality by the equivalent of half a serving of vegetables.</p>
+
+            <p>Even small improvements across these behaviours had a measurable impact. Modest gains in just one area — roughly 25 extra minutes of sleep per night, about two additional minutes of daily physical activity, or a significant improvement in diet quality — were each independently associated with longer lifespan. Over an average follow-up period of 8.1 years, participants who made slightly larger but still realistic combined improvements in sleep, activity and diet gained up to four additional disease-free years. The message is clear: when it comes to health, consistency beats intensity — and the best habits are often the simplest ones.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">wellness</td>
+                    <td>n.</td>
+                    <td>健康，身心健康</td>
+                    <td>Wellness has become a buzzword in recent years 健康近年来成了一个流行词</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">hefty</td>
+                    <td>adj.</td>
+                    <td>相当大的，昂贵的</td>
+                    <td>one that often comes with a hefty price tag 一个往往伴随高昂价格标签的词</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">buzzword</td>
+                    <td>n.</td>
+                    <td>流行词，热词</td>
+                    <td>Wellness has become a buzzword 健康成了一个流行词</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">abandon</td>
+                    <td>v.</td>
+                    <td>放弃，抛弃</td>
+                    <td>88 per cent of people have already abandoned their New Year's health goals 88%的人已经放弃了新年健康目标</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">sustainable</td>
+                    <td>adj.</td>
+                    <td>可持续的</td>
+                    <td>sustainable health improvements 可持续的健康改善</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">circadian rhythm</td>
+                    <td>n.</td>
+                    <td>昼夜节律，生物钟</td>
+                    <td>helps reset the body's circadian rhythm 帮助重置身体的昼夜节律</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">metabolic</td>
+                    <td>adj.</td>
+                    <td>新陈代谢的</td>
+                    <td>can significantly improve metabolic health 能显著改善代谢健康</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">inflammation</td>
+                    <td>n.</td>
+                    <td>炎症，发炎</td>
+                    <td>help regulate blood sugar, support digestion and reduce inflammation 帮助调节血糖、促进消化并减少炎症</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">sedentary</td>
+                    <td>adj.</td>
+                    <td>久坐的，缺乏运动的</td>
+                    <td>The most sedentary group were 60 per cent more likely to die prematurely 最久坐的群体过早死亡的可能性高出60%</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">prematurely</td>
+                    <td>adv.</td>
+                    <td>过早地，提前地</td>
+                    <td>more likely to die prematurely 更可能过早死亡</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">calisthenics</td>
+                    <td>n.</td>
+                    <td>自重训练，徒手体操</td>
+                    <td>Bodyweight training, also known as calisthenics 自重训练，又称徒手体操</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">appetite regulation</td>
+                    <td>n.</td>
+                    <td>食欲调节</td>
+                    <td>improving digestion, nutrient absorption and appetite regulation 改善消化、营养吸收和食欲调节</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">immunity</td>
+                    <td>n.</td>
+                    <td>免疫力</td>
+                    <td>Quality sleep boosts immunity, mood and overall health 优质睡眠提升免疫力、情绪和整体健康</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">disease-free</td>
+                    <td>adj.</td>
+                    <td>无病的</td>
+                    <td>gained up to four additional disease-free years 获得了多达4年额外的无病年数</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">consistency beats intensity</td>
+                    <td>phrase</td>
+                    <td>坚持胜过强度</td>
+                    <td>consistency beats intensity — and the best habits are often the simplest ones 坚持胜过强度——最好的习惯往往是最简单的</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. Wellness has become a buzzword in recent years — and one that often comes with a hefty price tag.</div>
+                    <div class="cn">健康近年来成了一个流行词——而且往往伴随着高昂的价格标签。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Studies show that by the end of January each year, as many as 88 per cent of people have already abandoned their New Year's health goals.</div>
+                    <div class="cn">研究表明，每年到一月底，多达88%的人已经放弃了他们的新年健康目标。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Getting natural light on your face for just a few minutes after waking can help regulate sleep, mood and stress.</div>
+                    <div class="cn">醒来后只需让脸部接触几分钟自然光，就能帮助调节睡眠、情绪和压力。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. A 2022 University of Limerick study found that walking 60 to 90 minutes after eating, when blood sugar typically peaks, reduced the risk of type 2 diabetes.</div>
+                    <div class="cn">利默里克大学2022年的一项研究发现，在饭后60至90分钟血糖通常达到峰值时散步，可降低患2型糖尿病的风险。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. The most sedentary group were 60 per cent more likely to die prematurely than the most active group.</div>
+                    <div class="cn">最久坐的群体比最活跃的群体过早死亡的可能性高出60%。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. One study found that people consumed 15 per cent more calories and more fatty foods when using phones while eating.</div>
+                    <div class="cn">一项研究发现，人们在吃饭时使用手机会多摄入15%的卡路里和更多高脂食物。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. Around 70 per cent of British adults fail to get the recommended seven to nine hours of sleep, with the average adult clocking just over six hours a night.</div>
+                    <div class="cn">约70%的英国成年人未能达到建议的7至9小时睡眠，成年人平均每晚仅睡6个多小时。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. The message is clear: when it comes to health, consistency beats intensity — and the best habits are often the simplest ones.</div>
+                    <div class="cn">结论很明确：就健康而言，坚持胜过强度——最好的习惯往往是最简单的。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① Studies show that by the end of January each year, as many as 88 per cent of people have already abandoned their New Year's health goals, as quick-fix plans often fail because they are hard to sustain and expensive to maintain.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句是"Studies show"，其后"that by the end of January each year...abandoned their New Year's health goals"是that引导的宾语从句（作show的宾语），其中"by the end of January each year"是时间状语，"as many as 88 per cent of people"是主语，"have already abandoned"是谓语（现在完成时），"their New Year's health goals"是宾语。逗号后"as quick-fix plans often fail"是as引导的原因状语从句（意为"因为速成计划往往失败"），其后"because they are hard to sustain and expensive to maintain"是because引导的原因状语从句，进一步解释失败的原因（其中they指代quick-fix plans，"are hard to sustain"和"expensive to maintain"是并列的表语结构）。该句通过宾语从句、as原因从句和because原因从句的层层嵌套，完整解释了放弃新年健康目标的现象与原因。<br>
+                        <strong>翻译：</strong>研究表明，每年到一月底，多达88%的人已经放弃了他们的新年健康目标，因为速成计划往往难以坚持且维持成本高昂而失败。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② A 2022 University of Limerick study found that walking 60 to 90 minutes after eating, when blood sugar typically peaks, reduced the risk of type 2 diabetes.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是"A 2022 University of Limerick study"，谓语是"found"，其后"that walking 60 to 90 minutes after eating...reduced the risk of type 2 diabetes"是that引导的宾语从句（作found的宾语）。在宾语从句中，主语是动名词短语"walking 60 to 90 minutes after eating"，谓语是"reduced"，宾语是"the risk of type 2 diabetes"；"when blood sugar typically peaks"是when引导的非限制性时间状语从句（插入在主语和谓语之间，补充说明"饭后60至90分钟"这一时间点正是血糖通常达到峰值的时候）。该句通过宾语从句和插入性时间状语从句的组合，清晰说明了散步时机与血糖峰值的关系。<br>
+                        <strong>翻译：</strong>利默里克大学2022年的一项研究发现，在饭后60至90分钟（此时血糖通常达到峰值）散步，可降低患2型糖尿病的风险。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Over an average follow-up period of 8.1 years, participants who made slightly larger but still realistic combined improvements in sleep, activity and diet gained up to four additional disease-free years.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。句首"Over an average follow-up period of 8.1 years"是介词短语作时间状语。主句主语是"participants"，其后"who made slightly larger but still realistic combined improvements in sleep, activity and diet"是who引导的限制性定语从句（修饰participants，其中who作主语，made作谓语，"slightly larger but still realistic combined"是并列形容词作定语修饰improvements，"in sleep, activity and diet"是介词短语作范围状语）。主句谓语是"gained"，宾语是"up to four additional disease-free years"。该句通过定语从句准确限定了研究对象的行为特征，并通过"disease-free"这一复合形容词突出健康改善的实质成果。<br>
+                        <strong>翻译：</strong>在平均8.1年的随访期内，在睡眠、活动和饮食方面做出稍大但仍属现实的综合改善的参与者，获得了多达4年额外的无病年数。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ The message is clear: when it comes to health, consistency beats intensity — and the best habits are often the simplest ones.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为并列复合句。冒号前为主句"The message is clear"（主系表结构，The message为主语，is为系动词，clear为表语）。冒号后为解释性并列句，由and连接两个分句：前一分句"when it comes to health, consistency beats intensity"中，"when it comes to health"是when引导的时间状语从句（固定表达，意为"谈到健康时"），主句是"consistency beats intensity"（consistency为主语，beats为谓语，intensity为宾语）；后一分句"the best habits are often the simplest ones"是主系表结构（the best habits为主语，are为系动词，often为副词，the simplest ones为表语，ones指代habits）。破折号表示对前一分句的补充说明。该句以简洁有力的并列结构，点明了全文核心观点。<br>
+                        <strong>翻译：</strong>结论很明确：就健康而言，坚持胜过强度——最好的习惯往往是最简单的。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述流行现象的反面</td>
+                        <td>... has become a buzzword in recent years — and one that often comes with a hefty price tag.</td>
+                        <td>用于引出某事物虽流行但存在代价或问题，适用于议论文开头段</td>
+                    </tr>
+                    <tr>
+                        <td>陈述数据支撑观点</td>
+                        <td>Studies show that by the end of ..., as many as X per cent of people have already abandoned ...</td>
+                        <td>用于引用研究数据说明某现象的普遍性，适用于论证段</td>
+                    </tr>
+                    <tr>
+                        <td>强调简单方法的有效性</td>
+                        <td>Even small improvements across these behaviours had a measurable impact on ...</td>
+                        <td>用于论证微小改变也能产生显著效果，适用于说明文和议论文</td>
+                    </tr>
+                    <tr>
+                        <td>对比久坐与运动的危害</td>
+                        <td>The most sedentary group were X per cent more likely to ... than the most active group.</td>
+                        <td>用于对比不同生活方式的健康后果，适用于健康类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>总结核心观点</td>
+                        <td>The message is clear: when it comes to ..., consistency beats intensity — and the best ... are often the simplest ones.</td>
+                        <td>用于文章结尾总结升华，适用于各类议论文结尾段</td>
+                    </tr>
+                    <tr>
+                        <td>描述可持续改善</td>
+                        <td>Health improvements don't have to involve ... or ... — small, simple daily habits can have a meaningful and lasting impact.</td>
+                        <td>用于否定复杂昂贵方法、肯定简单习惯，适用于健康话题论点句</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article argues that "consistency beats intensity" when it comes to health. Do you agree with this claim, or do you believe that intense, short-term efforts can also produce lasting results? Drawing on evidence from the text — such as the University of Sydney study on small daily changes — as well as your own experience, discuss which approach you find more effective for maintaining long-term health.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> Research cited in the article shows that using phones during meals leads to consuming 15 per cent more calories and feeling more tired afterwards. Given that smartphones have become inseparable from daily life for most teenagers, what practical strategies would you propose to reduce screen use during meals and other key health moments? How might schools and families cooperate to support these habits?
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article highlights several free wellness habits — morning sunlight, post-meal walks, nasal breathing, and bedtime routines. If you were to choose just two of these habits to implement consistently for the next month as a high school student preparing for examinations, which would you select and why? Explain how these specific habits might improve not only your physical health but also your academic performance, using evidence from the text to support your argument.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第46期</p>
+            <p>📅 2026年9月2日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
