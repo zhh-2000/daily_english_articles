@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotaxis Hit the Streets: A Global Race Toward Driverless Mobility | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 自动驾驶</div>
+            <h1>Robotaxis Hit the Streets: A Global Race Toward Driverless Mobility</h1>
+            <div class="meta">
+                📅 September 3, 2026 &nbsp;|&nbsp; 📖 约980词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年9月初，全球自动驾驶出租车（robotaxi）行业迎来密集进展。美国方面，亚马逊旗下Zoox和谷歌母公司Alphabet旗下Waymo同步宣布扩展无人驾驶出行服务至更多城市；特斯拉计划本周正式发布Cybercab自动驾驶出租车。欧洲方面，法国启动对特斯拉FSD系统的道路测试，英国伦敦首条自动驾驶出租车线路由Uber与Wayve联合推出。与此同时，中国滴滴下一代R2自动驾驶出租车已开始全无人驾驶试运营。一场以技术、监管和公众信任为核心的全球竞赛正在加速展开。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🚗 A Simultaneous Global Push</h2>
+            <p>In the first week of September 2026, the autonomous vehicle industry experienced what analysts are calling a "synchronised global push." On September 1, Amazon's Zoox and Alphabet's Waymo separately announced expansions of their driverless ride-hailing operations into new United States cities. Zoox said it would begin testing in Houston and San Diego, bringing its presence to 12 U.S. locations, while Waymo welcomed its first public riders in Denver, San Diego and Tampa, extending its fully autonomous ride service to 14 cities.</p>
+
+            <p>The American expansion came just as Tesla, the electric carmaker led by Elon Musk, confirmed it would officially launch its Cybercab robotaxi on Thursday, September 4. The unveiling marks a significant step for Tesla in its bid to catch up with Waymo, the current market leader in commercial driverless ride-hailing. The convergence of these announcements signals that the long-promised era of autonomous mobility may finally be materialising on a commercial scale.</p>
+            
+            <h2>🇬🇧 London's Cautious Debut</h2>
+            <p>Across the Atlantic, Uber and British artificial intelligence company Wayve launched London's first self-driving taxi service on September 3. The rollout began with a small fleet of Ford Mustang Mach-E electric vehicles equipped with Wayve's autonomous technology. However, unlike robotaxis operating in parts of the United States and China, the London vehicles still carry a human safety driver behind the wheel who can intervene at any moment.</p>
+
+            <p>"That process is still playing out," said Sarfraz Maredia, Uber's head of autonomous mobility, referring to the regulatory approval needed to operate without a human safety driver. Under the U.K. government's pilot framework, operators like Uber and Wayve must obtain special permission before removing the safety driver entirely. London's narrow, famously convoluted roads, frequent congestion and legally permitted jaywalking all pose unique engineering and regulatory challenges that companies do not face in sunnier, more grid-like American cities.</p>
+
+            <h2>🇫🇷 France Tests Tesla's Technology</h2>
+            <p>Meanwhile, France has begun its own on-road tests of Tesla's Full Self-Driving (FSD) advanced driver assistance system. French Minister of Transport Philippe Tabarot announced on September 3 that Tesla had provided two vehicles equipped with FSD so that the government could verify data previously supplied by the Netherlands and Tesla itself. France is aiming to complete the tests by mid-to-late September, positioning itself to vote on a bloc-wide European approval as early as October.</p>
+
+            <p>In July, Tabarot had said the safety trade-offs were not yet sufficient to justify authorisation, specifically in areas of speed limitation and driver attention warnings. However, after a "constructive exchange" with Musk, the minister indicated that France was now entering "a new phase: that of on-road testing." The Netherlands' road authority RDW had already approved FSD on a provisional basis in April, prompting Belgium, Denmark, Estonia and Lithuania to follow suit ahead of the European Union vote.</p>
+
+            <h2>🇨🇳 China's Rapid Deployment</h2>
+            <p>In China, the pace of deployment has been equally swift. DiDi Autonomous Driving, the self-driving unit of China's largest ride-hailing platform, has begun fully driverless service trials with its next-generation Robotaxi R2. Chinese companies including Baidu, WeRide and Pony.ai already operate robotaxi services in multiple cities and have been expanding into the Middle East through partnerships with Uber and local fleet operators in Dubai, Abu Dhabi and Saudi Arabia.</p>
+
+            <p>The global landscape reveals a stark contrast in regulatory philosophies. In the United States and China, companies have largely been permitted to deploy fully driverless vehicles on public roads, albeit under varying oversight regimes. Europe, by contrast, has adopted a far more cautious approach, requiring extensive testing, data verification and intergovernmental coordination before granting commercial approval. The question now is whether Europe's caution will prove to be a prudent safeguard or a competitive disadvantage.</p>
+
+            <h2>⚖️ Safety, Trust and Regulation</h2>
+            <p>At the heart of the robotaxi revolution lies a tension between technological optimism and public safety. FSD, for instance, is classified as a driver assistance system rather than a fully autonomous one. The system can accelerate, brake and steer, but the human driver must remain ready to intervene. Critics argue that this designation blurs the line between assistance and autonomy, potentially creating false expectations among consumers.</p>
+
+            <p>For European regulators, the priority is clear: verify the technology independently rather than relying on manufacturer-supplied data. France's decision to conduct its own road tests reflects a broader European insistence on sovereign technical assessment. As one transport ministry source explained, the goal is to verify the data provided by the Netherlands and Tesla and to test the system on French roads before casting a vote that could affect the entire bloc.</p>
+
+            <h2>📊 The Road Ahead</h2>
+            <p>Industry analysts project that the global robotaxi market could be worth over 200 billion dollars by 2035, but significant hurdles remain. Public trust, built through years of safe operation, will be the ultimate currency. Waymo's gradual expansion to 14 cities, Zoox's methodical mapping of 12 locations, Tesla's high-profile Cybercab launch, and Uber's cautious European debut all represent different bets on how quickly consumers and regulators will embrace a driverless future.</p>
+
+            <p>For the companies involved, the strategy is clear: scale quickly but carefully. As Maredia noted, the London deployment will start with fewer than 20 vehicles and expand from there. Whether robotaxis become as commonplace as traditional taxis — or remain a niche novelty — may well depend on whether the technology can prove itself safe enough, often enough, to win over the most sceptical regulators and riders alike.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">autonomous</td>
+                    <td>adj.</td>
+                    <td>自治的，自主的</td>
+                    <td>the autonomous vehicle industry 自动驾驶汽车行业</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">synchronised</td>
+                    <td>adj.</td>
+                    <td>同步的，同时发生的</td>
+                    <td>a "synchronised global push" "同步的全球推进"</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">driverless</td>
+                    <td>adj.</td>
+                    <td>无人驾驶的</td>
+                    <td>driverless ride-hailing operations 无人驾驶网约车运营</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">deploy</td>
+                    <td>v.</td>
+                    <td>部署，投入使用</td>
+                    <td>permitted to deploy fully driverless vehicles 获准部署完全无人驾驶车辆</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">materialise</td>
+                    <td>v.</td>
+                    <td>实现，成为现实</td>
+                    <td>may finally be materialising on a commercial scale 可能终于在商业规模上成为现实</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">intervene</td>
+                    <td>v.</td>
+                    <td>干预，介入</td>
+                    <td>can intervene at any moment 可随时介入</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">convoluted</td>
+                    <td>adj.</td>
+                    <td>曲折的，复杂的</td>
+                    <td>narrow, famously convoluted roads 狭窄且出了名曲折的道路</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">provisional</td>
+                    <td>adj.</td>
+                    <td>临时的，暂定的</td>
+                    <td>approved FSD on a provisional basis 以临时方式批准了FSD</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">authorisation</td>
+                    <td>n.</td>
+                    <td>授权，批准</td>
+                    <td>the safety trade-offs were not yet sufficient to justify authorisation 安全权衡尚不足以证明授权的合理性</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">trade-off</td>
+                    <td>n.</td>
+                    <td>权衡，取舍</td>
+                    <td>the safety trade-offs were not yet sufficient 安全权衡尚不充分</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">stark</td>
+                    <td>adj.</td>
+                    <td>鲜明的，明显的</td>
+                    <td>reveals a stark contrast in regulatory philosophies 揭示了监管理念上的鲜明对比</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">prudent</td>
+                    <td>adj.</td>
+                    <td>谨慎的，审慎的</td>
+                    <td>whether Europe's caution will prove to be a prudent safeguard 欧洲的谨慎是否会证明是审慎的保障</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">sovereign</td>
+                    <td>adj.</td>
+                    <td>主权的，自主的</td>
+                    <td>a broader European insistence on sovereign technical assessment 欧洲对主权技术评估的更广泛坚持</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">sceptical</td>
+                    <td>adj.</td>
+                    <td>怀疑的，持怀疑态度的</td>
+                    <td>win over the most sceptical regulators and riders 赢得最持怀疑态度的监管者和乘客</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">hurdle</td>
+                    <td>n.</td>
+                    <td>障碍，难关</td>
+                    <td>significant hurdles remain 重大障碍依然存在</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. In the first week of September 2026, the autonomous vehicle industry experienced what analysts are calling a "synchronised global push."</div>
+                    <div class="cn">2026年9月第一周，自动驾驶汽车行业经历了分析师所称的"同步的全球推进"。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. The unveiling marks a significant step for Tesla in its bid to catch up with Waymo, the current market leader in commercial driverless ride-hailing.</div>
+                    <div class="cn">此次发布标志着特斯拉在追赶当前商业无人驾驶网约车市场领导者Waymo方面迈出的重要一步。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Unlike robotaxis operating in parts of the United States and China, the London vehicles still carry a human safety driver behind the wheel who can intervene at any moment.</div>
+                    <div class="cn">与在美国和中国部分地区运营的自动驾驶出租车不同，伦敦的车辆仍配备一名安全驾驶员，可随时介入驾驶。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. France is aiming to complete the tests by mid-to-late September, positioning itself to vote on a bloc-wide European approval as early as October.</div>
+                    <div class="cn">法国计划在9月中下旬完成测试，以便最早在10月对欧洲范围内的批准方案进行投票。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. In July, Tabarot had said the safety trade-offs were not yet sufficient to justify authorisation, specifically in areas of speed limitation and driver attention warnings.</div>
+                    <div class="cn">7月，塔巴罗曾表示，安全权衡尚不足以证明授权的合理性，特别是在限速和驾驶员注意力警示方面。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. The global landscape reveals a stark contrast in regulatory philosophies between the United States, China and Europe.</div>
+                    <div class="cn">全球格局揭示了美国、中国和欧洲在监管理念上的鲜明对比。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. Whether Europe's caution will prove to be a prudent safeguard or a competitive disadvantage remains to be seen.</div>
+                    <div class="cn">欧洲的谨慎究竟会证明是审慎的保障还是竞争劣势，仍有待观察。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Whether robotaxis become as commonplace as traditional taxis may well depend on whether the technology can prove itself safe enough, often enough, to win over the most sceptical regulators and riders alike.</div>
+                    <div class="cn">自动驾驶出租车是否会变得像传统出租车一样普遍，很可能取决于技术能否足够频繁地证明自身足够安全，从而赢得最持怀疑态度的监管者和乘客。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① Unlike robotaxis operating in parts of the United States and China, the London vehicles still carry a human safety driver behind the wheel who can intervene at any moment.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。句首"Unlike robotaxis operating in parts of the United States and China"是介词短语作方式状语（其中"operating in parts of the United States and China"是现在分词短语作后置定语修饰robotaxis）。主句主语是"the London vehicles"，谓语是"carry"，宾语是"a human safety driver"，"behind the wheel"是介词短语作地点状语。其后"who can intervene at any moment"是who引导的限制性定语从句（修饰a human safety driver，who作主语，can intervene为谓语，"at any moment"为时间状语）。该句通过与美中情况对比，突出了伦敦的谨慎做法。<br>
+                        <strong>翻译：</strong>与在美国和中国部分地区运营的自动驾驶出租车不同，伦敦的车辆仍在方向盘后配备一名安全驾驶员，他可随时介入驾驶。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② France is aiming to complete the tests by mid-to-late September, positioning itself to vote on a bloc-wide European approval as early as October.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句扩展结构。主句主语是"France"，谓语部分是"is aiming to complete"（aim to do结构，意为"计划完成"），宾语是"the tests"，"by mid-to-late September"是介词短语作时间状语。逗号后"positioning itself to vote on a bloc-wide European approval as early as October"是现在分词短语作伴随状语（positioning的逻辑主语是France，itself是宾语，"to vote on a bloc-wide European approval"是不定式短语作目的状语，"as early as October"是时间状语，意为"最早在10月"）。该句通过现在分词伴随状语，紧凑地表达了法国测试计划的双重目的：完成验证并争取投票资格。<br>
+                        <strong>翻译：</strong>法国计划在9月中下旬完成测试，以便最早在10月对欧洲范围内的批准方案进行投票。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ Whether robotaxis become as commonplace as traditional taxis may well depend on whether the technology can prove itself safe enough, often enough, to win over the most sceptical regulators and riders alike.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是"Whether robotaxis become as commonplace as traditional taxis"（whether引导的主语从句，其中robotaxis为主语，become为系动词，"as commonplace as traditional taxis"为表语）。主句谓语是"may well depend on"（may well意为"很可能"），宾语是"whether the technology can prove itself safe enough, often enough, to win over the most sceptical regulators and riders alike"（whether引导的宾语从句，作depend on的宾语）。在宾语从句中，the technology为主语，can prove为谓语，itself为宾语，"safe enough"为宾语补足语，"often enough"为频率状语修饰prove，"to win over the most sceptical regulators and riders alike"是不定式短语作目的状语（win over意为"争取过来"，alike修饰regulators and riders表示"两者皆如此"）。该句通过主语从句和宾语从句的双重whether结构，层层递进地阐述了自动驾驶出租车普及的核心条件。<br>
+                        <strong>翻译：</strong>自动驾驶出租车是否会变得像传统出租车一样普遍，很可能取决于技术能否足够频繁地证明自身足够安全，从而赢得最持怀疑态度的监管者和乘客。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ In July, Tabarot had said the safety trade-offs were not yet sufficient to justify authorisation, specifically in areas of speed limitation and driver attention warnings.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。"In July"是时间状语。主句主语是"Tabarot"，谓语是"had said"（过去完成时，表示在9月测试之前就已说过），其后"the safety trade-offs were not yet sufficient to justify authorisation"是省略了that的宾语从句（作said的宾语）。在宾语从句中，the safety trade-offs为主语，were为系动词，"not yet sufficient"为表语，"to justify authorisation"是不定式短语作结果状语（意为"足以证明授权的合理性"）。句末"specifically in areas of speed limitation and driver attention warnings"是介词短语作补充说明状语，限定"不足"的具体领域。该句通过宾语从句和补充状语的组合，精确传达了法国交通部长此前对FSD安全性的保留意见。<br>
+                        <strong>翻译：</strong>7月，塔巴罗曾表示，安全权衡尚不足以证明授权的合理性，特别是在限速和驾驶员注意力警示方面。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述行业重大进展</td>
+                        <td>In the first week of ..., the ... industry experienced what analysts are calling a "synchronised global push."</td>
+                        <td>用于引出某行业同步发生的重大事件，适用于科技类议论文开头段</td>
+                    </tr>
+                    <tr>
+                        <td>对比不同地区做法</td>
+                        <td>Unlike ... operating in parts of ..., the ... still carry a ... who can intervene at any moment.</td>
+                        <td>用于对比不同国家或地区在某一问题上的不同做法，适用于比较类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>描述谨慎态度的转变</td>
+                        <td>In July, ... had said the ... were not yet sufficient to justify ..., specifically in areas of ...</td>
+                        <td>用于描述从谨慎保留到逐步开放的政策转变过程，适用于时政类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>揭示鲜明对比</td>
+                        <td>The global landscape reveals a stark contrast in ... between ...</td>
+                        <td>用于总结全球范围内不同地区在理念或策略上的差异，适用于分析类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>提出核心条件</td>
+                        <td>Whether ... may well depend on whether the ... can prove itself ... enough, often enough, to win over the most sceptical ...</td>
+                        <td>用于阐述某事物成功与否的核心决定因素，适用于议论文论证段</td>
+                    </tr>
+                    <tr>
+                        <td>描述行业展望</td>
+                        <td>Industry analysts project that the global ... market could be worth over ... by ..., but significant hurdles remain.</td>
+                        <td>用于引出行业前景与挑战并存的分析，适用于科技类议论文结尾段</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article reveals a "stark contrast in regulatory philosophies" between the United States and China on one hand, and Europe on the other. In your view, which approach — rapid deployment with oversight, or extensive testing before approval — better balances innovation with public safety? Use evidence from the text, such as France's decision to conduct its own road tests and the U.K.'s requirement for a human safety driver, to support your argument.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> Tesla's Full Self-Driving system is described as a "driver assistance system" rather than a "fully autonomous one," yet the marketing term "Full Self-Driving" may create false expectations among consumers. Should governments regulate not only the technology itself but also the names companies use to market it? Drawing on the article's discussion of authorisation, trade-offs and speed limitation, discuss what responsibilities companies and regulators each bear.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article notes that "public trust, built through years of safe operation, will be the ultimate currency" for the robotaxi industry. If you were advising a company planning to launch driverless taxis in your city, what three strategies would you propose to build public confidence? Consider the challenges mentioned in the text — such as London's convoluted roads, jaywalking pedestrians and the need for regulatory approval — and explain how your strategies address these specific concerns.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第47期</p>
+            <p>📅 2026年9月3日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
