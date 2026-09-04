@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep-Sea Discoveries: Scientists Uncover Hundreds of New Marine Species | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">生活类 | 环境保护</div>
+            <h1>Deep-Sea Discoveries: Scientists Uncover Hundreds of New Marine Species</h1>
+            <div class="meta">
+                📅 September 4, 2026 &nbsp;|&nbsp; 📖 约950词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年8月底至9月初，全球深海探索接连取得重大突破。由海洋生物学家Diva Amon领导的加勒比深海探险队在特立尼达和多巴哥附近海域发现了至少20个疑似新物种和25处冷泉生态系统；澳大利亚研究团队在印度洋偏远海山发现了149个科学新物种，包括新的鱼类、海参和寄生藤壶；西澳大利亚大学利用环境DNA技术在埃克斯茅斯湾识别出487个独特分类群。这些发现不仅揭示了深海生物多样性的丰富程度，也凸显了在气候变化和深海采矿威胁下加强海洋保护的紧迫性。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🌊 A Caribbean Deep-Sea Breakthrough</h2>
+            <p>On September 3, 2026, a Caribbean-led expedition into Trinidad and Tobago's largely unexplored deep ocean revealed at least 25 cold-seep ecosystems, 20 suspected new species, and more than 11,000 square kilometres of previously unmapped seafloor. The month-long expedition, led by marine biologist Dr Diva Amon of SpeSeas, was conducted aboard the Schmidt Ocean Institute's research vessel Falkor (too) from June 29 to July 28.</p>
+
+            <p>Researchers mapped approximately 11,335 square kilometres of uncharted seafloor — equivalent to about 13 per cent of Trinidad and Tobago's marine territory. Using mapping data, the team identified 219 bubble streams that can indicate the presence of cold seeps, which are ecosystems fuelled by chemical energy, including methane bubbling from the ocean floor, rather than sunlight. Using the remotely operated vehicle SuBastian, scientists visually confirmed 25 active cold-seep ecosystems, the largest of which was about half an acre and covered in mussels and tubeworms.</p>
+
+            <p>Among the suspected new species is an octopus first observed during a 2014 expedition. Scientists also encountered corals, carnivorous sponges, squat lobsters, ghost sharks and zombie worms. In total, at least 54 species never previously observed in Trinidad and Tobago's waters were recorded. However, the expedition also found evidence of human-made garbage, highlighting the reach of human activity even in areas that have never been explored by people.</p>
+
+            <h2>🇦🇺 Indian Ocean Seamount Discoveries</h2>
+            <p>Meanwhile, an Australian study published in June detailed a separate deep-sea expedition near the remote Christmas and Cocos islands, where researchers visited unexplored seamounts and identified 149 previously unknown marine species. These included black corals, sea worms, sea cucumbers and a variety of fish. The international team of 33 researchers surveyed at depths ranging from 94 to 5,431 metres, mapping a dark abyssal seafloor punctuated by volcanic seamounts that can be up to 70 kilometres across.</p>
+
+            <p>Study lead author Tim O'Hara, a marine scientist at Museums Victoria in Melbourne, told Mongabay that these seamounts had never been studied before. "People had been around the islands in shallow water before, but no one had looked at life in the deep. It was a massive hole in the data," O'Hara explained. One of the most intriguing discoveries was a caldera — a bowl-shaped crater that forms after a volcanic eruption — which the researchers named the Eye of Sauron after the character in J.R.R. Tolkien's The Lord of the Rings, as its centre resembles an eye.</p>
+
+            <p>The researchers also discovered approximately 1,000 shark teeth on the Cocos Abyssal Plain, covering more than 22 million years of evolution. The teeth included those of great white sharks, mako, tiger sharks, and even prehistoric Megalodon fossils. At the same site, they found polymetallic nodules — mineral-rich rocks that are highly sought after in deep-sea mining and used in electric vehicle batteries, wind turbines and renewable energy technologies.</p>
+
+            <h2>🧬 eDNA: A New Tool for Conservation</h2>
+            <p>Adding to these discoveries, an environmental DNA study published on September 1 identified distinct regions of extraordinary marine biodiversity in Western Australia's Exmouth Gulf. Researchers from the University of Western Australia applied a meta-barcoding gene sequencing technique to seawater eDNA samples collected from 19 sites over 3,000 square kilometres, identifying 487 unique taxa, including 440 bony fish, 37 elasmobranchs, seven birds, two mammals and one reptile.</p>
+
+            <p>"Exmouth Gulf exhibits significantly distinct marine communities, with the eastern gulf emerging as a hotspot for elasmobranchs and threatened species," said lead author Jessica Pearce. The researchers said eDNA approaches could help identify areas of highest conservation importance to better inform marine spatial planning, offering a non-invasive yet powerful tool for understanding marine ecosystems.</p>
+
+            <h2>⚖️ Threats and the Case for Protection</h2>
+            <p>Despite these remarkable discoveries, the deep sea faces growing threats from warming oceans, marine heatwaves, overfishing, pollution and deep-sea mining. The Biodiversity Beyond National Jurisdiction (BBNJ) Agreement, which reached 60 ratifications in September 2025 and entered into force in early 2026, represents a transformative step toward safeguarding marine ecosystems in international waters. This landmark agreement, the result of over a decade of international collaboration, aims to establish marine protected areas in the high seas and ensure sustainable use of marine biological diversity.</p>
+
+            <p>Jim Barry, a senior scientist at the Monterey Bay Aquarium Research Institute, expressed amazement at the continued discoveries: "I am just amazed that every time we go somewhere and look carefully, we discover so many new species in the deep sea." O'Hara echoed this sentiment, calling the deep sea "the last frontier." He stressed that understanding how the deep sea works is essential, as no one experiences it except a few people who go down in submarines.</p>
+
+            <h2>🌍 A Global Responsibility</h2>
+            <p>The data from these expeditions could contribute to marine governance, spatial planning, and the establishment of marine protected areas worldwide. Amon emphasised that the findings demonstrate Caribbean scientists can lead exploration of their own deep-sea environments, challenging the historical pattern of foreign-led expeditions. The Trinidad and Tobago expedition collected close to 1,000 water, sediment and animal samples and tested a new cryopreservation technique designed to preserve living animal tissues for future research.</p>
+
+            <p>More than 3,000 people were also reached through public engagement activities before and during the expedition, including students, universities, non-governmental organisations and government officials. As oceans face mounting pressures from climate change and industrial exploitation, these discoveries remind us that the deep sea remains one of Earth's least understood frontiers — and that protecting it is not just a scientific imperative but a global responsibility.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">expedition</td>
+                    <td>n.</td>
+                    <td>探险，考察</td>
+                    <td>a Caribbean-led expedition 一支由加勒比主导的探险队</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">uncover</td>
+                    <td>v.</td>
+                    <td>发现，揭开</td>
+                    <td>uncover at least 25 cold-seep ecosystems 发现至少25处冷泉生态系统</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">biodiversity</td>
+                    <td>n.</td>
+                    <td>生物多样性</td>
+                    <td>extraordinary marine biodiversity 非凡的海洋生物多样性</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">ecosystem</td>
+                    <td>n.</td>
+                    <td>生态系统</td>
+                    <td>cold-seep ecosystems 冷泉生态系统</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">chart</td>
+                    <td>v.</td>
+                    <td>绘制（地图），勘测</td>
+                    <td>previously unmapped seafloor 此前未勘测的海底</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">carnivorous</td>
+                    <td>adj.</td>
+                    <td>食肉的</td>
+                    <td>carnivorous sponges 食肉海绵</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">specimen</td>
+                    <td>n.</td>
+                    <td>标本，样本</td>
+                    <td>more than 700 specimens 超过700个标本</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">seamount</td>
+                    <td>n.</td>
+                    <td>海山</td>
+                    <td>unexplored seamounts 未探索的海山</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">abyssal</td>
+                    <td>adj.</td>
+                    <td>深渊的，深海的</td>
+                    <td>a dark abyssal seafloor 黑暗的深海海底</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">caldera</td>
+                    <td>n.</td>
+                    <td>火山口，破火山口</td>
+                    <td>a bowl-shaped caldera 碗状火山口</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">non-invasive</td>
+                    <td>adj.</td>
+                    <td>非侵入性的</td>
+                    <td>a non-invasive yet powerful tool 一种非侵入性但强大的工具</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">imperative</td>
+                    <td>n./adj.</td>
+                    <td>迫切需要的事；迫切的</td>
+                    <td>a scientific imperative 一项科学上的迫切需要</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">ratification</td>
+                    <td>n.</td>
+                    <td>批准，认可</td>
+                    <td>reached 60 ratifications 达到60个批准国</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">spatial</td>
+                    <td>adj.</td>
+                    <td>空间的，空间上的</td>
+                    <td>marine spatial planning 海洋空间规划</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">frontier</td>
+                    <td>n.</td>
+                    <td>前沿，边界</td>
+                    <td>the last frontier 最后的前沿</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. A Caribbean-led expedition into Trinidad and Tobago's largely unexplored deep ocean revealed at least 25 cold-seep ecosystems, 20 suspected new species, and more than 11,000 square kilometres of previously unmapped seafloor.</div>
+                    <div class="cn">一支由加勒比主导的探险队深入特立尼达和多巴哥基本上未探索的深海，发现了至少25处冷泉生态系统、20个疑似新物种以及超过11,000平方公里的此前未绘制的海底。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Cold seeps are ecosystems fuelled by chemical energy, including methane bubbling from the ocean floor, rather than sunlight.</div>
+                    <div class="cn">冷泉是由化学能驱动的生态系统，包括从海底冒出的甲烷，而不是阳光。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. The expedition also found evidence of human-made garbage, highlighting the reach of human activity even in areas that have never been explored by people.</div>
+                    <div class="cn">探险队还发现了人造垃圾的痕迹，突显了人类活动的影响甚至延伸到了人们从未探索过的区域。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. An international team of 33 researchers surveyed at depths ranging from 94 to 5,431 metres, mapping a dark abyssal seafloor punctuated by volcanic seamounts that can be up to 70 kilometres across.</div>
+                    <div class="cn">一个由33名研究人员组成的国际团队在94至5,431米的深度范围内进行了调查，绘制了一片黑暗的深海海底，其间点缀着直径可达70公里的火山海山。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. "People had been around the islands in shallow water before, but no one had looked at life in the deep. It was a massive hole in the data," O'Hara explained.</div>
+                    <div class="cn">奥哈拉解释道："人们以前曾在岛屿周围的浅水区域活动过，但没有人观察过深海中的生命。这是数据中一个巨大的空白。"</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. The researchers said eDNA approaches could help identify areas of highest conservation importance to better inform marine spatial planning.</div>
+                    <div class="cn">研究人员表示，环境DNA方法可以帮助识别具有最高保护重要性的区域，从而更好地指导海洋空间规划。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. "I am just amazed that every time we go somewhere and look carefully, we discover so many new species in the deep sea," Barry said.</div>
+                    <div class="cn">巴里说："每次我们去到一个地方仔细观察，都能在深海发现如此多的新物种，我感到非常惊叹。"</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. As oceans face mounting pressures from climate change and industrial exploitation, these discoveries remind us that protecting the deep sea is not just a scientific imperative but a global responsibility.</div>
+                    <div class="cn">随着海洋面临来自气候变化和工业开采日益增长的压力，这些发现提醒我们，保护深海不仅是一项科学上的迫切需要，更是一项全球责任。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① A Caribbean-led expedition into Trinidad and Tobago's largely unexplored deep ocean revealed at least 25 cold-seep ecosystems, 20 suspected new species, and more than 11,000 square kilometres of previously unmapped seafloor.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句扩展结构。主句主语是"a Caribbean-led expedition"（中心词为expedition，"Caribbean-led"和介词短语"into Trinidad and Tobago's largely unexplored deep ocean"共同作定语修饰expedition）。谓语是"revealed"（意为"揭示、发现"），其后跟三个并列宾语："at least 25 cold-seep ecosystems"、"20 suspected new species"和"more than 11,000 square kilometres of previously unmapped seafloor"，三者由逗号和and连接。每个宾语都带有前置定语修饰，如"suspected"修饰"new species"，"previously unmapped"修饰"seafloor"。该句通过并列宾语结构，紧凑而全面地概括了探险队的三大发现。<br>
+                        <strong>翻译：</strong>一支由加勒比主导的探险队深入特立尼达和多巴哥基本上未探索的深海，发现了至少25处冷泉生态系统、20个疑似新物种以及超过11,000平方公里的此前未绘制的海底。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② An international team of 33 researchers surveyed at depths ranging from 94 to 5,431 metres, mapping a dark abyssal seafloor punctuated by volcanic seamounts that can be up to 70 kilometres across.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是"An international team of 33 researchers"，谓语是"surveyed"，"at depths ranging from 94 to 5,431 metres"是介词短语作状语（其中"ranging from 94 to 5,431 metres"是现在分词短语作后置定语修饰depths）。逗号后"mapping a dark abyssal seafloor punctuated by volcanic seamounts that can be up to 70 kilometres across"是现在分词短语作伴随状语（mapping的逻辑主语是team，宾语是"a dark abyssal seafloor"，"punctuated by volcanic seamounts"是过去分词短语作后置定语修饰seafloor，其后"that can be up to 70 kilometres across"是that引导的定语从句修饰seamounts，that作主语，can be为谓语，"up to 70 kilometres across"为表语）。该句通过分词伴随状语和定语从句的嵌套，生动描绘了深海考察的环境特征。<br>
+                        <strong>翻译：</strong>一个由33名研究人员组成的国际团队在94至5,431米的深度范围内进行了调查，绘制了一片黑暗的深海海底，其间点缀着直径可达70公里的火山海山。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ As oceans face mounting pressures from climate change and industrial exploitation, these discoveries remind us that protecting the deep sea is not just a scientific imperative but a global responsibility.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。句首"As oceans face mounting pressures from climate change and industrial exploitation"是as引导的时间状语从句（as意为"随着"，oceans为主语，face为谓语，"mounting pressures"为宾语，"from climate change and industrial exploitation"是介词短语作后置定语修饰pressures）。主句主语是"these discoveries"，谓语是"remind"，宾语是"us"，其后"that protecting the deep sea is not just a scientific imperative but a global responsibility"是that引导的宾语从句（作remind的直接宾语，即remind sb. that...结构）。在宾语从句中，"protecting the deep sea"是动名词短语作主语，is为系动词，"not just a scientific imperative but a global responsibility"是表语（使用"not just...but..."并列结构，意为"不仅是……更是……"）。该句通过as状语从句和not just...but...并列结构，将科学发现与全球责任紧密联系起来。<br>
+                        <strong>翻译：</strong>随着海洋面临来自气候变化和工业开采日益增长的压力，这些发现提醒我们，保护深海不仅是一项科学上的迫切需要，更是一项全球责任。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ Cold seeps are ecosystems fuelled by chemical energy, including methane bubbling from the ocean floor, rather than sunlight.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句扩展结构。主句主语是"Cold seeps"，系动词是"are"，表语是"ecosystems"。"fuelled by chemical energy"是过去分词短语作后置定语修饰ecosystems（fuelled意为"由……驱动"）。其后的"including methane bubbling from the ocean floor, rather than sunlight"是介词短语作补充说明（including引导列举成分，"methane bubbling from the ocean floor"中methane为中心词，"bubbling from the ocean floor"是现在分词短语作后置定语修饰methane），"rather than sunlight"表示"而不是阳光"，与前面的chemical energy形成对比。该句通过分词定语和rather than对比结构，简洁地解释了冷泉生态系统的独特能量来源。<br>
+                        <strong>翻译：</strong>冷泉是由化学能驱动的生态系统，包括从海底冒出的甲烷，而不是阳光。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述科学重大发现</td>
+                        <td>A ...-led expedition into ...'s largely unexplored ... revealed at least ..., ..., and more than ...</td>
+                        <td>用于引出某次科学探险的重大发现，适用于科技类议论文开头段</td>
+                    </tr>
+                    <tr>
+                        <td>解释独特概念</td>
+                        <td>... are ecosystems fuelled by ..., including ..., rather than ...</td>
+                        <td>用于解释某种特殊生态系统或现象的独特机制，适用于科普类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>强调人类影响范围</td>
+                        <td>The expedition also found evidence of ..., highlighting the reach of ... even in areas that have never been explored by people.</td>
+                        <td>用于强调人类活动对偏远地区的深远影响，适用于环保类议论文</td>
+                    </tr>
+                    <tr>
+                        <td>引用专家观点说明空白</td>
+                        <td>"People had been around ... before, but no one had looked at ... It was a massive hole in the data," ... explained.</td>
+                        <td>用于引用权威人士的话说明某领域研究的空白，适用于议论文论证段</td>
+                    </tr>
+                    <tr>
+                        <td>从紧迫性到责任升华</td>
+                        <td>As ... face mounting pressures from ..., these discoveries remind us that protecting ... is not just a scientific imperative but a global responsibility.</td>
+                        <td>用于将科学发现升华为全球责任的论述，适用于议论文结尾段升华主题</td>
+                    </tr>
+                    <tr>
+                        <td>表达惊叹与呼吁</td>
+                        <td>"I am just amazed that every time we ..., we discover so many ...," ... said.</td>
+                        <td>用于引用科学家对持续发现的惊叹，呼吁加强探索与保护，适用于议论文引用论证</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article describes how researchers discovered polymetallic nodules — mineral-rich rocks used in electric vehicle batteries and renewable energy technologies — at the same site where they found 1,000 shark teeth covering 22 million years of evolution. Should deep-sea mining be permitted in areas rich in biodiversity, even if those minerals support the transition to clean energy? Use evidence from the text to discuss the tension between environmental protection and green technology.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> Dr Diva Amon emphasised that the findings "demonstrate that Caribbean scientists can lead exploration of their own deep-sea environments." Why is local leadership in scientific exploration important, and how might it change the way marine resources are managed? Drawing on the article's discussion of eDNA technology, the BBNJ Agreement, and public engagement activities, discuss how local capacity-building and international cooperation can work together.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article notes that "every time we go somewhere and look carefully, we discover so many new species in the deep sea," yet the deep sea remains "the last frontier" that very few people experience directly. If most people will never see the deep sea firsthand, what strategies could effectively build public support for marine conservation? Consider the expedition's outreach to 3,000 people and the role of technology, education and policy in your answer.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第48期</p>
+            <p>📅 2026年9月4日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
