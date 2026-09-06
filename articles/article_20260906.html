@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Silicon: How the AI Chip Boom Is Reshaping the Global Semiconductor Industry | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 芯片半导体</div>
+            <h1>Beyond Silicon: How the AI Chip Boom Is Reshaping the Global Semiconductor Industry</h1>
+            <div class="meta">
+                📅 September 6, 2026 &nbsp;|&nbsp; 📖 约980词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年9月初，全球半导体产业在SEMICON Taiwan 2026展会上释放强烈信号：AI芯片需求正以前所未有的速度重塑行业格局。台积电(TSMC)同时在台湾和海外推进25座晶圆厂及先进封装设施建设，设备需求在数月内从基线飙升至1.9倍，2026年资本支出上调至600-640亿美元。与此同时，英伟达(Nvidia)宣布以129.3亿美元收购全球最大开源AI模型平台Hugging Face，标志着芯片巨头正从单纯卖硬件转向掌控AI软件生态。专家指出，行业瓶颈已从晶圆制造转移到先进封装和数据传输，连接芯片的"线"正成为新的制约因素。这场前所未有的扩张既带来巨大机遇，也对供应链、能源消耗和全球地缘经济格局提出严峻挑战。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🏭 A Factory Race Like Never Before</h2>
+            <p>In early September 2026, thousands of executives, engineers, and investors gathered in Taipei for SEMICON Taiwan 2026, the world's leading specialized semiconductor exhibition. The event shattered every previous record: more than 1,300 exhibitors from over 65 countries, 4,300 booths, and an expected 100,000 professionals filled the Taipei Nangang Exhibition Center. The message from the industry was unmistakable — the artificial intelligence boom has triggered a semiconductor expansion unlike anything the world has seen.</p>
+
+            <p>At the center of this transformation is Taiwan Semiconductor Manufacturing Co. (TSMC), the world's largest contract chipmaker. Senior Vice President Cliff Hou told the audience that demand for advanced chips, packaging, and computing infrastructure has accelerated far beyond the patterns the industry was accustomed to over the past three decades. TSMC is now working on 25 semiconductor fabrication and advanced-packaging facilities worldwide this year — including 13 in Taiwan — compared with a historical pace of roughly five or six factory projects annually.</p>
+
+            <p>The speed of the expansion is staggering. Using the company's equipment requirement estimate at the end of 2025 as a baseline, demand climbed to 1.5 times that level after the first quarter of 2026 and approximately 1.9 times by July. That nearly twofold jump within months reveals how quickly AI infrastructure spending is forcing semiconductor companies to rewrite plans that normally take years to execute.</p>
+
+            <h2>💰 The Economics of the AI Chip Boom</h2>
+            <p>The financial figures behind this expansion are equally remarkable. TSMC generated US$40.2 billion in second-quarter 2026 revenue, up 33.7 percent from a year earlier, while net income jumped 77.4 percent year-on-year. Advanced technologies of 7 nanometers and below accounted for 77 percent of wafer revenue, and high-performance computing — the segment most closely associated with AI accelerators and data centers — represented 66 percent of total company revenue.</p>
+
+            <p>In July, TSMC raised its 2026 capital-expenditure forecast to between US$60 billion and US$64 billion, up from its previous range of US$52 billion to US$56 billion. The company also announced an additional US$100 billion investment in Arizona, bringing its planned U.S. investment to roughly US$265 billion. Chairman and CEO C.C. Wei emphasized that developing technology, preparing capacity, and bringing products into high-volume manufacturing can take more than five years, yet customers continue to signal strong multi-year requirements for computing capacity.</p>
+
+            <p>Other companies are following suit. MediaTek, Taiwan's leading chip designer, has asked TSMC and packaging giant ASE Technology Holding for additional capacity covering 2027 through 2029. Nvidia agreed to invest US$3.5 billion in MediaTek through convertible bonds, deepening their partnership around AI infrastructure. Global semiconductor manufacturing equipment sales reached US$135.1 billion in 2025, up 15 percent year-on-year, and SEMI projects that 300mm fab equipment spending will cross US$150 billion for the first time in 2027.</p>
+
+            <h2>🔌 The Bottleneck Has Moved</h2>
+            <p>Perhaps the most striking insight from SEMICON Taiwan 2026 was that the industry's bottleneck has shifted. Wafer production capacity is no longer the primary constraint — advanced packaging is. Specifically, TSMC's CoWoS technology, which stacks compute chips alongside high-bandwidth memory on a single substrate, is what Nvidia and other AI companies need most. Nvidia has reportedly reserved roughly 60 percent of TSMC's advanced packaging capacity for 2026 alone.</p>
+
+            <p>Terry Tsao, Global Chief Marketing Officer and President of Taiwan at SEMI, framed the challenge in even starker terms. "Data movement in today's AI systems could consume more energy than computation itself, making system architecture, not individual chip performance, the new bottleneck," he said. Frontier AI training compute is growing four- to fivefold annually, pushing the limits of copper interconnects that have connected chips for decades. The industry's response is co-packaged optics (CPO), which integrates photonic components — devices that transmit data using light rather than electrons — directly within the switch package, dramatically reducing signal path length and power consumption.</p>
+
+            <p>TSMC's Compact Universal Photonic Engine (COUPE) platform entered mass production in 2026, while Foxconn expects to begin CPO switch shipments in the third quarter. The transition from copper to light represents not merely a technical upgrade but a fundamental architectural shift, as the industry races to ensure that the wires connecting chips can keep pace with the chips themselves.</p>
+
+            <h2>🤝 Nvidia's $12.9 Billion Software Bet</h2>
+            <p>While TSMC and its peers build the physical infrastructure, Nvidia is making a different kind of bet. On September 3, 2026, the chip giant announced it had agreed to acquire Hugging Face for US$12.93 billion — its largest outright acquisition ever. Hugging Face operates the world's leading platform for open-source AI models, used by more than 18 million developers and 200,000 companies to share over 3 million models, 500,000 datasets, and 1 million applications.</p>
+
+            <p>CEO Jensen Huang pledged that Hugging Face would remain an open platform. "Developers will choose the models they want, the frameworks they want, the clouds and inference service providers they want, and the computing platforms they want," he wrote. "Nvidia Compute will not be required to build on or deploy through Hugging Face." Yet analysts pointed out what the pledge did not cover: how models get ranked, searched, and routed on the platform — the mechanisms that quietly shape what developers see.</p>
+
+            <p>Sanchit Vir Gogia, chief analyst at Greyhound Research, offered a sharp assessment. "Nvidia's openness commitment is precise where it is cheap, and silent where it is expensive," he said. Brian Levine of FormerGov described the risk as a "slow drift, where the Nvidia-optimized path quietly becomes the easy path, and everything else becomes the friction path." The deal, expected to close in the first half of 2027 subject to regulatory approval, signals that Nvidia sees its future not just in silicon, but in controlling the software ecosystem that surrounds it.</p>
+
+            <h2>🌍 A Global Industry at a Crossroads</h2>
+            <p>The chip boom is also reshaping global geography. Foxconn chairman Young Liu argued that Taiwan's technology industry should evolve from "Made in Taiwan" to "Made with Taiwan" — retaining expertise and intellectual property at home while manufacturing moves closer to customers worldwide. Taiwanese companies are planning another US$20 billion of U.S. investment, excluding previously announced TSMC projects.</p>
+
+            <p>Yet challenges remain formidable. Unimicron chairman Chien Shan-chieh warned that booming AI demand has intensified shortages of semiconductor substrates. ASE chief executive Tien Wu argued that no single company, not even TSMC, can solve the problem alone, because many essential equipment and materials suppliers are relatively small companies facing their own capacity constraints. Power grids must accommodate enormous new loads, skilled engineers are in short supply, and every new generation of AI hardware is becoming more complicated.</p>
+
+            <p>The central question facing the industry has therefore shifted from whether AI demand exists to whether the physical supply chain can scale quickly enough to satisfy it. When companies build factories five times faster than they historically did and still say capacity is insufficient, the AI boom is entering a stage where success depends not merely on designing better chips, but on whether the entire industrial system behind them can expand fast enough. That may ultimately determine whether today's unprecedented investment cycle keeps accelerating — or eventually runs into a physical wall.</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">semiconductor</td>
+                    <td>n.</td>
+                    <td>半导体</td>
+                    <td>the global semiconductor industry 全球半导体产业</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">fabrication</td>
+                    <td>n.</td>
+                    <td>制造，生产</td>
+                    <td>semiconductor fabrication facilities 半导体制造设施</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">accelerate</td>
+                    <td>v.</td>
+                    <td>加速，加快</td>
+                    <td>demand has accelerated far beyond patterns 需求已远超以往模式地加速</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">bottleneck</td>
+                    <td>n.</td>
+                    <td>瓶颈，阻碍因素</td>
+                    <td>the industry's bottleneck has shifted 行业瓶颈已转移</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">interconnect</td>
+                    <td>n./v.</td>
+                    <td>互连，互联</td>
+                    <td>copper interconnects 铜互连</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">photonic</td>
+                    <td>adj.</td>
+                    <td>光子的，光学的</td>
+                    <td>photonic components 光子组件</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">acquisition</td>
+                    <td>n.</td>
+                    <td>收购，并购</td>
+                    <td>agreed to acquire Hugging Face 同意收购Hugging Face</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">infrastructure</td>
+                    <td>n.</td>
+                    <td>基础设施</td>
+                    <td>AI infrastructure spending AI基础设施支出</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">ecosystem</td>
+                    <td>n.</td>
+                    <td>生态系统</td>
+                    <td>the software ecosystem that surrounds it 围绕它的软件生态系统</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">constraint</td>
+                    <td>n.</td>
+                    <td>限制，约束</td>
+                    <td>capacity constraints 产能限制</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">substantially</td>
+                    <td>adv.</td>
+                    <td>大量地，实质上</td>
+                    <td>expanding substantially 大幅扩张</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">substrate</td>
+                    <td>n.</td>
+                    <td>基板，衬底</td>
+                    <td>on a single substrate 在单一基板上</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">unprecedented</td>
+                    <td>adj.</td>
+                    <td>前所未有的，空前的</td>
+                    <td>an unprecedented investment cycle 前所未有的投资周期</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">dispersing</td>
+                    <td>adj.</td>
+                    <td>分散的，散布的</td>
+                    <td>dispersing more production internationally 在全球范围内分散更多生产</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">formidable</td>
+                    <td>adj.</td>
+                    <td>艰巨的，令人畏惧的</td>
+                    <td>challenges remain formidable 挑战依然艰巨</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. TSMC is now working on 25 semiconductor fabrication and advanced-packaging facilities worldwide this year — including 13 in Taiwan — compared with a historical pace of roughly five or six factory projects annually.</div>
+                    <div class="cn">台积电今年正在全球推进25座半导体制造和先进封装设施建设——包括台湾的13座——相比之下，历史上的速度大约是每年五到六个工厂项目。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Using the company's equipment requirement estimate at the end of 2025 as a baseline, demand climbed to 1.5 times that level after the first quarter of 2026 and approximately 1.9 times by July.</div>
+                    <div class="cn">以该公司2025年底的设备需求估计为基线，需求在2026年第一季度后攀升至该水平的1.5倍，到7月约为1.9倍。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Data movement in today's AI systems could consume more energy than computation itself, making system architecture, not individual chip performance, the new bottleneck.</div>
+                    <div class="cn">在当今的AI系统中，数据传输消耗的能量可能超过计算本身，这使得系统架构而非单个芯片性能成为新的瓶颈。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Nvidia has reportedly reserved roughly 60 percent of TSMC's advanced packaging capacity for 2026 alone.</div>
+                    <div class="cn">据报道，仅2026年一年，英伟达就预订了台积电约60%的先进封装产能。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. On September 3, 2026, the chip giant announced it had agreed to acquire Hugging Face for US$12.93 billion — its largest outright acquisition ever.</div>
+                    <div class="cn">2026年9月3日，这家芯片巨头宣布已同意以129.3亿美元收购Hugging Face——这是其有史以来最大规模的直接收购。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. Nvidia's openness commitment is precise where it is cheap, and silent where it is expensive.</div>
+                    <div class="cn">英伟达的开放承诺在成本低廉之处精准明确，在成本高昂之处却保持沉默。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. It's a slow drift, where the Nvidia-optimized path quietly becomes the easy path, and everything else becomes the friction path.</div>
+                    <div class="cn">这是一种缓慢的偏移，英伟达优化的路径悄然成为容易的路径，而其他一切都变成了充满摩擦的路径。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. The central question facing the industry has therefore shifted from whether AI demand exists to whether the physical supply chain can scale quickly enough to satisfy it.</div>
+                    <div class="cn">因此，行业面临的核心问题已从AI需求是否存在，转变为物理供应链能否足够快地扩展以满足这种需求。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① TSMC is now working on 25 semiconductor fabrication and advanced-packaging facilities worldwide this year — including 13 in Taiwan — compared with a historical pace of roughly five or six factory projects annually.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句扩展结构。主语是"TSMC"，谓语是"is now working on"（现在进行时），宾语是"25 semiconductor fabrication and advanced-packaging facilities"（由and连接的复合名词短语，fabrication和advanced-packaging共同修饰facilities）。"worldwide this year"是地点和时间状语。破折号之间的"including 13 in Taiwan"是介词短语作插入语，补充说明设施分布（including意为"包括"，13后省略了facilities）。句末"compared with a historical pace of roughly five or six factory projects annually"是过去分词短语作比较状语（compared with意为"与……相比"，"of roughly five or six factory projects annually"是介词短语修饰pace）。该句通过插入语和比较状语，紧凑地对比了当前扩张规模与历史常态。<br>
+                        <strong>翻译：</strong>台积电今年正在全球推进25座半导体制造和先进封装设施建设——包括台湾的13座——相比之下，历史上的速度大约是每年五到六个工厂项目。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② Data movement in today's AI systems could consume more energy than computation itself, making system architecture, not individual chip performance, the new bottleneck.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句扩展结构。主语是"Data movement in today's AI systems"（in today's AI systems是介词短语作后置定语修饰movement），谓语是"could consume"（情态动词+动词原形），宾语是"more energy"，"than computation itself"是比较状语从句（than后省略了consumes，itself是反身代词强调计算本身）。逗号后"making system architecture, not individual chip performance, the new bottleneck"是现在分词短语作结果状语（making的逻辑主语是前面整个句子所表达的情况）。在making结构中，"system architecture"是宾语，"the new bottleneck"是宾语补足语，中间"not individual chip performance"是插入语，与system architecture形成对比（not表示"而非"）。该句通过比较结构和分词结果状语，精确传达了瓶颈转移这一核心观点。<br>
+                        <strong>翻译：</strong>在当今的AI系统中，数据传输消耗的能量可能超过计算本身，这使得系统架构而非单个芯片性能成为新的瓶颈。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ The central question facing the industry has therefore shifted from whether AI demand exists to whether the physical supply chain can scale quickly enough to satisfy it.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。主句主语是"The central question"，其后"facing the industry"是现在分词短语作后置定语修饰question（facing意为"面临的"）。谓语是"has therefore shifted"（现在完成时，therefore是副词作插入语表示因果关系），"from whether AI demand exists to whether the physical supply chain can scale quickly enough to satisfy it"是介词短语作状语，其中from...to...结构包含两个whether引导的名词性从句作介词宾语。第一个whether从句"whether AI demand exists"中，AI demand是主语，exists是谓语。第二个whether从句"whether the physical supply chain can scale quickly enough to satisfy it"中，the physical supply chain是主语，can scale是谓语，quickly enough是副词短语作状语，"to satisfy it"是不定式短语作目的状语（it指代AI demand）。该句通过from...to...结构和双重whether从句，清晰地呈现了行业关注焦点的转变。<br>
+                        <strong>翻译：</strong>因此，行业面临的核心问题已从AI需求是否存在，转变为物理供应链能否足够快地扩展以满足这种需求。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ When companies are building factories five times faster than they historically did and still say capacity is insufficient, the AI boom is entering a stage where success depends not merely on designing better chips, but on whether the entire industrial system behind them can expand fast enough.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。句首"When companies are building factories five times faster than they historically did and still say capacity is insufficient"是when引导的时间状语从句，其中主语是companies，有两个并列谓语：are building和(still) say，由and连接。"five times faster than they historically did"是比较结构（five times faster意为"快五倍"，than引导比较状语从句，did替代built）。在say之后，"capacity is insufficient"是省略that的宾语从句。主句是"the AI boom is entering a stage"，其后"where success depends not merely on designing better chips, but on whether the entire industrial system behind them can expand fast enough"是where引导的定语从句修饰stage（where相当于in which）。在该定语从句中，success是主语，depends是谓语，"not merely on...but on..."是并列介词短语（not merely...but...意为"不仅……而且……"）。第一个on的宾语是designing better chips（动名词短语），第二个on的宾语是whether引导的名词性从句"whether the entire industrial system behind them can expand fast enough"，其中"behind them"是介词短语作后置定语修饰system。该句通过when状语从句、where定语从句和not merely...but...并列结构，深刻阐述了AI繁荣面临的新挑战。<br>
+                        <strong>翻译：</strong>当企业以历史上五倍的速度建设工厂却仍称产能不足时，AI繁荣正进入这样一个阶段：成功不仅取决于设计更好的芯片，还取决于其背后的整个工业体系能否足够快地扩张。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述行业规模与增长</td>
+                        <td>The event shattered every previous record: more than ... exhibitors from over ... countries, ... booths, and an expected ... professionals filled the ...</td>
+                        <td>用于描述某展会或活动的创纪录规模，适用于科技类议论文开头段</td>
+                    </tr>
+                    <tr>
+                        <td>用数据对比突出变化</td>
+                        <td>... is now working on ... facilities worldwide this year — including ... in ... — compared with a historical pace of roughly ... annually.</td>
+                        <td>用于通过当前与历史的对比突出某行业扩张速度，适用于论证段</td>
+                    </tr>
+                    <tr>
+                        <td>描述瓶颈转移</td>
+                        <td>... has shifted from whether ... exists to whether ... can scale quickly enough to satisfy it.</td>
+                        <td>用于描述某领域核心问题或瓶颈的转变，适用于议论文分析段落</td>
+                    </tr>
+                    <tr>
+                        <td>引用专家精辟观点</td>
+                        <td>"... is precise where it is cheap, and silent where it is expensive," said ..., chief analyst at ....</td>
+                        <td>用于引用分析师或专家的精辟判断，适用于议论文引用论证段落</td>
+                    </tr>
+                    <tr>
+                        <td>描述渐进性风险</td>
+                        <td>It's a slow drift, where the ...-optimized path quietly becomes the easy path, and everything else becomes the friction path.</td>
+                        <td>用于描述某种渐进式风险或变化趋势，适用于议论文风险分析段落</td>
+                    </tr>
+                    <tr>
+                        <td>设问升华结尾主题</td>
+                        <td>When companies are building ... five times faster than they historically did and still say ... is insufficient, ... is entering a stage where success depends not merely on ..., but on whether ... can expand fast enough.</td>
+                        <td>用于以设问方式升华主题、引发读者深思，适用于议论文结尾段</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The article describes how TSMC is building 25 facilities in a single year — five times its historical pace — yet still says capacity is insufficient. Do you think the AI chip boom represents sustainable long-term growth, or could it lead to overcapacity and a future downturn? Use evidence from the text about equipment requirements, customer demand forecasts, and the multi-year lead times for building fabs to support your argument.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> Nvidia pledged that Hugging Face would remain an open platform and that its hardware "will not be required," yet analyst Sanchit Vir Gogia argued the commitment is "precise where it is cheap, and silent where it is expensive." What did Gogia mean by this? Drawing on the article's discussion of model ranking, searching, and routing, discuss whether a chip company owning the dominant AI software platform could subtly steer developers toward its own ecosystem — and whether regulation should address this risk.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The article notes that the semiconductor bottleneck has moved from wafer production to advanced packaging and data interconnects, with copper wires reaching their physical limits. Co-packaged optics (CPO) is described as the leading response. Which approach do you believe will be more effective in solving the AI performance challenge: pushing the physical limits of chip manufacturing (smaller nanometer processes), or rethinking system architecture (advanced packaging, optical interconnects)? Consider the roles of TSMC, Nvidia, and the broader supply chain in your answer.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第50期</p>
+            <p>📅 2026年9月6日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
