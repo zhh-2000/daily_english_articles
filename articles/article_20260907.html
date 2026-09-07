@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overshoot and Return: UN Warns World Will Cross 1.5°C as Super El Niño Looms | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+        
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">时政类 | 气候变化</div>
+            <h1>Overshoot and Return: UN Warns World Will Cross 1.5°C as Super El Niño Looms</h1>
+            <div class="meta">
+                📅 September 7, 2026 &nbsp;|&nbsp; 📖 约980词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+        
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年9月初，联合国环境规划署（UNEP）发布《限制超调》报告，首次承认全球升温突破1.5°C已成必然，最乐观情景下峰值也将达到1.8°C。报告提出"超调、达峰、回落"路径作为最佳应对方案，呼吁立即深度减排、大规模碳移除和加强适应行动。与此同时，世界气象组织（WMO）警告一场"超级厄尔尼诺"正在形成，持续至2027年2月的概率接近100%，可能成为有记录以来最强事件。全球海表温度于8月22日创下21.1°C的历史新高。中国气象部门指出，厄尔尼诺对中国气候的影响将在2027年夏季最为显著，长江中下游面临洪涝风险。</p>
+        </div>
+        
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>🌡️ An Inevitable Threshold</h2>
+            <p>On September 2, 2026, the United Nations Environment Programme (UNEP) released a landmark report titled "Limiting Overshoot" at its headquarters in Nairobi. The report delivered a sobering message: global temperature rise is set to cross the 1.5°C threshold — the central goal of the 2015 Paris Agreement — likely within the next few years. Even in the most optimistic scenario, the report found, warming will peak at approximately 1.8°C above pre-industrial levels, while most other scenarios predict even higher peaks.</p>
+
+            <p>The report identified an "overshoot, peak, and decline" pathway as the best remaining option to minimize the magnitude and duration of exceeding 1.5°C and to eventually return below it. This pathway would require immediate and sustained cuts to greenhouse gas emissions, including methane, on the road to net-zero, followed by long-term net-negative emissions achieved through carefully governed Carbon Dioxide Removal (CDR) — the process of extracting carbon from the atmosphere and storing it through afforestation or other technological means.</p>
+
+            <p>"This summer's scorching heat, raging wildfires and deadly floods are a warning of what lies ahead," said UN Secretary-General António Guterres. "We must make the overshoot above 1.5 degrees as small and short as possible. That demands an overshoot of ambition." UNEP Executive Director Inger Andersen was equally blunt: "There are no good outcomes if we remain above 1.5°C. Now is the time we must double down on climate action."</p>
+
+            <h2>🌊 A Supersized El Niño</h2>
+            <p>Just one day after the UNEP report, on September 3, the World Meteorological Organization (WMO) issued an extraordinary update on the El Niño phenomenon developing across the tropical Pacific Ocean. Forecasts from the WMO's global network of climate centers put the likelihood that El Niño will persist through to February 2027 at close to 100 percent — the first time a WMO El Niño update had been so unequivocal, reflecting strong agreement across its entire network of forecasting bodies.</p>
+
+            <p>The data behind the warning is striking. The Niño 3.4 index — the standard measure of sea surface temperature in the region at the heart of El Niño — rose from 1.5°C above normal in May to 2°C in July, before climbing further to between 2.2°C and 2.6°C above average by mid-August. Temperatures below the ocean surface were even more extreme, with parts of the tropical Pacific running more than 8°C above average during July and early August. Global sea surface temperatures reached 21.1°C on August 22, the highest level ever recorded, exceeding the previous high of 21.09°C set in 2024.</p>
+
+            <p>"El Niño is being supersized before our eyes," Guterres declared. "The science leaves no room for doubt: the planet is in uncharted waters, and those waters are heating up." WMO Secretary-General Celeste Saulo emphasized the scale of the response required: "This exceptional El Niño demands exceptional preparation and response. We have no time to lose."</p>
+
+            <h2>🌏 Devastating Impacts and Tipping Points</h2>
+            <p>The UNEP report warned that above 1.5°C, risks and impacts will intensify with every extra fraction of a degree and every year spent in overshoot. Anticipated impacts include intensified extreme weather, ecosystem loss, and the submersion of Small Island Developing States and low-lying coastal cities. Severe damage to human health, food security, water supplies, nature, cities, infrastructure, and economies is expected.</p>
+
+            <p>Crucially, the likelihood of crossing irreversible tipping points increases with the magnitude and duration of higher temperatures. These include the destabilization of major ice sheets, the degradation of the Amazon rainforest, and the disruption of the Atlantic Meridional Overturning Circulation — the system of currents that moves warm surface water north and cold deep water south, playing a key role in regulating the global climate. Some impacts may emerge abruptly, while others will accumulate over time.</p>
+
+            <p>The first half of 2026 has already provided a preview. Record-breaking heatwaves struck Europe, Asia, Africa, and North America. Devastating flash floods in Nepal were attributed to a collapsed glacier in the Himalayas. The biggest wildfires in Indonesia since the 2015 El Niño blanketed parts of Southeast Asia in acrid smoke, while India faced its weakest monsoon in two decades. In Europe, wildfires were the fourth worst on record by early August, triggered by conditions linked to climate change. A rapid attribution study by World Weather Attribution found that a similar June heatwave in western Europe would have been around 3.5°C cooler if it had happened 50 years ago.</p>
+
+            <h2>🇨🇳 Climate Risks for China</h2>
+            <p>According to China's National Climate Center, the rapidly strengthening El Niño event is approaching super El Niño status, with its effects expected to persist into the summer of 2027 and potentially bring greater climate risks to China. The sea surface temperature index in the El Niño monitoring region reached 2.09°C in July and averaged 2.59°C in August — both the highest levels for the corresponding periods since records began in 1951.</p>
+
+            <p>The event is expected to peak around November or December, potentially making it the strongest El Niño event on record. Chen Lijuan, chief forecaster at the center, noted that China's climate in the summer of 2027 will be more significantly affected by El Niño than in 2026. Rainfall is expected to be above average in much of central and eastern China, with the middle and lower reaches of the Yangtze River likely to see particularly heavy precipitation, increasing the risks of torrential rain and flooding. Meanwhile, Northwest China and the Xinjiang region could face greater risks of drought caused by high temperatures and limited rainfall. Agriculture, electricity, infrastructure, and transportation are among the sectors likely to face significant impacts.</p>
+
+            <h2>🔄 The Path Forward</h2>
+            <p>The UNEP report stressed that mitigation and adaptation must advance together, as they are mutually reinforcing. Interventions that achieve both goals — such as nature-based cooling — should be prioritized. Strong political will, effective policies, inclusive governance, and finance are all important enabling conditions, and equity and justice must underpin all responses. Countries with greater historical responsibility for climate change should act the fastest with the greatest ambition.</p>
+
+            <p>The report also emphasized that net-zero is a milestone towards net-negative, with CDR needed in addition to — not instead of — sustained reductions in greenhouse gas emissions. However, CDR can only contribute credibly to a return below 1.5°C if peak warming remains well below 2°C and all residual emissions are reduced. Years of inaction mean that even if a return to below 1.5°C is secured, irreversible losses and permanently changed conditions are certain. As Guterres reminded the world, the pathway to limit overshoot "cannot be left unattended for the next generation to tackle. Immediate action is required for such a pathway to remain possible."</p>
+            
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">overshoot</td>
+                    <td>n./v.</td>
+                    <td>超越（限度），超调</td>
+                    <td>the overshoot above 1.5 degrees 超越1.5度的超调</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">threshold</td>
+                    <td>n.</td>
+                    <td>门槛，临界值</td>
+                    <td>cross the 1.5°C threshold 突破1.5°C临界值</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">inevitable</td>
+                    <td>adj.</td>
+                    <td>不可避免的，必然的</td>
+                    <td>an inevitable breach of the limit 对限制不可避免的突破</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">mitigation</td>
+                    <td>n.</td>
+                    <td>缓解，减轻</td>
+                    <td>mitigation and adaptation must advance together 减缓与适应必须共同推进</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">adaptation</td>
+                    <td>n.</td>
+                    <td>适应</td>
+                    <td>adaptation actions that reduce vulnerability 减少脆弱性的适应行动</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">phenomenon</td>
+                    <td>n.</td>
+                    <td>现象</td>
+                    <td>the El Niño phenomenon 厄尔尼诺现象</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">unequivocal</td>
+                    <td>adj.</td>
+                    <td>毫不含糊的，明确的</td>
+                    <td>the first time a WMO update had been so unequivocal WMO更新首次如此明确</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">destabilization</td>
+                    <td>n.</td>
+                    <td>不稳定，动摇</td>
+                    <td>destabilization of major ice sheets 主要冰盖的不稳定</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">irreversible</td>
+                    <td>adj.</td>
+                    <td>不可逆的</td>
+                    <td>irreversible tipping points 不可逆的临界点</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">circulation</td>
+                    <td>n.</td>
+                    <td>环流，循环</td>
+                    <td>the Atlantic Meridional Overturning Circulation 大西洋经向翻转环流</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">atmospheric</td>
+                    <td>adj.</td>
+                    <td>大气的</td>
+                    <td>atmospheric CO₂ levels 大气二氧化碳浓度</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">devastating</td>
+                    <td>adj.</td>
+                    <td>毁灭性的</td>
+                    <td>devastating flash floods 毁灭性的山洪</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">accumulate</td>
+                    <td>v.</td>
+                    <td>积累，累积</td>
+                    <td>others will accumulate over time 其他影响将随时间累积</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">reinforce</td>
+                    <td>v.</td>
+                    <td>加强，强化</td>
+                    <td>mutually reinforcing 相互强化的</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">underpin</td>
+                    <td>v.</td>
+                    <td>支撑，构成……的基础</td>
+                    <td>equity and justice must underpin all responses 公平与正义必须支撑所有应对措施</td>
+                </tr>
+            </table>
+            
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. Global temperature rise is set to cross the 1.5°C threshold — the central goal of the 2015 Paris Agreement — likely within the next few years.</div>
+                    <div class="cn">全球气温上升势必将突破1.5°C的临界值——这是2015年《巴黎协定》的核心目标——很可能在未来几年内发生。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. The report identified an "overshoot, peak, and decline" pathway as the best remaining option to minimize the magnitude and duration of exceeding 1.5°C.</div>
+                    <div class="cn">报告将"超调、达峰、回落"路径确定为将超越1.5°C的幅度和持续时间降至最低的最佳剩余选择。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. El Niño is being supersized before our eyes; the science leaves no room for doubt: the planet is in uncharted waters, and those waters are heating up.</div>
+                    <div class="cn">厄尔尼诺正在我们眼前被"超级化"；科学不容置疑：地球正处于未知水域，而这些水域正在升温。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. Forecasts from the WMO's global network of climate centers put the likelihood that El Niño will persist through to February 2027 at close to 100 percent.</div>
+                    <div class="cn">来自WMO全球气候中心网络的预测显示，厄尔尼诺持续到2027年2月的可能性接近100%。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. Above 1.5°C, risks and impacts will intensify with every extra fraction of a degree and every year spent in overshoot.</div>
+                    <div class="cn">在1.5°C以上，风险和影响将随着每增加一度的零头和每多待在超调状态一年而加剧。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. The likelihood of crossing irreversible tipping points increases with the magnitude and duration of higher temperatures.</div>
+                    <div class="cn">跨越不可逆临界点的可能性随着高温的幅度和持续时间而增加。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. A rapid attribution study found that a similar June heatwave in western Europe would have been around 3.5°C cooler if it had happened 50 years ago.</div>
+                    <div class="cn">一项快速归因研究发现，如果西欧6月类似的热浪发生在50年前，温度大约会低3.5°C。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. Mitigation and adaptation must advance together, as they are mutually reinforcing, and equity and justice must underpin all responses.</div>
+                    <div class="cn">减缓与适应必须共同推进，因为它们相互强化；公平与正义必须支撑所有应对措施。</div>
+                </div>
+            </div>
+            
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+                
+                <div class="difficult-box">
+                    <div class="sentence">① The report identified an "overshoot, peak, and decline" pathway as the best remaining option to minimize the magnitude and duration of exceeding 1.5°C and to eventually return below it.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为简单句扩展结构。主语是"The report"，谓语是"identified"（identify...as...意为"将……认定为……"），宾语是'an "overshoot, peak, and decline" pathway'（引号内的三个名词由and连接，共同修饰pathway）。"as the best remaining option"是宾语补足语（remaining是现在分词作形容词，意为"剩余的"）。句末两个不定式短语"to minimize the magnitude and duration of exceeding 1.5°C"和"and to eventually return below it"是并列的目的状语（由and连接，第二个to前有eventually修饰）。在第一个不定式中，"of exceeding 1.5°C"是介词短语作后置定语修饰magnitude and duration；在第二个不定式中，below it是介词短语作状语（it指代1.5°C）。该句通过identify...as...结构和并列目的状语，清晰阐明了报告的核心建议。<br>
+                        <strong>翻译：</strong>报告将"超调、达峰、回落"路径确定为将超越1.5°C的幅度和持续时间降至最低、并最终回落至该阈值以下的最佳剩余选择。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">② Forecasts from the WMO's global network of climate centers put the likelihood that El Niño will persist through to February 2027 at close to 100 percent, the organisation said in an update published on Thursday.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句，且采用倒装语序。"the organisation said"是插入语，其后"in an update published on Thursday"是介词短语作状语（published on Thursday是过去分词短语作后置定语修饰update）。真正的主句在前半部分："Forecasts from the WMO's global network of climate centers put the likelihood that El Niño will persist through to February 2027 at close to 100 percent"。主句主语是"Forecasts"，"from the WMO's global network of climate centers"是介词短语作后置定语修饰Forecasts。谓语是"put"（put...at...意为"将……置于……水平"），宾语是"the likelihood"，其后"that El Niño will persist through to February 2027"是that引导的同位语从句解释likelihood的内容（El Niño是主语，will persist是谓语，through to February 2027是时间状语）。"at close to 100 percent"是介词短语作状语（close to意为"接近"）。该句通过同位语从句和put...at...结构，精确传达了WMO预测的确定性。<br>
+                        <strong>翻译：</strong>该组织在周四发布的一份更新中表示，来自WMO全球气候中心网络的预测显示，厄尔尼诺持续到2027年2月的可能性接近100%。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">③ The likelihood of crossing irreversible tipping points increases with the magnitude and duration of higher temperatures, and some impacts may emerge abruptly, while others will accumulate over time.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句是由and连接的并列复合句。第一个分句"The likelihood of crossing irreversible tipping points increases with the magnitude and duration of higher temperatures"中，主语是"The likelihood"，"of crossing irreversible tipping points"是介词短语作后置定语（crossing是动名词），谓语是"increases"，"with the magnitude and duration of higher temperatures"是介词短语作状语（意为"随着……而增加"）。第二个分句"some impacts may emerge abruptly, while others will accumulate over time"中，"some impacts"是主语，"may emerge"是谓语（abruptly是副词），"while others will accumulate over time"是while引导的对比状语从句（others代指other impacts，will accumulate是谓语，over time是时间状语）。while在此表示"而"，引导对比关系。该句通过并列结构和while对比从句，全面描述了气候影响的不同表现形式。<br>
+                        <strong>翻译：</strong>跨越不可逆临界点的可能性随着高温的幅度和持续时间而增加，有些影响可能突然出现，而另一些则会随时间累积。
+                    </div>
+                </div>
+                
+                <div class="difficult-box">
+                    <div class="sentence">④ Countries with greater historical responsibility for climate change should act the fastest with the greatest ambition, and net-zero is a milestone towards net-negative, with CDR needed in addition to — not instead of — sustained reductions in greenhouse gas emissions.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为由and连接的并列复合句。第一个分句"Countries with greater historical responsibility for climate change should act the fastest with the greatest ambition"中，主语是"Countries"，"with greater historical responsibility for climate change"是介词短语作后置定语修饰Countries（for climate change修饰responsibility），谓语是"should act"，"the fastest"是副词最高级作状语，"with the greatest ambition"是介词短语作方式状语。第二个分句"net-zero is a milestone towards net-negative"中，主语是"net-zero"，谓语是"is"，表语是"a milestone"，"towards net-negative"是介词短语作后置定语修饰milestone。其后"with CDR needed in addition to — not instead of — sustained reductions in greenhouse gas emissions"是with复合结构作伴随状语（CDR是with的逻辑宾语，needed是过去分词作宾语补足语），"in addition to — not instead of — sustained reductions"中破折号之间的"not instead of"是插入语，与in addition to形成对比（意为"除了……之外，而非取而代之"），"in greenhouse gas emissions"是介词短语作后置定语修饰reductions。该句通过并列结构、with复合结构和插入语对比，清晰表达了气候行动的公正性原则和CDR的定位。<br>
+                        <strong>翻译：</strong>对气候变化承担更大历史责任的国家应以最大的雄心最快采取行动；净零是迈向净负排放的里程碑，碳移除需要在持续减少温室气体排放的基础上补充，而非取而代之。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>主题</th>
+                        <th>英文表达</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>描述不可避免的趋势</td>
+                        <td>... is set to cross the ... threshold — the central goal of ... — likely within the next few years.</td>
+                        <td>用于描述某项指标即将突破关键界限，适用于环境类或科技类议论文开头段</td>
+                    </tr>
+                    <tr>
+                        <td>提出应对方案</td>
+                        <td>The report identified ... as the best remaining option to minimize ... and to eventually return below ....</td>
+                        <td>用于引用报告或研究提出的最佳方案，适用于议论文论证段落</td>
+                    </tr>
+                    <tr>
+                        <td>引用权威人士警语</td>
+                        <td>"... is being supersized before our eyes; the science leaves no room for doubt: ...," said ..., secretary-general of ....</td>
+                        <td>用于引用国际组织领导人的警示性言论，适用于议论文引用论证段落</td>
+                    </tr>
+                    <tr>
+                        <td>描述风险随程度加剧</td>
+                        <td>Above ..., risks and impacts will intensify with every extra fraction of a degree and every year spent in ....</td>
+                        <td>用于描述风险或负面影响随时间或程度递增的规律，适用于议论文分析段落</td>
+                    </tr>
+                    <tr>
+                        <td>对比不同影响方式</td>
+                        <td>Some impacts may emerge abruptly, while others will accumulate over time.</td>
+                        <td>用于对比两种不同的影响或变化方式（突发vs渐进），适用于议论文对比分析段落</td>
+                    </tr>
+                    <tr>
+                        <td>阐述行动原则与定位</td>
+                        <td>... is needed in addition to — not instead of — sustained reductions in ....</td>
+                        <td>用于强调某措施是补充而非替代，适用于议论文论证措施定位段落</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+                
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The UNEP report acknowledges that crossing the 1.5°C threshold is now "inevitable," yet it still proposes an "overshoot, peak, and decline" pathway as the best remaining option. Do you think it is still worth pursuing ambitious climate action if the 1.5°C target will be temporarily breached? Using evidence from the article about tipping points, irreversible impacts, and the difference between a 1.8°C and a 2.6°C peak, explain why "every fraction of a degree matters."
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The article describes how the current El Niño is being "supersized" by exceptionally warm Pacific Ocean conditions, with sea surface temperatures reaching record highs. While El Niño is a naturally occurring phenomenon, the WMO warns its impacts are "amplified by the warmer baseline conditions a warming planet creates." In your view, what does the interaction between natural climate variability and human-caused warming reveal about the urgency of reducing greenhouse gas emissions? Consider the examples of Nepal's flash floods, Indonesia's wildfires, and India's weak monsoon in your response.
+                </div>
+                
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The report stresses that "countries with greater historical responsibility for climate change should act the fastest with the greatest ambition" and that "equity and justice must underpin all responses." Do you agree that developed nations, which industrialized earlier and emitted more greenhouse gases historically, bear a greater moral obligation to lead climate action? Discuss how principles of equity and justice could be applied in practice — for example, through climate finance, technology transfer, or carbon dioxide removal — and what challenges might arise in implementing these principles globally.
+                </div>
+            </div>
+        </div>
+        
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第51期</p>
+            <p>📅 2026年9月7日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
