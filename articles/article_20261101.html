@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe by Design: EU Proposes KIDS Act to Shield Children from Online Harm | 每日高考英语时文阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans CJK SC', 'WenQuanYi Micro Hei', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .back-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px 30px;
+            margin: 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .header .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .header .category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        .summary {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px;
+            border-radius: 8px;
+        }
+        .summary h2 {
+            color: #f57c00;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        .content {
+            padding: 25px;
+        }
+        .content h2 {
+            color: #667eea;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #764ba2;
+        }
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+        .vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .vocab-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+        }
+        .vocab-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .vocab-table tr:hover {
+            background: #f5f7fa;
+        }
+        .vocab-table .word {
+            font-weight: bold;
+            color: #667eea;
+        }
+        .examples {
+            background: #f5f7fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .examples h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .example-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .example-item .en {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .example-item .cn {
+            color: #888;
+            font-size: 0.9em;
+        }
+        .difficult-sentences {
+            margin: 20px 0;
+        }
+        .difficult-box {
+            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
+            border: 2px solid #667eea;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .difficult-box .sentence {
+            font-weight: bold;
+            color: #283593;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .difficult-box .analysis {
+            color: #555;
+            line-height: 1.8;
+        }
+        .writing-materials {
+            margin: 20px 0;
+        }
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .materials-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 12px;
+        }
+        .materials-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .materials-table tr:hover {
+            background: #e8eaf6;
+        }
+        .discussion {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .discussion h2 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        .discussion-item {
+            background: #fff;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .discussion-item strong {
+            color: #1976d2;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. 返回按钮 -->
+        <a href="../index.html" class="back-btn">← 返回主页</a>
+
+        <!-- 2. 文章头部 -->
+        <div class="header">
+            <div class="category">科技类 | 互联网数字隐私</div>
+            <h1>Safe by Design: EU Proposes KIDS Act to Shield Children from Online Harm</h1>
+            <div class="meta">
+                📅 November 1, 2026 &nbsp;|&nbsp; 📖 约960词 &nbsp;|&nbsp; ⏱️ 建议阅读时间：15分钟
+            </div>
+        </div>
+
+        <!-- 3. 摘要 -->
+        <div class="summary">
+            <h2>📋 文章摘要</h2>
+            <p>2026年9月17日，欧盟委员会提出KIDS法案（Keeping Internet Digital Spaces Accountable and Trustworthy），旨在保护未成年人在线安全。法案规定13岁以下禁止使用社交媒体，13至14岁需家长监管且每日限用1小时，15岁及以上方可独立开设账户。法案要求平台实施"安全优先设计"，禁止诱导沉迷的功能，AI聊天机器人对未成年人默认关闭，并将举证责任从监管方倒置至平台方。此举回应了欧洲仅半数9至16岁儿童感到在线安全的严峻现实。</p>
+        </div>
+
+        <!-- 4. 正文 -->
+        <div class="content">
+            <h2>📱 A Growing Crisis</h2>
+            <p>Across Europe, a quiet crisis is unfolding in the lives of children and teenagers. According to research published by the European Commission in 2026, only half of children aged 9 to 16 across the continent say they feel safe online. The risks they face are no longer abstract — they are real, urgent, and growing. Reduced physical activity, increased risk of myopia, disrupted sleep, depressive and anxious symptoms, diminished self-esteem, eating disorders, and addictive behaviours have all been linked to excessive screen time and harmful online experiences. More gravely still, minors face the dangers of cyberbullying, grooming, and child sexual abuse material circulating on the platforms they use every day.</p>
+
+            <p>The root of the problem, experts argue, lies not merely in the behaviour of individual users but in the design of the platforms themselves. Social media services, video-sharing platforms, online games, and AI-powered chatbots have been engineered to capture and hold children's attention for as long as possible. Features such as infinite scrolling, reward tricks, auto-play videos, and push notifications delivered during sleeping hours are not accidental — they are deliberate strategies to maximise engagement, often at the expense of young users' wellbeing.</p>
+
+            <h2>🛡️ The KIDS Act: A Landmark Proposal</h2>
+            <p>On 17 September 2026, the European Commission adopted a proposal that could fundamentally reshape the digital landscape for young people: the EU KIDS Act — formally titled "Keeping Internet Digital Spaces Accountable and Trustworthy." The legislation does two things. First, it sets common age rules for the whole European Union, replacing the patchwork of diverging national laws that currently leaves children in some countries far less protected than in others. Second, it imposes "safety by design" obligations on the digital services that children use most, requiring platforms to be safe from the ground up rather than relying on users to protect themselves.</p>
+
+            <p>Under the proposed age rules, children under 13 will not be able to hold social media accounts at all. They may, however, access child-friendly video-sharing services through an account managed by a parent or guardian. Children aged 13 and 14 will be able to use social media, but only through a "mini account" set up and controlled by their guardian — with limited features, a daily time restriction of at most one hour, and parental approval of contacts. Only from the age of 15 will young people be permitted to open and manage their own social media accounts, and even then, the services they access must by law be safe for them.</p>
+
+            <p>"Today, our children are engaging with the most sophisticated technologies ever created — technology that was never created with their wellbeing in mind," said Commission President Ursula von der Leyen as she announced the proposal. "Our KIDS Act is reversing the burden of proof: it is for platforms to show they are safe by design. And we put parents back in the driving seat, giving them the tools to help their children navigate a safer online world."</p>
+
+            <h2>🔧 Safety by Design: Changing How Platforms Are Built</h2>
+            <p>The age restrictions are the most visible part of the KIDS Act, but they are far from its most transformative element. The heart of the legislation lies in its "safety by design" requirements, which compel online services used by minors to offer stronger protection by default. This means platforms must limit or eliminate features that encourage excessive use — infinite scroll, reward tricks, and push notifications during sleeping hours will be prohibited for minors. Profiles for users under 18 must be private by default, unsolicited contact from strangers must be blocked, and easy tools to block or mute other users must be provided.</p>
+
+            <p>Perhaps most notably, the KIDS Act addresses the rapidly growing phenomenon of AI companions and chatbots. Under the proposal, AI chatbots and companions must be turned off by default for minors and will no longer be permitted to act in ways that make children emotionally dependent on them. This provision responds to mounting evidence that young users, particularly those who are lonely or vulnerable, can form deep emotional attachments to AI companions — attachments that may displace real human relationships and leave children psychologically harmed.</p>
+
+            <h2>🔍 Age Verification Without Sacrificing Privacy</h2>
+            <p>One of the most technically challenging aspects of the KIDS Act is age verification. Critics of age-gating have long argued that verifying a user's age inevitably requires collecting sensitive personal data — precisely the kind of data that privacy laws such as the GDPR are designed to protect. The KIDS Act attempts to resolve this tension by requiring online services and app stores to use age assurance tools that protect users' privacy. The European Commission points to its own EU age verification app, launched in April 2026, as a model: the app confirms a user's age without retaining identity documents or biometric data, ensuring that privacy and safety are not traded off against each other.</p>
+
+            <p>The legislation also explicitly rejects self-declared age as a sufficient safeguard — a significant departure from current practice, where a simple date-of-birth box is often the only barrier between a twelve-year-old and an account on a platform designed for adults. Under the KIDS Act, access must be gated by certified age verification, and platforms will be required to check existing accounts within six months of the rules taking effect, disabling those belonging to underage users or users whose age cannot be established.</p>
+
+            <h2>⚖️ Shifting the Burden of Proof</h2>
+            <p>Perhaps the most revolutionary aspect of the KIDS Act is its reversal of the burden of proof. Currently, when regulators suspect that a platform is unsafe for children, they must gather evidence and demonstrate the harm — a process that is slow, resource-intensive, and often outmatched by the legal firepower of big tech companies. The KIDS Act flips this dynamic: providers of very large online platforms will have to affirmatively demonstrate that their services are safe for children and designed with their wellbeing in mind. If they cannot, they will be in violation of the law.</p>
+
+            <p>This shift represents a fundamental change in the relationship between regulators and platforms. No longer will children and their advocates have to prove harm after the fact; instead, platforms must prove safety before the fact. It is a principle that could set a precedent not only in Europe but around the world, as governments everywhere grapple with the challenge of protecting young people in an increasingly digital age.</p>
+
+            <h2>🌍 A Global Conversation</h2>
+            <p>The EU is not alone in this effort. In October 2025, twenty-five EU Member States signed the Jutland Declaration calling for age verification and a safer online environment for minors. Countries including Italy, France, Norway, Greece, Austria, Poland, and Belgium have already proposed or passed national legislation. Beyond Europe, Australia has enacted its own age-verification requirements for social media, and China has introduced regulations governing AI-powered interactive services for minors, including a ban on providing virtual companion services to children. In the United States, several states have passed or are considering similar measures, though federal action remains stalled.</p>
+
+            <p>The KIDS Act will now be examined by the European Parliament and the Council of the EU, which will negotiate and decide on the final text before it becomes law. A public consultation remains open until 3 December 2026, inviting input from children, parents, educators, and the platforms themselves. Whatever the final legislation looks like, one thing is clear: the era of leaving children to navigate the digital world largely unprotected is drawing to a close. The question is no longer whether governments will act, but how swiftly and how effectively they can do so — before another generation grows up online without the safeguards they deserve.</p>
+
+            <!-- 5. 词汇表 -->
+            <h2>📚 核心词汇</h2>
+            <table class="vocab-table">
+                <tr>
+                    <th>序号</th>
+                    <th>英文词汇</th>
+                    <th>词性</th>
+                    <th>中文释义</th>
+                    <th>原文例句/用法</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="word">shield</td>
+                    <td>v.</td>
+                    <td>保护，庇护</td>
+                    <td>shield children from online harm 保护儿童免受网络伤害</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="word">accountable</td>
+                    <td>adj.</td>
+                    <td>负有责任的，可追责的</td>
+                    <td>Keeping Internet Digital Spaces Accountable 保持互联网数字空间可追责</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="word">addictive</td>
+                    <td>adj.</td>
+                    <td>使人上瘾的</td>
+                    <td>addictive behaviours 上瘾行为</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="word">deliberate</td>
+                    <td>adj.</td>
+                    <td>故意的，蓄意的</td>
+                    <td>deliberate strategies to maximise engagement 蓄意最大化参与度的策略</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="word">patchwork</td>
+                    <td>n.</td>
+                    <td>拼凑之物，杂乱拼凑</td>
+                    <td>patchwork of diverging national laws 各国法律杂乱拼凑</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="word">obligation</td>
+                    <td>n.</td>
+                    <td>义务，责任</td>
+                    <td>imposes safety by design obligations 施加安全设计义务</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="word">guardian</td>
+                    <td>n.</td>
+                    <td>监护人</td>
+                    <td>managed by a parent or guardian 由父母或监护人管理</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="word">prohibit</td>
+                    <td>v.</td>
+                    <td>禁止</td>
+                    <td>prohibit unsolicited contact from strangers 禁止陌生人主动接触</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="word">unsolicited</td>
+                    <td>adj.</td>
+                    <td>未经请求的，主动推送的</td>
+                    <td>unsolicited contact from strangers 陌生人未经请求的接触</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="word">provision</td>
+                    <td>n.</td>
+                    <td>条款，规定</td>
+                    <td>This provision responds to mounting evidence 该条款回应了日益增多的证据</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="word">displace</td>
+                    <td>v.</td>
+                    <td>取代，替代</td>
+                    <td>attachments that may displace real human relationships 可能取代真实人际关系的依恋</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="word">biometric</td>
+                    <td>adj.</td>
+                    <td>生物特征的</td>
+                    <td>does not retain biometric data 不保留生物特征数据</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="word">affirmatively</td>
+                    <td>adv.</td>
+                    <td>肯定地，明确地</td>
+                    <td>affirmatively demonstrate safety 明确证明安全性</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="word">precedent</td>
+                    <td>n.</td>
+                    <td>先例</td>
+                    <td>set a precedent not only in Europe 不仅在欧洲树立先例</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="word">stalled</td>
+                    <td>adj.</td>
+                    <td>停滞的，搁置的</td>
+                    <td>federal action remains stalled 联邦行动仍然停滞</td>
+                </tr>
+            </table>
+
+            <!-- 6. 例句 -->
+            <div class="examples">
+                <h2>✍️ 重点例句</h2>
+                <div class="example-item">
+                    <div class="en">1. Only half of children aged 9 to 16 across Europe say they feel safe online — the risks they face are no longer abstract but real, urgent, and growing.</div>
+                    <div class="cn">在欧洲9至16岁的儿童中，只有一半表示他们觉得在线安全——他们所面临的风险不再是抽象的，而是真实、紧迫且不断增长的。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">2. Features such as infinite scrolling, reward tricks, and push notifications delivered during sleeping hours are deliberate strategies to maximise engagement, often at the expense of young users' wellbeing.</div>
+                    <div class="cn">无限滚动、奖励套路和睡眠时段推送通知等功能是蓄意最大化参与度的策略，往往以牺牲年轻用户的身心健康为代价。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">3. Under the proposed age rules, children under 13 will not be able to hold social media accounts at all, while those aged 13 and 14 may use social media only through a mini account controlled by their guardian.</div>
+                    <div class="cn">根据拟议的年龄规则，13岁以下儿童完全不能拥有社交媒体账户，而13至14岁儿童只能通过监护人控制的迷你账户使用社交媒体。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">4. AI chatbots and companions must be turned off by default for minors and will no longer be permitted to act in ways that make children emotionally dependent on them.</div>
+                    <div class="cn">AI聊天机器人和陪伴程序对未成年人必须默认关闭，且不得再以使儿童产生情感依赖的方式运作。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">5. The KIDS Act flips the dynamic: providers of very large online platforms will have to affirmatively demonstrate that their services are safe for children and designed with their wellbeing in mind.</div>
+                    <div class="cn">KIDS法案翻转了这一态势：大型在线平台提供者必须明确证明其服务对儿童是安全的，并且是以儿童身心健康为考量而设计的。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">6. The app confirms a user's age without retaining identity documents or biometric data, ensuring that privacy and safety are not traded off against each other.</div>
+                    <div class="cn">该应用在不保留身份证明文件或生物特征数据的情况下确认用户年龄，确保隐私和安全不会相互取舍。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">7. The legislation explicitly rejects self-declared age as a sufficient safeguard — a significant departure from current practice, where a simple date-of-birth box is often the only barrier.</div>
+                    <div class="cn">该立法明确拒绝将自行申报年龄作为充分保障——这与现行做法形成重大区别，目前一个简单的出生日期框往往是唯一的屏障。</div>
+                </div>
+                <div class="example-item">
+                    <div class="en">8. The era of leaving children to navigate the digital world largely unprotected is drawing to a close — the question is no longer whether governments will act, but how swiftly and how effectively.</div>
+                    <div class="cn">让儿童在基本无保护的状态下独自探索数字世界的时代正在终结——问题不再是政府是否会行动，而是行动有多迅速、多有效。</div>
+                </div>
+            </div>
+
+            <!-- 7. 长难句 -->
+            <div class="difficult-sentences">
+                <h2>🔍 长难句解析</h2>
+
+                <div class="difficult-box">
+                    <div class="sentence">① The root of the problem, experts argue, lies not merely in the behaviour of individual users but in the design of the platforms themselves — social media services, video-sharing platforms, online games, and AI-powered chatbots have been engineered to capture and hold children's attention for as long as possible.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为并列复合句。前半部分主语是"The root of the problem"，"experts argue"是插入语，谓语是"lies"（意为"在于"），"not merely in... but in..."是not merely...but...结构（不仅……而且……），连接两个并列的介词短语作状语，表示问题根源的双重性。破折号后是对"the design of the platforms themselves"的具体展开：主语是四个并列名词短语"social media services, video-sharing platforms, online games, and AI-powered chatbots"，谓语是"have been engineered"（现在完成时被动语态，engineer此处作动词意为"设计/精心构建"），"to capture and hold children's attention for as long as possible"是不定式短语作目的状语，其中capture和hold是并列动词，"for as long as possible"是时间状语。该句通过插入语、并列结构和破折号展开，层层深入地指出了问题的根本原因。<br>
+                        <strong>翻译：</strong>专家认为，问题的根源不仅在于个体用户的行为，更在于平台本身的设计——社交媒体、视频分享平台、在线游戏和AI驱动的聊天机器人都被精心设计，以尽可能长时间地吸引和保持儿童的注意力。
+                    </div>
+                </div>
+
+                <div class="difficult-box">
+                    <div class="sentence">② Perhaps most notably, the KIDS Act addresses the rapidly growing phenomenon of AI companions and chatbots — under the proposal, AI chatbots and companions must be turned off by default for minors and will no longer be permitted to act in ways that make children emotionally dependent on them.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为并列复合句。"Perhaps most notably"是副词短语作评注性状语，表示"最值得注意的是"。前半句主语是"the KIDS Act"，谓语是"addresses"（意为"应对/处理"），宾语是"the rapidly growing phenomenon of AI companions and chatbots"（rapidly growing是前置定语修饰phenomenon，of AI companions and chatbots是介词短语作后置定语）。破折号后是对"addresses"的具体说明：主语是"AI chatbots and companions"，由and连接两个并列谓语"must be turned off by default for minors"（被动语态，by default意为"默认地"，for minors是介词短语表示对象）和"will no longer be permitted to act in ways"（将来时被动语态，no longer意为"不再"，to act in ways是不定式短语作主语补足语），"that make children emotionally dependent on them"是that引导的定语从句修饰ways（that在从句中作主语，make是谓语，children是宾语，"emotionally dependent on them"是形容词短语作宾语补足语）。该句通过破折号解释和定语从句，清晰地阐述了KIDS法案对AI陪伴程序的核心规制。<br>
+                        <strong>翻译：</strong>或许最值得注意的是，KIDS法案应对了AI陪伴程序和聊天机器人迅速增长的现象——根据该提案，AI聊天机器人和陪伴程序对未成年人必须默认关闭，且不再被允许以使儿童产生情感依赖的方式运作。
+                    </div>
+                </div>
+
+                <div class="difficult-box">
+                    <div class="sentence">③ Currently, when regulators suspect that a platform is unsafe for children, they must gather evidence and demonstrate the harm — a process that is slow, resource-intensive, and often outmatched by the legal firepower of big tech companies.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为主从复合句。"Currently"是时间副词作状语。"when regulators suspect that a platform is unsafe for children"是when引导的时间状语从句，其中"that a platform is unsafe for children"是that引导的宾语从句作suspect的宾语。主句主语是"they"（指代regulators），由and连接两个并列谓语"must gather evidence"和"demonstrate the harm"。破折号后是对"a process"（指代gather evidence and demonstrate the harm这一过程）的同位语解释："a process"是中心词，其后"that is slow, resource-intensive, and often outmatched by the legal firepower of big tech companies"是that引导的定语从句修饰process（that在从句中作主语，由is和is outmatched两个谓语构成，slow、resource-intensive是表语形容词，outmatched意为"被压倒/不敌"，by the legal firepower of big tech companies是介词短语表示"被大科技公司的法律火力"）。该句通过时间状语从句、宾语从句和同位语定语从句，生动揭示了当前监管面临的困境。<br>
+                        <strong>翻译：</strong>目前，当监管机构怀疑某个平台对儿童不安全时，他们必须收集证据并证明危害——这一过程缓慢、耗费资源，且往往不敌大科技公司的法律火力。
+                    </div>
+                </div>
+
+                <div class="difficult-box">
+                    <div class="sentence">④ No longer will children and their advocates have to prove harm after the fact; instead, platforms must prove safety before the fact — a principle that could set a precedent not only in Europe but around the world, as governments everywhere grapple with the challenge of protecting young people in an increasingly digital age.</div>
+                    <div class="analysis">
+                        <strong>结构分析：</strong>此句为并列复合句。前半句"No longer will children and their advocates have to prove harm after the fact"是否定词no longer置于句首引起的部分倒装句（正常语序为children and their advocates will no longer have to...），have to是情态动词短语，prove是动词，harm是宾语，"after the fact"是介词短语作时间状语（意为"事后"）。分号后"instead"是副词，"platforms must prove safety before the fact"是简单句（"before the fact"意为"事前"）。破折号后是对上述原则的评价："a principle"是同位语，"that could set a precedent not only in Europe but around the world"是that引导的定语从句修饰principle（set a precedent意为"树立先例"，not only...but...连接两个并列介词短语）。"as governments everywhere grapple with the challenge of protecting young people in an increasingly digital age"是as引导的原因/时间状语从句（grapple with意为"努力应对"，of protecting young people是介词短语作后置定语修饰challenge，in an increasingly digital age是介词短语作时间/背景状语）。该句通过倒装、同位语和状语从句，有力地阐述了举证责任倒置的深远意义。<br>
+                        <strong>翻译：</strong>儿童及其倡导者不再需要事后证明危害；相反，平台必须事前证明安全——这一原则不仅可能在欧洲树立先例，也可能影响全球，因为各国政府都在努力应对在日益数字化的时代保护年轻人的挑战。
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. 写作素材 -->
+            <div class="writing-materials">
+                <h2>📝 写作素材积累</h2>
+                <table class="materials-table">
+                    <tr>
+                        <th>素材主题</th>
+                        <th>英文表达</th>
+                        <th>适用话题</th>
+                        <th>应用场景</th>
+                    </tr>
+                    <tr>
+                        <td>问题根源在于设计</td>
+                        <td>The root of the problem lies not merely in the behaviour of individual users but in the design of the platforms themselves.</td>
+                        <td>科技伦理、社会责任、产品设计</td>
+                        <td>用于议论文分析段落，指出问题的根本原因不在于用户而在于系统设计</td>
+                    </tr>
+                    <tr>
+                        <td>以牺牲...为代价</td>
+                        <td>Deliberate strategies to maximise engagement, often at the expense of young users' wellbeing.</td>
+                        <td>利益冲突、代价、伦理抉择</td>
+                        <td>用于描述某种做法虽然达到目的但造成了负面代价，适用于辩证分析段落</td>
+                    </tr>
+                    <tr>
+                        <td>举证责任倒置</td>
+                        <td>The KIDS Act flips the dynamic: platforms must affirmatively demonstrate that their services are safe for children.</td>
+                        <td>法律改革、责任归属、制度创新</td>
+                        <td>用于描述从"证明有罪"到"证明无罪"的制度性转变，适用于论证主动责任的重要性</td>
+                    </tr>
+                    <tr>
+                        <td>隐私与安全不矛盾</td>
+                        <td>The app confirms a user's age without retaining biometric data, ensuring that privacy and safety are not traded off against each other.</td>
+                        <td>隐私保护、技术方案、兼容共赢</td>
+                        <td>用于论证隐私与安全可以兼顾而非对立，适用于议论文反驳段或创新方案论述</td>
+                    </tr>
+                    <tr>
+                        <td>时代正在转变</td>
+                        <td>The era of leaving children to navigate the digital world largely unprotected is drawing to a close.</td>
+                        <td>时代变革、社会进步、法律完善</td>
+                        <td>用于议论文结尾段升华主题，表达某个不受约束的时代即将结束的转折</td>
+                    </tr>
+                    <tr>
+                        <td>各国纷纷行动</td>
+                        <td>Countries including Italy, France, and Norway have already proposed or passed national legislation, while federal action in the United States remains stalled.</td>
+                        <td>国际合作与差异、政策对比、全球趋势</td>
+                        <td>用于对比各国在某一问题上的政策进展差异，适用于议论文比较分析段落</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 9. 讨论问题 -->
+            <div class="discussion">
+                <h2>💬 思考与讨论</h2>
+
+                <div class="discussion-item">
+                    <strong>Question 1:</strong> The EU KIDS Act sets 13 as the minimum age for social media access and 15 as the age for independent accounts. Some people argue that age limits are too rigid and ignore individual differences in maturity, while others believe that uniform rules are necessary because platforms cannot assess each child's readiness. What is your opinion? Should digital age limits be flexible, allowing parents to decide when their child is ready, or should governments set one common standard for all children? Discuss the advantages and disadvantages of each approach, using examples from the article.
+                </div>
+
+                <div class="discussion-item">
+                    <strong>Question 2:</strong> The KIDS Act requires AI chatbots and companions to be turned off by default for minors, because they may cause children to become "emotionally dependent" on them. However, some AI companions are designed to help children with learning, mental health support, or social skills practice. Do you think banning AI companions by default goes too far, or is it a necessary precaution? How should society balance the potential benefits of AI for children against the risks of emotional dependency and manipulation? Support your argument with specific reasoning.
+                </div>
+
+                <div class="discussion-item">
+                    <strong>Question 3:</strong> The KIDS Act "reverses the burden of proof" — instead of regulators having to prove that a platform is harmful, platforms must prove that they are safe. This principle could be applied to many other areas, such as food safety, pharmaceutical drugs, or environmental protection. Do you think this principle should be adopted more widely? What are the potential benefits and risks of requiring companies to prove their products are safe before they are allowed on the market, rather than waiting for harm to be demonstrated after the fact? Discuss with reference to the article and your own knowledge.
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. 页脚 -->
+        <div class="footer">
+            <p>📚 每日高考英语时文阅读 | 第76期</p>
+            <p>📅 2026年11月1日</p>
+            <p>✨ 适合高三学生备考使用 | 建议精读并积累词汇</p>
+            <p>© 2026 Daily English Reading for Gaokao</p>
+        </div>
+    </div>
+</body>
+</html>
